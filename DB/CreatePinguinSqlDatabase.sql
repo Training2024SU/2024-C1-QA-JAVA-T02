@@ -80,34 +80,53 @@ CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`novel` (
 ENGINE = InnoDB;
 
 
-
 -- -----------------------------------------------------
--- Table `Pinguin_Library`.`loan`
+-- Table `Pinguin_Library`.`book_loan`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`loan` (
-  `loand_id` VARCHAR(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`book_loan` (
+  `book_loan_id` VARCHAR(100) NOT NULL,
   `user_id` VARCHAR(100) NOT NULL,
-  `loaned_item_id` VARCHAR(100) NOT NULL,
-  `item_type` VARCHAR(45) NOT NULL,
+  `book_id` VARCHAR(100) NOT NULL,
   `loan_date` DATE NOT NULL,
   `return_date` DATE NOT NULL,
   `status` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`loand_id`),
-  INDEX `FK_BookItem_idx` (`loaned_item_id` ASC) VISIBLE,
+  PRIMARY KEY (`book_loan_id`),
+  INDEX `FK_BookItem_idx` (`book_id` ASC) VISIBLE,
   INDEX `FK_UserLoan_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `FK_BookItem`
-    FOREIGN KEY (`loaned_item_id`)
+    FOREIGN KEY (`book_id`)
     REFERENCES `Pinguin_Library`.`book` (`book_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `FK_NovelItem`
-    FOREIGN KEY (`loaned_item_id`)
-    REFERENCES `Pinguin_Library`.`novel` (`novel_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FK_UserLoan`
     FOREIGN KEY (`user_id`)
     REFERENCES `Pinguin_Library`.`user` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Pinguin_Library`.`novel_loan`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`novel_loan` (
+  `novel_loan_id` VARCHAR(100) NOT NULL,
+  `user_id` VARCHAR(100) NOT NULL,
+  `novel_id` VARCHAR(100) NOT NULL,
+  `loan_date` DATE NOT NULL,
+  `return_date` DATE NOT NULL,
+  `status` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`novel_loan_id`),
+  INDEX `FK_UserNovel_idx` (`user_id` ASC) VISIBLE,
+  INDEX `FK_NovelId_idx` (`novel_id` ASC) VISIBLE,
+  CONSTRAINT `FK_UserNovel`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `Pinguin_Library`.`user` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK_NovelId`
+    FOREIGN KEY (`novel_id`)
+    REFERENCES `Pinguin_Library`.`novel` (`novel_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
