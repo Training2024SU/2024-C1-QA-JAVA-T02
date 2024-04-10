@@ -1,4 +1,4 @@
-package co.com.sofka.model;
+package co.com.sofka.entities;
 
 public class Manuscript extends Item{
     protected String title;

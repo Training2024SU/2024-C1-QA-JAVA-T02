@@ -1,4 +1,4 @@
-package co.com.sofka.model;
+package co.com.sofka.entities;
 
 public abstract class Item {
     protected String id;

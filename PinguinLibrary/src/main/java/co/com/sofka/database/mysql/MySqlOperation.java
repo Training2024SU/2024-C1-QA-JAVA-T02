@@ -1,10 +1,12 @@
-package co.com.sofka.DB;
+package co.com.sofka.database.mysql;
+
+import co.com.sofka.database.DataBase;
+
 
 import java.sql.*;
 
-import static co.com.sofka.DB.constants.DatabaseConfigConstants.*;
+public class MySqlOperation implements DataBase {
 
-public class SqlOperation implements DatabaseConfig{
     private Connection connection = null;
     private Statement statement   = null;
     private ResultSet resultSet   = null;
@@ -12,9 +14,9 @@ public class SqlOperation implements DatabaseConfig{
     private String sqlStatement;
     private String server;
     private String dataBaseName;
-
     private String user;
     private String password;
+
 
     public String getSqlStatement() {
         return sqlStatement;
@@ -24,32 +26,12 @@ public class SqlOperation implements DatabaseConfig{
         this.sqlStatement = sqlStatement;
     }
 
-    public String getServer() {
-        return server;
-    }
-
-    public void setServer(String server) {
-        this.server = server;
-    }
-
-    public String getDataBaseName() {
-        return dataBaseName;
-    }
-
     public void setDataBaseName(String dataBaseName) {
         this.dataBaseName = dataBaseName;
     }
 
-    public String getUser() {
-        return user;
-    }
-
     public void setUser(String user) {
         this.user = user;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public void setPassword(String password) {
@@ -57,18 +39,17 @@ public class SqlOperation implements DatabaseConfig{
     }
 
     @Override
-    public void configureDatabaseConnection() {
+    public void configureDataBaseConnection() {
         try {
-            Class.forName(MY_SQL_DRIVER);
+            Class.forName(MySqlConstants.MY_SQL_JDBC_DRIVER);
             connection= DriverManager.getConnection(
-                    String.format(CONNECTION_STRING,
+                    String.format(MySqlConstants.CONNECTION_STRING,
                             this.server,
                             this.dataBaseName,
                             this.user,
                             this.password)
             );
             statement=connection.createStatement();
-            System.out.println("Successfully connected");
 
         }catch (Exception e){
             close();
@@ -80,18 +61,17 @@ public class SqlOperation implements DatabaseConfig{
     @Override
     public void executeSqlStatement() {
         try {
-            configureDatabaseConnection();
+            configureDataBaseConnection();
             resultSet = statement.executeQuery(sqlStatement);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
     public void executeSqlStatementVoid() {
         try {
-            configureDatabaseConnection();
+            configureDataBaseConnection();
             statement.execute(sqlStatement);
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -137,7 +117,7 @@ public class SqlOperation implements DatabaseConfig{
                 String columnValue = resultSet.getString(columnNumber);
                 System.out.print(resultSetMetaData.getColumnName(columnNumber) + ": " + columnValue);
             }
-            System.out.println("");
+            System.out.println();
         }
 
     }
