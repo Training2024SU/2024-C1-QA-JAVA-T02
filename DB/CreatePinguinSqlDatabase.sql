@@ -43,7 +43,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`book` (
   `book_id` VARCHAR(100) NOT NULL,
   `title` VARCHAR(100) NOT NULL,
-  `amount` INT NOT NULL,
+  `quantity` INT NOT NULL,
   `quantity_loaned` INT NOT NULL,
   `quantity_available` INT NOT NULL,
   `category` VARCHAR(45) NOT NULL,
@@ -78,7 +78,6 @@ CREATE TABLE IF NOT EXISTS `Pinguin_Library`.`novel` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `Pinguin_Library`.`book_loan`
