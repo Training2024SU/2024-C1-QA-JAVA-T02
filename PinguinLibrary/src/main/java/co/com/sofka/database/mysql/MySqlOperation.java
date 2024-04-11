@@ -5,18 +5,21 @@ import co.com.sofka.database.DataBase;
 
 import java.sql.*;
 
+import static co.com.sofka.database.mysql.MySqlConstants.CONNECTION_STRING;
+import static co.com.sofka.database.mysql.MySqlConstants.MY_SQL_JDBC_DRIVER;
+
+
 public class MySqlOperation implements DataBase {
 
-    private Connection connection = null;
-    private Statement statement   = null;
-    private ResultSet resultSet   = null;
+    private Connection connection= null;
+    private Statement statement=null;
+    private ResultSet resultSet=null;
 
     private String sqlStatement;
     private String server;
     private String dataBaseName;
     private String user;
     private String password;
-
 
     public String getSqlStatement() {
         return sqlStatement;
@@ -26,12 +29,32 @@ public class MySqlOperation implements DataBase {
         this.sqlStatement = sqlStatement;
     }
 
+    public String getServer() {
+        return server;
+    }
+
+    public void setServer(String server) {
+        this.server = server;
+    }
+
+    public String getDataBaseName() {
+        return dataBaseName;
+    }
+
     public void setDataBaseName(String dataBaseName) {
         this.dataBaseName = dataBaseName;
     }
 
+    public String getUser() {
+        return user;
+    }
+
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
@@ -41,9 +64,9 @@ public class MySqlOperation implements DataBase {
     @Override
     public void configureDataBaseConnection() {
         try {
-            Class.forName(MySqlConstants.MY_SQL_JDBC_DRIVER);
+            Class.forName(MY_SQL_JDBC_DRIVER);
             connection= DriverManager.getConnection(
-                    String.format(MySqlConstants.CONNECTION_STRING,
+                    String.format(CONNECTION_STRING,
                             this.server,
                             this.dataBaseName,
                             this.user,
@@ -52,8 +75,9 @@ public class MySqlOperation implements DataBase {
             statement=connection.createStatement();
 
         }catch (Exception e){
-            close();
+
             System.out.println(e.getMessage());
+            close();
         }
 
     }
@@ -66,6 +90,7 @@ public class MySqlOperation implements DataBase {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
+
     }
 
     @Override
