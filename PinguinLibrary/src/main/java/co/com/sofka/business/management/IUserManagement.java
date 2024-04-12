@@ -1,11 +1,10 @@
-package co.com.sofka.DAO;
+package co.com.sofka.business.management;
 
-import co.com.sofka.entities.Novel;
 import co.com.sofka.entities.User;
 
 import java.util.List;
 
-public interface IUserDAO {
+public interface IUserManagement {
     public void insertUser(User user);
     public List<User> getAllUsers();
     public User getUserById(String id);

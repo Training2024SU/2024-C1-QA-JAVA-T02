@@ -22,7 +22,6 @@ public class AuthorDAO implements IAuthorDAO {
     private final MySqlOperation mySqlOperation;
     public AuthorDAO(MySqlOperation mySqlOperation) {
         this.mySqlOperation = mySqlOperation;
-
     }
 
     @Override

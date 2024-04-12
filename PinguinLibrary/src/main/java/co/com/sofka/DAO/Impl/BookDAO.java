@@ -31,7 +31,11 @@ public class BookDAO implements IBookDAO {
             "author_id = '%s' " +
             "WHERE book_id = '%s';";
     private static final String deleteQuery = "DELETE FROM BOOK WHERE book_id = '%s';";
-    private static final MySqlOperation mySqlOperation = new MySqlOperation();
+
+    private final MySqlOperation mySqlOperation;
+    public BookDAO(MySqlOperation mySqlOperation) {
+        this.mySqlOperation = mySqlOperation;
+    }
 
     @Override
     public void insertBook(Book book) {
@@ -49,7 +53,8 @@ public class BookDAO implements IBookDAO {
     @Override
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
-
+        mySqlOperation.setSqlStatement(selectAllQuery);
+        mySqlOperation.executeSqlStatement();
         try (ResultSet resultSet = mySqlOperation.getResultSet()) {
             while (resultSet.next()) {
                 String id = resultSet.getString("book_id");
@@ -72,10 +77,6 @@ public class BookDAO implements IBookDAO {
         }
 
         return books;
-    }
-    private Author getAuthorById(String authorId) throws SQLException {
-        AuthorDAO authorDAO = new AuthorDAO(mySqlOperation);
-        return authorDAO.getAuthorById(authorId);
     }
 
     @Override
@@ -104,6 +105,10 @@ public class BookDAO implements IBookDAO {
         return book;
     }
 
+    private Author getAuthorById(String authorId) throws SQLException {
+        AuthorDAO authorDAO = new AuthorDAO(mySqlOperation);
+        return authorDAO.getAuthorById(authorId);
+    }
     @Override
     public void updateBook(Book book) {
         String query = String.format(updateQuery,
@@ -117,13 +122,10 @@ public class BookDAO implements IBookDAO {
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
     }
-
     @Override
     public void deleteBook(Book book) {
         String query = String.format(deleteQuery, book.getId());
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
     }
-
-
 }

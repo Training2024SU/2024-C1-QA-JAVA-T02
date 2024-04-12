@@ -2,6 +2,7 @@ package co.com.sofka.entities;
 
 public class Novel extends Manuscript{
     private String gender;
+    private int recommendedAge;
 
     public Novel() {
     }
@@ -15,9 +16,21 @@ public class Novel extends Manuscript{
         this.gender = gender;
     }
 
-    public Novel(String id, int quantity, int quantityLoaned, int quantityAvailable, String title, Author author, String gender) {
+    public Novel(String gender, int recommendedAge) {
+        this.gender = gender;
+        this.recommendedAge = recommendedAge;
+    }
+
+    public Novel(String title, Author author, String gender, int recommendedAge) {
+        super(title, author);
+        this.gender = gender;
+        this.recommendedAge = recommendedAge;
+    }
+
+    public Novel(String id, int quantity, int quantityLoaned, int quantityAvailable, String title, Author author, String gender, int recommendedAge) {
         super(id, quantity, quantityLoaned, quantityAvailable, title, author);
         this.gender = gender;
+        this.recommendedAge = recommendedAge;
     }
 
     public String getGender() {
@@ -26,6 +39,14 @@ public class Novel extends Manuscript{
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public int getRecommendedAge() {
+        return recommendedAge;
+    }
+
+    public void setRecommendedAge(int recommendedAge) {
+        this.recommendedAge = recommendedAge;
     }
 
     @Override
