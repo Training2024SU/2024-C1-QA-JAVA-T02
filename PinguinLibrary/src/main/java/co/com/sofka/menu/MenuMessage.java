@@ -1,5 +1,7 @@
 package co.com.sofka.menu;
 
+import co.com.sofka.model.User;
+
 public class MenuMessage {
     public static void menuMessage(){
         System.out.println(MenuConstant.welcomeMessage);
@@ -8,19 +10,70 @@ public class MenuMessage {
         System.out.println(MenuConstant.exitMessage);
     }
 
-    public static void readerMenuMessage(){
+    public static void administratorMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.bookOptions) + "%n", 1);
+        System.out.printf((MenuConstant.bookLoanOptions) + "%n", 2);
+        System.out.printf((MenuConstant.novelOptions) + "%n", 3);
+        System.out.printf((MenuConstant.novelLoanOptions) + "%n", 4);
+        System.out.printf((MenuConstant.authorOptions) + "%n", 5);
+        System.out.printf((MenuConstant.userOptions) + "%n", 6);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 7);
+    }
+    public static void administratorBookMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeBookMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.createBookMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeAllBooksMessage) + "%n", 2);
+        System.out.printf((MenuConstant.seeBookByNameMessage) + "%n", 3);
+        System.out.printf((MenuConstant.updateBookMessage) + "%n", 4);
+        System.out.printf((MenuConstant.deleteBookMessage) + "%n", 5);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
+    }
+
+    public static void administratorNovelMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeNovelMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.createNovelMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeAllNovelsMessage) + "%n", 2);
+        System.out.printf((MenuConstant.seeNovelByNameMessage) + "%n", 3);
+        System.out.printf((MenuConstant.updateNovelMessage) + "%n", 4);
+        System.out.printf((MenuConstant.deleteNovelMessage) + "%n", 5);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
+    }
+    public static void readerMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
         System.out.printf((MenuConstant.bookOptions) + "%n", 1);
         System.out.printf((MenuConstant.novelOptions) + "%n", 2);
         System.out.printf((MenuConstant.authorOptions) + "%n", 3);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 4);
     }
-
-    public static void readerBookMenuMessage(){
+    public static void readerBookMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeBookMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
         System.out.printf((MenuConstant.seeAllBooksMessage) + "%n", 1);
         System.out.printf((MenuConstant.seeBookByNameMessage) + "%n", 2);
         System.out.printf((MenuConstant.loanBookMessage) + "%n", 3);
         System.out.printf((MenuConstant.seeMyBookLoansMessage) + "%n", 4);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
+    }
+    public static void readerNovelMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeNovelMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.seeAllNovelsMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeNovelByNameMessage) + "%n", 2);
+        System.out.printf((MenuConstant.loanNovelMessage) + "%n", 3);
+        System.out.printf((MenuConstant.seeMyNovelLoansMessage) + "%n", 4);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
+    }
 
+    public static void readerAuthorMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeAuthorMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.seeAllAuthorsMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeAuthorByNameMessage) + "%n", 2);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 3);
     }
 }

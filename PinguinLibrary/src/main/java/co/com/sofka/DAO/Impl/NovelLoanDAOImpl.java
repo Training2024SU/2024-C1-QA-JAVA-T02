@@ -1,6 +1,5 @@
 package co.com.sofka.DAO.Impl;
 
-import co.com.sofka.database.mysql.MySqlOperation;
 import co.com.sofka.enums.LoanStatus;
 import co.com.sofka.model.Novel;
 import co.com.sofka.model.NovelLoan;
@@ -16,7 +15,7 @@ import static co.com.sofka.business.Library.mySqlOperation;
 
 public class NovelLoanDAOImpl implements co.com.sofka.DAO.NovelLoanDAO {
     private static final String insertIntoQuery = "INSERT INTO novel_loan (novel_loan_id, user_id, novel_id, loan_date, return_date, status)" +
-            "VALUES ('%s', '%s', '%s', '%s', '%s', '%s')";
+            "VALUES ('%s', '%s', '%s', %s, %s, '%s')";
 
     private static final String selectAllQuery = "SELECT novel_loan_id, user_id, novel_id, loan_date, return_date, status FROM novel_loan ";
     private static final String updateQuery = "UPDATE novel_loan SET " +
@@ -28,7 +27,6 @@ public class NovelLoanDAOImpl implements co.com.sofka.DAO.NovelLoanDAO {
             "WHERE novel_loan_id = '%s'";
 
     private static final String deleteQuery = "DELETE FROM novel_loan WHERE novel_loan_id = '%s'";
-
 
     @Override
     public void insertNovelLoan(NovelLoan novelLoan) {

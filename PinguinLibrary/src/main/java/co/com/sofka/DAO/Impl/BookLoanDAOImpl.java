@@ -1,6 +1,5 @@
 package co.com.sofka.DAO.Impl;
 
-import co.com.sofka.database.mysql.MySqlOperation;
 import co.com.sofka.model.Book;
 import co.com.sofka.model.BookLoan;
 import co.com.sofka.enums.LoanStatus;

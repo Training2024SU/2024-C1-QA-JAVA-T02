@@ -6,12 +6,13 @@ import co.com.sofka.model.*;
 
 import static co.com.sofka.business.administrator.AdministratorFunctions.administratorMenu;
 import static co.com.sofka.business.assistant.AssistantOptions.assistantMenu;
-import static co.com.sofka.menu.Menu.displayPrincipalMenu;
 import static co.com.sofka.business.Authentication.login;
 import static co.com.sofka.business.Authentication.register;
 import static co.com.sofka.business.reader.ReaderFunctions.readerMenu;
 import static co.com.sofka.database.DatabaseConfigConstants.*;
 import static co.com.sofka.database.DatabaseConfigConstants.PASSWORD;
+import static co.com.sofka.menu.MenuConstant.*;
+import static co.com.sofka.menu.MenuMessage.menuMessage;
 import static co.com.sofka.utils.Utils.getIntOption;
 
 public class Library {
@@ -27,8 +28,8 @@ public class Library {
     private static void mainMenuFunctions() {
         boolean runApp = true;
         while (runApp){
-            displayPrincipalMenu();
-            System.out.print("Enter your option: ");
+            menuMessage();
+            System.out.print(enterYourOptionMessage);
             int option = getIntOption();
             switch (option){
                 case 1:
@@ -40,11 +41,11 @@ public class Library {
                     register();
                     break;
                 case 3:
-                    System.out.println("exit");
+                    System.out.println(exitingMessage);
                     runApp = false;
                     break;
                 default:
-                    System.out.println("Enter a valid option");
+                    System.out.println(incorrectOptionMessage);
             }
         }
     }

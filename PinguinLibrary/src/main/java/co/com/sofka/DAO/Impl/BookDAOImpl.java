@@ -1,8 +1,8 @@
 package co.com.sofka.DAO.Impl;
 
+import co.com.sofka.DAO.BookDAO;
 import co.com.sofka.model.Author;
 import co.com.sofka.model.Book;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.List;
 
 import static co.com.sofka.business.Library.mySqlOperation;
 
-public class BookDAOImpl implements co.com.sofka.DAO.BookDAO {
+public class BookDAOImpl implements BookDAO {
     private static final String insertIntoQuery = "INSERT INTO BOOK " +
             "(book_id, title, quantity, quantity_loaned, category, author_id) " +
             "VALUES ('%s', '%s', %d, %d, '%s', '%s');";

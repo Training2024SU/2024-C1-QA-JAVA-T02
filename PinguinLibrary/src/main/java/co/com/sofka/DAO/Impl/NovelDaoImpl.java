@@ -14,8 +14,8 @@ import static co.com.sofka.business.Library.mySqlOperation;
 
 public class NovelDaoImpl implements NovelDAO {
     private static final String insertIntoQuery = "INSERT INTO novel " +
-            "(novel_id, title, recommend_age, quantity, quantity_loaned, quantity_available, gender, author_id) " +
-            "VALUES ('%s', '%s', %d, %d, %d, %d, '%s', '%s');";
+            "(novel_id, title, recommend_age, quantity, quantity_loaned, gender, author_id) " +
+            "VALUES ('%s', '%s', %d, %d, %d, '%s', '%s');";
     private static final String selectAllQuery = "SELECT novel_id, " +
             "title, " +
             "recommend_age, " +
@@ -30,7 +30,6 @@ public class NovelDaoImpl implements NovelDAO {
             "recommend_age = %d, " +
             "quantity = %d, " +
             "quantity_loaned = %d, " +
-            "quantity_available = %d, " +
             "gender = '%s', " +
             "author_id = '%s' " +
             "WHERE novel_id = '%s';";
@@ -44,7 +43,6 @@ public class NovelDaoImpl implements NovelDAO {
                 novel.getRecommendedAge(),
                 novel.getQuantity(),
                 novel.getQuantityLoaned(),
-                novel.getQuantityAvailable(),
                 novel.getGender(),
                 novel.getAuthor().getId());
         mySqlOperation.setSqlStatement(query);
@@ -97,7 +95,6 @@ public class NovelDaoImpl implements NovelDAO {
                 novel.getRecommendedAge(),
                 novel.getQuantity(),
                 novel.getQuantityLoaned(),
-                novel.getQuantityAvailable(),
                 novel.getGender(),
                 novel.getAuthor().getId(),
                 novel.getId());
