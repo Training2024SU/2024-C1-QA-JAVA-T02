@@ -3,13 +3,10 @@ package co.com.sofka.business.administrator;
 import co.com.sofka.model.User;
 
 import static co.com.sofka.business.generalAdmin.AdministratorBookFunctions.administratorBookMenuOptions;
+import static co.com.sofka.business.generalAdmin.AdministratorBookLoanFunctions.administratorBookLoanMenuOptions;
 import static co.com.sofka.business.generalAdmin.AdministratorNovelFunctions.administratorNovelMenuOptions;
-import static co.com.sofka.business.reader.ReaderAuthorFunctions.readerAuthorMenuOptions;
-import static co.com.sofka.business.reader.ReaderBookFunctions.readerBookMenuOptions;
-import static co.com.sofka.business.reader.ReaderNovelFunctions.readerNovelMenuOptions;
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorMenuMessage;
-import static co.com.sofka.menu.MenuMessage.readerMenuMessage;
 import static co.com.sofka.utils.Utils.getIntOption;
 
 public class AdministratorFunctions {
@@ -22,17 +19,13 @@ public class AdministratorFunctions {
             int option = getIntOption();
             switch (option){
                 case 1:
-                    // book
                     administratorBookMenuOptions(user);
                     break;
                 case 2:
-                    // book loan
-                    //readerBookMenuOptions(user);
+                    administratorBookLoanMenuOptions(user);
                     break;
                 case 3:
-                    // novel
                     administratorNovelMenuOptions(user);
-                    //readerNovelMenuOptions(user);
                     break;
                 case 4:
                     // novel loan

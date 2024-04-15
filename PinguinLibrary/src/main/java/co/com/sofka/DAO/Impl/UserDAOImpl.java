@@ -1,5 +1,6 @@
 package co.com.sofka.DAO.Impl;
 
+import co.com.sofka.DAO.UserDAO;
 import co.com.sofka.model.User;
 import co.com.sofka.enums.UserType;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 import static co.com.sofka.business.Library.mySqlOperation;
 
-public class UserDAOImpl implements co.com.sofka.DAO.UserDAO {
+public class UserDAOImpl implements UserDAO {
     private static final String insertIntoQuery = "INSERT INTO user " +
             "(id, name, email, password, role) " +
             "VALUES ('%s', '%s', '%s', '%s', '%s');";

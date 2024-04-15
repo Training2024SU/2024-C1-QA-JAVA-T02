@@ -1,6 +1,6 @@
 package co.com.sofka.DAO.Impl;
 
-import co.com.sofka.database.mysql.MySqlOperation;
+import co.com.sofka.DAO.AuthorDAO;
 import co.com.sofka.model.Author;
 
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.util.List;
 
 import static co.com.sofka.business.Library.mySqlOperation;
 
-public class AuthorDAOImpl implements co.com.sofka.DAO.AuthorDAO {
+public class AuthorDAOImpl implements AuthorDAO {
 
     private static final String insertIntoQuery = "INSERT INTO author (id, name) VALUES ('%s', '%s');";
     private static final String selectAllQuery = "SELECT id, name FROM author";

@@ -1,5 +1,6 @@
 package co.com.sofka.DAO.Impl;
 
+import co.com.sofka.DAO.BookLoanDAO;
 import co.com.sofka.model.Book;
 import co.com.sofka.model.BookLoan;
 import co.com.sofka.enums.LoanStatus;
@@ -13,7 +14,7 @@ import java.util.List;
 
 import static co.com.sofka.business.Library.mySqlOperation;
 
-public class BookLoanDAOImpl {
+public class BookLoanDAOImpl implements BookLoanDAO {
     private static final String insertIntoQuery = "INSERT INTO book_loan (book_loan_id, user_id, book_id, loan_date, return_date, status)" +
             "VALUES ('%s', '%s', '%s', %s, %s, '%s')";
 

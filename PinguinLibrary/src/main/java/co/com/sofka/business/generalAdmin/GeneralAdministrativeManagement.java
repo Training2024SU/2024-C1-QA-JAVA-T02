@@ -1,6 +1,7 @@
 package co.com.sofka.business.generalAdmin;
 
 import co.com.sofka.DAO.Impl.*;
+import co.com.sofka.DAO.UserDAO;
 import co.com.sofka.business.generalAdmin.interf.*;
 import co.com.sofka.enums.LoanStatus;
 import co.com.sofka.model.*;
@@ -199,5 +200,10 @@ public class GeneralAdministrativeManagement implements
     @Override
     public void deleteNovel(Novel novel) {
         novelDao.deleteNovel(novel);
+    }
+
+    public User getUserByEmail(String email) {
+        UserDAOImpl userDAO = new UserDAOImpl();
+        return userDAO.findUserByEmail(email);
     }
 }

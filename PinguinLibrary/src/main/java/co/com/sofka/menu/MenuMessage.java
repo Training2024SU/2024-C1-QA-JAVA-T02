@@ -13,12 +13,12 @@ public class MenuMessage {
     public static void administratorMenuMessage(User user){
         System.out.printf((MenuConstant.personalizedWelcomeMessage) + "%n", user.getName());
         System.out.println(MenuConstant.separator);
-        System.out.printf((MenuConstant.bookOptions) + "%n", 1);
-        System.out.printf((MenuConstant.bookLoanOptions) + "%n", 2);
-        System.out.printf((MenuConstant.novelOptions) + "%n", 3);
+        System.out.printf((MenuConstant.bookOptionsMessage) + "%n", 1);
+        System.out.printf((MenuConstant.bookLoanOptionsMessage) + "%n", 2);
+        System.out.printf((MenuConstant.novelOptionsMessage) + "%n", 3);
         System.out.printf((MenuConstant.novelLoanOptions) + "%n", 4);
-        System.out.printf((MenuConstant.authorOptions) + "%n", 5);
-        System.out.printf((MenuConstant.userOptions) + "%n", 6);
+        System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 5);
+        System.out.printf((MenuConstant.userOptionsMessage) + "%n", 6);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 7);
     }
     public static void administratorBookMenuMessage(User user){
@@ -30,6 +30,16 @@ public class MenuMessage {
         System.out.printf((MenuConstant.updateBookMessage) + "%n", 4);
         System.out.printf((MenuConstant.deleteBookMessage) + "%n", 5);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
+    }
+
+    public static void administratorBookLoanMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeBookLoanMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.createBookLoanMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeBookLoansMessage) + "%n", 2);
+        System.out.printf((MenuConstant.editAcceptDeniedBookLoansMessage) + "%n", 3);
+        System.out.printf((MenuConstant.deleteBookLoanMessage) + "%n", 4);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
     }
 
     public static void administratorNovelMenuMessage(User user){
@@ -45,9 +55,9 @@ public class MenuMessage {
     public static void readerMenuMessage(User user){
         System.out.printf((MenuConstant.personalizedWelcomeMessage) + "%n", user.getName());
         System.out.println(MenuConstant.separator);
-        System.out.printf((MenuConstant.bookOptions) + "%n", 1);
-        System.out.printf((MenuConstant.novelOptions) + "%n", 2);
-        System.out.printf((MenuConstant.authorOptions) + "%n", 3);
+        System.out.printf((MenuConstant.bookOptionsMessage) + "%n", 1);
+        System.out.printf((MenuConstant.novelOptionsMessage) + "%n", 2);
+        System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 3);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 4);
     }
     public static void readerBookMenuMessage(User user){
