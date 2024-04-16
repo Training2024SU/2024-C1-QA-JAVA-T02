@@ -9,10 +9,9 @@ INSERT INTO author (id, name) VALUES
 
 -- Insertar usuarios
 INSERT INTO user (id, name, email, password, role) VALUES 
-('1', 'Admin Smith', 'admin1@example.com', 'admin1pass', 'ADMINISTRATOR'),
+('1', 'John Doe', 'administrador@pingu.com.co', 'contrasenasegura123456', 'ADMINISTRATOR'),
 ('2', 'Reader Johnson', 'reader1@example.com', 'reader1pass', 'READER'),
 ('3', 'Assistant Williams', 'assistant1@example.com', 'assistant1pass', 'ASSISTANT'),
-('4', 'Admin Brown', 'admin2@example.com', 'admin2pass', 'ADMINISTRATOR'),
 ('5', 'Reader Davis', 'reader2@example.com', 'reader2pass', 'READER'),
 ('6', 'Assistant Wilson', 'assistant2@example.com', 'assistant2pass', 'ASSISTANT');
 

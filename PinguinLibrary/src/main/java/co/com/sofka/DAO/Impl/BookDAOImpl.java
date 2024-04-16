@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.com.sofka.business.Library.mySqlOperation;
+import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class BookDAOImpl implements BookDAO {
     private static final String insertIntoQuery = "INSERT INTO BOOK " +

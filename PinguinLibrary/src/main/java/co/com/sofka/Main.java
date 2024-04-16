@@ -1,7 +1,7 @@
 package co.com.sofka;
 
 
-import static co.com.sofka.business.Library.startApp;
+import static co.com.sofka.businessLogic.Library.startApp;
 
 public class Main {
 

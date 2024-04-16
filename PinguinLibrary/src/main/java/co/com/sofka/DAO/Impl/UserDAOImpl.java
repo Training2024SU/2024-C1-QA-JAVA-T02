@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.com.sofka.business.Library.mySqlOperation;
+import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class UserDAOImpl implements UserDAO {
     private static final String insertIntoQuery = "INSERT INTO user " +
@@ -23,9 +23,9 @@ public class UserDAOImpl implements UserDAO {
             "FROM user ";
     private static final String updateQuery = "UPDATE user SET " +
             "name = '%s', " +
-            "email = %s, " +
-            "password = %s, " +
-            "role = %s, " +
+            "email = '%s', " +
+            "password = '%s', " +
+            "role = '%s' " +
             "WHERE id = '%s';";
     private static final String deleteQuery = "DELETE FROM user WHERE id = '%s';";
 

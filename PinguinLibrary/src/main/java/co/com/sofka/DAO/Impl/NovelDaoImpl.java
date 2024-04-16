@@ -1,7 +1,6 @@
 package co.com.sofka.DAO.Impl;
 
 import co.com.sofka.DAO.NovelDAO;
-import co.com.sofka.database.mysql.MySqlOperation;
 import co.com.sofka.model.Novel;
 import co.com.sofka.model.Author;
 
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.com.sofka.business.Library.mySqlOperation;
+import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class NovelDaoImpl implements NovelDAO {
     private static final String insertIntoQuery = "INSERT INTO novel " +

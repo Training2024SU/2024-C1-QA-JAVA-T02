@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.com.sofka.business.Library.mySqlOperation;
+import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class BookLoanDAOImpl implements BookLoanDAO {
     private static final String insertIntoQuery = "INSERT INTO book_loan (book_loan_id, user_id, book_id, loan_date, return_date, status)" +

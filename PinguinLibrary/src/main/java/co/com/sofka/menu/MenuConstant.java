@@ -31,6 +31,8 @@ public class MenuConstant {
     public static String seeBookByNameMessage = "%s. See book by name";
     public static String updateBookMessage = "%s. Update book";
     public static String deleteBookMessage = "%s. Delete book";
+    public static String exportBookInfoMessage = "%s. Export book data in csv file";
+    public static String returnBookLMessage = "%s. Return book loan";
     public static String bookOptionsMessage = "%s. Book options";
 
 
@@ -38,19 +40,10 @@ public class MenuConstant {
 
     public static String bookLoanOptionsMessage = "%s. Book loan options";
     public static String loanBookMessage = "%s. Loan book";
-    public static String createBookLoanMessage = "%s. See book loans";
+    public static String createBookLoanMessage = "%s. Create book loan";
     public static String seeBookLoansMessage = "%s. See book loans";
-    public static String editAcceptDeniedBookLoansMessage = "%s. edit/Accept/Denied book loans";
-    public static String seeAllBookLoansMessage = "%s. See all book loans";
-    public static String seeBookLoanByIdMessage = "%s. See book loan by id";
-    public static String seeRequestedBookLoanMessage = "%s. See requested book loan";
-    public static String seeCompletedBookLoanMessage = "%s. See completed book loan";
-    public static String seeFinishedBookLoanMessage = "%s. See finished book loan";
-    public static String seeCancelledBookLoanMessage = "%s. See canceled book loan";
-    public static String editBookLoanMessage = "%s. Edit book loan";
-    public static String deleteBookLoanMessage = "%s. Edit book loan";
-    public static String acceptBookLoanMessage = "%s. Accept requested book loan";
-    public static String cancelBookLoanMessage = "%s. Cancel requested book loan";
+    public static String editAcceptBookLoansMessage = "%s. Edit/Accept book loans";
+    public static String deleteBookLoanMessage = "%s. delete book loan";
     public static String seeMyBookLoansMessage = "%s. See my book loans";
 
 
@@ -61,8 +54,9 @@ public class MenuConstant {
     public static String deleteNovelMessage = "%s. Delete novel";
     public static String seeNovelByNameMessage = "%s. See novel by name";
     public static String novelOptionsMessage = "%s. Novel options";
+    public static String returnNovelMessage = "%s. Return novel loan";
+    public static String exportNovelInfoMessage = "%s. Export novel data in csv file";
     public static String novelLoanOptions = "%s. Novel loan options";
-
 
 
 
@@ -70,29 +64,30 @@ public class MenuConstant {
     public static String novelLoanOptionsMessage = "%s. Novel loan options";
     public static String loanNovelMessage = "%s. Loan novel";
     public static String seeNovelLoansMessage = "%s. See novel loans";
-    public static String acceptDeniedNovelLoansMessage = "%s. Accept/Denied novel loans";
-    public static String seeAllNovelLoansMessage = "%s. See all novel loans";
-    public static String seeNovelLoanByIdMessage = "%s. See novel loan by id";
-    public static String seeRequestedNovelLoanMessage = "%s. See requested novel loan";
-    public static String seeCompletedNovelLoanMessage = "%s. See completed novel loan";
-    public static String seeFinishedNovelLoanMessage = "%s. See finished novel loan";
-    public static String seeCancelledNovelLoanMessage = "%s. See canceled novel loan";
-    public static String editNovelLoanMessage = "%s. Edit novel loan";
+    public static String editAcceptNovelLoansMessage = "%s. Edit/Accept novel loans";
     public static String deleteNovelLoanMessage = "%s. Delete novel loan";
-    public static String acceptNovelLoanMessage = "%s. Accept requested novel loan";
-    public static String cancelNovelLoanMessage = "%s. Cancel requested novel loan";
     public static String seeMyNovelLoansMessage = "%s. See my novel loans";
 
 
 
     // Author options
-    public static String seeAllAuthorsMessage = "%s. See all author";
+    public static String createAuthorMessage = "%s. Create author";
+    public static String seeAllAuthorsMessage = "%s. See all authors";
     public static String seeAuthorByNameMessage = "%s. See author by name";
+    public static String updateAuthorMessage = "%s. Update author";
+    public static String deleteAuthorMessage = "%s. Delete author";
+
     public static String authorOptionsMessage = "%s. Author options";
 
 
     // User options
     public static String userOptionsMessage = "%s. User options";
+    public static String createUserMessage = "%s. Create user";
+    public static String seeAllUsersMessage = "%s. See all users";
+    public static String seeUserByEmailMessage = "%s. See user by email";
+    public static String updateUserMessage = "%s. Update user";
+    public static String deleteUserMessage = "%s. Delete user";
+
 
 
 
