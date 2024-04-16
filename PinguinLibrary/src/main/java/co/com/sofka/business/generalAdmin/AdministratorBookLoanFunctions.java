@@ -24,7 +24,7 @@ public class AdministratorBookLoanFunctions {
             int option = getIntOption();
             switch (option){
                 case 1:
-                    //createBookLoan()
+                    createBookLoan();
                     break;
                 case 2:
                     //seeBookLoans();
@@ -43,6 +43,10 @@ public class AdministratorBookLoanFunctions {
                     System.out.println(incorrectOptionMessage);
             }
         }
+    }
+    public static void createBookLoan(){
+        BookLoan bookLoan = getBookLoanData();
+        generalAdministrativeManagement.insertBookLoan(bookLoan);
     }
 
     private static BookLoan getBookLoanData(){

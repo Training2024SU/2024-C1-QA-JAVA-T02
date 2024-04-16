@@ -1,0 +1,6 @@
+bookId,bookTitle,quantity,quantityLoaned,quantityAvailable,category,authorName
+1,Cien annos de soledad,10,3,7,Ficcion,Gabriel García Márquez
+2,Harry Potter y la piedra filosofal,8,1,7,Fantasia,J.K. Rowling
+3,El resplandor,15,1,14,Terror,Stephen King
+4,Tokio blues,20,1,19,Drama,Haruki Murakami
+5,Asesinato en el Orient Express,12,1,11,Misterio,Agatha Christie

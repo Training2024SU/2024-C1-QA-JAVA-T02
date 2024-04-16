@@ -1,10 +1,14 @@
 package co.com.sofka.menu;
 
 import co.com.sofka.model.User;
+import co.com.sofka.utils.UserLogger;
+import org.apache.logging.log4j.core.Logger;
+
 
 public class MenuMessage {
+    //private static Logger logger = new Logger(MenuMessage.class);
     public static void menuMessage(){
-        System.out.println(MenuConstant.welcomeMessage);
+        UserLogger.info(MenuConstant.welcomeMessage);
         System.out.println(MenuConstant.loginMessage);
         System.out.println(MenuConstant.registerMessage);
         System.out.println(MenuConstant.exitMessage);

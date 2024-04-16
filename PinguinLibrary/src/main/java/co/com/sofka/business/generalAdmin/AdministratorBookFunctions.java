@@ -6,6 +6,7 @@ import co.com.sofka.model.User;
 
 import java.util.UUID;
 
+import static co.com.sofka.utils.CsvManagement.exportBookData;
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorBookMenuMessage;
 import static co.com.sofka.utils.Utils.getIntOption;
@@ -37,6 +38,9 @@ public class AdministratorBookFunctions {
                     deleteBook();
                     break;
                 case 6:
+                    exportBookData();
+                    break;
+                case 7:
                     System.out.println(exitingMessage);
                     keepMenu = false;
                     break;
