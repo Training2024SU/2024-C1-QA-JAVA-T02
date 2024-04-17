@@ -11,8 +11,8 @@ import java.util.List;
 public class UsuarioDAO extends AbstractDAO<Usuario> {
 
     private static final String CONSULTA_USUARIOS = "SELECT * FROM Usuario";
-    private static final String INSERTAR_USUARIO = "INSERT INTO Usuario (Correo, Nombre, Contraseña) VALUES (?, ?, ?)";
-    private static final String ACTUALIZAR_USUARIO = "UPDATE Usuario SET Nombre = ?, Contraseña = ? WHERE idUsuario = ?";
+    private static final String INSERTAR_USUARIO = "INSERT INTO usuario (Correo, Nombre, Contrasena) VALUES (?, ?, ?)";
+    private static final String ACTUALIZAR_USUARIO = "UPDATE Usuario SET Nombre = ?, Contrasena = ? WHERE idUsuario = ?";
     private static final String ELIMINAR_USUARIO = "DELETE FROM Usuario WHERE idUsuario = ?";
 
     // Constructor que recibe un objeto GestorBD para establecer la conexión
@@ -31,7 +31,7 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
         usuario.setIdUsuario(resultSet.getInt("idUsuario"));
         usuario.setCorreo(resultSet.getString("Correo"));
         usuario.setNombre(resultSet.getString("Nombre"));
-        usuario.setContrasena(resultSet.getString("Contraseña"));
+        usuario.setContrasena(resultSet.getString("Contrasena"));
         return usuario;
     }
 

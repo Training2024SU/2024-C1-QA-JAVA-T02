@@ -34,6 +34,7 @@ public class ControladorCRUDUsuario {
         try {
             usuarioDAO.insertar(nuevoUsuario);
         } catch (SQLException e) {
+            System.out.println("Error JJ");
             VistaUtil.mostrarMensajeError();
         }
         sincronizarDatos();
