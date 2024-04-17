@@ -136,5 +136,13 @@ public class MenuMessage {
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 3);
     }
 
+    public static void superuserMenuMessage(User user) {
+        System.out.printf((MenuConstant.personalizedWelcomeSuperuserMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.readerMenuMessage) + "%n", 1);
+        System.out.printf((MenuConstant.assistantMenuMessage) + "%n", 2);
+        System.out.printf((MenuConstant.administratorMenuMessage) + "%n", 3);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 4);
+    }
 
 }

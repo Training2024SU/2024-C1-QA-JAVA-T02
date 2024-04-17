@@ -10,6 +10,7 @@ public class MenuConstant {
     public static String personalizedWelcomeNovelLoanMessage = "Welcome to Novel Loans Menu, %s";
     public static String personalizedWelcomeAuthorMessage = "Welcome to Author Menu, %s";
     public static String personalizedWelcomeUserMessage = "Welcome to User Menu, %s";
+    public static String personalizedWelcomeSuperuserMessage = "Welcome to Superuser Menu, %s";
 
 
     // Separators
@@ -88,8 +89,10 @@ public class MenuConstant {
     public static String updateUserMessage = "%s. Update user";
     public static String deleteUserMessage = "%s. Delete user";
 
-
-
+    // Super user options
+    public static String readerMenuMessage = "%s. Reader menu";
+    public static String assistantMenuMessage = "%s. Assistant menu";
+    public static String administratorMenuMessage = "%s. Administrator menu";
 
     // Exiting message
     public static String exitingMessage = "Bye...";
