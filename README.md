@@ -25,6 +25,7 @@ la empresa ha considera realizar unas mejoras:
 Valor agregado o bonus (opcional):
 11. Almacene simultaneamente en dos tipos de BD una relacional y otra no relacional 
 	(sugerencia MongoBD) la información de libros y prestamos.
+12. consultas a la BD no relacional con la información almacenada.
 
 Fecha de entrega: Viernes 8 PM
    
