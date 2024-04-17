@@ -4,7 +4,7 @@ En vista de su reciente éxito en el prototipo de la libreria Pingui
 la empresa ha considera realizar unas mejoras:
 
 1. Debe haber un super usuario que puede verificar todas las funcionalidades del sistema 
-	y debe poder crear los administradores, incluso debe tener la opción de restaur 
+	y debe poder crear los administradores, incluso debe tener la opción de restaurar 
 	una vez realice las pruebas de prestamo. 
 2. Todas las personas incluyendo los usuarios del sistema pueden cambiar su contraseña 
 	y modificar o agregar 2 campos (cada una de las tablas que contiene información 
