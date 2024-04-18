@@ -12,7 +12,7 @@ public class CrudProductoAsistente {
         this.mySqlOperation = mySqlOperation;
     }
 
-    private static final String INSERT_PRODUCT = "INSERT INTO bibliotecapingu.producto (titulo, tipo, autor, numero_pag, cant_ejemplares, cant_prestados) VALUES ('%s', '%s', '%s', %d, %d, %d)";
+    private static final String INSERT_PRODUCT = "INSERT INTO bibliotecapingu.producto (titulo, tipo, autor, magnitud, cant_ejemplares, cant_prestados) VALUES ('%s', '%s', '%s', %d, %d, %d)";
     private static final String DELETE_PRODUCT = "DELETE FROM bibliotecapingu.producto where titulo='%s'";
     private static final String OBTAIN_PRODUCT = "DELETE FROM bibliotecapingu.producto where titulo='%s'";
     private static final String UPDATE_PRODUCT = "UPDATE libro SET titulo = '%s', autor = '%s' area_conocimiento = '%s', nu_paginas = '%s', cantidad_ejemplares = '%s', cantidad_prestados = '%s', cantidad_disponibles = '%s', area_genero = '%s'  WHERE titulo = '%s'";
@@ -31,7 +31,7 @@ public class CrudProductoAsistente {
         String titulo = scanner.nextLine();
 
         // Solicita el tipo de producto al usuario
-        System.out.println("Inserte el tipo de producto: ");
+        System.out.println("Inserte el tipo de producto (LIBRO, NOVELA, CANCION, VIDEOGRABACION, ENSAYO): ");
         String tipo = scanner.nextLine();
 
         // Solicita el autor del producto al usuario
@@ -39,7 +39,7 @@ public class CrudProductoAsistente {
         String autor = scanner.nextLine();
 
         // Solicita el número de páginas del producto al usuario
-        System.out.println("Ingrese el número de páginas del producto: ");
+        System.out.println("Ingrese la magnitud del producto (PAGINAS, DURACION(segundos)): ");
         int numeroPaginas = Integer.parseInt(scanner.nextLine());
 
         // Solicita el número de ejemplares del producto al usuario

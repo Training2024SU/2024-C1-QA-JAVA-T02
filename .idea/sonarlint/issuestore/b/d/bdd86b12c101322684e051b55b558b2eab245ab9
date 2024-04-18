@@ -1,0 +1,15 @@
+
+“
+java:S1192l"RDefine a constant instead of duplicating this literal ", numeroPaginas='" 4 times.(¶ìÏÿýÿÿÿÿJ$d0002631-b5ff-4672-9e47-764c11a57cf7
+‡
+java:S1192t"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåý°J$3a9328fd-a133-423a-a0fe-be3dfc7ffd12
+Š
+java:S1192i"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„ÆþÿÿÿÿJ$6286fcf1-3121-47fc-9f98-199a4de4c6b8
+˜
+java:S1192o"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®ÁþÿÿÿÿJ$38ccf708-e3b0-4eb7-b720-24108df7d7b8
+†
+java:S1192k"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛJ$83a0e0b3-a450-48fc-8eb5-88d94da52479
+…
+java:S1192j"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹J$d22b77a5-2e1b-4f4a-9420-c564dbe8d2fc
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãþÿÿÿÿJ$006e89a9-9a1a-410a-8fe7-a13a814c935c
+|	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(‰ªº‰J$f103f42e-4987-4f5b-adcf-bfaf53d241d3

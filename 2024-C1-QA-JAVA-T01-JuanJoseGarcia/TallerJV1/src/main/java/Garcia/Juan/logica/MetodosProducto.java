@@ -65,10 +65,10 @@ public class MetodosProducto {
     public static void gestionarMaterial(MySqlOperation mySqlOperation){
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Por favor, digite el numero de opción:%n" +
-                "1. Agregar libro%n" +
-                "2. Eliminar libro%n" +
-                "3. Actualizar libro%n" +
-                "4. Obtener libro%n" +
+                "1. Agregar producto%n" +
+                "2. Eliminar producto%n" +
+                "3. Actualizar producto%n" +
+                "4. Obtener producto%n" +
                 "5. Salir%n");
         int seleccion = Integer.parseInt(scanner.nextLine());
         switch (seleccion) {

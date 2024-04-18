@@ -19,3 +19,17 @@ d
 4src/main/java/Garcia/Juan/logica/MetodosUsuario.java,e/8/e8ad773393a9ce90c43ecbb4916a89951f78e28d
 \
 ,src/main/java/Garcia/Juan/model/Usuario.java,8/2/82c34d928fe556ec8d63952842b501258e42ad29
+X
+(src/main/java/Garcia/Juan/util/Tipo.java,1/b/1b69a854e5857bbb9cfd69b95e64fa52ebf881a2
+e
+5src/main/java/Garcia/Juan/logica/MetodosProducto.java,8/b/8b11ec6570799ec21bfb6914fbe119c4b5011034
+]
+-src/main/java/Garcia/Juan/model/Producto.java,b/d/bdd86b12c101322684e051b55b558b2eab245ab9
+`
+0src/main/java/Garcia/Juan/CRUD/CrudPrestamo.java,c/7/c70e5ab6aae5c2a73f9cd87e82791de07549def2
+`
+0src/main/java/Garcia/Juan/CRUD/CrudProducto.java,1/e/1e46ea76d01dfffba3f6cb1275bbdf7d9f5dc6eb
+]
+-src/main/java/Garcia/Juan/model/Prestamo.java,4/b/4bb164c413f75b1ae7d95454f94a4b2f9379ce21
+c
+3src/main/java/Garcia/Juan/Exporter/CSVExporter.java,2/f/2f737500dbe998e142b8e03b1ec00cf683c64ea9
