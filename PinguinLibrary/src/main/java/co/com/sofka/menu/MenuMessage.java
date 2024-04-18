@@ -1,8 +1,6 @@
 package co.com.sofka.menu;
 
 import co.com.sofka.model.User;
-import co.com.sofka.utils.UserLogger;
-import org.apache.logging.log4j.core.Logger;
 
 
 public class MenuMessage {
@@ -22,7 +20,8 @@ public class MenuMessage {
         System.out.printf((MenuConstant.novelLoanOptions) + "%n", 4);
         System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 5);
         System.out.printf((MenuConstant.userOptionsMessage) + "%n", 6);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 7);
+        System.out.printf((MenuConstant.profileOptionsMessage) + "%n", 7);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 8);
     }
     public static void administratorBookMenuMessage(User user){
         System.out.printf((MenuConstant.personalizedWelcomeBookMessage) + "%n", user.getName());
@@ -96,7 +95,8 @@ public class MenuMessage {
         System.out.printf((MenuConstant.novelLoanOptions) + "%n", 3);
         System.out.printf((MenuConstant.novelLoanOptions) + "%n", 4);
         System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 5);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
+        System.out.printf((MenuConstant.profileOptionsMessage) + "%n", 6);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 7);
 
     }
     public static void readerMenuMessage(User user){
@@ -105,7 +105,8 @@ public class MenuMessage {
         System.out.printf((MenuConstant.bookOptionsMessage) + "%n", 1);
         System.out.printf((MenuConstant.novelOptionsMessage) + "%n", 2);
         System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 3);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 4);
+        System.out.printf((MenuConstant.profileOptionsMessage) + "%n", 4);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
     }
     public static void readerBookMenuMessage(User user){
         System.out.printf((MenuConstant.personalizedWelcomeBookMessage) + "%n", user.getName());
@@ -142,7 +143,16 @@ public class MenuMessage {
         System.out.printf((MenuConstant.readerMenuMessage) + "%n", 1);
         System.out.printf((MenuConstant.assistantMenuMessage) + "%n", 2);
         System.out.printf((MenuConstant.administratorMenuMessage) + "%n", 3);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 4);
+        System.out.printf((MenuConstant.createUserMessage) + "%n", 4);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
     }
 
+    public static void userProfileMenuMessage(User user) {
+        System.out.printf((MenuConstant.personalizedWelcomeProfileMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.updateProfileMessage) + "%n", 1);
+        System.out.printf((MenuConstant.changePasswordMessage) + "%n", 2);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 3);
+
+    }
 }

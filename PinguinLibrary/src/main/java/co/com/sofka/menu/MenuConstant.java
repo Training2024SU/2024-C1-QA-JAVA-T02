@@ -10,6 +10,7 @@ public class MenuConstant {
     public static String personalizedWelcomeNovelLoanMessage = "Welcome to Novel Loans Menu, %s";
     public static String personalizedWelcomeAuthorMessage = "Welcome to Author Menu, %s";
     public static String personalizedWelcomeUserMessage = "Welcome to User Menu, %s";
+    public static String personalizedWelcomeProfileMessage = "Welcome to Profile Menu, %s";
     public static String personalizedWelcomeSuperuserMessage = "Welcome to Superuser Menu, %s";
 
 
@@ -88,6 +89,12 @@ public class MenuConstant {
     public static String seeUserByEmailMessage = "%s. See user by email";
     public static String updateUserMessage = "%s. Update user";
     public static String deleteUserMessage = "%s. Delete user";
+
+    // User profile options
+    public static String profileOptionsMessage = "%s. Profile options";
+    public static String updateProfileMessage = "%s. Update profile";
+    public static String changePasswordMessage = "%s. Change password";
+
 
     // Super user options
     public static String readerMenuMessage = "%s. Reader menu";
