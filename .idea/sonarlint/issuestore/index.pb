@@ -49,3 +49,5 @@ f
 6src/main/java/Garcia/Juan/logica/prestamos_prueba.java,a/4/a4a9e09103951afe6ca0bb104553273de9c06022
 e
 5src/main/java/Garcia/Juan/logica/PrestamosPrueba.java,b/f/bf841564a1898a7170d44e2fa7ac523e300ab5ae
+]
+-src/main/java/Garcia/Juan/util/VistaUtil.java,4/6/461acfef627651018704a1547335c2f3d5140887
