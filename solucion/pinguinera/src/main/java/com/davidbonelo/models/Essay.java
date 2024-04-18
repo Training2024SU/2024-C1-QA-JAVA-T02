@@ -1,5 +1,8 @@
 package com.davidbonelo.models;
 
+import static com.davidbonelo.utils.UserInteractions.askNumber;
+import static com.davidbonelo.utils.UserInteractions.askText;
+
 public class Essay extends LibraryItem{
     private String supervisor;
     private String topic;
@@ -14,6 +17,15 @@ public class Essay extends LibraryItem{
         super(id, title, author, copies, copiesBorrowed);
         this.supervisor = supervisor;
         this.topic = topic;
+    }
+    public static Essay createEssayFromInput() {
+        String title = askText("Title: ");
+        String author = askText("Author: ");
+        int copies = askNumber("Copies: ");
+        int copiesBorrowed = askNumber("Copies borrowed: ");
+        String supervisor = askText("Supervisor: ");
+        String topic = askText("Topic: ");
+        return new Essay(title, author, copies, copiesBorrowed, supervisor, topic);
     }
 
     public String getSupervisor() {

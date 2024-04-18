@@ -70,39 +70,36 @@ CREATE TABLE IF NOT EXISTS borrowings_novels (
 -- =========================== EXTENSION ===========================
 
 CREATE TABLE IF NOT EXISTS videorecordings (
-    id INT NOT NULL,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     author VARCHAR(50) NOT NULL,
     duration TIME NOT NULL,
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
     format VARCHAR(45) NOT NULL,
-    is_deleted BOOLEAN DEFAULT 0,
-    PRIMARY KEY (id)
+    is_deleted BOOLEAN DEFAULT 0
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS songs (
-    id INT NOT NULL,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     recordLabel VARCHAR(50) NOT NULL,
     author VARCHAR(50) NOT NULL,
     duration TIME NOT NULL,
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
-    is_deleted  BOOLEAN DEFAULT 0,
-    PRIMARY KEY (id)
+    is_deleted  BOOLEAN DEFAULT 0
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS essays (
-    id INT NOT NULL,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(50) NOT NULL,
     author VARCHAR(50) NOT NULL,
     supervisor VARCHAR(50) NOT NULL,
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
     topic VARCHAR(50) NOT NULL,
-    is_deleted  BOOLEAN DEFAULT 0,
-    PRIMARY KEY (id)
+    is_deleted  BOOLEAN DEFAULT 0
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS borrowings_videos (
