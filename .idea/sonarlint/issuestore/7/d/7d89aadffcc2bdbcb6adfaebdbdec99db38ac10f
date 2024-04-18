@@ -1,11 +1,11 @@
 
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-3
-java:S1118"Hide this public constructor.(Ä˜´¬
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-@	java:S106`"+Replace this use of System.out by a logger.(¬ÊÖÜ
-I
-java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$431d9801-2707-44d3-b810-bf1c67cdcd33
+Y
+java:S1118"Hide this public constructor.(Ä˜´¬J$8cf7fb6a-01a4-40af-b5ab-cb507445ca91
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$49de40a9-ed6d-4f8f-a07f-b37dc2313c4d
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$baff0174-324b-4cdd-a50f-4f3687c615b8
+f	java:S106`"+Replace this use of System.out by a logger.(¬ÊÖÜJ$e6dab4fd-70c3-4978-a1ec-039bfab442b8
+o
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿJ$4dfd2fed-52a2-4eb3-9bb8-7e4077e98bf9
