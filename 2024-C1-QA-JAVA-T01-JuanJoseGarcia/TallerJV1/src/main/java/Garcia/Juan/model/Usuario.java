@@ -5,6 +5,8 @@ public class Usuario {
     private String nombre;
     private String contrasena;
     private String rol;
+    private String telefono; // Nuevo campo para el número de teléfono
+    private String direccion; // Nuevo campo para la dirección
 
     public Usuario(String correo, String nombre, String contrasena) {
         this.correo = correo;
@@ -13,7 +15,6 @@ public class Usuario {
     }
 
     public Usuario() {
-
     }
 
     public String getCorreo() {
@@ -48,6 +49,22 @@ public class Usuario {
         this.rol = rol;
     }
 
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -55,6 +72,8 @@ public class Usuario {
                 ", nombre='" + nombre + '\'' +
                 ", contrasena='" + contrasena + '\'' +
                 ", rol='" + rol + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", direccion='" + direccion + '\'' +
                 '}';
     }
 }

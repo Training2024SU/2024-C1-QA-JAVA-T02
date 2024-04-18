@@ -80,11 +80,22 @@ public class MetodosUsuario {
     public static List<String> registrarSuperUsuario(MySqlOperation mySqlOperation) throws SQLException, ParseException {
         List<String> credenciales = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Por favor ingrese un correo electrónico para el superusuario:");
         credenciales.add(scanner.nextLine());
+
         System.out.println("Por favor ingrese la contraseña para el superusuario:");
         credenciales.add(scanner.nextLine());
+
         System.out.println("Por favor ingrese el nombre del superusuario:");
+        credenciales.add(scanner.nextLine());
+
+        // Solicitar número de teléfono
+        System.out.println("Por favor ingrese su número de teléfono:");
+        credenciales.add(scanner.nextLine());
+
+        // Solicitar dirección
+        System.out.println("Por favor ingrese su dirección:");
         credenciales.add(scanner.nextLine());
 
         // Añadir el rol de SUPERUSUARIO a las credenciales
@@ -92,7 +103,7 @@ public class MetodosUsuario {
 
         // Verificar si el usuario ya está registrado
         if (checkUser(mySqlOperation, credenciales)) {
-            System.out.println("El superusuario ya está registrado");
+            System.out.println("El superusuario ya está registrado.");
         } else {
             // Insertar el superusuario en la base de datos
             insertUser(mySqlOperation, credenciales);
@@ -108,20 +119,29 @@ public class MetodosUsuario {
         List<String> credenciales = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        // Solicitar las credenciales del administrador
         System.out.println("Por favor ingrese un correo electrónico para el administrador:");
         credenciales.add(scanner.nextLine());
+
         System.out.println("Por favor ingrese la contraseña para el administrador:");
         credenciales.add(scanner.nextLine());
+
         System.out.println("Por favor ingrese el nombre del administrador:");
         credenciales.add(scanner.nextLine());
 
-        // Asignar rol de ADMINISTRADOR
+        // Solicitar número de teléfono
+        System.out.println("Por favor ingrese su número de teléfono:");
+        credenciales.add(scanner.nextLine());
+
+        // Solicitar dirección
+        System.out.println("Por favor ingrese su dirección:");
+        credenciales.add(scanner.nextLine());
+
+        // Asignar rol de ADMINISTRADOR a las credenciales
         credenciales.add("ADMINISTRADOR");
 
         // Verificar si el administrador ya está registrado
         if (checkUser(mySqlOperation, credenciales)) {
-            System.out.println("El administrador ya está registrado");
+            System.out.println("El administrador ya está registrado.");
         } else {
             // Insertar el administrador en la base de datos
             insertUser(mySqlOperation, credenciales);
@@ -132,5 +152,79 @@ public class MetodosUsuario {
 
         return credenciales;
     }
+
+
+    public static List<String> crearLector(MySqlOperation mySqlOperation) throws SQLException, ParseException {
+        List<String> credenciales = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor ingrese un correo electrónico para el lector:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese la contraseña:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su nombre:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su número de teléfono:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su dirección:");
+        credenciales.add(scanner.nextLine());
+
+        // Asignar el rol de LECTOR
+        credenciales.add("LECTOR");
+
+        // Verificar si el usuario ya está registrado
+        if (checkUser(mySqlOperation, credenciales)) {
+            System.out.println("El lector ya está registrado.");
+        } else {
+            // Insertar el lector en la base de datos
+            insertUser(mySqlOperation, credenciales);
+            System.out.println("Lector creado exitosamente.");
+            // Iniciar sesión automáticamente
+            usuarioIniciado(mySqlOperation, credenciales);
+        }
+
+        return credenciales;
+    }
+
+    public static List<String> crearAsistente(MySqlOperation mySqlOperation) throws SQLException, ParseException {
+        List<String> credenciales = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor ingrese un correo electrónico para el asistente:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese la contraseña:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su nombre:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su número de teléfono:");
+        credenciales.add(scanner.nextLine());
+
+        System.out.println("Por favor ingrese su dirección:");
+        credenciales.add(scanner.nextLine());
+
+        // Asignar el rol de ASISTENTE
+        credenciales.add("ASISTENTE");
+
+        // Verificar si el usuario ya está registrado
+        if (checkUser(mySqlOperation, credenciales)) {
+            System.out.println("El asistente ya está registrado.");
+        } else {
+            // Insertar el asistente en la base de datos
+            insertUser(mySqlOperation, credenciales);
+            System.out.println("Asistente creado exitosamente.");
+            // Iniciar sesión automáticamente
+            usuarioIniciado(mySqlOperation, credenciales);
+        }
+
+        return credenciales;
+    }
+
 
 }
