@@ -23,6 +23,8 @@ public class CrudProducto {
     private static final String RESTAR_PRESTADOS = "UPDATE bibliotecaPingu.producto" +
             "    SET cant_prestados = cant_prestados - 1" +
             "    WHERE titulo = '%s'";
+    private static final String GET_ALL_PRODUCTS = "SELECT titulo, tipo, autor, numero_pag, cant_ejemplares, cant_prestados, cant_disponibles " +
+            "FROM bibliotecapingu.producto";
 
     public static List<Producto> getProductos(MySqlOperation mySqlOperation){
         List<Producto> productos = new ArrayList<>();
@@ -83,5 +85,36 @@ public class CrudProducto {
         }
     }
 
+    public static List<Producto> getAllProducts(MySqlOperation mySqlOperation) {
+        List<Producto> productos = new ArrayList<>();
+        try {
+            // Establecer la consulta SQL
+            mySqlOperation.setSqlStatement(GET_ALL_PRODUCTS);
+            // Ejecutar la consulta
+            mySqlOperation.executeSqlStatement();
+            // Obtener el conjunto de resultados
+            ResultSet resultSet = mySqlOperation.getResulset();
+
+            // Iterar sobre los resultados y crear objetos Producto
+            while (resultSet.next()) {
+                Producto producto = new Producto();
+                producto.setTitulo(resultSet.getString("titulo"));
+                producto.setTipo(resultSet.getString("tipo"));
+                producto.setAutor(resultSet.getString("autor"));
+                producto.setNumeroPaginas(resultSet.getString("numero_pag"));
+                producto.setCantidadEjemplares(resultSet.getInt("cant_ejemplares"));
+                producto.setCantidadPrestados(resultSet.getInt("cant_prestados"));
+                producto.setCantidadDisponibles(resultSet.getInt("cant_disponibles"));
+
+                // Agregar el producto a la lista
+                productos.add(producto);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al obtener los productos: " + e.getMessage());
+        }
+
+        // Devolver la lista de productos
+        return productos;
+    }
 
 }

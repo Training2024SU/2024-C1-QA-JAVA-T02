@@ -33,3 +33,11 @@ e
 -src/main/java/Garcia/Juan/model/Prestamo.java,4/b/4bb164c413f75b1ae7d95454f94a4b2f9379ce21
 c
 3src/main/java/Garcia/Juan/Exporter/CSVExporter.java,2/f/2f737500dbe998e142b8e03b1ec00cf683c64ea9
+;
+gradlew.bat,2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3
+C
+settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850
+@
+build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d
+<
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
