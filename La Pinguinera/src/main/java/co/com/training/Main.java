@@ -3,7 +3,10 @@ package co.com.training;
 import co.com.training.integration.database.mysql.MySqlOperation;
 import co.com.training.logica.CrudLibro;
 import co.com.training.logica.CrudNovela;
+import co.com.training.logica.util.InputOutputUtil;
+import co.com.training.modelo.Libro;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -23,7 +26,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         openConnection();
-//        insertarLibroEnBd(preguntarAlUsuario());
+        insertarLibroEnBd(preguntarAlUsuario());
         selectAllFromLibro();
         closeConnection();
 
@@ -39,6 +42,7 @@ public class Main {
 
     private static void insertarLibroEnBd(int cantidadLibros) {
         for (int i = 0; i < cantidadLibros; i++) {
+            System.out.println("Libro: " + i+1 + "\n");
             insertarLibro();
         }
     }
@@ -59,7 +63,16 @@ public class Main {
     }
 
     public static void insertarLibro() {
-        mySqlOperation.setSqlStatement(INSERT_LIBRO);
+        Libro libro = InputOutputUtil.ingresarLibro();
+        String sqlStatement = String.format(INSERT_LIBRO,
+                libro.getTituloLibro(),
+                libro.getAutor(),
+                libro.getAreaConocimiento(),
+                libro.getNumeroPaginas(),
+                libro.getCantidadEjemplares(),
+                libro.getCantidadPrestados()
+                );
+        mySqlOperation.setSqlStatement(sqlStatement);
         mySqlOperation.executeSqlStatementVoid();
     }
 
