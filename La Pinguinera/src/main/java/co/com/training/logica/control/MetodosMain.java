@@ -101,22 +101,18 @@ public class MetodosMain {
         }
     }
 
-    public void eliminarLibroPorTitulo() {
+    public void eliminarLibroPorTitulo() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese el título del libro a eliminar:");
         String titulo = scanner.nextLine();
 
-        try {
-            // Eliminar el libro por título
-            boolean eliminado = crudLibro.
-                    eliminarLibroPorTitulo(titulo);
-            if (eliminado) {
-                System.out.println("Libro eliminado correctamente.");
-            } else {
-                System.out.println("El libro no existe en la base de datos.");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al eliminar el libro: " + e.getMessage());
+        // Eliminar el libro por título
+        boolean eliminado = crudLibro.
+                eliminarLibroPorTitulo(titulo);
+        if (eliminado) {
+            System.out.println("Libro eliminado correctamente.");
+        } else {
+            System.out.println("El libro no existe en la base de datos.");
         }
     }
 }

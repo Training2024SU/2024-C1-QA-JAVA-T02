@@ -144,15 +144,22 @@ public class MySqlOperation implements DataBase {
 
     }
 
-    public String printColumnValue() throws SQLException {
-        int totalColumnNumber = 3;
-        String columnValue="";
-        while (resultSet.next()) {
-            columnValue = resultSet.getString(totalColumnNumber);
-            System.out.print(columnValue);
-            System.out.println("");
+    public void printColumnValue() throws SQLException {
+
+        ResultSetMetaData metaData = resultSet.getMetaData();
+        int columnCount = metaData.getColumnCount();
+
+        for (int i = 1; i <= columnCount; i++) {
+            System.out.print(metaData.getColumnName(i) + "\t\t");
         }
-        return columnValue;
+        System.out.println();
+
+        while (resultSet.next()) {
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.print(resultSet.getString(i) + "\t\t");
+            }
+            System.out.println(); // New line after printing each row
+        }
     }
 
     public Connection getConnection() {

@@ -3,13 +3,15 @@ package co.com.training.logica;
 import co.com.training.integration.database.mysql.MySqlOperation;
 import co.com.training.modelo.Prestamo;
 import co.com.training.util.enums.EstadoPrestamo;
+import co.com.training.util.enums.TipoPublicacion;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public class CrudPrestamo {
@@ -20,7 +22,7 @@ public class CrudPrestamo {
         this.mySqlOperation = mySqlOperation;
     }
 
-    public void realizarPrestamo(String correoUsuario, List<String> titulosLibros, List<String> titulosNovelas, String fechaPrestamo, String fechaDevolucion) throws SQLException {
+    public void realizarPrestamo(String correoUsuario, List<String> titulosLibros, List<String> titulosNovelas, Date fechaPrestamo, Date fechaDevolucion, TipoPublicacion tipoPublicacion) throws SQLException {
         // Confirmación del usuario
         // Aquí deberías implementar la lógica para pedir la confirmación al usuario
 
@@ -34,7 +36,7 @@ public class CrudPrestamo {
         }
 
         // Registrar el préstamo en la base de datos
-        insertarPrestamo(correoUsuario, titulosLibros, titulosNovelas, fechaPrestamo, fechaDevolucion);
+        insertarPrestamo(correoUsuario, titulosLibros, titulosNovelas, fechaPrestamo, fechaDevolucion, tipoPublicacion);
     }
 
     private void descontarUnidadDisponibleLibro(String tituloLibro) throws SQLException {
@@ -63,7 +65,7 @@ public class CrudPrestamo {
         }
     }
 
-    private void insertarPrestamo(String correoUsuario, List<String> titulosLibros, List<String> titulosNovelas, Date fechaPrestamo, Date fechaDevolucion) throws SQLException {
+    private void insertarPrestamo(String correoUsuario, List<String> titulosLibros, List<String> titulosNovelas, Date fechaPrestamo, Date fechaDevolucion, TipoPublicacion tipoPublicacion) throws SQLException {
         String sql = "INSERT INTO prestamo (correoUsuario, tituloLibro, TipoPublicacion tipoPublicacion, fechaPrestamo, fechaDevolucion) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = mySqlOperation.getConnection();
@@ -71,7 +73,7 @@ public class CrudPrestamo {
             for (String tituloLibro : titulosLibros) {
                 statement.setString(1, correoUsuario);
                 statement.setString(2, tituloLibro);
-                statement.setString(2, tipoPublicacion);
+                statement.setString(2, String.valueOf(tipoPublicacion));
                 statement.setString(4, "Libro");
                 statement.setDate(5, fechaPrestamo);
                 statement.setDate(6, fechaDevolucion);
@@ -81,8 +83,8 @@ public class CrudPrestamo {
                 statement.setString(1, correoUsuario);
                 statement.setString(2, tituloNovela);
                 statement.setString(3, "Novela");
-                statement.setString(4, fechaPrestamo);
-                statement.setString(5, fechaDevolucion);
+                statement.setString(4, String.valueOf(fechaPrestamo));
+                statement.setString(5, String.valueOf(fechaDevolucion));
                 statement.addBatch();
             }
             statement.executeBatch();
@@ -101,12 +103,16 @@ public class CrudPrestamo {
             statement.setString(1, correoUsuario);
             try (ResultSet resultSet = statement.executeQuery()) {
                 while (resultSet.next()) {
-                    String titulo = resultSet.getString("tituloLibro");
-                    String tipo = resultSet.getString("tipo");
+                    int id = resultSet.getInt("idPrestamo");
+                    String correo = resultSet.getString("correoUsuario");
+                    TipoPublicacion tipo = TipoPublicacion.valueOf(resultSet.getString("tipoPublicacion"));
                     String fechaPrestamo = resultSet.getString("fechaPrestamo");
                     String fechaDevolucion = resultSet.getString("fechaDevolucion");
+                    EstadoPrestamo estado = EstadoPrestamo.valueOf(resultSet.getString("estadoPrestamo"));
+                    String tituloLibro = resultSet.getString("tituloLibro");
+                    String tituloNovela = resultSet.getString("tituloNovela");
 
-                    Prestamo prestamo = new Prestamo(titulo, tipo, fechaPrestamo, fechaDevolucion);
+                    Prestamo prestamo = new Prestamo(id, correo, tipo, Date.valueOf(fechaPrestamo), Date.valueOf(fechaDevolucion), estado, tituloLibro, tituloNovela);
                     prestamos.add(prestamo);
                 }
             }

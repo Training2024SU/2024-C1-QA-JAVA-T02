@@ -97,4 +97,8 @@ public class CrudLibro {
             throw e; // Lanzar la excepción nuevamente para que sea manejada en otro lugar si es necesario
         }
     }
+
+    public boolean eliminarLibroPorTitulo(String titulo) {
+        return true;
+    }
 }

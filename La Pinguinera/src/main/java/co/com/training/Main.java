@@ -13,7 +13,7 @@ public class Main {
 
     private static final String DATA_BASE_NAME = "la_pinguinera_biblioteca";
     private static final String USER = "root";
-    private static final String PASSWORD = "Janet1976";
+    private static final String PASSWORD = "0000";
 
     private static final String SELECT_ALL_FROM_LIBRO = String.format("select * from %s.libro", DATA_BASE_NAME);
     private static final MySqlOperation mySqlOperation = new MySqlOperation();
@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         openConnection();
-        insertarLibroEnBd(preguntarAlUsuario());
+//        insertarLibroEnBd(preguntarAlUsuario());
         selectAllFromLibro();
         closeConnection();
 

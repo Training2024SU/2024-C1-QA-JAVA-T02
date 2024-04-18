@@ -12,21 +12,23 @@ public class Prestamo {
     private Date fechaPrestamo;
     private Date fechaDevolucion;
     private EstadoPrestamo estadoPrestamo;
-    private String tituloPublicacion;
+//    private String tituloPublicacion;
     private String tituloLibro;
     private String tituloNovela;
 
-    public Prestamo(int idPrestamo, String correoUsuario, TipoPublicacion tipoPublicacion, Date fechaPrestamo, Date fechaDevolucion, EstadoPrestamo estadoPrestamo, String tituloPublicacion, String tituloLibro, String tituloNovela) {
+    public Prestamo(int idPrestamo, String correoUsuario, TipoPublicacion tipoPublicacion, Date fechaPrestamo, Date fechaDevolucion, EstadoPrestamo estadoPrestamo, String tituloLibro, String tituloNovela) {
         this.idPrestamo = idPrestamo;
         this.correoUsuario = correoUsuario;
         this.tipoPublicacion = tipoPublicacion;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = fechaDevolucion;
         this.estadoPrestamo = estadoPrestamo;
-        this.tituloPublicacion = tituloPublicacion;
+//        this.tituloPublicacion = tituloPublicacion;
         this.tituloLibro = tituloLibro;
         this.tituloNovela = tituloNovela;
     }
+
+
 
     public int getIdPrestamo() {
         return idPrestamo;
@@ -76,13 +78,13 @@ public class Prestamo {
         this.estadoPrestamo = estadoPrestamo;
     }
 
-    public String getTituloPublicacion() {
-        return tituloPublicacion;
-    }
-
-    public void setTituloPublicacion(String tituloPublicacion) {
-        this.tituloPublicacion = tituloPublicacion;
-    }
+//    public String getTituloPublicacion() {
+//        return tituloPublicacion;
+//    }
+//
+//    public void setTituloPublicacion(String tituloPublicacion) {
+//        this.tituloPublicacion = tituloPublicacion;
+//    }
 
     public String getTituloLibro() {
         return tituloLibro;
