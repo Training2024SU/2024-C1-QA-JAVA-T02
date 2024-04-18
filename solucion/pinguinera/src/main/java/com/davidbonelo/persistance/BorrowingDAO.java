@@ -123,7 +123,7 @@ public class BorrowingDAO {
     }
 
     /**
-     * Fills the intermediate tables for the many to many relations
+     * Fills the intermediate tables for the many-to-many relations
      */
     private void saveBorrowedItems(Borrowing borrowing) throws SQLException {
         String sqlB = "INSERT INTO borrowings_books (borrowing_id, book_id) VALUES (?, ?)";

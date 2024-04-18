@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS videorecordings (
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
     format VARCHAR(45) NOT NULL,
-    is_deleted TINYINT(1) NULL,
+    is_deleted BOOLEAN DEFAULT 0,
     PRIMARY KEY (id)
 ) ENGINE = InnoDB;
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS songs (
     duration TIME NOT NULL,
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
-    is_deleted TINYINT(1) NULL,
+    is_deleted  BOOLEAN DEFAULT 0,
     PRIMARY KEY (id)
 ) ENGINE = InnoDB;
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS essays (
     copies INT NOT NULL,
     copies_borrowed INT NOT NULL,
     topic VARCHAR(50) NOT NULL,
-    is_deleted TINYINT(1) NULL,
+    is_deleted  BOOLEAN DEFAULT 0,
     PRIMARY KEY (id)
 ) ENGINE = InnoDB;
 
