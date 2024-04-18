@@ -83,4 +83,16 @@ public class ConstantesMenu {
 
     public static final String MSN_MODOSUPERADMINDES="6. SALIR MODO SUPER ADMIN";
 
+    public static final String MSN_CREARCANCION = "9. Crear Canción";
+    public static final String MSN_LISTARCANCIONES = "10. Listar Canciones";
+
+    public static final String MSN_CREARVIDEOGRABACION = "11. Crear Videograbación";
+    public static final String MSN_LISTARVIDEOGRABACIONES = "12. Listar Videograbaciones";
+
+    public static final String MSN_CREARTESIS = "13. Crear Tesis";
+    public static final String MSN_LISTARTESIS = "14. Listar Tesis";
+
+    public static final String MSN_FECHA_LANZAMIENTO = "Ingreso de fecha de lanzamiento (formato: yyyy-MM-dd):";
+    public static final String MSN_LETRA = "Ingreso de letra de la canción:";
+
 }

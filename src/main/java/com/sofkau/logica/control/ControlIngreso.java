@@ -2,6 +2,7 @@ package com.sofkau.logica.control;
 
 import com.sofkau.dialogo.Menu;
 import com.sofkau.logica.Autor.AutorOperaciones;
+import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.empleado.EmpleadoOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
@@ -9,6 +10,7 @@ import com.sofkau.logica.usuario.UsuarioOperaciones;
 import com.sofkau.util.generar.GenerarAutores;
 import com.sofkau.util.generar.GenerarEmpleadoSuperAdmin;
 
+import java.text.SimpleDateFormat;
 import java.util.logging.Logger;
 
 import java.util.Scanner;
@@ -30,8 +32,11 @@ public class ControlIngreso {
 
     protected static PrestamoOperaciones prestamoOp = new PrestamoOperaciones();
 
+    protected static CancionOperaciones cancionOperaciones = new CancionOperaciones();
+
     protected static final Logger logger = Logger.getLogger(ControlIngreso.class.getName());
 
+    protected static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 
     protected static int option = 0;
 

@@ -21,4 +21,6 @@ public class ConstantesInserccionBd {
 
     public static String MSN_PRESTAMOACTUALIZADO ="El prestamo se ha actualizado correctamente";
 
+    public static String MSN_CREARCANCION ="Se ha creado la cancion correctamente";
+
 }

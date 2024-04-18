@@ -42,7 +42,12 @@ public class Menu {
         System.out.println(MSN_LIBRODEV);
         System.out.println(MSN_LISTARPRESTAMOS);
         System.out.println(MSN_INGRESOAU);
-
+        System.out.println(ConstantesMenu.MSN_CREARCANCION);
+        System.out.println(ConstantesMenu.MSN_LISTARCANCIONES);
+        System.out.println(ConstantesMenu.MSN_CREARVIDEOGRABACION);
+        System.out.println(ConstantesMenu.MSN_LISTARVIDEOGRABACIONES);
+        System.out.println(ConstantesMenu.MSN_CREARTESIS);
+        System.out.println(ConstantesMenu.MSN_LISTARTESIS);
     }
 
     public static void prestamo(){
@@ -154,6 +159,13 @@ public class Menu {
         }
     }
 
+    public static void ingresoLetra(){
+        System.out.println(MSN_LETRA);
+    }
+
+    public static void fechaLanzamiento(){
+        System.out.println(MSN_FECHA_LANZAMIENTO);
+    }
 
 
 

@@ -1,13 +1,13 @@
 package com.sofkau.logica.control;
 
 import com.sofkau.dialogo.Menu;
-import com.sofkau.model.AreaGenero;
-import com.sofkau.model.Autor;
-import com.sofkau.model.EdadSugerida;
-import com.sofkau.model.Publicacion;
+import com.sofkau.model.*;
 import com.sofkau.util.CommonOperacion.GenerateUniqueId;
 import com.sofkau.util.enums.EstadoPrestamo;
 import com.sofkau.util.enums.TipoPublicacion;
+
+import java.text.ParseException;
+import java.util.Date;
 
 import static com.sofkau.logica.control.ControlIngreso.*;
 
@@ -134,6 +134,40 @@ public class MenuAsistente {
                 Menu.ingresoAutor();
                 String nombre = scannerGlobal.nextLine();
                 autorOp.registrarAutor(new Autor(GenerateUniqueId.generateID(),nombre));
+            }case 9 ->{
+                Menu.ingresoTitulo();
+                String titulo = scannerGlobal.nextLine();
+                Menu.ingresoGenero();
+                String genero = scannerGlobal.nextLine();
+                Menu.ingresoAutor();
+                String nombreAutor = scannerGlobal.nextLine();
+                Menu.fechaLanzamiento();
+                String fecha = scannerGlobal.nextLine();
+                Date fechaLanzamiento = null;
+                try {
+                    fechaLanzamiento = formato.parse(fecha);
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+                Menu.ingresoLetra();
+                String letra = scannerGlobal.nextLine();
+                Menu.ingresoCantEjemplar();
+                int cantEjemplar = scannerGlobal.nextInt();
+                Menu.ingresoCantPrestado();
+                int cantPres = scannerGlobal.nextInt();
+
+                cancionOperaciones.crearCancion(new Cancion(titulo,genero,nombreAutor,letra,fechaLanzamiento,cantEjemplar,cantPres));
+
+            }case 10 ->{
+
+            }case 11 ->{
+
+            }case 12 ->{
+
+            }case 13 ->{
+
+            }case 14 ->{
+
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

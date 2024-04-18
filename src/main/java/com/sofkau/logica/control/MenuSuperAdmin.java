@@ -2,6 +2,7 @@ package com.sofkau.logica.control;
 
 import com.sofkau.dialogo.Menu;
 import com.sofkau.logica.Autor.AutorOperaciones;
+import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.empleado.EmpleadoOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
@@ -81,6 +82,9 @@ public class MenuSuperAdmin {
         publicacionOp = new PublicacionOperaciones();
 
         prestamoOp = new PrestamoOperaciones();
+
+        cancionOperaciones = new CancionOperaciones();
+
     }
 
 }

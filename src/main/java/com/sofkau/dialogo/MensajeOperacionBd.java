@@ -55,6 +55,9 @@ public class MensajeOperacionBd {
         logger.info(ConstantesInserccionBd.MSN_PRESTAMOACTUALIZADO);
     }
 
+    public static void crearCancion() {
+        logger.info(ConstantesInserccionBd.MSN_CREARCANCION);
+    }
 
 
 
