@@ -64,12 +64,14 @@ public class Prestamo {
 
     @Override
     public String toString() {
-        return "Prestamo{" +
-                "id='" + id + '\'' +
-                ", estado='" + estado + '\'' +
-                ", fechaSalida=" + fechaSalida +
-                ", fechaDevolucion=" + fechaDevolucion +
-                ", correoUsuario='" + correoUsuario + '\'' +
-                '}';
+        return String.format(
+                "%-10s %-10s %-15s %-15s %-20s",
+                id,
+                estado,
+                fechaSalida != null ? fechaSalida.toString() : "N/A",
+                fechaDevolucion != null ? fechaDevolucion.toString() : "N/A",
+                correoUsuario
+        );
     }
+
 }

@@ -1,24 +1,17 @@
 
-a
-java:S1700"Rename field "prestamosPrueba"(ÑôÀœ8‰¶™ûî1J$b923db96-b00a-4155-a4ef-fac17e404236
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8Š¶™ûî1J$117799fd-80a6-4e6a-929b-750bccb4222c
-}
-java:S1118
-":Add a private constructor to hide the implicit public one.(“üê‰8¥¶™ûî1J$68757fc1-5359-485a-ac84-7d60f6875087
-m	java:S106$"+Replace this use of System.out by a logger.(öû˜µ8«¶™ûî1J$58687f7c-fc55-4c2d-928a-487d83339e86
-m	java:S106&"+Replace this use of System.out by a logger.(¦ÏÀº8¬¶™ûî1J$923f15fe-baab-491c-85d4-c8442c4237c4
-r	java:S106("+Replace this use of System.out by a logger.(Š»áÓÿÿÿÿÿ8¬¶™ûî1J$6777ada1-0a32-4368-be5c-01e9fde04319
-l	java:S106/"+Replace this use of System.out by a logger.(ÔöÛW8¬¶™ûî1J$a768aaa2-5df7-44f1-af46-4d1727c9f33d
-r	java:S1061"+Replace this use of System.out by a logger.(ªà£™ıÿÿÿÿ8­¶™ûî1J$051deb30-6db2-468b-b53e-d290468d1e32
-r	java:S1063"+Replace this use of System.out by a logger.(àÚ¥µşÿÿÿÿ8­¶™ûî1J$531af921-6437-4a1f-a3cb-a49e12ed6b71
-r	java:S106B"+Replace this use of System.out by a logger.(ˆèÎŸüÿÿÿÿ8®¶™ûî1J$be476d5c-a772-450c-b9a3-64726d54b35f
-m	java:S106G"+Replace this use of System.out by a logger.(åŸÖì8¯¶™ûî1J$00f7879d-2d4a-42a9-9d92-907907993267
-m	java:S106I"+Replace this use of System.out by a logger.(±‚¡8¯¶™ûî1J$32533711-0013-48b5-b8b7-9c731f97d84a
-m	java:S106S"+Replace this use of System.out by a logger.(©Š¬â8²¶™ûî1J$2550951a-3b18-453e-8ad0-fbd4c9a5e08d
-r	java:S106V"+Replace this use of System.out by a logger.(ÛÕÃºüÿÿÿÿ8²¶™ûî1J$c72f8e0b-7cc4-45b8-adfc-1d9acd189e8e
-m	java:S106`"+Replace this use of System.out by a logger.(âşŠ™8²¶™ûî1J$0d79c664-bfa2-40c8-a569-4097c9dfaf7f
-r	java:S106a"+Replace this use of System.out by a logger.(¾Íƒüşÿÿÿÿ8²¶™ûî1J$228e3914-f81a-4adc-a5e9-2ad7aef7e04e
-m	java:S106b"+Replace this use of System.out by a logger.(‘ÜÖ­8²¶™ûî1J$a6737db0-1072-4a79-b9d2-79c628ec6620
-m	java:S106c"+Replace this use of System.out by a logger.(î‰šè8³¶™ûî1J$a5e45026-a1f7-4685-bf05-be61cd079f29
-L	java:S106d"+Replace this use of System.out by a logger.(òÛÖ™ùÿÿÿÿ8ä™½ûî1
-F	java:S106w"+Replace this use of System.out by a logger.(åóèK8å™½ûî1
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8é½üî1J$ce14a120-9a34-4a0f-9e42-fa209c24cc95
+r	java:S106"+Replace this use of System.out by a logger.(ãçÇäüÿÿÿÿ8½üî1J$371c5153-565c-4064-862e-aa31e985ec29
+m	java:S106"+Replace this use of System.out by a logger.(ÑÚŠù8½üî1J$988c32b6-f60e-434c-bea8-3d913afbd97e
+m	java:S106"+Replace this use of System.out by a logger.(œ©Úí8‚½üî1J$230935fd-6a50-4f75-bde9-cf3416c0ad0c
+m	java:S106"+Replace this use of System.out by a logger.(‰ÊØ¥8ƒ½üî1J$fb60b1af-50cc-47d0-afa0-81d0577d03d0
+m	java:S106"+Replace this use of System.out by a logger.(İ…®8ƒ½üî1J$314ef87a-085c-42ad-b5fb-62342f023484
+m	java:S106$"+Replace this use of System.out by a logger.(ÔÊ ©8ƒ½üî1J$36b4e099-5ac8-4dfe-a2a9-2dc0c931b955
+m	java:S106)"+Replace this use of System.out by a logger.(Üû‡8ƒ½üî1J$b644f824-3777-4f6c-a6d1-354250c7aec4
+r	java:S106*"+Replace this use of System.out by a logger.(²±‘´úÿÿÿÿ8ƒ½üî1J$71ab6839-7ccf-4294-8ba6-c1002db5059c
+r	java:S106/"+Replace this use of System.out by a logger.(“«İ±ıÿÿÿÿ8„½üî1J$f82bfa6f-7f5e-4ba3-b279-fb1e79193466
+m	java:S1067"+Replace this use of System.out by a logger.(âşŠ™8¬õÃüî1J$aef1505a-04ee-47d8-9f58-75648ae556af
+r	java:S1068"+Replace this use of System.out by a logger.(¾Íƒüşÿÿÿÿ8¬õÃüî1J$5e864869-43fe-43ab-9a89-cc585491f7e0
+m	java:S1069"+Replace this use of System.out by a logger.(‘ÜÖ­8¬õÃüî1J$80680cd3-46ba-4ee0-af41-9f066e59145d
+r	java:S106:"+Replace this use of System.out by a logger.(†…œ–üÿÿÿÿ8­õÃüî1J$c70253bc-51d2-40bb-97ed-5fc79c43773a
+r	java:S106;"+Replace this use of System.out by a logger.(òÛÖ™ùÿÿÿÿ8­õÃüî1J$115b38de-aad7-4fd9-b4b6-69ce48b82664
+m	java:S106N"+Replace this use of System.out by a logger.(ùğ8®õÃüî1J$356b9ca2-0b9d-495a-bf7d-e1c5f4ea17be

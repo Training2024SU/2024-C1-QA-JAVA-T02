@@ -1,93 +1,52 @@
 package Garcia.Juan.logica;
 
-import Garcia.Juan.model.Producto;
-import Garcia.Juan.model.Usuario;
+import Garcia.Juan.model.Prestamo;
+import Garcia.Juan.util.EstadoPrestamo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
 public class PrestamosPrueba {
 
-    // Lista para almacenar los préstamos de prueba
-    private static List<PrestamoPrueba> prestamosPrueba = new ArrayList<>();
+    private static List<Prestamo> prestamos = new ArrayList<>();
 
-    // Clase anidada para representar un préstamo de prueba
-    private static class PrestamoPrueba {
-        private Usuario usuario;
-        private Producto producto;
-
-        public PrestamoPrueba(Usuario usuario, Producto producto) {
-            this.usuario = usuario;
-            this.producto = producto;
-        }
-
-        @Override
-        public String toString() {
-            return "PrestamoPrueba{usuario=" + usuario.getNombre() + ", producto=" + producto.toStringPrestamo() + "}";
-        }
-    }
-
-    // Método para realizar un préstamo de prueba
     public static void realizarPrestamoPrueba() {
         Scanner scanner = new Scanner(System.in);
 
-        // Solicita información del usuario
-        System.out.println("Ingrese el nombre del usuario que realizará el préstamo de prueba:");
-        String nombreUsuario = scanner.nextLine();
-        System.out.println("Ingrese el correo electrónico del usuario:");
+        System.out.println("Ingrese el ID del préstamo:");
+        String id = scanner.nextLine();
+
+        System.out.println("Ingrese el correo del usuario:");
         String correoUsuario = scanner.nextLine();
-        System.out.println("Ingrese la contraseña del usuario:");
-        String contrasena = scanner.nextLine();
 
-        // Crear un objeto Usuario con la información proporcionada
-        Usuario usuario = new Usuario(correoUsuario, nombreUsuario, contrasena);
+        System.out.println("Seleccione el estado del préstamo (SOLICITADO, REALIZADO, FINALIZADO):");
+        EstadoPrestamo estado = EstadoPrestamo.valueOf(scanner.nextLine().toUpperCase());
+        String estadoString = estado.toString();
 
-        // Solicita información del producto a prestar
-        System.out.println("Ingrese el título del producto a prestar:");
-        String tituloProducto = scanner.nextLine();
-        System.out.println("Ingrese el tipo de producto (por ejemplo, Libro, Revista, etc.):");
-        String tipoProducto = scanner.nextLine();
-        System.out.println("Ingrese el autor del producto:");
-        String autorProducto = scanner.nextLine();
+        System.out.println("Ingrese la fecha de salida (YYYY-MM-DD):");
+        Date fechaSalida = java.sql.Date.valueOf(scanner.nextLine());
 
-        // Crear un objeto Producto con la información proporcionada
-        Producto producto = new Producto();
-        producto.setTitulo(tituloProducto);
-        producto.setTipo(tipoProducto);
-        producto.setAutor(autorProducto);
-        producto.setCantidadDisponibles(1); // Asumimos que hay al menos un ejemplar disponible
+        System.out.println("Ingrese la fecha de devolución (YYYY-MM-DD):");
+        Date fechaDevolucion = java.sql.Date.valueOf(scanner.nextLine());
 
-        // Crear un nuevo préstamo de prueba
-        PrestamoPrueba prestamoPrueba = new PrestamoPrueba(usuario, producto);
-
-        // Agregar el préstamo de prueba a la lista
-        prestamosPrueba.add(prestamoPrueba);
-        System.out.println("Préstamo de prueba realizado exitosamente.");
+        Prestamo prestamo = new Prestamo(id, estadoString, fechaSalida, fechaDevolucion, correoUsuario);
+        prestamos.add(prestamo);
+        System.out.println("Préstamo de prueba realizado.");
     }
 
-    // Método para consultar los préstamos de prueba
+
     public static void consultarPrestamosPrueba() {
-        System.out.println("Lista de préstamos de prueba:");
-        for (PrestamoPrueba prestamo : prestamosPrueba) {
-            System.out.println(prestamo);
-        }
+        System.out.println("Préstamos de prueba:");
+        prestamos.forEach(System.out::println);
     }
 
-    // Método para eliminar todos los préstamos de prueba
-    public static void eliminarPrestamoPrueba() {
-        // Verifica si la lista de préstamos de prueba no está vacía
-        if (!prestamosPrueba.isEmpty()) {
-            // Vacía la lista de préstamos de prueba
-            prestamosPrueba.clear();
-            System.out.println("Todos los préstamos de prueba han sido eliminados exitosamente.");
-        } else {
-            // Si la lista ya está vacía, muestra un mensaje
-            System.out.println("No hay préstamos de prueba para eliminar.");
-        }
+    public static void eliminarPrestamosPrueba() {
+        prestamos.clear();
+        System.out.println("Préstamos de prueba eliminados.");
     }
 
-    // Método para manejar el menú de los préstamos de prueba
     public static void menuPrestamosPrueba() {
         Scanner scanner = new Scanner(System.in);
         boolean ciclo = true;
@@ -96,11 +55,11 @@ public class PrestamosPrueba {
             System.out.println("Seleccione una opción:");
             System.out.println("1. Realizar préstamo de prueba");
             System.out.println("2. Consultar préstamos de prueba");
-            System.out.println("3. Eliminar préstamo de prueba");
+            System.out.println("3. Eliminar todos los préstamos de prueba");
             System.out.println("4. Salir");
 
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir nueva línea
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -110,15 +69,20 @@ public class PrestamosPrueba {
                     consultarPrestamosPrueba();
                     break;
                 case 3:
-                    eliminarPrestamoPrueba();
+                    eliminarPrestamosPrueba();
                     break;
                 case 4:
                     ciclo = false;
                     break;
                 default:
-                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
+                    System.out.println("Opción no válida. Intente de nuevo.");
                     break;
             }
+
         }
+    }
+
+    public static void main(String[] args) {
+        menuPrestamosPrueba();
     }
 }
