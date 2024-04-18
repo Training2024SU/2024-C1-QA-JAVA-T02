@@ -3,9 +3,7 @@ package com.davidbonelo.services;
 import com.davidbonelo.models.Book;
 import com.davidbonelo.models.LibraryItem;
 import com.davidbonelo.models.Novel;
-import com.davidbonelo.persistance.BookDAO;
-import com.davidbonelo.persistance.DataHandler;
-import com.davidbonelo.persistance.NovelDAO;
+import com.davidbonelo.persistance.*;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,7 +17,7 @@ public class DataService {
     private final NovelDAO novelDAO;
     private final Connection connection;
 
-    public DataService(BookDAO bookDAO, NovelDAO novelDAO, Connection connection) {
+    public DataService(BookDAO bookDAO, NovelDAO novelDAO, VideoRecordingDAO videoRecordingDAO, SongDAO songDAO, EssayDAO essayDAO, Connection connection) {
         this.bookDAO = bookDAO;
         this.novelDAO = novelDAO;
         this.connection = connection;

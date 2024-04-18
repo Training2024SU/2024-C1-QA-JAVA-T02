@@ -25,6 +25,7 @@ public class UserInteractions {
         ResourceBundle messages = ResourceBundle.getBundle("ask");
         prompt += "\n> ";
         System.out.print(prompt);
+
         // Invalid integer handling
         while (!scanner.hasNextInt()) {
             System.out.println(messages.getString("ask.invalid.int"));

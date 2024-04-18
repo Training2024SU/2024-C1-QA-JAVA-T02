@@ -2,6 +2,9 @@ package com.davidbonelo.models;
 
 import java.sql.Time;
 
+import static com.davidbonelo.utils.UserInteractions.askNumber;
+import static com.davidbonelo.utils.UserInteractions.askText;
+
 public class VideoRecording extends LibraryItem{
     private Time duration;
     private String format;
@@ -16,6 +19,16 @@ public class VideoRecording extends LibraryItem{
         super(id, title, author, copies, copiesBorrowed);
         this.duration = duration;
         this.format = format;
+    }
+
+    public static VideoRecording createVideoFromInput() {
+        String title = askText("Title: ");
+        String author = askText("Author: ");
+        int copies = askNumber("Copies: ");
+        int copiesBorrowed = askNumber("Copies borrowed: ");
+        Time duration = Time.valueOf(askText("time (hh:mm:ss): "));
+        String format = askText("format: ");
+        return new VideoRecording(title, author, copies, copiesBorrowed, duration, format);
     }
 
     public Time getDuration() {
@@ -36,8 +49,8 @@ public class VideoRecording extends LibraryItem{
 
     @Override
     public String toString() {
-        return "VideoRecording{" +
-                "duration=" + duration +
+        return "VideoRecording{" +  super.toString() +
+                ", duration=" + duration +
                 ", format='" + format + '\'' +
                 '}';
     }

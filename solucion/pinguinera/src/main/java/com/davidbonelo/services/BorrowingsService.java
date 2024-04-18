@@ -122,7 +122,7 @@ public class BorrowingsService {
                 return borrowings.stream().filter(b -> b.getBorrower().getId() == user.getId()).toList();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return Collections.emptyList();
     }

@@ -27,6 +27,7 @@ public class MenuChoices {
     }
 
     public int showMenu(User user) {
+
         String menuMessage = buildMenuMessage(user);
         return askNumber(menuMessage);
     }

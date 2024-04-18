@@ -33,13 +33,14 @@ public class MainMenu {
 
         BorrowingDAO borrowingDAO = new BorrowingDAO(connection);
         this.userService = new UserService(userDAO);
-        this.libraryManager = new LibraryManager(bookDAO, novelDAO);
+        this.libraryManager = new LibraryManager(bookDAO, novelDAO, videoRecordingDAO, songDAO, essayDAO);
         this.borrowingsService = new BorrowingsService(bookDAO, novelDAO, videoRecordingDAO, songDAO, essayDAO, borrowingDAO, connection);
-        this.dataService = new DataService(bookDAO, novelDAO, connection);
+        this.dataService = new DataService(bookDAO, novelDAO,videoRecordingDAO, songDAO, essayDAO, connection);
     }
 
     public void menu() {
         userService.login("ad","min");
+
         System.out.println(messages.getString("welcome"));
         while (true) {
             messages = ResourceBundle.getBundle("messages"); // Refresh if language changed
@@ -50,10 +51,13 @@ public class MainMenu {
                 case 1 -> new LoginMenu(userService).menu();
                 case 2 -> new BooksMenu(libraryManager, borrowingsService, user).menu();
                 case 3 -> new NovelsMenu(libraryManager, borrowingsService, user).menu();
-                case 4 -> new BorrowingMenu(borrowingsService, user).menu();
-                case 5 -> new AdminMenu(userService, dataService, user).menu();
-                case 8 -> Locale.setDefault(Locale.forLanguageTag("es"));
-                case 9 -> logout(user);
+                case 4 -> new VideoRecordingsMenu(libraryManager, borrowingsService, user).menu();
+                //case 5 -> new SongsMenu(libraryManager, borrowingsService, user).menu();
+                //case 6 -> new EssaysMenu(libraryManager, borrowingsService, user).menu();
+                case 7 -> new BorrowingMenu(borrowingsService, user).menu();
+                case 8 -> new AdminMenu(userService, dataService, user).menu();
+                case 9 -> Locale.setDefault(Locale.forLanguageTag("es"));
+                case 10 -> logout(user);
                 case 0 -> {
                     closeScanner();
                     return;

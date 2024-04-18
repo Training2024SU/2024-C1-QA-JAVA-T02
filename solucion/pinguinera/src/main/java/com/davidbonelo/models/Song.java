@@ -2,6 +2,9 @@ package com.davidbonelo.models;
 
 import java.sql.Time;
 
+import static com.davidbonelo.utils.UserInteractions.askNumber;
+import static com.davidbonelo.utils.UserInteractions.askText;
+
 public class Song extends LibraryItem{
     private String recordLabel;
     private Time duration;
@@ -16,6 +19,16 @@ public class Song extends LibraryItem{
         super(id, title, author, copies, copiesBorrowed);
         this.recordLabel = recordLabel;
         this.duration = duration;
+    }
+
+    public static Song createSongFromInput() {
+        String title = askText("Title: ");
+        String author = askText("Author: ");
+        int copies = askNumber("Copies: ");
+        int copiesBorrowed = askNumber("Copies borrowed: ");
+        String recordLabel = askText("Record label: ");
+        Time duration = Time.valueOf(askText("Durations: "));
+        return new Song(title, author, copies, copiesBorrowed, recordLabel, duration);
     }
 
     public String getRecordLabel() {
@@ -36,8 +49,8 @@ public class Song extends LibraryItem{
 
     @Override
     public String toString() {
-        return "Song{" +
-                "recordLabel='" + recordLabel + '\'' +
+        return "Song{" + super.toString() +
+                ", recordLabel='" + recordLabel + '\'' +
                 ", duration=" + duration +
                 '}';
     }

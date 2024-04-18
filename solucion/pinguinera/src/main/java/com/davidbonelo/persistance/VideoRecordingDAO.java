@@ -66,7 +66,13 @@ public class VideoRecordingDAO {
         if (!containsId(videoRecording))
             throw new IllegalArgumentException("Cant update a video recording without an id");
 
-        String sql = "UPDATE VideoRecordings SET title = ?, author = ?, duration = ? copies= ?, copies_borrowed = ?, format = ? " +
+        String sql = "UPDATE VideoRecordings SET " +
+                "title = ?, " +
+                "author = ?, " +
+                "duration = ?, " +
+                "copies= ?, " +
+                "copies_borrowed = ?, " +
+                "format = ? " +
                 "WHERE is_deleted = 0 AND id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
