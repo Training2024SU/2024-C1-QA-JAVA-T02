@@ -41,3 +41,9 @@ C
 build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+]
+-src/main/java/Garcia/Juan/io/CSVExporter.java,f/5/f5a109b5a860d517f6b7776a802ff784e4e860cf
+]
+-src/main/java/Garcia/Juan/io/CSVImporter.java,5/8/585775a4a8062e01eb701a4acca1cec5afe5d2d6
+l
+<src/main/java/Garcia/Juan/database/mysql/MySqlOperation.java,e/3/e3176e5a934728a0ffa2dd0619f987296caec848

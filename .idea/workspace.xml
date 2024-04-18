@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb50b8e1-456a-48a4-9475-2da3204fb581" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e46ea76d01dfffba3f6cb1275bbdf7d9f5dc6eb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e46ea76d01dfffba3f6cb1275bbdf7d9f5dc6eb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudProductoAsistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudProductoAsistente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

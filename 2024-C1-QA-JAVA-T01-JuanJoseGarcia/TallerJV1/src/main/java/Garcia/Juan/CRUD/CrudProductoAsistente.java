@@ -96,4 +96,5 @@ public class CrudProductoAsistente {
         String area = scanner.nextLine();
         return String.format(UPDATE_PRODUCT, tituloNuevo,areaConocimiento,nuPaginas,cantEjemplares,cantPrest,cantDisp,titulo,area);
     }
+
 }

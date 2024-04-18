@@ -1,0 +1,12 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§Ì÷‘
+E	java:S106N"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
+E	java:S106Y"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
+E	java:S106d"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
+E	java:S106}"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ
+F	java:S106Š"+Replace this use of System.out by a logger.(¹ª”·şÿÿÿÿ
+F	java:S106"+Replace this use of System.out by a logger.(Ù²™ùÿÿÿÿ
+F	java:S106"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿ
+F	java:S106š"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿ
+J
+java:S1068"/Remove this unused "connection2" private field.(öÔİ¬şÿÿÿÿ
