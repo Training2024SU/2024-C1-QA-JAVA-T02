@@ -1,0 +1,19 @@
+
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8 ïÉïî1J$b2e35733-7970-4fad-8448-32d315bdb6f1
+`
+java:S1118"Hide this public constructor.(ŸºÆ8—§‚ğî1J$eda4c92e-4ad9-4b5a-bd6c-84f2fb774f23
+n
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8˜§‚ğî1J$c32bd3f1-12cb-44ca-9de3-805711ae9c40
+x
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8™§‚ğî1J$48a3e015-dfa2-4207-a1e4-3f463b43e335
+r	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿ8œ§‚ğî1J$e227d5f9-806f-4fe2-a4e4-0627c20a8095
+m	java:S106"+Replace this use of System.out by a logger.(¤£şÖ8§‚ğî1J$7c911bf3-d780-45c6-8608-8f71f6cfd034
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿ8§‚ğî1J$27c2aee0-9c3c-46dc-aa50-981ff24cf149
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿ8§‚ğî1J$794f1b5c-f8e4-4cea-9f5e-172cb0b94c56
+r	java:S106$"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿ8Ÿ§‚ğî1J$4e36d66e-f1ef-493c-bfa7-d60ff78f1f83
+r	java:S1069"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿ8£§‚ğî1J$9a55ff89-5d27-46a9-829c-8c8488813eb1
+l	java:S106;"+Replace this use of System.out by a logger.(®…ê38¤§‚ğî1J$64cd3095-d4bf-4826-978f-57d2cc56849a
+r	java:S106="+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ8¤§‚ğî1J$fe351eda-80b2-4974-a937-e225742d1aab
+r	java:S106G"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿ8¥§‚ğî1J$fba6abfd-544f-482b-bb1e-843b68ffaff7
+z
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ8¦§‚ğî1J$f9884192-56db-452e-887e-3dd9e8a6e5c3

@@ -1,0 +1,56 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šƒ ™ûÿÿÿÿJ$553814e2-3447-435e-9c3b-e4128e244ab8
+~
+java:S1854!"BRemove this useless assignment to local variable "sesionIniciada".(¶Å®J$3471817c-5091-4a7b-a6b7-8bb26645c4d4
+„
+java:S1854 "CRemove this useless assignment to local variable "metodosPrestamo".(Ü”†»ıÿÿÿÿJ$0fc4a1aa-4579-4d7e-9d09-13f1c38424a7
+„
+java:S1854"CRemove this useless assignment to local variable "metodosProducto".(Ô†Ü’şÿÿÿÿJ$b63325d8-6e42-4b6e-b3e9-589b179b483a
+ƒ
+java:S1854"BRemove this useless assignment to local variable "metodosUsuario".(ó…­ŞúÿÿÿÿJ$530a1ef6-ee9e-4483-b015-c620b8ceaee2
+|
+java:S1854"@Remove this useless assignment to local variable "crudPrestamo".(õÛğJ$731d42d5-46e3-4e24-bbe8-934405ac99df
+|
+java:S1854"@Remove this useless assignment to local variable "crudProducto".(ß»™îJ$4fabf5d3-0971-4187-8494-4115e8ef94c6
+€
+java:S1854"?Remove this useless assignment to local variable "crudUsuario".(ñ³¯¸ıÿÿÿÿJ$29967ece-2ca9-497c-88b1-75d5225c342b
+€
+java:S1854"?Remove this useless assignment to local variable "metodosMain".(§÷ŒˆøÿÿÿÿJ$c30a137d-8200-41c5-bd48-eff3bcef9b4d
+}
+java:S1854"<Remove this useless assignment to local variable "conexion".(ãœÿøúÿÿÿÿJ$78608c07-f2e2-4156-82fe-f2fb9d4705e0
+L
+java:S2440"*Remove this instantiation of "ConexionBD".(ãœÿøúÿÿÿÿ8½¥¶÷î1
+n
+java:S1481"-Remove this unused "conexion" local variable.(ãœÿøúÿÿÿÿJ$e158d0bb-147a-49fd-97cf-d406edba2985
+M
+java:S2440"+Remove this instantiation of "MetodosMain".(§÷Œˆøÿÿÿÿ8¾¥¶÷î1
+q
+java:S1481"0Remove this unused "metodosMain" local variable.(§÷ŒˆøÿÿÿÿJ$3ce20105-b944-4a7d-9237-c66336fa6259
+M
+java:S2440"+Remove this instantiation of "CrudUsuario".(ñ³¯¸ıÿÿÿÿ8¾¥¶÷î1
+q
+java:S1481"0Remove this unused "crudUsuario" local variable.(ñ³¯¸ıÿÿÿÿJ$ccb5ef18-7bbe-4445-a404-0a49f08cd4df
+I
+java:S2440",Remove this instantiation of "CrudProducto".(ß»™î8¿¥¶÷î1
+m
+java:S1481"1Remove this unused "crudProducto" local variable.(ß»™îJ$a7ff0a58-260e-4877-9e67-0a944f7c68cf
+I
+java:S2440",Remove this instantiation of "CrudPrestamo".(õÛğ8À¥¶÷î1
+m
+java:S1481"1Remove this unused "crudPrestamo" local variable.(õÛğJ$2a0619dd-ab96-4808-9e2b-3598a6c5f627
+P
+java:S2440".Remove this instantiation of "MetodosUsuario".(ó…­Şúÿÿÿÿ8À¥¶÷î1
+t
+java:S1481"3Remove this unused "metodosUsuario" local variable.(ó…­ŞúÿÿÿÿJ$c26d115c-5e29-45c6-9380-a956b77c6ca0
+Q
+java:S2440"/Remove this instantiation of "MetodosProducto".(Ô†Ü’şÿÿÿÿ8Á¥¶÷î1
+u
+java:S1481"4Remove this unused "metodosProducto" local variable.(Ô†Ü’şÿÿÿÿJ$5f50965b-7dff-4d7a-8635-f1bf76ba0f5c
+Q
+java:S2440 "/Remove this instantiation of "MetodosPrestamo".(Ü”†»ıÿÿÿÿ8Á¥¶÷î1
+u
+java:S1481 "4Remove this unused "metodosPrestamo" local variable.(Ü”†»ıÿÿÿÿJ$c469ef95-63f6-466f-aa4d-adc3efa835ee
+K
+java:S2440!".Remove this instantiation of "SesionIniciada".(¶Å®8Á¥¶÷î1
+o
+java:S1481!"3Remove this unused "sesionIniciada" local variable.(¶Å®J$78e613be-f227-4096-a32f-65c78f683e5b

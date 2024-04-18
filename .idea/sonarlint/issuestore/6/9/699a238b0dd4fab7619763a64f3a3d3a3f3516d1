@@ -1,0 +1,13 @@
+
+˜	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ë«Ûıÿÿÿÿ8¿£‚ğî1J$f1103478-47ef-4d33-8531-ad3b18a13b6e
+¢
+java:S1488B"ZImmediately return this expression instead of assigning it to the temporary variable "id".(òü¤²úÿÿÿÿ8À£‚ğî1J$41b9a658-b50f-4920-a86c-6515c5ef7f24
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î8Á£‚ğî1J$088c30c2-e505-4143-a30c-d492b7b05bd9
+`
+java:S1118"Hide this public constructor.(šÁî8Ñ£‚ğî1J$6c13e399-4bac-41df-a822-e4d631b70dbe
+n
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8Ó£‚ğî1J$e816b71a-1fdb-4076-9d41-8083288e422e
+x
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8Ô£‚ğî1J$2acd5213-8f54-4a32-a9d2-4e7eef94f6ff
+—
+java:S1172("ORemove these unused method parameters "mySqlOperation", "productosSolicitados".(å®Ùëûÿÿÿÿ8×£‚ğî1J$1b807fd7-355f-43cb-8cf0-4bb429bea71f

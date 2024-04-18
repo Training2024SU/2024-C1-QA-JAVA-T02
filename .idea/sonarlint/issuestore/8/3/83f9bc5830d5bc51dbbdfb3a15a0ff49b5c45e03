@@ -1,0 +1,32 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼Óæ´ùÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Ìì¢Ï
+@	java:S106"+Replace this use of System.out by a logger.(âÅ¯­
+E	java:S106"+Replace this use of System.out by a logger.(¢Éışÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(•å›ßøÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(–©²‹ûÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(»²Ë
+E	java:S106 "+Replace this use of System.out by a logger.(£ŸÜºıÿÿÿÿ
+E	java:S106$"+Replace this use of System.out by a logger.(À˜‡“ùÿÿÿÿ
+@	java:S106%"+Replace this use of System.out by a logger.(şÏÕ
+E	java:S106&"+Replace this use of System.out by a logger.(ıÈá‡şÿÿÿÿ
+?	java:S106'"+Replace this use of System.out by a logger.(ïóçC
+E	java:S106+"+Replace this use of System.out by a logger.(À˜‡“ùÿÿÿÿ
+E	java:S106,"+Replace this use of System.out by a logger.(ÿÊ’šÿÿÿÿÿ
+E	java:S106-"+Replace this use of System.out by a logger.(ùñÒ…üÿÿÿÿ
+?	java:S106."+Replace this use of System.out by a logger.(ïóçC
+E	java:S1062"+Replace this use of System.out by a logger.(À˜‡“ùÿÿÿÿ
+E	java:S1063"+Replace this use of System.out by a logger.(ÿÊ’šÿÿÿÿÿ
+E	java:S1064"+Replace this use of System.out by a logger.(ùñÒ…üÿÿÿÿ
+E	java:S1065"+Replace this use of System.out by a logger.(ÊìŒüøÿÿÿÿ
+E	java:S1066"+Replace this use of System.out by a logger.(Íüüÿÿÿÿ
+E	java:S1067"+Replace this use of System.out by a logger.(èØîğüÿÿÿÿ
+E	java:S106;"+Replace this use of System.out by a logger.(À˜‡“ùÿÿÿÿ
+E	java:S106<"+Replace this use of System.out by a logger.(€¦â˜üÿÿÿÿ
+@	java:S106="+Replace this use of System.out by a logger.(ßó¨ğ
+E	java:S106>"+Replace this use of System.out by a logger.(ˆëÚ”ùÿÿÿÿ
+E	java:S106?"+Replace this use of System.out by a logger.(ö†¸Ûıÿÿÿÿ
+E	java:S106D"+Replace this use of System.out by a logger.(§Õû³øÿÿÿÿ
+E	java:S106E"+Replace this use of System.out by a logger.(³ä³œøÿÿÿÿ
+E	java:S106F"+Replace this use of System.out by a logger.(•Òúùÿÿÿÿ

@@ -1,0 +1,48 @@
+
+t
+java:S1488/"^Immediately return this expression instead of assigning it to the temporary variable "titulo".(³²šÌ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î
+8
+java:S1118"Hide this public constructor.(Üï€•ÿÿÿÿÿ
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+@	java:S106"+Replace this use of System.out by a logger.(ÿëÂ£
+E	java:S106"+Replace this use of System.out by a logger.(äÁê¸ıÿÿÿÿ
+E	java:S106 "+Replace this use of System.out by a logger.(øÕÏ§ùÿÿÿÿ
+E	java:S106""+Replace this use of System.out by a logger.(Èã©Äùÿÿÿÿ
+@	java:S106$"+Replace this use of System.out by a logger.(ãàşª
+E	java:S106'"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿ
+h	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢šïÇşÿÿÿÿ
+;
+java:S3457."%String contains no format specifiers.(úå¹Œ
+@	java:S106."+Replace this use of System.out by a logger.(úå¹Œ
+c	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ‰´½
+N
+java:S1854I"9Remove this useless assignment to local variable "autor".(ÖÀ>
+@
+java:S3457F"%String contains no format specifiers.(‹™øªüÿÿÿÿ
+E	java:S106F"+Replace this use of System.out by a logger.(‹™øªüÿÿÿÿ
+@
+java:S3457H"%String contains no format specifiers.(¿¥±Ñÿÿÿÿÿ
+E	java:S106H"+Replace this use of System.out by a logger.(¿¥±Ñÿÿÿÿÿ
+?
+java:S1481I"*Remove this unused "autor" local variable.(ÖÀ>
+@
+java:S3457J"%String contains no format specifiers.(ò¤±äùÿÿÿÿ
+E	java:S106J"+Replace this use of System.out by a logger.(ò¤±äùÿÿÿÿ
+@
+java:S3457L"%String contains no format specifiers.(Ù¦ó ÿÿÿÿÿ
+E	java:S106L"+Replace this use of System.out by a logger.(Ù¦ó ÿÿÿÿÿ
+@
+java:S3457N"%String contains no format specifiers.(ô°²¡øÿÿÿÿ
+E	java:S106N"+Replace this use of System.out by a logger.(ô°²¡øÿÿÿÿ
+;
+java:S3457P"%String contains no format specifiers.(˜Ÿ
+@	java:S106P"+Replace this use of System.out by a logger.(˜Ÿ
+E	java:S106S"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿ
+H
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ
+M
+java:S1068	"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ

@@ -1,0 +1,11 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$dd03c9be-c4a7-474d-8d87-bfe705e7fb43
+^
+java:S1118"Hide this public constructor.(êÀÙşúÿÿÿÿJ$4e98d176-30d1-4db7-855a-fa306f62f931
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$dc599fe5-c83f-487e-aa53-596a27cc03de
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$fe1292ab-2170-45be-904e-b51b3af02132
+f	java:S106'"+Replace this use of System.out by a logger.(†“¡£J$4db5d02d-3f02-4ba3-89ed-e232f9dfdbe1
+s
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$db2dc1b2-2ca0-433a-b6d9-1cf7390e0c96

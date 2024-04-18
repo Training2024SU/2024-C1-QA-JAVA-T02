@@ -1,0 +1,24 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
+8
+java:S1118"Hide this public constructor.(¸ÿØúÿÿÿÿ
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¯å‡úÿÿÿÿ
+‰
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¯å‡úÿÿÿÿ
+7	java:S131""Add a default case to this switch.(°€àâ
+?	java:S106!"+Replace this use of System.out by a logger.(ª…ı
+@	java:S106""+Replace this use of System.out by a logger.(ò¤µæ
+E	java:S106("+Replace this use of System.out by a logger.(Ú²Âêøÿÿÿÿ
+?	java:S106,"+Replace this use of System.out by a logger.(›ù¼L
+E	java:S1063"+Replace this use of System.out by a logger.(¡†Ü«ıÿÿÿÿ
+@	java:S1064"+Replace this use of System.out by a logger.(ò¤µæ
+E	java:S106;"+Replace this use of System.out by a logger.(ôº¼¸ùÿÿÿÿ
+E	java:S106C"+Replace this use of System.out by a logger.(ã…éüÿÿÿÿ
+7	java:S131J""Add a default case to this switch.(ü‹¢ï
+M
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ
