@@ -20,6 +20,7 @@ import co.com.pinguinera.vistas.vistas_asistente.MenuPrincipalAsistente;
 import co.com.pinguinera.vistas.vistas_libro.InformacionLibroVista;
 import co.com.pinguinera.vistas.vistas_novela.InformacionNovelaVista;
 import co.com.pinguinera.vistas.vistas_prestamo.InformacionPrestamoVista;
+import co.com.pinguinera.vistas.vistas_superadmin.MenuPrincipalSuperadmin;
 
 
 import java.sql.Connection;
@@ -65,6 +66,7 @@ public class MenuPrincipalFactory {
 
         // Crear instancias de los controladores de sesión
         UsuarioSesionControlador usuarioSesionControlador = new UsuarioSesionControlador(gestorAccesoUsuarios);
+
 
         // Crear instancias de los controladores CRUD
         ControladorCRUDUsuario controladorCRUDUsuario = new ControladorCRUDUsuario(
@@ -140,11 +142,21 @@ public class MenuPrincipalFactory {
                 controladorCRUDLibro
         );
 
+        MenuPrincipalSuperadmin menuPrincipalSuperadmin = new MenuPrincipalSuperadmin(
+                controladorCRUDUsuario,
+                controladorCRUDPrestamo,
+                controladorCRUDEmpleado,
+                controladorCRUDNovela,
+                controladorCRUDLibro,
+                menuAdministrarPrestamos
+        );
+
         // Crear instancia de EmpleadoSesionControlador con GestorAccesoEmpleados, MenuPrincipalAsistente y MenuPrincipalAdministrativo
         EmpleadoSesionControlador empleadoSesionControlador = new EmpleadoSesionControlador(
                 gestorAccesoEmpleados,
                 menuPrincipalAsistente,
-                menuPrincipalAdministrativo
+                menuPrincipalAdministrativo,
+                menuPrincipalSuperadmin
         );
 
         // Crear instancia de MenuPrincipal

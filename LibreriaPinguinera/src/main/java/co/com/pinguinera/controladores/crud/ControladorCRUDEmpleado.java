@@ -6,7 +6,6 @@ import co.com.pinguinera.datos.model.Empleado;
 import co.com.pinguinera.servicios.integracion.SincronizadorEmpleado;
 import co.com.pinguinera.vistas.VistaUtil;
 import co.com.pinguinera.vistas.vista_empleado.InformacionEmpleadoVista;
-import co.com.pinguinera.vistas.vista_usuario.InformacionUsuarioVista;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -26,13 +25,13 @@ public class ControladorCRUDEmpleado {
         this.sincronizadorEmpleado = sincronizadorEmpleado;
     }
 
-    public void registrarEmpleado() {
+    public void registrarAsistente() {
         Empleado nuevoEmpleado = new Empleado();
         nuevoEmpleado.setNombre(vista.pedirNombre());
         nuevoEmpleado.setCorreo(vista.pedirCorreo());
         nuevoEmpleado.setContrasena(vista.pedirContrasena());
-        nuevoEmpleado.setRol(vista.pedirRol());
-        nuevoEmpleado.setEsAdministrativo(vista.pedirEsAdministrativo());
+        nuevoEmpleado.setRol("ASISTENTE");
+        nuevoEmpleado.setEsAdministrativo(false);
         crudEmpleadosLocales.agregar(nuevoEmpleado);
         try {
             empleadoDAO.insertar(nuevoEmpleado);

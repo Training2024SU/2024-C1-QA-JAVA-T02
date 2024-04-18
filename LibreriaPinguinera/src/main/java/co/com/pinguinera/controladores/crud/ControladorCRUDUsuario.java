@@ -9,6 +9,8 @@ import co.com.pinguinera.vistas.vista_usuario.InformacionUsuarioVista;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
+
 
 public class ControladorCRUDUsuario {
 
@@ -34,7 +36,6 @@ public class ControladorCRUDUsuario {
         try {
             usuarioDAO.insertar(nuevoUsuario);
         } catch (SQLException e) {
-            System.out.println("Error JJ");
             VistaUtil.mostrarMensajeError();
         }
         sincronizarDatos();
@@ -43,6 +44,9 @@ public class ControladorCRUDUsuario {
 
     public void actualizarUsuario() {
         Usuario usuarioActualizado = new Usuario();
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("Ingrese el Id del usuario que desea actualizar");
+        usuarioActualizado.setIdUsuario(Integer.parseInt(scanner.nextLine()));
         usuarioActualizado.setNombre(vista.pedirNombreUsuario());
         usuarioActualizado.setCorreo(vista.pedirCorreoUsuario());
         usuarioActualizado.setContrasena(vista.pedirContrasenaUsuario());

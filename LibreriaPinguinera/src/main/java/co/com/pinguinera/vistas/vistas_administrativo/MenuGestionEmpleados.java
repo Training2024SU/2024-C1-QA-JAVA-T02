@@ -25,7 +25,7 @@ public class MenuGestionEmpleados {
         int opcion = VistaUtil.obtenerOpcion();
         switch (opcion) {
             case 1:
-                controladorCRUDEmpleado.registrarEmpleado();
+                controladorCRUDEmpleado.registrarAsistente();
                 break;
             case 2:
                 controladorCRUDEmpleado.actualizarEmpleado();

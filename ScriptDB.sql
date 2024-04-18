@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `pinguinera`.`Empleado` (
     `Nombre` VARCHAR(100) NULL,
     `Contraseña` VARCHAR(100) NULL,
     `Correo` VARCHAR(100) NULL,
-    `Rol` ENUM('ADMINISTRATIVO', 'ASISTENTE') NOT NULL,
+    `Rol` ENUM('ADMINISTRATIVO', 'ASISTENTE','SUPERADMIN') NOT NULL,
     `EsAdministrativo` TINYINT NOT NULL DEFAULT 0,
     PRIMARY KEY (`idEmpleado`),
     UNIQUE KEY `uk_Empleado_Correo` (`Correo`),
@@ -28,6 +28,14 @@ CREATE TABLE IF NOT EXISTS `pinguinera`.`Usuario` (
     `Contraseña` VARCHAR(100) NULL,
     PRIMARY KEY (`idUsuario`), 
     UNIQUE (`Correo`) 
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `pinguinera`.`InfoAdicionalUsuario` (
+    `idUsuario` INT NOT NULL,
+    `Edad` INT NULL,
+    `Telefono` VARCHAR(20) NULL,
+    PRIMARY KEY (`idUsuario`),
+    FOREIGN KEY (`idUsuario`) REFERENCES `Usuario`(`idUsuario`)
 ) ENGINE=InnoDB;
 
 -- Tabla `Publicacion`
