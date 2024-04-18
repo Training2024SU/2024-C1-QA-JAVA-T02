@@ -35,9 +35,15 @@ public class QueryConstante {
     //Query a Tabla Empleado en la BD
 
     public static final String INSERT_EMPLEADO = "INSERT INTO empleado (idEmpleado, nombre, correo, contrasenia, rol) VALUES (?, ?, ?, ?, ?)";
+
+    public static final String INSERT_ADMINISTRADOR = "INSERT INTO administrador (id, nombre, correo, contrasenia, departamentoAdministrado) VALUES (?, ?, ?, ?, ?)";
+
+
     public static final String DELETE_FROM_EMPLEADO = "DELETE FROM empleado WHERE idEmpleado = ?";
 
     public static final String SELECT_LOGUIN_ASISTENTE = "SELECT * FROM empleado WHERE correo = ? AND contrasenia = ?";
+
+    public static final String SELECT_LOGIN_ADMINISTRADOR = "SELECT * from administrador where correo = ? AND contrasenia = ?";
     public static final String SELECT_ALL_FROM_EMPLEADO = "SELECT * FROM empleado";
 
 }

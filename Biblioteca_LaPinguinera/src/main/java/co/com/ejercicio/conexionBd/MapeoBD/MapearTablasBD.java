@@ -66,4 +66,18 @@ public class MapearTablasBD {
         }
 
     }
+
+    public static Administrador mapearResultSetAAdministrador(ResultSet resultSet) throws SQLException {
+        try {
+            return new Administrador(
+                    resultSet.getInt("id"),
+                    resultSet.getString("nombre"),
+                    resultSet.getString("correo"),
+                    resultSet.getString("contrasenia"),
+                    resultSet.getString("departamentoAdministrado")
+            );
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

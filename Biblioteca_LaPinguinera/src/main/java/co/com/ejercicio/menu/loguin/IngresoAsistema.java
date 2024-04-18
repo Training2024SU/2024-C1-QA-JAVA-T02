@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 import static co.com.ejercicio.menu.dialogos.MenuGestionUsuario.menuAccionesUsuario;
 import static co.com.ejercicio.menu.dialogos.MenuPrincipal.mostrarMenu;
-import static co.com.ejercicio.menu.loguin.InicioSesion.iniciarSesionAsistente;
-import static co.com.ejercicio.menu.loguin.InicioSesion.iniciarSesionUsuario;
+import static co.com.ejercicio.menu.loguin.InicioSesion.*;
+import static co.com.ejercicio.menu.menuPrincipal.MenuGestionAdministrador.menuAdministrador;
 import static co.com.ejercicio.menu.menuPrincipal.MenuGestionAsistente.menuAsistente;
 import static co.com.ejercicio.principal.Main.logger;
 
@@ -45,7 +45,33 @@ public class IngresoAsistema {
     }
 
 
+    public static void inicioSesionAdministrador(){
+        Connection conexion; {
+            try {
+                conexion = Conexion.obtenerConexion();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Ingrese su correo: ");
+            String correo = scanner.nextLine();
+            System.out.println("Ingrese su contraseña: ");
+            String contrasenia = scanner.nextLine();
 
+
+            try {
+                if (ingresarComoAdministradorCreadoPorSuperUsuario(conexion, correo, contrasenia)) {
+                    logger.info("Inicio de sesión exitoso para el " + Roles.TIPO_UNO.getvalue());
+                    menuAdministrador();
+                } else {
+                    System.out.println("Correo o contraseña incorrectos.");
+                    mostrarMenu();
+                }
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    }
 
     public static void inicioSesionAsistente(){
         Connection conexion; {

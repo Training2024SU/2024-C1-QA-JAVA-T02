@@ -9,10 +9,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import static co.com.ejercicio.conexionBd.constantesCRUD.QueryConstante.SELECT_LOGUIN_ASISTENTE;
-import static co.com.ejercicio.conexionBd.constantesCRUD.QueryConstante.SELECT_LOGUIN_USER;
+import static co.com.ejercicio.conexionBd.constantesCRUD.QueryConstante.*;
 import static co.com.ejercicio.menu.dialogos.MenuPrincipal.mostrarMenu;
 import static co.com.ejercicio.menu.menuPrincipal.MenuGestionAdministrador.menuAdministrador;
+import static co.com.ejercicio.menu.menuPrincipal.MenuGestionSuperUsuario.menuSuperUsuario;
 import static co.com.ejercicio.principal.Main.logger;
 
 
@@ -41,6 +41,40 @@ public class InicioSesion {
         scanner.close();
     }
 
+    public static boolean ingresarComoAdministradorCreadoPorSuperUsuario(Connection conn, String correo, String contrasenia) throws SQLException {
+        try (PreparedStatement statement = conn.prepareStatement(SELECT_LOGIN_ADMINISTRADOR)) {
+            statement.setString(1, correo);
+            statement.setString(2, contrasenia);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                return resultSet.next();
+            }
+        }
+    }
+
+    public static void iniciarComoSuperUsuario(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresando como super usuario");
+        System.out.println("Por favor, inicie sesión.");
+        System.out.println("Ingrese su correo electrónico:");
+        String correo = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String contrasena = scanner.nextLine();
+
+        boolean autenticado = Autenticacion.autenticarSuperUsuario(correo, contrasena);
+        if (autenticado) {
+            System.out.println("¡Bienvenido al sistema como super usuario!");
+            logger.info("Inicio de sesión exitoso para el " + Roles.TIPO_TRES.getvalue());
+            menuSuperUsuario();
+        } else {
+            System.out.println("Credenciales incorrectas. Acceso denegado.");
+            mostrarMenu();
+        }
+
+        scanner.close();
+    }
+
     public static boolean iniciarSesionUsuario(Connection conn, String correo, String contrasenia) throws SQLException {
         try (PreparedStatement statement = conn.prepareStatement(SELECT_LOGUIN_USER)) {
             statement.setString(1, correo);
@@ -52,6 +86,16 @@ public class InicioSesion {
         }
     }
     public static boolean iniciarSesionAsistente(Connection conn, String correo, String contrasenia) throws SQLException {
+        try (PreparedStatement statement = conn.prepareStatement(SELECT_LOGUIN_ASISTENTE)) {
+            statement.setString(1, correo);
+            statement.setString(2, contrasenia);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                return resultSet.next();
+            }
+        }
+    }
+
+    public static boolean iniciarSesionAdministrador(Connection conn, String correo, String contrasenia) throws SQLException {
         try (PreparedStatement statement = conn.prepareStatement(SELECT_LOGUIN_ASISTENTE)) {
             statement.setString(1, correo);
             statement.setString(2, contrasenia);
