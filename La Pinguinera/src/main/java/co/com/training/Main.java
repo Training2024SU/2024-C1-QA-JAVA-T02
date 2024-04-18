@@ -26,8 +26,12 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         openConnection();
-        insertarLibroEnBd(preguntarAlUsuario());
-        selectAllFromLibro();
+//        insertarLibroEnBd(preguntarAlUsuario());
+//        selectAllFromLibro();
+
+        CrudLibro libroCrud = new CrudLibro(mySqlOperation);
+        Libro libro = libroCrud.consultarLibroPorTitulo("Hola");
+        System.out.println(libro.toString());
         closeConnection();
 
     }

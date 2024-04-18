@@ -9,7 +9,7 @@ import static co.com.training.integration.database.mysql.MySqlConstants.MY_SQL_J
 
 public class MySqlOperation implements DataBase {
 
-    private Connection connection= null;
+    private static Connection connection= null;
     private Statement statement=null;
     private ResultSet resultSet=null;
 
@@ -162,6 +162,18 @@ public class MySqlOperation implements DataBase {
         }
     }
 
-    public Connection getConnection() {
-    return null;}
+    public Connection getConnection() throws SQLException {
+        if (connection == null) {
+            connection= DriverManager.getConnection(
+                    String.format(CONNECTION_STRING,
+                            this.server,
+                            this.dataBaseName,
+                            this.user,
+                            this.password)
+            );
+            return connection;
+        }
+
+        return connection;
+    }
 }

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06d2dd3d-3c81-4db0-b8d9-7f8ba650088c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/logica/util/InputOutputUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/logica/util/ScannerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/modelo/Libro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/dialogo/ConstantesMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/dialogo/ConstantesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/Constantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/MySqlOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/MySqlOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,7 @@
     "Application.Main.executor": "Run",
     "Gradle.La Pinguinera [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"

@@ -36,7 +36,7 @@ public class CrudLibro {
             statement.setString(1, titulo);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    String autor = resultSet.getString("autorLibro");
+                    String autor = resultSet.getString("autor");
                     String areaConocimiento = resultSet.getString("areaConocimiento");
                     int numeroPaginas = resultSet.getInt("numeroPaginas");
                     int cantidadEjemplares = resultSet.getInt("cantidadEjemplares");
