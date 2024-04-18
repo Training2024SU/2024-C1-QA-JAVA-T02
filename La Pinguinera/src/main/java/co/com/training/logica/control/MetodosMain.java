@@ -1,4 +1,4 @@
-package co.com.training.control;
+package co.com.training.logica.control;
 
 import co.com.training.logica.CrudLibro;
 import co.com.training.logica.CrudNovela;
