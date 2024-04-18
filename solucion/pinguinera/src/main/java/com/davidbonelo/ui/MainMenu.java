@@ -55,6 +55,7 @@ public class MainMenu {
                 case 5 -> new SongsMenu(libraryManager, borrowingsService, user).menu();
                 case 6 -> new EssaysMenu(libraryManager, borrowingsService, user).menu();
                 case 7 -> new BorrowingMenu(borrowingsService, user).menu();
+                // case 8 -> new PersonalUserMenu(borrowingsService, user).menu();
                 case 8 -> new AdminMenu(userService, dataService, user).menu();
                 case 9 -> Locale.setDefault(Locale.forLanguageTag("es"));
                 case 10 -> logout(user);

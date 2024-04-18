@@ -1,6 +1,7 @@
 package com.davidbonelo.persistance;
 
 import com.davidbonelo.models.User;
+import com.davidbonelo.models.UserExtraInfo;
 import com.davidbonelo.models.UserRole;
 
 import java.sql.Connection;
@@ -47,6 +48,28 @@ public class UserDAO {
             return users;
         }
     }
+
+    public List<User> getAllUsersExtraInfo() throws SQLException {
+
+        String sql = "SELECT u.id, u.email, u.role, ui.biography, ui.birthday FROM Users u " +
+                "LEFT JOIN user_info ui ON (u.id = ui.user_id) " +
+                "WHERE is_deleted = 0 AND u.id = ?;";
+
+        ArrayList<User> users = new ArrayList<>();
+        List<UserExtraInfo> userExtraInfo = new ArrayList<>();
+        try (PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet rs = statement.executeQuery()) {
+
+            while (rs.next()) {
+                User user = buildUserFromResult(rs);
+
+                users.add(user);
+
+            }
+            return users;
+        }
+    }
+
 
     public void createUser(User user, String password) throws SQLException {
         String sql = "INSERT INTO Users (name, email, password, role) VALUES (?, ?, ?, ?)";

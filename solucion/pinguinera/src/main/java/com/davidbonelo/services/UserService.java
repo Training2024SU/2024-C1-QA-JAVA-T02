@@ -52,4 +52,5 @@ public class UserService {
     public void deleteUser(int userId) throws SQLException {
         userDAO.softDeleteUser(userId);
     }
+
 }
