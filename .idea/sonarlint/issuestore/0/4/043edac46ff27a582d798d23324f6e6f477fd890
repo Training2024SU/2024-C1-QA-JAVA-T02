@@ -1,13 +1,0 @@
-
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(×–£âıÿÿÿÿ8™Ğ½ôî1J$72ad9afb-ac3b-444f-b1a9-7a3127a7300a
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´™—Œ8óÇ×ñî1J$5f2954a3-0937-4f01-90b9-120710644f56
-e
-java:S1118"Hide this public constructor.(«ØõÇüÿÿÿÿ8Ş©æñî1J$ded0f0f4-2ed2-451a-a00f-7f26ee1d5a76
-n
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8á©æñî1J$1883f42f-0c2e-4be8-89de-0a73c840feaf
-x
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8â©æñî1J$470db848-ad6c-4c42-9dba-dc44fb477b51
-u
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8‘°èóî1J$5a02ae08-b3f5-4e27-a820-5270e34dd8a6
-z
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ8å©æñî1J$3844af66-57f6-42c1-9545-494eb15d4435

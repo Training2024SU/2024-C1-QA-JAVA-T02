@@ -1,14 +1,14 @@
 
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8Ï˜äøî1J$2cefda95-5c3f-441d-b194-6dbe0fe293fc
-`
-java:S1118"Hide this public constructor.(Ä˜´¬8ßšäøî1J$d61153b7-afe6-4fe4-8969-700203c601da
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$7f73179d-df98-49aa-9f48-b8c0662cec6f
+Y
+java:S1118"Hide this public constructor.(Ä˜´¬J$7d47ed37-5a69-41da-b1ea-22accfd7547c
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$817e28fa-1019-44ca-b94c-d81acdf92888
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$e8b76343-5f24-4e04-a5f0-a1c2ed1d7f78
+
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ªJ$dcd1f387-fcd0-4233-84d5-4c26b5d6fac5
+f	java:S106b"+Replace this use of System.out by a logger.(¬ÊÖÜJ$6666ce37-94a9-4bb8-9fe6-8cb695de7f2d
 n
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8ášäøî1J$84343f0c-acba-420f-92b6-5be025d6698c
-x
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8ášäøî1J$f8cd0d5b-f5bb-4e29-8fe5-aa4707ad681d
-•
-java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª8æšäøî1J$c682e878-391d-41ce-9cc8-ea8f8c0df794
-m	java:S106_"+Replace this use of System.out by a logger.(¬ÊÖÜ8ëšäøî1J$e01d1b80-8a7d-4b69-abd5-3323df71ac4a
-u
-java:S1135g"2Complete the task associated to this TODO comment.(³ˆßÖ8íšäøî1J$7c51cc46-8850-4bcd-873c-3d1e33502405
-G	java:S106~"+Replace this use of System.out by a logger.(¬ÊÖÜ8ï®´şî1
+java:S1135j"2Complete the task associated to this TODO comment.(³ˆßÖJ$e4842b1a-0737-4fa4-9273-0a1ddb24a1df
+g	java:S106"+Replace this use of System.out by a logger.(¬ÊÖÜJ$ea127581-68da-49db-9f31-98387cfb9f10

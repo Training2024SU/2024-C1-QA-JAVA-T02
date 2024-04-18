@@ -168,5 +168,42 @@ public class MetodosUsuario {
     }
 
 
+    public static void actualizarInformacionUsuario(MySqlOperation mySqlOperation) throws SQLException {
+        // Pedir al usuario el correo electrónico del usuario que se quiere actualizar
+        String correo = VistaUtil.solicitarCorreoElectronico();
+
+        // Recuperar el usuario de la base de datos
+        Usuario usuario = obtenerUsuarioPorCorreo(mySqlOperation, correo);
+
+        // Verificar si el usuario existe
+        if (usuario == null) {
+            System.out.println("No se encontró un usuario con el correo electrónico especificado.");
+            return;
+        }
+
+        // Solicitar los nuevos datos del usuario utilizando los métodos de VistaUtil
+        System.out.println("Ingrese la nueva información del usuario:");
+        usuario.setContrasena(VistaUtil.solicitarContraseña());
+        usuario.setNombre(VistaUtil.solicitarNombre());
+        usuario.setTelefono(VistaUtil.solicitarNumeroTelefono());
+        usuario.setDireccion(VistaUtil.solicitarDireccion());
+
+        // Llamar a updateUser para actualizar la información del usuario
+        updateUser(mySqlOperation, usuario);
+    }
+
+
+    // Este método es un ejemplo para obtener un usuario por correo electrónico de la base de datos
+    private static Usuario obtenerUsuarioPorCorreo(MySqlOperation mySqlOperation, String correo) throws SQLException {
+        List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
+        for (Usuario usuario : usuarios) {
+            if (usuario.getCorreo().equals(correo)) {
+                return usuario;
+            }
+        }
+        return null; // No se encontró el usuario
+    }
+
+
 
 }

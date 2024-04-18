@@ -59,6 +59,9 @@ public class SesionIniciada {
                     case 2:
                         solicitarPrestamo(mySqlOperation, correo);
                         break;
+                    case 3:  // Nueva opción para actualizar la información del usuario
+                        actualizarInformacionUsuario(mySqlOperation);
+                        break;
                     default:
                         ciclo = false;
                         break;

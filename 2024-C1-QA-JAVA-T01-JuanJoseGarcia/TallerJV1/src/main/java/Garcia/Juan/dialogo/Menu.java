@@ -32,11 +32,12 @@ public class Menu {
         System.out.println(MSN_UNO+" "+usuarioIniciado.get(3));
     }
 
-    public static void  menuLector(){
+    public static void menuLector() {
         System.out.println(SELECCIONE);
         System.out.println(VER_PUBLICACIONES);
         System.out.println(SOLICITAR_PRESTAMO);
-        System.out.println("3. " +SALIR);
+        System.out.println("3. Actualizar información personal"); // Nueva opción
+        System.out.println("4. " + SALIR);
     }
 
     public static void  menuAsistente(){

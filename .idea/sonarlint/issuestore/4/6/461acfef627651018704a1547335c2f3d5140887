@@ -1,22 +1,22 @@
 
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¥²şøÿÿÿÿ8ÊÕ‹şî1J$ed3aa493-b2b3-4fe9-8d6f-2c6bb7239642
-¡
-java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "correo".(’Û„Ş8ËÕ‹şî1J$6501df2f-67a4-4c4a-ad79-c1cc460beb06
-«
-java:S1488"cImmediately return this expression instead of assigning it to the temporary variable "contraseÃ±a".(¦¥²şøÿÿÿÿ8ËÕ‹şî1J$a3972272-2e6b-44f9-bf5f-556cdce54a7a
-¡
-java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "nombre".(â»÷¬8ËÕ‹şî1J$313ae231-6a66-4b36-84a2-af2e16070415
-©
-java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "numeroTelefono".(î¼¥š8ËÕ‹şî1J$dcf6657a-9b45-4054-830d-ad1e9b860008
-£
-java:S1488#"aImmediately return this expression instead of assigning it to the temporary variable "direccion".(ÁÙ®x8ËÕ‹şî1J$c20a0982-d66d-493e-a848-1d074f51571e
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦’Ê88ÌÕ‹şî1J$78cffeeb-5105-4614-9612-c08da6996aa4
-}
-java:S1118":Add a private constructor to hide the implicit public one.(´·ë8ÑÕ‹şî1J$9bdb6cfe-f4b7-4006-b764-c8cc8dc62421
-m	java:S106
-"+Replace this use of System.out by a logger.(­õÙ²8ÔÕ‹şî1J$f9ec04db-7c97-4230-9d30-ac0ab93ebc2b
-	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â„†Ø8ÕÕ‹şî1J$1db8eca9-210a-41e2-9ba6-c14e04c896c4
-m	java:S106"+Replace this use of System.out by a logger.(çÜ¸´8ÖÕ‹şî1J$1403b258-bdf1-4e60-9ab1-7654e4dec0fb
-r	java:S106"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ8ÖÕ‹şî1J$d1136b64-1ba4-4c47-b089-81326c29a224
-r	java:S106"+Replace this use of System.out by a logger.(èÊåÆúÿÿÿÿ8×Õ‹şî1J$0e9a1b1e-4219-45b6-ac90-ebe5c99f2a53
-r	java:S106""+Replace this use of System.out by a logger.(íšë–ùÿÿÿÿ8×Õ‹şî1J$44f03515-6877-4b15-9216-4ef8a533ae70
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¥²şøÿÿÿÿ
+t
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "correo".(’Û„Ş
+~
+java:S1488"cImmediately return this expression instead of assigning it to the temporary variable "contraseÃ±a".(¦¥²şøÿÿÿÿ
+t
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "nombre".(â»÷¬
+|
+java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "numeroTelefono".(î¼¥š
+v
+java:S1488#"aImmediately return this expression instead of assigning it to the temporary variable "direccion".(ÁÙ®x
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦’Ê8
+P
+java:S1118":Add a private constructor to hide the implicit public one.(´·ë
+@	java:S106
+"+Replace this use of System.out by a logger.(­õÙ²
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â„†Ø
+@	java:S106"+Replace this use of System.out by a logger.(çÜ¸´
+E	java:S106"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(èÊåÆúÿÿÿÿ
+E	java:S106""+Replace this use of System.out by a logger.(íšë–ùÿÿÿÿ

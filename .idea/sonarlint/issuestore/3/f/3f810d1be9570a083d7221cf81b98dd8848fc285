@@ -1,12 +1,12 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î8Ô˜ıî1
-?
-java:S1118"Hide this public constructor.(êÀÙşúÿÿÿÿ8ã˜ıî1
-H
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8æ˜ıî1
-R
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8ç˜ıî1
-G	java:S106*"+Replace this use of System.out by a logger.(†“¡£8ó˜ıî1
-F	java:S106N"+Replace this use of System.out by a logger.(¿Êôb8ü˜ıî1
-T
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ8ş˜ıî1
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$aac811d0-3b76-4e37-8c51-4782ade41b9c
+^
+java:S1118"Hide this public constructor.(êÀÙşúÿÿÿÿJ$943c1915-c1bc-4661-b62a-7194b976162a
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$f851a32b-7528-491d-ace9-8b28c33a1859
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$6526b4ac-9ee7-41da-8dd9-850cfeac5716
+f	java:S106*"+Replace this use of System.out by a logger.(†“¡£J$952b266a-937f-4512-806b-3a1e5b3157ab
+F	java:S106N"+Replace this use of System.out by a logger.(¿Êôb8ùà™‹ï1
+s
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$e23ce2cc-5722-41c0-ab6b-91ba75369fc0
