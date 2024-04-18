@@ -11,16 +11,21 @@ repositories {
 
 dependencies {
     // Dependencia para manejar archivos CSV con OpenCSV
-    implementation 'com.opencsv:opencsv:5.7'
+    implementation 'com.opencsv:opencsv:5.8'
 
     // Dependencias para manejar archivos JSON y XML con Jackson
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
     implementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.1'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 
     // Dependencia para manejar archivos XML con Jackson Dataformat XML
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.1'
+
+    // Dependencia para el conector JDBC de MySQL
+    implementation 'mysql:mysql-connector-java:8.0.28'
 }
+
 
 
 tasks.test {

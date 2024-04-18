@@ -4,34 +4,18 @@ public class Producto {
     private String titulo;
     private String tipo;
     private String autor;
-    private String numeroPaginas;
+    private String magnitud;  // Renombramos 'numeroPaginas' a 'magnitud'
     private int cantidadEjemplares;
     private int cantidadPrestados;
     private int cantidadDisponibles;
     private String genero;
     private int edadMinima;
 
-    public int getEdadMinima() {
-        return edadMinima;
-    }
-
-    public void setEdadMinima(int edadMinima) {
-        this.edadMinima = edadMinima;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public Producto(String titulo, String tipo, String autor, String numeroPaginas, int cantidadPrestados, int cantidadEjemplares, int cantidadDisponibles, String genero, int edadMinima) {
+    public Producto(String titulo, String tipo, String autor, String magnitud, int cantidadPrestados, int cantidadEjemplares, int cantidadDisponibles, String genero, int edadMinima) {
         this.titulo = titulo;
         this.tipo = tipo;
         this.autor = autor;
-        this.numeroPaginas = numeroPaginas;
+        this.magnitud = magnitud; // Usamos 'magnitud' en lugar de 'numeroPaginas'
         this.cantidadPrestados = cantidadPrestados;
         this.cantidadEjemplares = cantidadEjemplares;
         this.cantidadDisponibles = cantidadDisponibles;
@@ -40,9 +24,10 @@ public class Producto {
     }
 
     public Producto() {
-
+        // Constructor por defecto
     }
 
+    // Getters y setters
     public String getTitulo() {
         return titulo;
     }
@@ -67,12 +52,12 @@ public class Producto {
         this.autor = autor;
     }
 
-    public String getNumeroPaginas() {
-        return numeroPaginas;
+    public String getMagnitud() {  // Cambiamos el nombre del método de 'getNumeroPaginas' a 'getMagnitud'
+        return magnitud;
     }
 
-    public void setNumeroPaginas(String numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+    public void setMagnitud(String magnitud) {  // Cambiamos el nombre del método de 'setNumeroPaginas' a 'setMagnitud'
+        this.magnitud = magnitud;
     }
 
     public int getCantidadEjemplares() {
@@ -99,13 +84,30 @@ public class Producto {
         this.cantidadDisponibles = cantidadDisponibles;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getEdadMinima() {
+        return edadMinima;
+    }
+
+    public void setEdadMinima(int edadMinima) {
+        this.edadMinima = edadMinima;
+    }
+
+    // Métodos `toString` para diferentes representaciones de `Producto`
     @Override
     public String toString() {
         return "Producto{" +
                 "titulo='" + titulo + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", autor='" + autor + '\'' +
-                ", numeroPaginas='" + numeroPaginas + '\'' +
+                ", magnitud='" + magnitud + '\'' +
                 ", cantidadEjemplares=" + cantidadEjemplares +
                 ", cantidadPrestados=" + cantidadPrestados +
                 ", cantidadDisponibles=" + cantidadDisponibles +
@@ -113,39 +115,40 @@ public class Producto {
     }
 
     public String toStringLibros() {
-        return "Producto{ "+
+        return "Producto{ " +
                 "titulo='" + titulo + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", autor='" + autor + '\'' +
-                ", numeroPaginas='" + numeroPaginas + '\'' +
+                ", magnitud='" + magnitud + '\'' +
                 ", cantidadDisponibles=" + cantidadDisponibles +
-                ", Area=" + genero+
+                ", Area=" + genero +
                 '}';
     }
 
     public String toStringNovelas() {
-        return "Producto{ "+
+        return "Producto{ " +
                 "titulo='" + titulo + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", autor='" + autor + '\'' +
-                ", numeroPaginas='" + numeroPaginas + '\'' +
+                ", magnitud='" + magnitud + '\'' +
                 ", cantidadDisponibles=" + cantidadDisponibles +
-                ", genero=" + genero+
-                ", Edad minima =" + edadMinima+
+                ", genero=" + genero +
+                ", Edad mínima=" + edadMinima +
                 '}';
     }
 
     public String toStringAutor() {
-        return "Producto{ "+
+        return "Producto{ " +
                 "Autor='" + autor + '\'' +
                 ", titulo='" + titulo + '\'' +
                 ", tipo='" + tipo + '\'' +
-                ", numeroPaginas='" + numeroPaginas + '\'' +
+                ", magnitud='" + magnitud + '\'' +
                 ", cantidadDisponibles=" + cantidadDisponibles +
                 '}';
     }
+
     public String toStringPrestamo() {
-        return "Producto{ "+
+        return "Producto{ " +
                 "titulo='" + titulo + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", autor='" + autor + '\'' +

@@ -1,6 +1,8 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß±üëüÿÿÿÿ8ºÓÀ“ï1J$cfec9781-75ea-485b-a65a-2796dd4b7413
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß±üëüÿÿÿÿ8œÂ›ï1J$df3189d0-acce-4355-8cf4-72c6fc542280
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(¡œ¸Âüÿÿÿÿ8¥±À“ï1J$945a9267-ce29-49e8-84e3-c52da3670c64
-m	java:S106%"+Replace this use of System.out by a logger.(©ñ…®8¬±À“ï1J$7c788844-5685-40ed-852d-c806e00f508d
-r	java:S106("+Replace this use of System.err by a logger.(Ü‚ôşüÿÿÿÿ8­±À“ï1J$dcc86d0d-f630-435d-a3e7-6d037d06bedf
+java:S1118":Add a private constructor to hide the implicit public one.(¡œ¸Âüÿÿÿÿ8¢Â›ï1J$ff757b35-fb9c-410e-834d-a552d9f3eb7f
+m	java:S106'"+Replace this use of System.out by a logger.(©ñ…®8¨Â›ï1J$22361b5c-5f5a-4652-8532-cc58c5e558ff
+r	java:S106*"+Replace this use of System.err by a logger.(Ü‚ôşüÿÿÿÿ8©Â›ï1J$37b8e685-2869-4a60-8974-ce710968ed26
+‚
+java:S1128":Remove this unused import 'Garcia.Juan.CRUD.CrudProducto'.(öáçûÿÿÿÿ8‚—Ÿœï1J$b260ce62-195d-487f-8419-7b0d510f2873

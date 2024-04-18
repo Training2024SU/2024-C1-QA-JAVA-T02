@@ -37,7 +37,7 @@ public class CrudProducto {
                 producto.setTitulo(resultSet.getString(1));
                 producto.setTipo(resultSet.getString(2));
                 producto.setAutor(resultSet.getString(3));
-                producto.setNumeroPaginas(resultSet.getString(4));
+                producto.setMagnitud(resultSet.getString(4));
                 producto.setCantidadEjemplares(resultSet.getInt(5));
                 producto.setCantidadPrestados(resultSet.getInt(6));
                 producto.setCantidadDisponibles(resultSet.getInt(7));
@@ -59,7 +59,7 @@ public class CrudProducto {
                 producto.setTitulo(productoFor.getTitulo());
                 producto.setTipo(productoFor.getTipo());
                 producto.setAutor(productoFor.getAutor());
-                producto.setNumeroPaginas(productoFor.getNumeroPaginas());
+                producto.setMagnitud(productoFor.getMagnitud());
                 producto.setCantidadEjemplares(productoFor.getCantidadEjemplares());
                 producto.setCantidadPrestados(productoFor.getCantidadPrestados());
                 producto.setCantidadDisponibles(productoFor.getCantidadDisponibles());
@@ -83,38 +83,6 @@ public class CrudProducto {
             mySqlOperation.setSqlStatement(updateStatement);
             mySqlOperation.executeSqlStatementVoid();
         }
-    }
-
-    public static List<Producto> getAllProducts(MySqlOperation mySqlOperation) {
-        List<Producto> productos = new ArrayList<>();
-        try {
-            // Establecer la consulta SQL
-            mySqlOperation.setSqlStatement(GET_ALL_PRODUCTS);
-            // Ejecutar la consulta
-            mySqlOperation.executeSqlStatement();
-            // Obtener el conjunto de resultados
-            ResultSet resultSet = mySqlOperation.getResulset();
-
-            // Iterar sobre los resultados y crear objetos Producto
-            while (resultSet.next()) {
-                Producto producto = new Producto();
-                producto.setTitulo(resultSet.getString("titulo"));
-                producto.setTipo(resultSet.getString("tipo"));
-                producto.setAutor(resultSet.getString("autor"));
-                producto.setNumeroPaginas(resultSet.getString("numero_pag"));
-                producto.setCantidadEjemplares(resultSet.getInt("cant_ejemplares"));
-                producto.setCantidadPrestados(resultSet.getInt("cant_prestados"));
-                producto.setCantidadDisponibles(resultSet.getInt("cant_disponibles"));
-
-                // Agregar el producto a la lista
-                productos.add(producto);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al obtener los productos: " + e.getMessage());
-        }
-
-        // Devolver la lista de productos
-        return productos;
     }
 
 }

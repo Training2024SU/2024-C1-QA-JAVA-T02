@@ -1,12 +1,14 @@
 
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8ƒ¼”ï1J$917a3aca-b0cd-466d-b45d-30479a9aef9a
-`
-java:S1118"Hide this public constructor.(Ä˜´¬8ºƒ¼”ï1J$fdbe4d0a-483b-4683-a0b3-ef2186de0a47
-n
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8¾ƒ¼”ï1J$79486284-5fe3-4e32-af61-53cf277cc1e4
-x
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8Àƒ¼”ï1J$69738570-cf40-4633-adc7-00bd609d42a1
-•
-java:S37760"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª8Çƒ¼”ï1J$97aa9c80-4483-4ecf-aaa4-abe35de064b6
-m	java:S106f"+Replace this use of System.out by a logger.(¬ÊÖÜ8Ïƒ¼”ï1J$ef7b442b-908c-4d64-baa9-8021df55b163
-n	java:S106…"+Replace this use of System.out by a logger.(¬ÊÖÜ8Ôƒ¼”ï1J$36130378-c9df-4c9c-a58b-b59866d23c82
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$e2466661-acab-4798-b3c5-94397e3e57c8
+Y
+java:S1118"Hide this public constructor.(Ä˜´¬J$5c6c0f90-19c7-45aa-86fe-289f823bab1d
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$994c81ef-6bb9-48b8-a368-ea864f277551
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$00e49a5f-d024-4a63-b7ef-fab3edbeb2ab
+
+java:S37760"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ªJ$46696ff5-da7e-492e-bb4c-943cc7eeb948
+f	java:S106f"+Replace this use of System.out by a logger.(¬ÊÖÜJ$464403b2-f7e8-4f6d-9158-4ff37608abf6
+g	java:S106…"+Replace this use of System.out by a logger.(¬ÊÖÜJ$d46be0e6-7c68-4a5f-a9f9-223612102dd0
+o
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿJ$2cfe7538-1e42-440a-90de-6712680c10d5

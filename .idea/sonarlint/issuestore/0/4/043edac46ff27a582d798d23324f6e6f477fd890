@@ -1,0 +1,13 @@
+
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(×–£âýÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´™—Œ
+8
+java:S1118"Hide this public constructor.(«ØõÇüÿÿÿÿ
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+H
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ
+M
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍŽÊÇúÿÿÿÿ

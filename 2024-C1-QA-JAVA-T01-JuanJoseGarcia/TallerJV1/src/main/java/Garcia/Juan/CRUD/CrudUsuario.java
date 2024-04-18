@@ -2,10 +2,8 @@ package Garcia.Juan.CRUD;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import Garcia.Juan.database.mysql.MySqlOperation;
 import Garcia.Juan.model.Usuario;
-
 import java.util.ArrayList;
 import java.util.List;
 
