@@ -15,8 +15,7 @@ import static Garcia.Juan.dialogo.Menu.*;
 import static Garcia.Juan.logica.MetodosMain.pedirOpcion;
 import static Garcia.Juan.logica.MetodosPrestamo.*;
 import static Garcia.Juan.logica.MetodosProducto.*;
-import static Garcia.Juan.logica.MetodosUsuario.registrarSuperUsuario;
-import static Garcia.Juan.logica.MetodosUsuario.registrarUsuario;
+import static Garcia.Juan.logica.MetodosUsuario.*;
 import static Garcia.Juan.util.Roles.*;
 
 public class SesionIniciada {
@@ -120,12 +119,19 @@ public class SesionIniciada {
                         gestionarPrestamo(mySqlOperation);
                         break;
                     case 5:
-                        registrarUsuario(mySqlOperation, 1);
+                        registrarAdministrador(mySqlOperation); // Nueva opción para registrar administrador
                         break;
                     case 6:
                         List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
                         System.out.println(usuarios);
                         CSVExporter.exportToCSV(usuarios);
+                        break;
+                    case 7:
+                        // Caso para gestionar préstamos de prueba
+                        PrestamosPrueba.menuPrestamosPrueba(); // Llamar al método del menú de préstamos de prueba
+                        break;
+                    case 8:
+                        ciclo = false;
                         break;
                     default:
                         ciclo = false;

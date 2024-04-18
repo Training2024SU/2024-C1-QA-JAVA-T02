@@ -1,13 +1,13 @@
 
-‘	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ë«ÛıÿÿÿÿJ$01d5389c-2df5-41c8-8371-a72e9e10b309
+‘	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ë«ÛıÿÿÿÿJ$e11d6cd8-f280-48ee-92fe-e86f9d6f3d22
 ›
-java:S1488B"ZImmediately return this expression instead of assigning it to the temporary variable "id".(òü¤²úÿÿÿÿJ$da942bb6-9ad3-466a-a6a7-6b9d4f4f984c
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$d1ce05b0-3e7d-4515-bcdb-282f0f86d0db
+java:S1488B"ZImmediately return this expression instead of assigning it to the temporary variable "id".(òü¤²úÿÿÿÿJ$6e9e56d5-fb53-4555-bd59-da5ed47aaf0d
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$580372fc-a98a-46f8-8219-6774534ca3f4
 Y
-java:S1118"Hide this public constructor.(šÁîJ$0fe10e0c-a436-49f5-8f28-91b2c3306e21
+java:S1118"Hide this public constructor.(šÁîJ$2cf1f0f1-5772-479b-8a0c-4a58fda2e1b0
 g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$6eb38494-fa70-4072-bb3f-36e45ebc50e0
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$82e708b4-57ec-4bad-8a02-6f46c85217a2
 q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$54a98624-d4db-4ba2-9eda-67dbeee4865b
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$887969ab-8741-48b4-bba6-23afcaefc38e
 
-java:S1172("ORemove these unused method parameters "mySqlOperation", "productosSolicitados".(å®ÙëûÿÿÿÿJ$d9626d92-6808-486e-aa6d-8d797ad6dc21
+java:S1172("ORemove these unused method parameters "mySqlOperation", "productosSolicitados".(å®ÙëûÿÿÿÿJ$363b39d6-f7fd-443c-96d1-372fb184b947

@@ -45,3 +45,7 @@ Y
 )src/main/java/Garcia/Juan/util/Roles.java,d/6/d6f178872cc838ba1bf562adb4e5763ecdbcbe2b
 X
 (src/main/java/Garcia/Juan/util/Tipo.java,1/b/1b69a854e5857bbb9cfd69b95e64fa52ebf881a2
+f
+6src/main/java/Garcia/Juan/logica/prestamos_prueba.java,a/4/a4a9e09103951afe6ca0bb104553273de9c06022
+e
+5src/main/java/Garcia/Juan/logica/PrestamosPrueba.java,b/f/bf841564a1898a7170d44e2fa7ac523e300ab5ae
