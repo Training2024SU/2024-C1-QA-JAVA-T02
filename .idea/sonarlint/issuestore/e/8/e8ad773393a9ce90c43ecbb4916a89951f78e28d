@@ -1,24 +1,24 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$f51609c0-3004-48b8-8c01-5dfa0db02c1d
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$8e90bcc9-7d11-4541-991f-4a6cc3cf8f8b
 Y
-java:S1118"Hide this public constructor.(ŸºÆJ$92f14199-7b9b-45de-9b07-9a562e623b29
+java:S1118"Hide this public constructor.(ŸºÆJ$a7cf6972-c10c-4d1b-84d0-8f734650c98c
 g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$8f110a85-e2f9-4acf-9d09-191c8d6b8cca
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$e840a1c0-92a6-4746-bdac-c72a171d7f29
 q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$df213149-c07b-4839-aed1-c6690f4b75cc
-k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$4d074588-8afd-44cd-9b6a-92d20484f3f6
-f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$213d773e-8000-4900-af30-62e710378c7b
-|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$63e1905e-26bc-4658-b3f8-0ec19a2bf299
-|	java:S125"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$e70eedf4-d4d5-443c-82ff-22c58a4452ac
-k	java:S106$"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$19e38b44-f2f6-4063-babe-a7e4f6df1d1c
-k	java:S1069"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$1a828f10-1553-4940-8741-a11cfd290713
-e	java:S106;"+Replace this use of System.out by a logger.(®…ê3J$83493978-8751-4ed7-a4e0-5c15880000f5
-k	java:S106="+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$4098c0fb-8043-468b-8d54-2144f7010742
-k	java:S106G"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$092c7bbf-5243-46b1-84b9-fc4193c85b5f
-L	java:S106S"+Replace this use of System.out by a logger.(…Ôëşÿÿÿÿ8°ûŒøî1
-L	java:S106U"+Replace this use of System.out by a logger.(ï¿íùÿÿÿÿ8±ûŒøî1
-G	java:S106W"+Replace this use of System.out by a logger.(Œ‹‚8²ûŒøî1
-G	java:S106_"+Replace this use of System.out by a logger.(Šò»Ô8´ûŒøî1
-G	java:S106e"+Replace this use of System.out by a logger.(µÅÒò8µûŒøî1
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$23ae358f-8326-48fb-bee4-9762b75fbcd8
+k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$03c57a7b-d591-48b5-9ec6-552c598ce2cc
+f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$e79aa102-33be-4f1d-8b60-308b1d0a85aa
+|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$1c6aeaf6-4748-4f5b-bba5-ccd38e758485
+|	java:S125"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$a2b8acb1-03e0-4701-a2ff-0a1c351b86b2
+k	java:S106$"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$a1ede2c8-0bf0-43a6-8ca8-e57fef1fd9f9
+k	java:S1069"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$b2c4c144-677c-4663-99d8-26a47ce02b5f
+e	java:S106;"+Replace this use of System.out by a logger.(®…ê3J$01f2ee12-c21d-4f06-bf4e-07ab07f3bae6
+k	java:S106="+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$b8e33def-dd59-4e5e-9262-170e545fc0aa
+k	java:S106G"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$5efa8e2b-c22f-4cf3-9179-a0b184dfa820
+r	java:S106S"+Replace this use of System.out by a logger.(…Ôëşÿÿÿÿ8°ûŒøî1J$93129c0e-1e5b-429b-ac0d-d5e4e3025957
+r	java:S106U"+Replace this use of System.out by a logger.(ï¿íùÿÿÿÿ8±ûŒøî1J$6ed61a05-3828-4791-b598-16f4970e4377
+m	java:S106W"+Replace this use of System.out by a logger.(Œ‹‚8²ûŒøî1J$55037ee2-d374-4a05-8922-e06cc01fe12d
+m	java:S106_"+Replace this use of System.out by a logger.(Šò»Ô8´ûŒøî1J$64215aed-4ce7-4744-940e-14221032979a
+m	java:S106e"+Replace this use of System.out by a logger.(µÅÒò8µûŒøî1J$8df69941-2290-43b9-81e7-162a189afb66
 s
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$c5a14279-734c-42e3-8893-ebb66858a300
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$158b7ad0-76e0-421f-9118-19c474b66b50

@@ -1,15 +1,15 @@
 
-m
-java:S1192l"RDefine a constant instead of duplicating this literal ", numeroPaginas='" 4 times.(¶ìÏÿıÿÿÿÿ
-a
-java:S1192t"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåı°
-d
-java:S1192i"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„Æşÿÿÿÿ
-r
-java:S1192o"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®Áşÿÿÿÿ
-`
-java:S1192k"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛ
-_
-java:S1192j"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãşÿÿÿÿ
-V	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(‰ªº‰
+š
+java:S1192l"RDefine a constant instead of duplicating this literal ", numeroPaginas='" 4 times.(¶ìÏÿıÿÿÿÿ8Ú÷…ùî1J$fb5216e4-1f92-485a-9c60-1295204d6276
+
+java:S1192t"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåı°8Û÷…ùî1J$740adee3-c4c9-4ac1-8e8e-cb18eb7c0403
+‘
+java:S1192i"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„Æşÿÿÿÿ8Û÷…ùî1J$113b2662-f58a-4655-ad53-5b2366f825bc
+Ÿ
+java:S1192o"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®Áşÿÿÿÿ8Û÷…ùî1J$6f713b12-6bd0-4081-9b63-d994e3b0f527
+
+java:S1192k"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛ8Û÷…ùî1J$e4cd8a75-16e2-49e9-a690-ecfc2f4b225d
+Œ
+java:S1192j"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹8Û÷…ùî1J$ad22b428-1630-41a5-9ab0-aaa576346d83
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãşÿÿÿÿ8İ÷…ùî1J$92fa89d4-41a8-445e-90f0-8af5e2eba888
+]	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(‰ªº‰8ØÿŠùî1

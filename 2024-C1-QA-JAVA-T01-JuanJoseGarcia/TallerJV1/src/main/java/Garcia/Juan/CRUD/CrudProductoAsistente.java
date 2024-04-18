@@ -12,7 +12,7 @@ public class CrudProductoAsistente {
         this.mySqlOperation = mySqlOperation;
     }
 
-    private static final String INSERT_PRODUCT = "INSERT INTO bibliotecapingu.producto (titulo,tipo, autor,numero_pag,cant_ejemplares,cant_prestados, area_genero) VALUES ('%s','%s', '%s','%s','%s','%s','%s')";
+    private static final String INSERT_PRODUCT = "INSERT INTO bibliotecapingu.producto (titulo, tipo, autor, numero_pag, cant_ejemplares, cant_prestados) VALUES ('%s', '%s', '%s', %d, %d, %d)";
     private static final String DELETE_PRODUCT = "DELETE FROM bibliotecapingu.producto where titulo='%s'";
     private static final String OBTAIN_PRODUCT = "DELETE FROM bibliotecapingu.producto where titulo='%s'";
     private static final String UPDATE_PRODUCT = "UPDATE libro SET titulo = '%s', autor = '%s' area_conocimiento = '%s', nu_paginas = '%s', cantidad_ejemplares = '%s', cantidad_prestados = '%s', cantidad_disponibles = '%s', area_genero = '%s'  WHERE titulo = '%s'";
@@ -23,22 +23,34 @@ public class CrudProductoAsistente {
         mySqlOperation.executeSqlStatementVoid();
     }
 
-    public static String obtenerInfoProduct(){
+    public static String obtenerInfoProduct() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Inserte el titulo del producto: ");
+
+        // Solicita el título del producto al usuario
+        System.out.println("Inserte el título del producto: ");
         String titulo = scanner.nextLine();
+
+        // Solicita el tipo de producto al usuario
         System.out.println("Inserte el tipo de producto: ");
         String tipo = scanner.nextLine();
-        System.out.print("Ingrese el autor del producto: ");
+
+        // Solicita el autor del producto al usuario
+        System.out.println("Ingrese el autor del producto: ");
         String autor = scanner.nextLine();
-        System.out.print("Ingrese el numero de paginas del producto: ");
-        String numeroPaginas = scanner.nextLine();
-        System.out.print("Ingrese el numero de ejemplares del producto: ");
+
+        // Solicita el número de páginas del producto al usuario
+        System.out.println("Ingrese el número de páginas del producto: ");
+        int numeroPaginas = Integer.parseInt(scanner.nextLine());
+
+        // Solicita el número de ejemplares del producto al usuario
+        System.out.println("Ingrese el número de ejemplares del producto: ");
         int cantidadEjemplares = Integer.parseInt(scanner.nextLine());
+
+        // Establece el número de préstamos inicial en cero
         int cantidadPrestados = 0;
-        System.out.print("Ingrese el area/genero del producto: ");
-        String area = scanner.nextLine();
-        return String.format(INSERT_PRODUCT, titulo, tipo, autor, numeroPaginas ,cantidadEjemplares, cantidadPrestados,area);
+
+        // Devuelve la consulta de inserción formateada utilizando `String.format`
+        return String.format(INSERT_PRODUCT, titulo, tipo, autor, numeroPaginas, cantidadEjemplares, cantidadPrestados);
     }
 
     protected static String PreguntarAlUsuario() {

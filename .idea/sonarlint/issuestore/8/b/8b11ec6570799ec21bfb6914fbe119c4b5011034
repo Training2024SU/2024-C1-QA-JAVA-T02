@@ -1,24 +1,24 @@
 
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-8
-java:S1118"Hide this public constructor.(¸ÿØúÿÿÿÿ
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-m
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¯å‡úÿÿÿÿ
-‰
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¯å‡úÿÿÿÿ
-7	java:S131""Add a default case to this switch.(°€àâ
-?	java:S106!"+Replace this use of System.out by a logger.(ª…ı
-@	java:S106""+Replace this use of System.out by a logger.(ò¤µæ
-E	java:S106("+Replace this use of System.out by a logger.(Ú²Âêøÿÿÿÿ
-?	java:S106,"+Replace this use of System.out by a logger.(›ù¼L
-E	java:S1063"+Replace this use of System.out by a logger.(¡†Ü«ıÿÿÿÿ
-@	java:S1064"+Replace this use of System.out by a logger.(ò¤µæ
-E	java:S106;"+Replace this use of System.out by a logger.(ôº¼¸ùÿÿÿÿ
-E	java:S106C"+Replace this use of System.out by a logger.(ã…éüÿÿÿÿ
-7	java:S131J""Add a default case to this switch.(ü‹¢ï
-M
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$c9e261cc-848e-4bb9-9140-019975f5ca54
+^
+java:S1118"Hide this public constructor.(¸ÿØúÿÿÿÿJ$4fd36599-46df-4e0d-a5dc-d69c576e34a2
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$c6d07f32-c374-431d-a117-ca8c01c698a2
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$b3a28a94-545d-49af-8eca-23008ccd7f56
+“
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¯å‡úÿÿÿÿJ$c2120ea6-3043-4372-bd46-cf7f7aeac0ea
+¯
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¯å‡úÿÿÿÿJ$dfe5a3cc-18b7-4009-8f49-1ba83ea65a88
+]	java:S131""Add a default case to this switch.(°€àâJ$519315ce-4a2c-41ef-8ddf-9a6ec8549477
+e	java:S106!"+Replace this use of System.out by a logger.(ª…ıJ$74d5ee47-7363-45a9-983b-6ba7fce143b1
+f	java:S106""+Replace this use of System.out by a logger.(ò¤µæJ$4a34febd-087a-4184-92f9-c14c79a6c098
+k	java:S106("+Replace this use of System.out by a logger.(Ú²ÂêøÿÿÿÿJ$c1ec0e76-18f9-4937-a8b7-b3b619c0af5e
+e	java:S106,"+Replace this use of System.out by a logger.(›ù¼LJ$c927c13b-9edd-4594-9763-254ece94a6ac
+k	java:S1063"+Replace this use of System.out by a logger.(¡†Ü«ıÿÿÿÿJ$d65e6811-5f15-4402-a0c0-94cf7cc9f09a
+f	java:S1064"+Replace this use of System.out by a logger.(ò¤µæJ$63c9a111-ecb9-4464-92ac-05ebfd0f7e73
+k	java:S106;"+Replace this use of System.out by a logger.(ôº¼¸ùÿÿÿÿJ$5d24d7fc-2013-4bd9-bd58-ff5bcfccfd87
+k	java:S106C"+Replace this use of System.out by a logger.(ã…éüÿÿÿÿJ$0dbbc51f-80c1-4bb9-a045-49e8ec15c29a
+]	java:S131J""Add a default case to this switch.(ü‹¢ïJ$37286d30-c4a7-4a9f-94db-71d2ab2a6cd2
+s
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$0c73fff8-7344-45ab-9978-4aa3761010f0

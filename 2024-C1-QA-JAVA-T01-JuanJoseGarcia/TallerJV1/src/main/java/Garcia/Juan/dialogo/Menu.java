@@ -73,12 +73,16 @@ public class Menu {
     public static void menuSuperUsuario() {
         System.out.println(SELECCIONE);
         System.out.println("1. Crear superusuario");
-        System.out.println("2. Gestionar usuarios");
-        System.out.println("3. Gestionar roles y permisos");
-        System.out.println("4. Configuraciones del sistema");
-        System.out.println("5. Auditoría y registros");
-        System.out.println("6. Salir");
+        System.out.println("2. Registrar usuarios");
+        System.out.println("3. Gestionar materiales");
+        System.out.println("4. Gestionar préstamos");
+        System.out.println("5. Registrar asistente");
+        System.out.println("6. Consultar usuarios");
+        System.out.println("7. Configuraciones del sistema");
+        System.out.println("8. Auditoría y registros");
+        System.out.println("9. Salir");
     }
+
 
 
 
