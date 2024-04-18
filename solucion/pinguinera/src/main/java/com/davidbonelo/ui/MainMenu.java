@@ -2,10 +2,7 @@ package com.davidbonelo.ui;
 
 import com.davidbonelo.models.User;
 import com.davidbonelo.models.UserRole;
-import com.davidbonelo.persistance.BookDAO;
-import com.davidbonelo.persistance.BorrowingDAO;
-import com.davidbonelo.persistance.NovelDAO;
-import com.davidbonelo.persistance.UserDAO;
+import com.davidbonelo.persistance.*;
 import com.davidbonelo.services.BorrowingsService;
 import com.davidbonelo.services.DataService;
 import com.davidbonelo.services.LibraryManager;
@@ -30,10 +27,14 @@ public class MainMenu {
         UserDAO userDAO = new UserDAO(connection);
         BookDAO bookDAO = new BookDAO(connection);
         NovelDAO novelDAO = new NovelDAO(connection);
+        SongDAO songDAO = new SongDAO(connection);
+        EssayDAO essayDAO = new EssayDAO(connection);
+        VideoRecordingDAO videoRecordingDAO = new VideoRecordingDAO(connection);
+
         BorrowingDAO borrowingDAO = new BorrowingDAO(connection);
         this.userService = new UserService(userDAO);
         this.libraryManager = new LibraryManager(bookDAO, novelDAO);
-        this.borrowingsService = new BorrowingsService(bookDAO, novelDAO, borrowingDAO, connection);
+        this.borrowingsService = new BorrowingsService(bookDAO, novelDAO, videoRecordingDAO, songDAO, essayDAO, borrowingDAO, connection);
         this.dataService = new DataService(bookDAO, novelDAO, connection);
     }
 

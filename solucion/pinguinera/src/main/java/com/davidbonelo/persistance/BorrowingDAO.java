@@ -1,12 +1,6 @@
 package com.davidbonelo.persistance;
 
-import com.davidbonelo.models.Book;
-import com.davidbonelo.models.Borrowing;
-import com.davidbonelo.models.BorrowingStatus;
-import com.davidbonelo.models.LibraryItem;
-import com.davidbonelo.models.Novel;
-import com.davidbonelo.models.User;
-import com.davidbonelo.models.UserRole;
+import com.davidbonelo.models.*;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -71,16 +65,40 @@ public class BorrowingDAO {
         List<LibraryItem> items = new ArrayList<>();
         // Note to self: Don't try to optimize by joining this 2 queries because then it will not
         // be possible to differentiate Books and Novels
+
         // SubQuery a borrowing and join its books
-        String sqlB =
-                "SELECT b.* FROM (SELECT * FROM borrowings_books bb WHERE bb.borrowing_id " + "=" + " ?) AS bb LEFT JOIN Books b ON bb.book_id = b.id";
+        String sqlB = "SELECT b.* FROM (SELECT * FROM borrowings_books bb WHERE bb.borrowing_id = ?) AS bb LEFT JOIN Books b ON bb.book_id = b.id";
         // SubQuery a borrowing and join its novels
         String sqlN = "SELECT n.* FROM (SELECT * FROM borrowings_novels bn WHERE bn.borrowing_id "
                 + "= ?) AS bn LEFT JOIN Novels n ON bn.novel_id = n.id";
 
-        try (PreparedStatement statementB = connection.prepareStatement(sqlB); PreparedStatement statementN = connection.prepareStatement(sqlN)) {
+        // EXTENSION USING THE NEW ENTITIES
+        // borrowing and video recordings
+        String sqlV = "SELECT v.* FROM borrowings_videos bv " +
+                "INNER JOIN VideoRecordings v ON (bv.video_recording_id = v.id) " +
+                "WHERE bv.borrowing_id = ?;";
+
+        // Borrowing and songs
+        String sqlS = "SELECT s.* FROM borrowings_songs bs " +
+                "INNER JOIN songs s ON (bs.song_id = s.id) " +
+                "WHERE bs.borrowing_id = ?;";
+
+        // Borrowings and essays
+        String sqlE = "SELECT e.* FROM borrowings_essays be " +
+                "INNER JOIN essays e ON (be.essay_id = e.id) " +
+                "WHERE be.borrowing_id = ?;";
+
+        try (PreparedStatement statementB = connection.prepareStatement(sqlB);
+             PreparedStatement statementN = connection.prepareStatement(sqlN);
+             PreparedStatement statementV = connection.prepareStatement(sqlV);
+             PreparedStatement statementS = connection.prepareStatement(sqlS);
+             PreparedStatement statementE = connection.prepareStatement(sqlE)) {
+
             statementB.setInt(1, borrowingId);
             statementN.setInt(1, borrowingId);
+            statementV.setInt(1, borrowingId);
+            statementS.setInt(1, borrowingId);
+            statementE.setInt(1, borrowingId);
 
             try (ResultSet rsB = statementB.executeQuery();
                  ResultSet rsN = statementN.executeQuery()) {
@@ -128,7 +146,14 @@ public class BorrowingDAO {
     private void saveBorrowedItems(Borrowing borrowing) throws SQLException {
         String sqlB = "INSERT INTO borrowings_books (borrowing_id, book_id) VALUES (?, ?)";
         String sqlN = "INSERT INTO borrowings_novels (borrowing_id, novel_id) VALUES (?, ?)";
-        try (PreparedStatement statementB = connection.prepareStatement(sqlB); PreparedStatement statementN = connection.prepareStatement(sqlN)) {
+        String sqlV = "INSERT INTO borrowings_videos (borrowing_id, video_recording_id) VALUES (?, ?)";
+        String sqlS = "INSERT INTO borrowings_songs (borrowing_id, song_id) VALUES (?, ?)";
+        String sqlE = "INSERT INTO borrowings_essays (borrowing_id, essay_id) VALUES (?, ?)";
+        try (PreparedStatement statementB = connection.prepareStatement(sqlB);
+             PreparedStatement statementN = connection.prepareStatement(sqlN);
+             PreparedStatement statementV = connection.prepareStatement(sqlV);
+             PreparedStatement statementS = connection.prepareStatement(sqlS);
+             PreparedStatement statementE = connection.prepareStatement(sqlE)) {
             for (LibraryItem li : borrowing.getBorrowedItems()) {
                 if (li instanceof Book) {
                     statementB.setInt(1, borrowing.getId());
@@ -140,9 +165,29 @@ public class BorrowingDAO {
                     statementN.setInt(2, li.getId());
                     statementN.addBatch();
                 }
+                if (li instanceof VideoRecording){
+                    statementV.setInt(1, borrowing.getId());
+                    statementV.setInt(2, li.getId());
+                    statementV.addBatch();
+                }
+                if (li instanceof Song){
+                    statementS.setInt(1, borrowing.getId());
+                    statementS.setInt(2, li.getId());
+                    statementS.addBatch();
+
+                }
+                if (li instanceof Essay){
+                    statementE.setInt(1, borrowing.getId());
+                    statementE.setInt(2, li.getId());
+                    statementE.addBatch();
+                }
+
             }
             statementB.executeBatch();
             statementN.executeBatch();
+            statementV.executeBatch();
+            statementS.executeBatch();
+            statementE.executeBatch();
         }
     }
 
@@ -150,7 +195,7 @@ public class BorrowingDAO {
         if (missingId(borrowing)) {
             throw new IllegalArgumentException("Can't update a borrowing without a id");
         }
-        String sql = "UPDATE Borrowings SET status= ? WHERE is_deleted = 0 AND id= ?";
+        String sql = "UPDATE Borrowings SET status = ? WHERE is_deleted = 0 AND id = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, borrowing.getStatus().getValue());
             statement.setInt(2, borrowing.getId()); // WHERE
@@ -163,7 +208,7 @@ public class BorrowingDAO {
     }
 
     public void deleteBorrowing(int borrowingId) throws SQLException {
-        String sql = "UPDATE Borrowing SET is_deleted = 1 WHERE id= ?";
+        String sql = "UPDATE Borrowing SET is_deleted = 1 WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, borrowingId); // WHERE
 

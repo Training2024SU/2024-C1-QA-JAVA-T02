@@ -1,14 +1,7 @@
 package com.davidbonelo.services;
 
-import com.davidbonelo.models.Book;
-import com.davidbonelo.models.Borrowing;
-import com.davidbonelo.models.LibraryItem;
-import com.davidbonelo.models.Novel;
-import com.davidbonelo.models.User;
-import com.davidbonelo.models.UserRole;
-import com.davidbonelo.persistance.BookDAO;
-import com.davidbonelo.persistance.BorrowingDAO;
-import com.davidbonelo.persistance.NovelDAO;
+import com.davidbonelo.models.*;
+import com.davidbonelo.persistance.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -24,15 +17,26 @@ import static com.davidbonelo.utils.Permissions.validPermission;
 public class BorrowingsService {
     private final BookDAO bookDAO;
     private final NovelDAO novelDAO;
+    private final VideoRecordingDAO videoRecordingDAO;
+    private final SongDAO songDAO;
+    private final EssayDAO essayDAO;
     private final BorrowingDAO borrowingDAO;
     private final Set<LibraryItem> itemsToBorrow;
     private final Connection connection;
     private final ResourceBundle messages = ResourceBundle.getBundle("messages");
 
-    public BorrowingsService(BookDAO bookDAO, NovelDAO novelDAO, BorrowingDAO borrowingDAO,
+    public BorrowingsService(BookDAO bookDAO,
+                             NovelDAO novelDAO,
+                             VideoRecordingDAO videoRecordingDAO,
+                             SongDAO songDAO,
+                             EssayDAO essayDAO,
+                             BorrowingDAO borrowingDAO,
                              Connection connection) {
         this.bookDAO = bookDAO;
         this.novelDAO = novelDAO;
+        this.videoRecordingDAO = videoRecordingDAO;
+        this.songDAO = songDAO;
+        this.essayDAO = essayDAO;
         this.borrowingDAO = borrowingDAO;
         this.connection = connection;
         this.itemsToBorrow = new HashSet<>();
@@ -77,6 +81,34 @@ public class BorrowingsService {
             throw new SQLException(errMsg);
         }
         this.itemsToBorrow.add(novel);
+    }
+
+    public void addBorrowingVideo(int itemId) throws SQLException {
+        VideoRecording videoRecording = videoRecordingDAO.getVideoRecordingById(itemId);
+        if (videoRecording == null) {
+            String errMsg = MessageFormat.format(messages.getString("borrowings.res" +
+                    ".videoRecordingNotFound"), itemId);
+            throw new SQLException(errMsg);
+        }
+        this.itemsToBorrow.add(videoRecording);
+    }
+    public void addBorrowingSong(int itemId) throws SQLException {
+        Song song = songDAO.getSongById(itemId);
+        if (song == null) {
+            String errMsg = MessageFormat.format(messages.getString("borrowings.res" +
+                    ".songNotFound"), itemId);
+            throw new SQLException(errMsg);
+        }
+        this.itemsToBorrow.add(song);
+    }
+    public void addBorrowingEssay(int itemId) throws SQLException {
+        Essay essay = essayDAO.getEssayById(itemId);
+        if (essay == null) {
+            String errMsg = MessageFormat.format(messages.getString("borrowings.res" +
+                    ".essayNotFound"), itemId);
+            throw new SQLException(errMsg);
+        }
+        this.itemsToBorrow.add(essay);
     }
 
     public List<Borrowing> getAllBorrowings(User user) {
@@ -133,6 +165,12 @@ public class BorrowingsService {
                 bookDAO.updateBook(book);
             } else if (li instanceof Novel novel) {
                 novelDAO.updateNovel(novel);
+            } else if (li instanceof VideoRecording videoRecording) {
+                videoRecordingDAO.updateVideoRecording(videoRecording);
+            } else if (li instanceof Song song) {
+                songDAO.updateSong(song);
+            } else if (li instanceof Essay essay) {
+                essayDAO.updateEssay(essay);
             }
         }
     }

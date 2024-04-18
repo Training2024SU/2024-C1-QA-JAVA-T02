@@ -37,7 +37,7 @@ public class PinguDatabase {
             connection.close();
             connection = null;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }
