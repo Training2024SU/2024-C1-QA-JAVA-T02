@@ -4,8 +4,10 @@ import co.com.sofka.DAO.Impl.UserDAOImpl;
 import co.com.sofka.enums.UserType;
 import co.com.sofka.model.User;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
+import static co.com.sofka.utils.Utils.askDate;
 import static co.com.sofka.utils.Utils.getStringOption;
 
 
@@ -35,36 +37,44 @@ public class Authentication {
         return null;
     }
 
-    public static void register(){
+    public static void register() {
         String name = askForName();
         String email = askForEmail();
         String password = askForPassword();
+        LocalDate birthDate = askDate("Enter your birth date: ");
+        String phone = askForPhone();
         User user = verifyEmail(email);
-        if(user != null){
+        if (user != null) {
             System.out.println("There is an user with that email");
-        }else {
+        } else {
             UserDAOImpl userDAOImpl = new UserDAOImpl();
-            user = new User(UUID.randomUUID().toString(),
-                    name,
-                    email,
-                    password,
-                    UserType.READER);
+            user = new User(UUID.randomUUID().toString(), name, email, password, UserType.READER,
+                    birthDate, phone);
             userDAOImpl.insertUser(user);
         }
     }
-    public static String askForName(){
+
+    public static String askForName() {
         System.out.println("Enter your name: ");
         return getStringOption();
     }
-    public static String askForEmail(){
+
+    public static String askForEmail() {
         System.out.println("Enter your email: ");
         return getStringOption();
     }
-    public static String askForPassword(){
+
+    public static String askForPassword() {
         System.out.println("Enter your password: ");
         return getStringOption();
     }
-    public static User verifyEmail(String email){
+
+    public static String askForPhone() {
+        System.out.println("Enter your phone number: ");
+        return getStringOption();
+    }
+
+    public static User verifyEmail(String email) {
         UserDAOImpl userDAOImpl = new UserDAOImpl();
         return userDAOImpl.findUserByEmail(email);
     }

@@ -11,7 +11,7 @@ import java.util.List;
 import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class BookDAOImpl implements BookDAO {
-    private static final String insertIntoQuery = "INSERT INTO BOOK " +
+    private static final String insertIntoQuery = "INSERT INTO book " +
             "(book_id, title, quantity, quantity_loaned, category, author_id) " +
             "VALUES ('%s', '%s', %d, %d, '%s', '%s');";
     private static final String selectAllQuery = "SELECT book_id, " +
@@ -22,7 +22,7 @@ public class BookDAOImpl implements BookDAO {
             "category, " +
             "author_id " +
             "FROM book;";
-    private static final String updateQuery = "UPDATE BOOK SET " +
+    private static final String updateQuery = "UPDATE book SET " +
             "title = '%s', " +
             "quantity = %d, " +
             "quantity_loaned = %d, " +

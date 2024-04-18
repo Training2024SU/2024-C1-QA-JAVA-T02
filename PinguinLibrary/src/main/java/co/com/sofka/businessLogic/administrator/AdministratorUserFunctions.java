@@ -4,46 +4,40 @@ import co.com.sofka.businessLogic.generalAdmin.GeneralAdministrativeManagement;
 import co.com.sofka.enums.UserType;
 import co.com.sofka.model.User;
 
-
+import java.time.LocalDate;
 import java.util.UUID;
 
-import static co.com.sofka.menu.MenuConstant.*;
+import static co.com.sofka.menu.MenuConstant.enterYourOptionMessage;
+import static co.com.sofka.menu.MenuConstant.exitingMessage;
+import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.administratorUserMenuMessage;
+import static co.com.sofka.utils.Utils.askDate;
 import static co.com.sofka.utils.Utils.getIntOption;
 import static co.com.sofka.utils.Utils.getStringOption;
 
 public class AdministratorUserFunctions {
-    private static final AdministratorManagement administratorManagement = new AdministratorManagement();
-    private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
+    private static final AdministratorManagement administratorManagement =
+            new AdministratorManagement();
+    private static final GeneralAdministrativeManagement generalAdministrativeManagement =
+            new GeneralAdministrativeManagement();
 
-    public static void administratorUserMenuOptions(User user){
+    public static void administratorUserMenuOptions(User user) {
         boolean keepMenu = true;
-        while (keepMenu){
+        while (keepMenu) {
             administratorUserMenuMessage(user);
             System.out.print(enterYourOptionMessage);
             int option = getIntOption();
-            switch (option){
-                case 1:
-                    insertUser();
-                    break;
-                case 2:
-                    seeAllUsers();
-                    break;
-                case 3:
-                    seeUserByEmail();
-                    break;
-                case 4:
-                    updateUser();
-                    break;
-                case 5:
-                    deleteUser();
-                    break;
-                case 6:
+            switch (option) {
+                case 1 -> insertUser();
+                case 2 -> seeAllUsers();
+                case 3 -> seeUserByEmail();
+                case 4 -> updateUser();
+                case 5 -> deleteUser();
+                case 6 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
-                    break;
-                default:
-                    System.out.println(incorrectOptionMessage);
+                }
+                default -> System.out.println(incorrectOptionMessage);
             }
         }
     }
@@ -63,7 +57,7 @@ public class AdministratorUserFunctions {
         administratorManagement.updateUser(newUser);
     }
 
-    private static User getUserData(){
+    private static User getUserData() {
         System.out.println("Enter name: ");
         String name = getStringOption();
         System.out.println("Enter email: ");
@@ -72,7 +66,11 @@ public class AdministratorUserFunctions {
         String password = getStringOption();
         System.out.println("Enter user role: (ADMINISTRATOR/ASSISTANT/READER)");
         UserType role = UserType.valueOf(getStringOption());
-        return new User(UUID.randomUUID().toString(), name, email, password, role);
+        LocalDate birthDate = askDate("Enter Birth Date: ");
+        System.out.println("Enter phone number: ");
+        String phone = getStringOption();
+        return new User(UUID.randomUUID().toString(), name, email, password, role, birthDate,
+                phone);
     }
 
     private static void seeUserByEmail() {
@@ -90,8 +88,7 @@ public class AdministratorUserFunctions {
         });
     }
 
-    private static void insertUser() {
+    public static void insertUser() {
         administratorManagement.insertUser(getUserData());
     }
-
 }

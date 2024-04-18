@@ -1,9 +1,10 @@
 package co.com.sofka.DAO.Impl;
 
 import co.com.sofka.DAO.UserDAO;
-import co.com.sofka.model.User;
 import co.com.sofka.enums.UserType;
+import co.com.sofka.model.User;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,32 +13,19 @@ import java.util.List;
 import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class UserDAOImpl implements UserDAO {
-    private static final String insertIntoQuery = "INSERT INTO user " +
-            "(id, name, email, password, role) " +
-            "VALUES ('%s', '%s', '%s', '%s', '%s');";
-    private static final String selectAllQuery = "SELECT id, " +
-            "name, " +
-            "email, " +
-            "password, " +
-            "role " +
-            "FROM user ";
-    private static final String updateQuery = "UPDATE user SET " +
-            "name = '%s', " +
-            "email = '%s', " +
-            "password = '%s', " +
-            "role = '%s' " +
-            "WHERE id = '%s';";
+    private static final String insertIntoQuery =
+            "INSERT INTO user (id, name, email, password, " + "role, phone, birth_date) VALUES " + "('%s', " + "'%s', '%s', '%s', '%s', '%s', '%s');";
+    private static final String selectAllQuery = "SELECT * FROM user;";
+    private static final String updateQuery = "UPDATE user SET name = '%s', email = '%s', " +
+            "password = '%s', role = '%s', phone = '%s', birth_date = '%s' WHERE id = '%s';";
     private static final String deleteQuery = "DELETE FROM user WHERE id = '%s';";
 
 
     @Override
     public void insertUser(User user) {
-        String query = String.format(insertIntoQuery,
-                user.getId(),
-                user.getName(),
-                user.getEmail(),
-                user.getPassword(),
-                user.getRole().toString());
+        String query = String.format(insertIntoQuery, user.getId(), user.getName(),
+                user.getEmail(), user.getPassword(), user.getRole().toString(), user.getPhone(),
+                Date.valueOf(user.getBirthDate()));
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
     }
@@ -60,21 +48,14 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUserById(String id) {
-        return getAllUsers()
-                .stream()
-                .filter(user -> user.getId().equals(id))
-                .findFirst()
-                .orElse(null);
+        return getAllUsers().stream().filter(user -> user.getId().equals(id)).findFirst().orElse(null);
     }
 
     @Override
     public void updateUser(User user) {
-        String query = String.format(updateQuery,
-                user.getName(),
-                user.getEmail(),
-                user.getPassword(),
-                user.getRole().toString(),
-                user.getId());
+        String query = String.format(updateQuery, user.getName(), user.getEmail(),
+                user.getPassword(), user.getRole().toString(), user.getPhone(),
+                Date.valueOf(user.getBirthDate()), user.getId());
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
     }
@@ -94,15 +75,12 @@ public class UserDAOImpl implements UserDAO {
         user.setEmail(resultSet.getString("email"));
         user.setPassword(resultSet.getString("password"));
         user.setRole(UserType.valueOf(resultSet.getString("role")));
+        user.setPhone(resultSet.getString("phone"));
+        user.setBirthDate(resultSet.getDate("birth_date").toLocalDate());
         return user;
     }
 
-    public User findUserByEmail(String email){
-        return getAllUsers()
-                .stream()
-                .filter(userInDatabase -> userInDatabase.getEmail().equals(email))
-                .findFirst()
-                .orElse(null);
+    public User findUserByEmail(String email) {
+        return getAllUsers().stream().filter(userInDatabase -> userInDatabase.getEmail().equals(email)).findFirst().orElse(null);
     }
-
 }

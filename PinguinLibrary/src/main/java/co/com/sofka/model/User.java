@@ -2,22 +2,29 @@ package co.com.sofka.model;
 
 import co.com.sofka.enums.UserType;
 
+import java.time.LocalDate;
+
 public class User {
     private String id;
     private String name;
     private String email;
     private String password;
     protected UserType role;
+    private LocalDate birthDate;
+    private String phone;
 
     public User() {
     }
 
-    public User(String id, String name, String email, String password, UserType role) {
+    public User(String id, String name, String email, String password, UserType role,
+                LocalDate birthDate, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.role = role;
+        this.birthDate = birthDate;
+        this.phone = phone;
     }
 
     public String getId() {
@@ -68,6 +75,24 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", role=" + role +
+                ", birthDate=" + birthDate +
+                ", phone='" + phone + '\'' +
                 '}';
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
