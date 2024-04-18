@@ -85,10 +85,10 @@ public class MetodosUsuario {
         credenciales.add(VistaUtil.solicitarCorreoElectronico());
         credenciales.add(VistaUtil.solicitarContraseña());
         credenciales.add(VistaUtil.solicitarNombre());
+        credenciales.add("SUPERUSUARIO");
         credenciales.add(VistaUtil.solicitarNumeroTelefono());
         credenciales.add(VistaUtil.solicitarDireccion());
 
-        credenciales.add("SUPERUSUARIO");
 
         if (checkUser(mySqlOperation, credenciales)) {
             System.out.println("El superusuario ya está registrado.");
@@ -108,10 +108,9 @@ public class MetodosUsuario {
         credenciales.add(VistaUtil.solicitarCorreoElectronico());
         credenciales.add(VistaUtil.solicitarContraseña());
         credenciales.add(VistaUtil.solicitarNombre());
+        credenciales.add("ADMINISTRADOR");
         credenciales.add(VistaUtil.solicitarNumeroTelefono());
         credenciales.add(VistaUtil.solicitarDireccion());
-
-        credenciales.add("ADMINISTRADOR");
 
         if (checkUser(mySqlOperation, credenciales)) {
             System.out.println("El administrador ya está registrado.");
@@ -131,10 +130,9 @@ public class MetodosUsuario {
         credenciales.add(VistaUtil.solicitarCorreoElectronico());
         credenciales.add(VistaUtil.solicitarContraseña());
         credenciales.add(VistaUtil.solicitarNombre());
+        credenciales.add("LECTOR");
         credenciales.add(VistaUtil.solicitarNumeroTelefono());
         credenciales.add(VistaUtil.solicitarDireccion());
-
-        credenciales.add("LECTOR");
 
         if (checkUser(mySqlOperation, credenciales)) {
             System.out.println("El lector ya está registrado.");
@@ -153,10 +151,9 @@ public class MetodosUsuario {
         credenciales.add(VistaUtil.solicitarCorreoElectronico());
         credenciales.add(VistaUtil.solicitarContraseña());
         credenciales.add(VistaUtil.solicitarNombre());
+        credenciales.add("ASISTENTE");
         credenciales.add(VistaUtil.solicitarNumeroTelefono());
         credenciales.add(VistaUtil.solicitarDireccion());
-
-        credenciales.add("ASISTENTE");
 
         if (checkUser(mySqlOperation, credenciales)) {
             System.out.println("El asistente ya está registrado.");

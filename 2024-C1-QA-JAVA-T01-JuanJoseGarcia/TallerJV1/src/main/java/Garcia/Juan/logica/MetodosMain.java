@@ -46,7 +46,7 @@ public class MetodosMain {
                 iniciarSesion(mySqlOperation);
                 break;
             case 2:
-                registrarUsuario(mySqlOperation,0);
+                crearLector(mySqlOperation);
                 break;
             case 3:
                 ciclo = false;

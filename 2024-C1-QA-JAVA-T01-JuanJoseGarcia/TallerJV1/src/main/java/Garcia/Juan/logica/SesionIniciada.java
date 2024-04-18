@@ -88,7 +88,7 @@ public class SesionIniciada {
                         gestionarPrestamo(mySqlOperation);
                         break;
                     case 3:
-                        registrarUsuario(mySqlOperation, 1);
+                        crearLector(mySqlOperation);
                         break;
                     case 4:
                         List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
@@ -110,7 +110,7 @@ public class SesionIniciada {
                         registrarSuperUsuario(mySqlOperation);
                         break;
                     case 2:
-                        registrarUsuario(mySqlOperation, 1);
+                        crearLector(mySqlOperation);
                         break;
                     case 3:
                         gestionarMaterial(mySqlOperation);
@@ -119,7 +119,7 @@ public class SesionIniciada {
                         gestionarPrestamo(mySqlOperation);
                         break;
                     case 5:
-                        registrarAdministrador(mySqlOperation); // Nueva opción para registrar administrador
+                        registrarAdministrador(mySqlOperation);
                         break;
                     case 6:
                         List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
@@ -127,16 +127,19 @@ public class SesionIniciada {
                         CSVExporter.exportToCSV(usuarios);
                         break;
                     case 7:
-                        // Caso para gestionar préstamos de prueba
-                        PrestamosPrueba.menuPrestamosPrueba(); // Llamar al método del menú de préstamos de prueba
+                        PrestamosPrueba.menuPrestamosPrueba();
                         break;
                     case 8:
+                        crearAsistente(mySqlOperation);  // Nuevo caso para crear un asistente
+                        break;
+                    case 9:
                         ciclo = false;
                         break;
                     default:
                         ciclo = false;
                         break;
                 }
+
             }
         }
     }
