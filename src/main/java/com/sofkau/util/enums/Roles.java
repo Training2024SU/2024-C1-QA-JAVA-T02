@@ -6,6 +6,8 @@ public enum Roles {
 
     ASISTENTE,
 
-    PROPIETARIO
+    PROPIETARIO,
+
+    SUPERADMIN
 
 }

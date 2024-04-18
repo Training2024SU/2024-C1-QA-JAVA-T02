@@ -8,11 +8,8 @@ import com.sofkau.model.Publicacion;
 import com.sofkau.util.CommonOperacion.GenerateUniqueId;
 import com.sofkau.util.enums.EstadoPrestamo;
 import com.sofkau.util.enums.TipoPublicacion;
-import static com.sofkau.logica.control.ControlIngreso.scannerGlobal;
-import static com.sofkau.logica.control.ControlIngreso.prestamoOp;
-import static com.sofkau.logica.control.ControlIngreso.bandera;
-import static com.sofkau.logica.control.ControlIngreso.publicacionOp;
-import static com.sofkau.logica.control.ControlIngreso.autorOp;
+
+import static com.sofkau.logica.control.ControlIngreso.*;
 
 public class MenuAsistente {
 
@@ -140,7 +137,7 @@ public class MenuAsistente {
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");
-                bandera = false;
+                option = 0;
             }
 
         }

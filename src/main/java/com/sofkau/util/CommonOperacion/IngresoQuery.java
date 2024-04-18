@@ -2,6 +2,7 @@ package com.sofkau.util.CommonOperacion;
 
 import com.sofkau.integration.database.ConexionDatabase;
 import com.sofkau.integration.database.mysql.MySqlOperation;
+import com.sofkau.logica.control.MenuSuperAdmin;
 
 public class IngresoQuery {
     private static MySqlOperation mySqlOperation = ConexionDatabase.getMySqlOperation();
@@ -9,8 +10,10 @@ public class IngresoQuery {
     // Metodo para ejecutar querys de ingreso de datos
     public static void ejecutarIngresoQuery(String query){
         try {
-            mySqlOperation.setSqlStatement(query);
-            mySqlOperation.executeSqlStatementVoid();
+            if(!MenuSuperAdmin.isModoSuperAdmin()){
+                mySqlOperation.setSqlStatement(query);
+                mySqlOperation.executeSqlStatementVoid();
+            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);

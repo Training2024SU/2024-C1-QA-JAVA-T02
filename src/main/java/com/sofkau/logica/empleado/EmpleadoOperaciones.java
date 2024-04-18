@@ -46,7 +46,7 @@ public class EmpleadoOperaciones {
         empleados.put(admin.getId(),admin);
     }
 
-    public static void getEmpleados() {
+    public void getEmpleados() {
         empleados = EmpleadoRepositorio.consultarEmpleados();
     }
 

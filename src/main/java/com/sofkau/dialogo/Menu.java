@@ -1,5 +1,8 @@
 package com.sofkau.dialogo;
 
+import com.sofkau.logica.control.MenuSuperAdmin;
+import org.w3c.dom.ls.LSOutput;
+
 import static com.sofkau.dialogo.ConstantesMenu.*;
 
 public class Menu {
@@ -37,7 +40,6 @@ public class Menu {
         System.out.println(ConstantesMenu.MSN_ACTUALIZARNOVELA);
         System.out.println(MSN_ENTREGARLIBRO);
         System.out.println(MSN_LIBRODEV);
-        System.out.println(MSN_LISTARPRESTAMOS);
         System.out.println(MSN_LISTARPRESTAMOS);
         System.out.println(MSN_INGRESOAU);
 
@@ -137,5 +139,22 @@ public class Menu {
     public static void IngresoIdPrestamo() {
         System.out.println(MSN_INGRESOIDPRESTAMO);
     }
+
+    public static void menuSuperAdmin() {
+        System.out.println(ConstantesMenu.MSN_BIENVENIDA);
+        System.out.println(MSN_CREARADMIN);
+        System.out.println(MSN_ENTRARADMINISTRADOR);
+        System.out.println(MSN_ENTRARPROPIETARIO);
+        System.out.println(MSN_ENTRARASISTENTE);
+        System.out.println(MSN_ENTRARUSUARIO);
+        if ((MenuSuperAdmin.isModoSuperAdmin())) {
+            System.out.println(MSN_MODOSUPERADMINDES);
+        } else {
+            System.out.println(MSN_MODOSUPERADMIN);
+        }
+    }
+
+
+
 
 }

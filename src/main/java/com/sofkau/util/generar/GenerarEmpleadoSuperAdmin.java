@@ -4,7 +4,7 @@ import com.sofkau.logica.empleado.EmpleadoOperaciones;
 import com.sofkau.model.Empleado;
 import io.github.cdimascio.dotenv.Dotenv;
 
-public class GenerarEmpleadoAdmin {
+public class GenerarEmpleadoSuperAdmin {
 
 
     static Dotenv dotenv = Dotenv.configure().load();

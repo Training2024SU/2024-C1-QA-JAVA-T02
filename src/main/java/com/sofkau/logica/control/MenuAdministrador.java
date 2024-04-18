@@ -4,11 +4,7 @@ import com.sofkau.dialogo.Menu;
 import com.sofkau.model.Empleado;
 import com.sofkau.util.enums.Roles;
 
-import static com.sofkau.logica.control.ControlIngreso.scannerGlobal;
-
-import static com.sofkau.logica.control.ControlIngreso.bandera;
-
-import static com.sofkau.logica.control.ControlIngreso.empleadoOp;
+import static com.sofkau.logica.control.ControlIngreso.*;
 
 /*        Menu Administrador
         1. Crear propietario
@@ -43,7 +39,7 @@ public class MenuAdministrador {
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");
-                bandera = false;
+                option = 0;
             }
 
         }

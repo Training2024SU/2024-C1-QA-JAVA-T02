@@ -32,7 +32,6 @@ public class InicioSesion {
                 Menu.contrasena();
                 String contrasena = scannerGlobal.nextLine();
 
-                usuarioOp = new UsuarioOperaciones();
 
                 if (usuarioOp.inicioSesion(correo, contrasena)) {
                     MenuUsuario.menuUsuario();
@@ -42,13 +41,11 @@ public class InicioSesion {
                 }
             }
             case 2 -> {
-                EmpleadoOperaciones.getEmpleados();
                 Menu.correo();
                 String correoEmp = scannerGlobal.nextLine();
                 Menu.contrasena();
                 String contrasenaEmp = scannerGlobal.nextLine();
 
-                empleadoOp = new EmpleadoOperaciones();
 
                 if (empleadoOp.inicioSesion(correoEmp, contrasenaEmp)) {
                     MenuEmpleado.menuEmpleado();
@@ -68,7 +65,7 @@ public class InicioSesion {
                 option = 0;
 
             }case 4 -> {
-                bandera = false;
+                option = 0;
 
             }default -> {
                 System.out.println("ingrese una opcion válida");

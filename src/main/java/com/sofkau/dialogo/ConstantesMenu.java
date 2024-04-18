@@ -69,4 +69,18 @@ public class ConstantesMenu {
 
     public static final String MSN_LISTARPUBLICACIONAUTOR="5. LISTAR PUBLICACIONES POR AUTOR";
 
+    public static final String MSN_CREARADMIN="1. CREAR USUARIO ADMINISTRADOR";
+
+    public static final String MSN_ENTRARADMINISTRADOR="2. VER OPCIONES ADMINISTRADOR";
+
+    public static final String MSN_ENTRARPROPIETARIO="3. VER OPCIONES PROPIETARIO";
+
+    public static final String MSN_ENTRARASISTENTE="4. VER OPCIONES ASISTENTE";
+
+    public static final String MSN_ENTRARUSUARIO="5. VER OPCIONES LECTOR";
+
+    public static final String MSN_MODOSUPERADMIN="6. ENTRAR EN MODO SUPERADMIN";
+
+    public static final String MSN_MODOSUPERADMINDES="6. SALIR MODO SUPER ADMIN";
+
 }
