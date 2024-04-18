@@ -1,15 +1,15 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î
-3
-java:S1118"Hide this public constructor.(öÔ¢Ş
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-G
-java:S6126"2Replace this String concatenation with Text block.(ëòœ8
-K
-java:S1172"5Remove this unused method parameter "mySqlOperation".(¶¢Ç
-E	java:S106/"+Replace this use of System.out by a logger.(óÒüÀüÿÿÿÿ
-K
-java:S11724"5Remove this unused method parameter "mySqlOperation".(¤Ç¿
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$53b95e44-200b-49af-8693-1cf323969734
+Y
+java:S1118"Hide this public constructor.(öÔ¢ŞJ$c28c472f-a6a7-4953-8e95-1db7a3d8302d
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$7803bfbd-0309-41e4-bbc3-98849c59668f
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$0228cb12-61ac-40e1-add1-7c90999486f9
+m
+java:S6126"2Replace this String concatenation with Text block.(ëòœ8J$c6026276-9eb4-4f32-bbdc-f9899e1bd30b
+q
+java:S1172"5Remove this unused method parameter "mySqlOperation".(¶¢ÇJ$8c74bb14-da1e-40a9-8f46-6b16b9cb0472
+k	java:S106/"+Replace this use of System.out by a logger.(óÒüÀüÿÿÿÿJ$465d364a-4622-4396-9e29-a997192ccffd
+q
+java:S11724"5Remove this unused method parameter "mySqlOperation".(¤Ç¿J$664b5c0d-816a-4ec0-9e25-4c9b5293c036

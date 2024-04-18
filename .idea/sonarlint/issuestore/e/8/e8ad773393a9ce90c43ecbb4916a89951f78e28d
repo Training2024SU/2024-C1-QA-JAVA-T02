@@ -1,19 +1,24 @@
 
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-3
-java:S1118"Hide this public constructor.(ŸºÆ
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-E	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿ
-@	java:S106"+Replace this use of System.out by a logger.(¤£şÖ
-V	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿ
-V	java:S125"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿ
-E	java:S106$"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿ
-E	java:S1069"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿ
-?	java:S106;"+Replace this use of System.out by a logger.(®…ê3
-E	java:S106="+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ
-E	java:S106G"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿ
-M
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$f51609c0-3004-48b8-8c01-5dfa0db02c1d
+Y
+java:S1118"Hide this public constructor.(ŸºÆJ$92f14199-7b9b-45de-9b07-9a562e623b29
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$8f110a85-e2f9-4acf-9d09-191c8d6b8cca
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$df213149-c07b-4839-aed1-c6690f4b75cc
+k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$4d074588-8afd-44cd-9b6a-92d20484f3f6
+f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$213d773e-8000-4900-af30-62e710378c7b
+|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$63e1905e-26bc-4658-b3f8-0ec19a2bf299
+|	java:S125"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$e70eedf4-d4d5-443c-82ff-22c58a4452ac
+k	java:S106$"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$19e38b44-f2f6-4063-babe-a7e4f6df1d1c
+k	java:S1069"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$1a828f10-1553-4940-8741-a11cfd290713
+e	java:S106;"+Replace this use of System.out by a logger.(®…ê3J$83493978-8751-4ed7-a4e0-5c15880000f5
+k	java:S106="+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$4098c0fb-8043-468b-8d54-2144f7010742
+k	java:S106G"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$092c7bbf-5243-46b1-84b9-fc4193c85b5f
+L	java:S106S"+Replace this use of System.out by a logger.(…Ôëşÿÿÿÿ8°ûŒøî1
+L	java:S106U"+Replace this use of System.out by a logger.(ï¿íùÿÿÿÿ8±ûŒøî1
+G	java:S106W"+Replace this use of System.out by a logger.(Œ‹‚8²ûŒøî1
+G	java:S106_"+Replace this use of System.out by a logger.(Šò»Ô8´ûŒøî1
+G	java:S106e"+Replace this use of System.out by a logger.(µÅÒò8µûŒøî1
+s
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$c5a14279-734c-42e3-8893-ebb66858a300

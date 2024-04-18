@@ -1,48 +1,48 @@
 
+š
+java:S1488/"^Immediately return this expression instead of assigning it to the temporary variable "titulo".(³²šÌJ$83a5d34d-32ee-4b06-b6ed-f67747353f4b
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…îJ$b4cc8716-08e2-4494-b08f-c6f396369a7e
+^
+java:S1118"Hide this public constructor.(Üï€•ÿÿÿÿÿJ$07e16da7-7ee7-4a9a-97f2-1fcee58a3d85
+g
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$e23dc01b-560b-4d30-b5e4-8415b75f538b
+q
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$a56c1a0d-bba0-4576-b87f-e88b074d8f1b
+f	java:S106"+Replace this use of System.out by a logger.(ÿëÂ£J$ebe3426d-fdb5-4ea8-b6f2-1e9928c3e374
+k	java:S106"+Replace this use of System.out by a logger.(äÁê¸ıÿÿÿÿJ$845668cf-434e-4813-8f79-3b442930a968
+k	java:S106 "+Replace this use of System.out by a logger.(øÕÏ§ùÿÿÿÿJ$295676d1-ee59-4e41-b9f5-9db2701a6e50
+k	java:S106""+Replace this use of System.out by a logger.(Èã©ÄùÿÿÿÿJ$d6094a48-60e3-4af9-b9a6-9b0076400779
+f	java:S106$"+Replace this use of System.out by a logger.(ãàşªJ$7ad78fbe-53f7-41e2-addd-83288a7d8371
+k	java:S106'"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿJ$6ec34eaf-6a8c-4e4e-9cdd-c6f76cea67d5
+	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢šïÇşÿÿÿÿJ$7a66fc4a-e37f-46bd-9c40-03809259dc84
+a
+java:S3457."%String contains no format specifiers.(úå¹ŒJ$56b00aa4-f891-4da5-8a84-5f4cafd356d3
+f	java:S106."+Replace this use of System.out by a logger.(úå¹ŒJ$c537cccc-327d-4f0f-8c30-cd7898578703
+‰	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ‰´½J$b9fab48e-b816-4e01-a2d2-9cfa02e1e8cf
 t
-java:S1488/"^Immediately return this expression instead of assigning it to the temporary variable "titulo".(³²šÌ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î
-8
-java:S1118"Hide this public constructor.(Üï€•ÿÿÿÿÿ
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-@	java:S106"+Replace this use of System.out by a logger.(ÿëÂ£
-E	java:S106"+Replace this use of System.out by a logger.(äÁê¸ıÿÿÿÿ
-E	java:S106 "+Replace this use of System.out by a logger.(øÕÏ§ùÿÿÿÿ
-E	java:S106""+Replace this use of System.out by a logger.(Èã©Äùÿÿÿÿ
-@	java:S106$"+Replace this use of System.out by a logger.(ãàşª
-E	java:S106'"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿ
-h	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢šïÇşÿÿÿÿ
-;
-java:S3457."%String contains no format specifiers.(úå¹Œ
-@	java:S106."+Replace this use of System.out by a logger.(úå¹Œ
-c	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ‰´½
-N
-java:S1854I"9Remove this useless assignment to local variable "autor".(ÖÀ>
-@
-java:S3457F"%String contains no format specifiers.(‹™øªüÿÿÿÿ
-E	java:S106F"+Replace this use of System.out by a logger.(‹™øªüÿÿÿÿ
-@
-java:S3457H"%String contains no format specifiers.(¿¥±Ñÿÿÿÿÿ
-E	java:S106H"+Replace this use of System.out by a logger.(¿¥±Ñÿÿÿÿÿ
-?
-java:S1481I"*Remove this unused "autor" local variable.(ÖÀ>
-@
-java:S3457J"%String contains no format specifiers.(ò¤±äùÿÿÿÿ
-E	java:S106J"+Replace this use of System.out by a logger.(ò¤±äùÿÿÿÿ
-@
-java:S3457L"%String contains no format specifiers.(Ù¦ó ÿÿÿÿÿ
-E	java:S106L"+Replace this use of System.out by a logger.(Ù¦ó ÿÿÿÿÿ
-@
-java:S3457N"%String contains no format specifiers.(ô°²¡øÿÿÿÿ
-E	java:S106N"+Replace this use of System.out by a logger.(ô°²¡øÿÿÿÿ
-;
-java:S3457P"%String contains no format specifiers.(˜Ÿ
-@	java:S106P"+Replace this use of System.out by a logger.(˜Ÿ
-E	java:S106S"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿ
-H
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ
-M
-java:S1068	"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ
+java:S1854I"9Remove this useless assignment to local variable "autor".(ÖÀ>J$ee326ac9-3efa-4d55-a04d-388973ac568f
+f
+java:S3457F"%String contains no format specifiers.(‹™øªüÿÿÿÿJ$d9b580be-2aac-4fdc-9b84-21d3ad9cd4ed
+k	java:S106F"+Replace this use of System.out by a logger.(‹™øªüÿÿÿÿJ$7981281c-15b4-42de-ad0e-086d54f3c087
+f
+java:S3457H"%String contains no format specifiers.(¿¥±ÑÿÿÿÿÿJ$32fd81b7-a46c-4cbb-8318-58352a80b172
+k	java:S106H"+Replace this use of System.out by a logger.(¿¥±ÑÿÿÿÿÿJ$c483e580-d9a3-40d3-ab33-9c21600e4e96
+e
+java:S1481I"*Remove this unused "autor" local variable.(ÖÀ>J$fb3d4b98-9555-4b9c-ad9a-891c550968d8
+f
+java:S3457J"%String contains no format specifiers.(ò¤±äùÿÿÿÿJ$79752610-661d-49ab-b485-b4e0893f922b
+k	java:S106J"+Replace this use of System.out by a logger.(ò¤±äùÿÿÿÿJ$8a676e84-61ce-4e37-acb3-6133a7ec7645
+f
+java:S3457L"%String contains no format specifiers.(Ù¦ó ÿÿÿÿÿJ$74674f9b-17fc-470d-90f7-2db53ca9f0dd
+k	java:S106L"+Replace this use of System.out by a logger.(Ù¦ó ÿÿÿÿÿJ$c7e6dccd-9d22-4eb7-814b-80c58452f8ea
+f
+java:S3457N"%String contains no format specifiers.(ô°²¡øÿÿÿÿJ$26f48ac9-5434-4e66-8d10-10e862a5c85f
+k	java:S106N"+Replace this use of System.out by a logger.(ô°²¡øÿÿÿÿJ$8ec9cbc3-2b34-49ce-a27c-75e29a40a0b9
+a
+java:S3457P"%String contains no format specifiers.(˜ŸJ$fb175458-e5d5-4e30-a759-7b132d32ffdf
+f	java:S106P"+Replace this use of System.out by a logger.(˜ŸJ$4e30a670-fc1a-4e8d-bff1-b6d1f40f1d4d
+k	java:S106S"+Replace this use of System.out by a logger.(ß­ëúüÿÿÿÿJ$709664c0-d355-48ab-bbc0-4bf2ff691574
+n
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸJ$81f13b65-8d79-4030-af28-580f022fa2b3
+s
+java:S1068	"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$2dedc21b-6804-481a-b886-f2db4b930a50

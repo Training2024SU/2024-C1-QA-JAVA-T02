@@ -76,4 +76,31 @@ public class MetodosUsuario {
         }
         return credenciales;
     }
+
+    public static List<String> registrarSuperUsuario(MySqlOperation mySqlOperation) throws SQLException, ParseException {
+        List<String> credenciales = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Por favor ingrese un correo electrónico para el superusuario:");
+        credenciales.add(scanner.nextLine());
+        System.out.println("Por favor ingrese la contraseña para el superusuario:");
+        credenciales.add(scanner.nextLine());
+        System.out.println("Por favor ingrese el nombre del superusuario:");
+        credenciales.add(scanner.nextLine());
+
+        // Añadir el rol de SUPERUSUARIO a las credenciales
+        credenciales.add("SUPERUSUARIO");
+
+        // Verificar si el usuario ya está registrado
+        if (checkUser(mySqlOperation, credenciales)) {
+            System.out.println("El superusuario ya está registrado");
+        } else {
+            // Insertar el superusuario en la base de datos
+            insertUser(mySqlOperation, credenciales);
+            // Iniciar sesión del superusuario (si es necesario)
+            usuarioIniciado(mySqlOperation, credenciales);
+            System.out.println("Superusuario creado exitosamente.");
+        }
+
+        return credenciales;
+    }
 }
