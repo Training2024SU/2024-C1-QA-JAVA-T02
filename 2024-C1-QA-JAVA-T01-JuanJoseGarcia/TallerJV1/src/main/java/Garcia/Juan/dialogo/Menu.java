@@ -40,21 +40,24 @@ public class Menu {
         System.out.println("4. " + SALIR);
     }
 
-    public static void  menuAsistente(){
+    public static void menuAsistente() {
         System.out.println(SELECCIONE);
         System.out.println(GESTIONAR_MATERIAL);
         System.out.println(CONSULTAR_PRESTAMOS);
-        System.out.println("3. " +SALIR);
+        System.out.println("3. Exportar e importar inventario"); // Nueva opción
+        System.out.println("4. " + SALIR);
     }
 
-    public static void  menuAdmin(){
+    public static void menuAdmin() {
         System.out.println(SELECCIONE);
         System.out.println(GESTIONAR_MATERIAL);
         System.out.println(CONSULTAR_PRESTAMOS);
         System.out.println(REGISTRAR_ASISTENTE);
         System.out.println(INFO_USUARIOS);
-        System.out.println("5. " +SALIR);
+        System.out.println("5. Exportar e importar inventario"); // Nueva opción
+        System.out.println("6. " + SALIR);
     }
+
 
     public static void menuProductos(){
         System.out.println(SELECCIONE);
@@ -80,22 +83,9 @@ public class Menu {
         System.out.println("5. Registrar administrador");
         System.out.println("6. Consultar usuarios");
         System.out.println("7. Simulación de préstamos");
-        System.out.println("8. Crear asistente"); // Nueva opción para crear un asistente
-        System.out.println("9. Salir");
+        System.out.println("8. Crear asistente");
+        System.out.println("9. Exportar e importar inventario"); // Nueva opción
+        System.out.println("10. " + SALIR);
     }
-
-
-    public static void menuImportExport() {
-        System.out.println(SELECCIONE);
-        System.out.println("1. Importar desde archivo CSV");
-        System.out.println("2. Exportar a archivo CSV");
-        System.out.println("3. Importar desde archivo XML");
-        System.out.println("4. Exportar a archivo XML");
-        System.out.println("5. Importar desde archivo JSON");
-        System.out.println("6. Exportar a archivo JSON");
-        System.out.println("7. " + SALIR);
-    }
-
-
 
 }

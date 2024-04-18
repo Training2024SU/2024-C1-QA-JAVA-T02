@@ -1,0 +1,133 @@
+
+i
+java:S1104"SMake MSN_UNO a static final constant or non-public and provide accessors if needed.(ÌÛ§
+n
+java:S1104"SMake MSN_DOS a static final constant or non-public and provide accessors if needed.(ğ®¶øüÿÿÿÿ
+j
+java:S1104	"TMake MSN_TRES a static final constant or non-public and provide accessors if needed.(÷âá
+q
+java:S1104
+"VMake MSN_CUATRO a static final constant or non-public and provide accessors if needed.(ã©¬¨úÿÿÿÿ
+k
+java:S1104"UMake MSN_CINCO a static final constant or non-public and provide accessors if needed.(á«µá
+l
+java:S1104"QMake ERROR a static final constant or non-public and provide accessors if needed.(•†«ûÿÿÿÿ
+l
+java:S1104"QMake SALIR a static final constant or non-public and provide accessors if needed.(Õ„Àçúÿÿÿÿ
+x
+java:S1104"]Make VER_PUBLICACIONES a static final constant or non-public and provide accessors if needed.(™š¹¹ıÿÿÿÿ
+y
+java:S1104"^Make SOLICITAR_PRESTAMO a static final constant or non-public and provide accessors if needed.(Ûôò¢şÿÿÿÿ
+q
+java:S1104"VMake SELECCIONE a static final constant or non-public and provide accessors if needed.(»“¤¼ÿÿÿÿÿ
+y
+java:S1104"^Make GESTIONAR_MATERIAL a static final constant or non-public and provide accessors if needed.(…³¢Éøÿÿÿÿ
+u
+java:S1104"_Make CONSULTAR_PRESTAMOS a static final constant or non-public and provide accessors if needed.(Úøõú
+z
+java:S1104"_Make REGISTRAR_ASISTENTE a static final constant or non-public and provide accessors if needed.(Ü“êóúÿÿÿÿ
+o
+java:S1104"YMake INFO_USUARIOS a static final constant or non-public and provide accessors if needed.(é¬Éú
+q
+java:S1104"VMake VER_LIBROS a static final constant or non-public and provide accessors if needed.(‹¨âƒÿÿÿÿÿ
+w
+java:S1104"\Make VER_LIBROS_AUTOR a static final constant or non-public and provide accessors if needed.(úô‘¶şÿÿÿÿ
+l
+java:S1104"WMake VER_NOVELAS a static final constant or non-public and provide accessors if needed.(ÔÕ°
+o
+java:S1104 "ZMake LISTAR_AUTORES a static final constant or non-public and provide accessors if needed.(Òí•
+w
+java:S1104""aMake PREGUNTA_CONFIRMACION a static final constant or non-public and provide accessors if needed.(ŸŒ€ú
+c
+java:S1104#"NMake SI a static final constant or non-public and provide accessors if needed.(ç©À?
+i
+java:S1104$"NMake NO a static final constant or non-public and provide accessors if needed.(ßô¿“ÿÿÿÿÿ
+C
+java:S1444"-Make this "public static MSN_UNO" field final(ÌÛ§
+H
+java:S1444"-Make this "public static MSN_DOS" field final(ğ®¶øüÿÿÿÿ
+D
+java:S1444	".Make this "public static MSN_TRES" field final(÷âá
+K
+java:S1444
+"0Make this "public static MSN_CUATRO" field final(ã©¬¨úÿÿÿÿ
+E
+java:S1444"/Make this "public static MSN_CINCO" field final(á«µá
+F
+java:S1444"+Make this "public static ERROR" field final(•†«ûÿÿÿÿ
+F
+java:S1444"+Make this "public static SALIR" field final(Õ„Àçúÿÿÿÿ
+R
+java:S1444"7Make this "public static VER_PUBLICACIONES" field final(™š¹¹ıÿÿÿÿ
+S
+java:S1444"8Make this "public static SOLICITAR_PRESTAMO" field final(Ûôò¢şÿÿÿÿ
+K
+java:S1444"0Make this "public static SELECCIONE" field final(»“¤¼ÿÿÿÿÿ
+S
+java:S1444"8Make this "public static GESTIONAR_MATERIAL" field final(…³¢Éøÿÿÿÿ
+O
+java:S1444"9Make this "public static CONSULTAR_PRESTAMOS" field final(Úøõú
+T
+java:S1444"9Make this "public static REGISTRAR_ASISTENTE" field final(Ü“êóúÿÿÿÿ
+I
+java:S1444"3Make this "public static INFO_USUARIOS" field final(é¬Éú
+K
+java:S1444"0Make this "public static VER_LIBROS" field final(‹¨âƒÿÿÿÿÿ
+Q
+java:S1444"6Make this "public static VER_LIBROS_AUTOR" field final(úô‘¶şÿÿÿÿ
+F
+java:S1444"1Make this "public static VER_NOVELAS" field final(ÔÕ°
+I
+java:S1444 "4Make this "public static LISTAR_AUTORES" field final(Òí•
+Q
+java:S1444"";Make this "public static PREGUNTA_CONFIRMACION" field final(ŸŒ€ú
+=
+java:S1444#"(Make this "public static SI" field final(ç©À?
+C
+java:S1444$"(Make this "public static NO" field final(ßô¿“ÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼Óæ´ùÿÿÿÿ
+h
+java:S3008"RRename this field "MSN_UNO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÛ§
+m
+java:S3008"RRename this field "MSN_DOS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ®¶øüÿÿÿÿ
+i
+java:S3008	"SRename this field "MSN_TRES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷âá
+p
+java:S3008
+"URename this field "MSN_CUATRO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã©¬¨úÿÿÿÿ
+j
+java:S3008"TRename this field "MSN_CINCO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á«µá
+k
+java:S3008"PRename this field "ERROR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•†«ûÿÿÿÿ
+k
+java:S3008"PRename this field "SALIR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ„Àçúÿÿÿÿ
+w
+java:S3008"\Rename this field "VER_PUBLICACIONES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™š¹¹ıÿÿÿÿ
+x
+java:S3008"]Rename this field "SOLICITAR_PRESTAMO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûôò¢şÿÿÿÿ
+p
+java:S3008"URename this field "SELECCIONE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»“¤¼ÿÿÿÿÿ
+x
+java:S3008"]Rename this field "GESTIONAR_MATERIAL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…³¢Éøÿÿÿÿ
+t
+java:S3008"^Rename this field "CONSULTAR_PRESTAMOS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úøõú
+y
+java:S3008"^Rename this field "REGISTRAR_ASISTENTE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü“êóúÿÿÿÿ
+n
+java:S3008"XRename this field "INFO_USUARIOS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¬Éú
+p
+java:S3008"URename this field "VER_LIBROS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¨âƒÿÿÿÿÿ
+v
+java:S3008"[Rename this field "VER_LIBROS_AUTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úô‘¶şÿÿÿÿ
+k
+java:S3008"VRename this field "VER_NOVELAS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÕ°
+n
+java:S3008 "YRename this field "LISTAR_AUTORES" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òí•
+v
+java:S3008""`Rename this field "PREGUNTA_CONFIRMACION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŒ€ú
+b
+java:S3008#"MRename this field "SI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç©À?
+h
+java:S3008$"MRename this field "NO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßô¿“ÿÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(à“èØ

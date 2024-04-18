@@ -1,16 +1,12 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$e6fb4e2c-7fdd-49b6-a4d7-7bfa5fda81e4
-Y
-java:S1118"Hide this public constructor.(Ä˜´¬J$ceb909d0-cbcb-4c8c-9572-ca3cd22f9a41
-g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$fcf10fa3-bea0-4786-99f8-a4a3d4aaa603
-q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$6fae6221-4007-41a1-abb4-46dea82a6809
-
-java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ªJ$6bac513c-c427-4734-8d7b-5a647beed723
-f	java:S106b"+Replace this use of System.out by a logger.(¬ÊÖÜJ$027e5a98-91b0-4595-a01e-606412a42b2d
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8ƒ¼”ï1J$917a3aca-b0cd-466d-b45d-30479a9aef9a
+`
+java:S1118"Hide this public constructor.(Ä˜´¬8ºƒ¼”ï1J$fdbe4d0a-483b-4683-a0b3-ef2186de0a47
 n
-java:S1135j"2Complete the task associated to this TODO comment.(³ˆßÖJ$562888ad-9187-476c-a594-8e87dfa1dba5
-g	java:S106"+Replace this use of System.out by a logger.(¬ÊÖÜJ$3c22d143-2f49-4516-be6e-3dedd8835502
-P
-java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8¯ï‡“ï1
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8¾ƒ¼”ï1J$79486284-5fe3-4e32-af61-53cf277cc1e4
+x
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8Àƒ¼”ï1J$69738570-cf40-4633-adc7-00bd609d42a1
+•
+java:S37760"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª8Çƒ¼”ï1J$97aa9c80-4483-4ecf-aaa4-abe35de064b6
+m	java:S106f"+Replace this use of System.out by a logger.(¬ÊÖÜ8Ïƒ¼”ï1J$ef7b442b-908c-4d64-baa9-8021df55b163
+n	java:S106…"+Replace this use of System.out by a logger.(¬ÊÖÜ8Ôƒ¼”ï1J$36130378-c9df-4c9c-a58b-b59866d23c82
