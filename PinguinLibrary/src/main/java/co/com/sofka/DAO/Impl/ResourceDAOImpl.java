@@ -152,8 +152,10 @@ public class ResourceDAOImpl implements ResourceDAO {
         mySqlOperation.setSqlStatement(sql);
         mySqlOperation.executeSqlStatement();
         try (ResultSet resultSetS = mySqlOperation.getResultSet()) {
-            int duration = resultSetS.getInt("duration");
-            return new Song(id, type, title, quantity, quantityLoaned, author, duration);
+            if (resultSetS.next()) {
+                int duration = resultSetS.getInt("duration");
+                return new Song(id, type, title, quantity, quantityLoaned, author, duration);
+            } else throw new SQLException("Couldn't get song details");
         }
     }
 
@@ -163,9 +165,11 @@ public class ResourceDAOImpl implements ResourceDAO {
         mySqlOperation.setSqlStatement(sql);
         mySqlOperation.executeSqlStatement();
         try (ResultSet resultSetV = mySqlOperation.getResultSet()) {
-            String resolution = resultSetV.getString("resolution");
-            return new VideoRecording(id, type, title, quantity, quantityLoaned, author,
-                    resolution);
+            if (resultSetV.next()) {
+                String resolution = resultSetV.getString("resolution");
+                return new VideoRecording(id, type, title, quantity, quantityLoaned, author,
+                        resolution);
+            } else throw new SQLException("Couldn't get video recording details");
         }
     }
 
@@ -175,8 +179,10 @@ public class ResourceDAOImpl implements ResourceDAO {
         mySqlOperation.setSqlStatement(sql);
         mySqlOperation.executeSqlStatement();
         try (ResultSet resultSetE = mySqlOperation.getResultSet()) {
-            String academicLevel = resultSetE.getString("academic_level");
-            return new Essay(id, type, title, quantity, quantityLoaned, author, academicLevel);
+            if (resultSetE.next()) {
+                String academicLevel = resultSetE.getString("academic_level");
+                return new Essay(id, type, title, quantity, quantityLoaned, author, academicLevel);
+            } else throw new SQLException("Couldn't get essay details");
         }
     }
 }
