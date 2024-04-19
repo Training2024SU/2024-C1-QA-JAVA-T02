@@ -23,4 +23,8 @@ public class ConstantesInserccionBd {
 
     public static String MSN_CREARCANCION ="Se ha creado la cancion correctamente";
 
+    public static String MSN_CREARVIDEOGRABACION ="Se ha creado la VIDEOGRABACION correctamente";
+
+    public static String MSN_CREARTESIS ="Se ha creado la TESIS correctamente";
+
 }

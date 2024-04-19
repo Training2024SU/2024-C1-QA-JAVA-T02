@@ -167,6 +167,28 @@ public class Menu {
         System.out.println(MSN_FECHA_LANZAMIENTO);
     }
 
+    public static void ingresoSinopsis() {
+        System.out.println(ConstantesMenu.MSN_INGRESOSINOPSIS);
+    }
 
+    public static void ingresoTipo() {
+        System.out.println(ConstantesMenu.MSN_INGRESOTIPO);
+    }
+
+    public static void ingresoCalificacion() {
+        System.out.println(ConstantesMenu.MSN_INGRESOCALIFICACION);
+    }
+
+    public static void ingresoFecha() {
+        System.out.println(ConstantesMenu.MSN_INGRESAR_FECHA);
+    }
+
+    public static void ingresoCampoEstudio() {
+        System.out.println(ConstantesMenu.MSN_INGRESAR_CAMPO_ESTUDIO);
+    }
+
+    public static void ingresoPais() {
+        System.out.println(ConstantesMenu.MSN_INGRESAR_PAIS);
+    }
 
 }

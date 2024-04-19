@@ -14,8 +14,9 @@ public class VideoGrabacionRepositorio {
     private static MySqlOperation mySqlOperation = ConexionDatabase.getMySqlOperation();
 
     public static void crearVideoGrabacion(VideoGrabacion videoGrabacion) {
-        String query = String.format("INSERT INTO videograbacion (titulo, sinopsis, genero, autor, calificacion, tipo, cantidad_copia, cantidad_prestado) VALUES ('%s', '%s', '%s', '%s', %f, '%s', %d, %d)",
-                videoGrabacion.getTitulo(), videoGrabacion.getSinopsis(), videoGrabacion.getGenero(), videoGrabacion.getAutor(), videoGrabacion.getCalificacion(), videoGrabacion.getTipo(), videoGrabacion.getCantidadCopia(), videoGrabacion.getCantidadPrestado());
+        String query = String.format("INSERT INTO videograbacion (titulo, sinopsis, genero, autor, calificacion, tipo, cantidad_copia, cantidad_prestado) VALUES ('%s', '%s', '%s', '%s', %d, '%s', %d, %d)",
+                videoGrabacion.getTitulo(), videoGrabacion.getSinopsis(), videoGrabacion.getGenero(), videoGrabacion.getAutor(), videoGrabacion.getCalificacion()
+                , videoGrabacion.getTipo(), videoGrabacion.getCantidadCopia(), videoGrabacion.getCantidadPrestado());
         IngresoQuery.ejecutarIngresoQuery(query);
     }
 
@@ -31,7 +32,7 @@ public class VideoGrabacionRepositorio {
                 String sinopsis = resultSet.getString("sinopsis");
                 String genero = resultSet.getString("genero");
                 String autor = resultSet.getString("autor");
-                float calificacion = resultSet.getFloat("calificacion");
+                int calificacion = resultSet.getInt("calificacion");
                 String tipo = resultSet.getString("tipo");
                 int cantidadCopia = resultSet.getInt("cantidad_copia");
                 int cantidadPrestado = resultSet.getInt("cantidad_prestado");

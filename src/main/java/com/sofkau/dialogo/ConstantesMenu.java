@@ -95,4 +95,12 @@ public class ConstantesMenu {
     public static final String MSN_FECHA_LANZAMIENTO = "Ingreso de fecha de lanzamiento (formato: yyyy-MM-dd):";
     public static final String MSN_LETRA = "Ingreso de letra de la canción:";
 
+    public static final String MSN_INGRESOSINOPSIS = "Ingreso de sinopsis:";
+    public static final String MSN_INGRESOCALIFICACION = "Ingreso de calificación:";
+    public static final String MSN_INGRESOTIPO = "Ingreso de tipo:";
+
+    public static final String MSN_INGRESAR_CAMPO_ESTUDIO = "Ingrese el campo de estudio:";
+    public static final String MSN_INGRESAR_PAIS = "Ingrese el país:";
+    public static final String MSN_INGRESAR_FECHA = "Ingrese la fecha (formato: yyyy-MM-dd):";
+
 }

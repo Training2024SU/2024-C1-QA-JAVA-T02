@@ -5,10 +5,24 @@ public class VideoGrabacion {
     private String sinopsis;
     private String genero;
     private String autor;
-    private Float calificacion;
+    private int calificacion;
     private String tipo;
     private int cantidadCopia;
     private int cantidadPrestado;
+
+    public VideoGrabacion(String titulo, String sinopsis, String genero, String autor, int calificacion, String tipo, int cantidadCopia, int cantidadPrestado) {
+        this.titulo = titulo;
+        this.sinopsis = sinopsis;
+        this.genero = genero;
+        this.autor = autor;
+        this.calificacion = calificacion;
+        this.tipo = tipo;
+        this.cantidadCopia = cantidadCopia;
+        this.cantidadPrestado = cantidadPrestado;
+    }
+
+    public VideoGrabacion() {
+    }
 
     // Getters y Setters
     public String getTitulo() {
@@ -43,11 +57,11 @@ public class VideoGrabacion {
         this.autor = autor;
     }
 
-    public Float getCalificacion() {
+    public int getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(Float calificacion) {
+    public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -73,5 +87,19 @@ public class VideoGrabacion {
 
     public void setCantidadPrestado(int cantidadPrestado) {
         this.cantidadPrestado = cantidadPrestado;
+    }
+
+    @Override
+    public String toString() {
+        return "VideoGrabacion{" +
+                "titulo='" + titulo + '\'' +
+                ", sinopsis='" + sinopsis + '\'' +
+                ", genero='" + genero + '\'' +
+                ", autor='" + autor + '\'' +
+                ", calificacion=" + calificacion +
+                ", tipo='" + tipo + '\'' +
+                ", cantidadCopia=" + cantidadCopia +
+                ", cantidadPrestado=" + cantidadPrestado +
+                '}';
     }
 }

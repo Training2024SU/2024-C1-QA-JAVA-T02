@@ -161,10 +161,52 @@ public class MenuAsistente {
             }case 10 ->{
 
             }case 11 ->{
+                Menu.ingresoTitulo();
+                String titulo = scannerGlobal.nextLine();
+                Menu.ingresoGenero();
+                String genero = scannerGlobal.nextLine();
+                Menu.ingresoAutor();
+                String nombreAutor = scannerGlobal.nextLine();
+                Menu.ingresoSinopsis();
+                String sinopsis = scannerGlobal.nextLine();
+                Menu.ingresoTipo();
+                String tipo = scannerGlobal.nextLine();
+                Menu.ingresoCalificacion();
+                int calificacion = scannerGlobal.nextInt();
+                Menu.ingresoCantEjemplar();
+                int cantEjemplar = scannerGlobal.nextInt();
+                Menu.ingresoCantPrestado();
+                int cantPres = scannerGlobal.nextInt();
+
+                videoGrabacionOperaciones.crearVideoGrabacion(new VideoGrabacion(titulo, sinopsis, genero, nombreAutor,calificacion,tipo, cantEjemplar, cantPres));
 
             }case 12 ->{
 
             }case 13 ->{
+                Menu.ingresoTitulo();
+                String tituloTesis = scannerGlobal.nextLine();
+                Menu.ingresoAutor();
+                String autorTesis = scannerGlobal.nextLine();
+                Menu.ingresoFecha();
+                String fechaTesis = scannerGlobal.nextLine();
+                Date fechaLanzamientoTesis = null;
+                try {
+                    fechaLanzamientoTesis = formato.parse(fechaTesis);
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+                Menu.ingresoCampoEstudio();
+                String campoEstudioTesis = scannerGlobal.nextLine();
+                Menu.ingresoPais();
+                String paisTesis = scannerGlobal.nextLine();
+                Menu.ingresoCantEjemplar();
+                int cantEjemplar = scannerGlobal.nextInt();
+                Menu.ingresoCantPrestado();
+                int cantPres = scannerGlobal.nextInt();
+
+                tesisOperaciones.crearTesis(new Tesis(tituloTesis,fechaLanzamientoTesis,
+                        autorTesis,campoEstudioTesis,paisTesis,cantEjemplar,cantPres
+                ));
 
             }case 14 ->{
 

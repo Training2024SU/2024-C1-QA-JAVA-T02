@@ -59,6 +59,11 @@ public class MensajeOperacionBd {
         logger.info(ConstantesInserccionBd.MSN_CREARCANCION);
     }
 
-
+    public static void crerVideoGrabacion() {
+        logger.info(ConstantesInserccionBd.MSN_CREARVIDEOGRABACION);
+    }
+    public static void crearTesis() {
+        logger.info(ConstantesInserccionBd.MSN_CREARTESIS);
+    }
 
 }

@@ -11,6 +11,19 @@ public class Tesis {
     private int cantidadCopia;
     private int cantidadPrestado;
 
+    public Tesis() {
+    }
+
+    public Tesis(String titulo, Date fecha, String autor, String campoEstudio, String pais, int cantidadCopia, int cantidadPrestado) {
+        this.titulo = titulo;
+        this.fecha = fecha;
+        this.autor = autor;
+        this.campoEstudio = campoEstudio;
+        this.pais = pais;
+        this.cantidadCopia = cantidadCopia;
+        this.cantidadPrestado = cantidadPrestado;
+    }
+
     // Getters y Setters
     public String getTitulo() {
         return titulo;
@@ -66,5 +79,18 @@ public class Tesis {
 
     public void setCantidadPrestado(int cantidadPrestado) {
         this.cantidadPrestado = cantidadPrestado;
+    }
+
+    @Override
+    public String toString() {
+        return "Tesis{" +
+                "titulo='" + titulo + '\'' +
+                ", fecha=" + fecha +
+                ", autor='" + autor + '\'' +
+                ", campoEstudio='" + campoEstudio + '\'' +
+                ", pais='" + pais + '\'' +
+                ", cantidadCopia=" + cantidadCopia +
+                ", cantidadPrestado=" + cantidadPrestado +
+                '}';
     }
 }

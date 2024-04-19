@@ -7,6 +7,7 @@ import com.sofkau.util.CommonOperacion.IngresoQuery;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -14,9 +15,11 @@ public class TesisRepositorio {
 
     private static MySqlOperation mySqlOperation = ConexionDatabase.getMySqlOperation();
 
+    private static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+
     public static void crearTesis(Tesis tesis) {
         String query = String.format("INSERT INTO tesis (titulo, fecha, autor, campo_estudio, pais, cantidad_copia, cantidad_prestado) VALUES ('%s', '%s', '%s', '%s', '%s', %d, %d)",
-                tesis.getTitulo(), tesis.getFecha(), tesis.getAutor(), tesis.getCampoEstudio(), tesis.getPais(), tesis.getCantidadCopia(), tesis.getCantidadPrestado());
+                tesis.getTitulo(), formato.format(tesis.getFecha()), tesis.getAutor(), tesis.getCampoEstudio(), tesis.getPais(), tesis.getCantidadCopia(), tesis.getCantidadPrestado());
         IngresoQuery.ejecutarIngresoQuery(query);
     }
 
@@ -56,7 +59,7 @@ public class TesisRepositorio {
 
     public static void actualizarTesis(Tesis tesis) {
         String query = String.format("UPDATE tesis SET fecha = '%s', autor = '%s', campo_estudio = '%s', pais = '%s', cantidad_copia = %d, cantidad_prestado = %d WHERE titulo = '%s'",
-                tesis.getFecha(), tesis.getAutor(), tesis.getCampoEstudio(), tesis.getPais(), tesis.getCantidadCopia(), tesis.getCantidadPrestado(), tesis.getTitulo());
+                formato.format(tesis.getFecha()), tesis.getAutor(), tesis.getCampoEstudio(), tesis.getPais(), tesis.getCantidadCopia(), tesis.getCantidadPrestado(), tesis.getTitulo());
         IngresoQuery.ejecutarIngresoQuery(query);
     }
 }
