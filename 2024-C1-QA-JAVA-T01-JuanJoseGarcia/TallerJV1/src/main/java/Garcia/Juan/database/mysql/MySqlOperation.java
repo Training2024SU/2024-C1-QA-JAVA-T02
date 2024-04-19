@@ -158,16 +158,28 @@ public class MySqlOperation implements DataBase {
         return columnValue;
     }
 
-
+    /**
+     * Prepara un objeto `PreparedStatement` para una consulta SQL específica.
+     *
+     * @param sqlStatement La consulta SQL a preparar.
+     * @return Un objeto `PreparedStatement` listo para ser usado.
+     * @throws SQLException Si ocurre un error al preparar la declaración.
+     */
     public PreparedStatement prepareStatement(String sqlStatement) throws SQLException {
         configureDataBaseConnection();
         preparedStatement = connection.prepareStatement(sqlStatement);
         return preparedStatement;
     }
 
+    /**
+     * Ejecuta la declaración preparada `PreparedStatement` si está configurada.
+     *
+     * @throws SQLException Si ocurre un error al ejecutar la declaración preparada.
+     */
     public void executePreparedStatement() throws SQLException {
         if (preparedStatement != null) {
             preparedStatement.execute();
         }
     }
+
 }

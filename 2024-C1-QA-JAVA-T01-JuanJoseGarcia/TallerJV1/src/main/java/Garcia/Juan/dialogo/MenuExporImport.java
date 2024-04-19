@@ -1,9 +1,8 @@
 package Garcia.Juan.dialogo;
 
 import Garcia.Juan.CRUD.CRUDImpoExpo;
-import Garcia.Juan.Exporter.*;
+import Garcia.Juan.exporter_importer.*;
 import Garcia.Juan.model.Producto;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -14,8 +13,18 @@ import static Garcia.Juan.Main.mySqlOperation;
 import static Garcia.Juan.dialogo.ConstantesDialogo.SALIR;
 import static Garcia.Juan.dialogo.ConstantesDialogo.SELECCIONE;
 
+/**
+ * Clase que representa el menú de importación y exportación de productos desde y hacia archivos CSV, XML, y JSON.
+ * Permite al usuario seleccionar entre varias opciones para importar o exportar productos a diferentes formatos de archivo.
+ */
 public class MenuExporImport {
 
+    /**
+     * Método principal que muestra el menú de importación y exportación de productos.
+     * El usuario puede elegir importar o exportar productos desde y hacia archivos CSV, XML, o JSON.
+     *
+     * @throws SQLException Si ocurre un error de base de datos durante la importación o exportación.
+     */
     public static void menuImportExport() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
@@ -36,55 +45,33 @@ public class MenuExporImport {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Importar desde archivo CSV");
-
-                    // Crear un objeto CSVProductImporter
                     CSVProductImporter csvImporter = new CSVProductImporter();
-
-                    // Importar los productos desde el archivo CSV
                     List<Producto> productosImportados = csvImporter.importProductsFromCSV(mySqlOperation);
-
-                    // Insertar los productos importados en la base de datos
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportados);
                     break;
 
                 case 2:
-                    System.out.println("Exportar a archivo CSV");
                     productos = getProductsFromTable(mySqlOperation);
                     CSVProductExporter.exportProductsToCSV(productos);
                     break;
 
                 case 3:
-                    // Llamar a la función para importar desde archivo XML
-                    System.out.println("Importar desde archivo XML");
-                    // Crear un objeto XmlMapper para leer archivos XML
-                    XmlMapper xmlMapper = new XmlMapper();
                     List<Producto> productosImportadorXML = XMLProductImporter.importProductsFromXML(mySqlOperation);
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadorXML);
                     break;
 
                 case 4:
-                    // Llamar a la función para exportar a archivo XML
-                    System.out.println("Exportar a archivo XML");
                     productos = getProductsFromTable(mySqlOperation);
                     XMLProductExporter.exportProductsToXML(productos);
-                    // Aquí debes agregar el código de exportación a XML
                     break;
 
                 case 5:
-                    System.out.println("Importar desde archivo JSON");
-
-                    // Crear un objeto JSONProductImporter
                     JSONProductImporter jsonImporter = new JSONProductImporter();
-
-                    // Importar los productos desde el archivo JSON
                     List<Producto> productosImportadosDesdeJSON = jsonImporter.importProductsFromJSON(mySqlOperation);
-
-                    // Insertar los productos importados en la base de datos
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosDesdeJSON);
+                    break;
 
                 case 6:
-                    System.out.println("Exportar a archivo JSON");
                     productos = getProductsFromTable(mySqlOperation);
                     JSONProductExporter.exportProductsToJSON(productos);
                     break;
@@ -98,10 +85,7 @@ public class MenuExporImport {
                     System.out.println("Opción no válida. Por favor, inténtelo de nuevo.");
                     break;
             }
-
         }
-
-        // Cerrar el escáner
         scanner.close();
     }
 }

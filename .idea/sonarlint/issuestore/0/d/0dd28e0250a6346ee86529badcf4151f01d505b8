@@ -1,12 +1,10 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8§ƒïï1J$d5f98f63-152b-4049-8a35-2a0591cc1d41
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8Åœ›¢ï1J$64c33e2b-73a8-463e-a202-5d10f4fdc1f5
+|
+java:S1118":Add a private constructor to hide the implicit public one.(è•U8Ëœ›¢ï1J$03982c2e-7eac-48f9-a4fa-4fa7bf056cdb
 „
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(Øÿ¿½8¯ƒïï1J$c3d8cfdb-ada1-4179-b1fa-21ee4da8029f
-r	java:S106"+Replace this use of System.out by a logger.(ÁÑ´ºüÿÿÿÿ8Âƒïï1J$df75b3fa-a749-4eae-84ae-c287d71889d4
-r	java:S106$"+Replace this use of System.err by a logger.(ƒÚÍüÿÿÿÿÿ8Ãƒïï1J$109a0afa-ba53-480f-9319-e36646f9e8e1
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Øÿ¿½8Ìœ›¢ï1J$a22a4c10-87d1-4ac5-becd-adfa17abd0e2
+r	java:S106"+Replace this use of System.out by a logger.(ÁÑ´ºüÿÿÿÿ8Şœ›¢ï1J$18ffe0be-5a23-4302-aa4d-0f90e6d08c42
+r	java:S106#"+Replace this use of System.err by a logger.(ƒÚÍüÿÿÿÿÿ8Şœ›¢ï1J$883d7c58-1d08-4a49-b9dd-f9f55de31088
 n
-java:S1168%"+Return an empty collection instead of null.(¥¹ï8Åƒïï1J$25cadbc7-2aa3-41b9-bb17-c5406d4ad885
-‹
-java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„8Ç§ëŸï1J$d5f61d81-f0d4-4952-b684-39d05c401bf4
-v
-java:S1068".Remove this unused "edadMinima" private field.(ßÂ©Œıÿÿÿÿ8È§ëŸï1J$ddaff1ed-df6b-4a5a-8de4-a013c7cf6102
+java:S1168$"+Return an empty collection instead of null.(¥¹ï8ßœ›¢ï1J$537df718-ee59-45dd-9a11-173ce90b5098

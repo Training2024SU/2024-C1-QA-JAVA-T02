@@ -1,6 +1,6 @@
 package Garcia.Juan.logica;
 
-import Garcia.Juan.Exporter.CSVExporter;
+import Garcia.Juan.exporter_importer.CSVExporter;
 import Garcia.Juan.database.mysql.MySqlOperation;
 import Garcia.Juan.dialogo.MenuExporImport;
 import Garcia.Juan.model.Usuario;
@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static Garcia.Juan.CRUD.CrudUsuario.getUsersFromTable;
 import static Garcia.Juan.dialogo.Menu.*;

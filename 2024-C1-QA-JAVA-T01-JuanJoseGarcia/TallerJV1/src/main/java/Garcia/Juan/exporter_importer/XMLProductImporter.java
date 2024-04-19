@@ -1,4 +1,4 @@
-package Garcia.Juan.Exporter;
+package Garcia.Juan.exporter_importer;
 
 import Garcia.Juan.CRUD.CRUDImpoExpo;
 import Garcia.Juan.database.mysql.MySqlOperation;
@@ -9,22 +9,26 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Clase que proporciona una función para importar productos desde un archivo XML.
+ */
 public class XMLProductImporter {
 
-    // Ruta del archivo XML a importar
     private static final String XML_FILE_PATH = "/home/dan/Desktop/productos.xml";
 
-    // Método para importar datos desde un archivo XML e insertarlos en la base de datos
+    /**
+     * Importa productos desde un archivo XML y los inserta en la base de datos.
+     *
+     * @param mySqlOperation Objeto MySqlOperation para realizar operaciones de base de datos.
+     * @return Lista de productos importados desde el archivo XML.
+     */
     public static List<Producto> importProductsFromXML(MySqlOperation mySqlOperation) {
-        // Crear una instancia de XmlMapper
         XmlMapper xmlMapper = new XmlMapper();
         List<Producto> productos = null;
 
         try {
-            // Leer y deserializar los datos desde el archivo XML
             productos = xmlMapper.readValue(new File(XML_FILE_PATH), xmlMapper.getTypeFactory().constructCollectionType(List.class, Producto.class));
 
-            // Insertar la lista de productos en la base de datos
             CRUDImpoExpo.insertProducts(mySqlOperation, productos);
             System.out.println("Productos importados exitosamente desde el archivo XML.");
         } catch (IOException e) {

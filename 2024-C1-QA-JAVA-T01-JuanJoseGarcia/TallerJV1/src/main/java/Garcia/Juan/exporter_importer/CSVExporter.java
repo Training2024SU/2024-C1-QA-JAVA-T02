@@ -1,4 +1,4 @@
-package Garcia.Juan.Exporter;
+package Garcia.Juan.exporter_importer;
 
 import Garcia.Juan.model.Usuario;
 import com.opencsv.CSVWriter;

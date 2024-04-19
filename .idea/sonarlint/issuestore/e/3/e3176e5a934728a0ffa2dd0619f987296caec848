@@ -1,12 +1,12 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§Ì÷‘J$37557a78-7269-4065-8826-d289cc135197
-k	java:S106P"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$e7cc2c7a-14c7-42af-befb-1cdd5852f1a9
-k	java:S106["+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$4eba70a1-646e-4491-ba8a-3c754bd32e0f
-k	java:S106f"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$63fec2a5-bc62-41f8-be4f-4fea27763678
-k	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$37a3ffc8-890b-4213-9dad-a335e6b8c743
-l	java:S106Œ"+Replace this use of System.out by a logger.(¹ª”·şÿÿÿÿJ$b3b0f6ad-7958-490f-8308-d4f152c82a8e
-l	java:S106"+Replace this use of System.out by a logger.(Ù²™ùÿÿÿÿJ$64d6ebcb-5622-4df9-bd40-04122509ed01
-l	java:S106‘"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿJ$16e6e468-29f5-42e3-a2fa-91e2283d9c17
-l	java:S106œ"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿJ$a3f6a4f7-0bff-49f3-bfe6-f651faed80f7
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§Ì÷‘J$3f0f8c27-4f8b-4614-bd6d-b59c6efe9714
+k	java:S106P"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$311a956a-c6e1-4af2-8581-ff34623dfc74
+k	java:S106["+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$354daf0a-c0ca-4240-9af9-f4cec71330b3
+k	java:S106f"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$125130c8-db22-42f1-9383-53fc5b7af8e8
+k	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿJ$d3b64b09-a58d-4790-9863-52f7f9f5870e
+l	java:S106Œ"+Replace this use of System.out by a logger.(¹ª”·şÿÿÿÿJ$29736f6d-931a-4a7d-8970-27d82f89c84b
+l	java:S106"+Replace this use of System.out by a logger.(Ù²™ùÿÿÿÿJ$66b0c66b-eebd-49bc-a4ce-3765ac6ce9c4
+l	java:S106‘"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿJ$2863ccd9-8b96-43de-b4d2-b380a7c55b6e
+l	java:S106œ"+Replace this use of System.out by a logger.(ŞÒ—üÿÿÿÿJ$2852f97a-527f-41a2-be0f-ee0bdcc1bfe0
 p
-java:S1068"/Remove this unused "connection2" private field.(öÔİ¬şÿÿÿÿJ$249fc1d4-1cee-44f1-b96f-423434baa7bb
+java:S1068"/Remove this unused "connection2" private field.(öÔİ¬şÿÿÿÿJ$a0411253-c88a-4651-b591-147cfc5552ed

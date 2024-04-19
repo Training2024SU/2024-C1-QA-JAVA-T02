@@ -1,8 +1,8 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8ß©Ìœï1J$13facd10-05e4-4703-aadc-09a1fd677df7
-‚
-java:S1118	":Add a private constructor to hide the implicit public one.(ğ”¼Ğùÿÿÿÿ8ë©Ìœï1J$8f349678-dfdb-4e97-89dd-6c496beea60d
-„
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(Ú·õÀ8í©Ìœï1J$c8ed3a6e-6df0-42eb-9ca9-0053c122570c
-r	java:S106"+Replace this use of System.out by a logger.(ô€úÿÿÿÿ8ò©Ìœï1J$82a4ff52-f79f-4a9b-801b-ccb5ace8a355
-l	java:S106!"+Replace this use of System.err by a logger.(ß•ˆ%8ó©Ìœï1J$d60ad059-7c72-49ee-9d64-10200fb7e8f8
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8â‹¢ï1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(ğ”¼Ğùÿÿÿÿ8—â‹¢ï1
+^
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Ú·õÀ8˜â‹¢ï1
+L	java:S106,"+Replace this use of System.out by a logger.(ô€úÿÿÿÿ8œâ‹¢ï1
+F	java:S106/"+Replace this use of System.err by a logger.(ß•ˆ%8œâ‹¢ï1
