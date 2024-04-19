@@ -50,26 +50,30 @@ public class UserDAO {
     }
 
     public List<User> getAllUsersExtraInfo() throws SQLException {
-
-        String sql = "SELECT u.id, u.email, u.role, ui.biography, ui.birthday FROM Users u " +
+        String sql = "SELECT u.id, u.name, u.email, u.role, ui.biography, ui.birthday FROM Users u " +
                 "LEFT JOIN user_info ui ON (u.id = ui.user_id) " +
-                "WHERE is_deleted = 0 AND u.id = ?;";
-
+                "WHERE is_deleted = 0;";
         ArrayList<User> users = new ArrayList<>();
-        List<UserExtraInfo> userExtraInfo = new ArrayList<>();
         try (PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet rs = statement.executeQuery()) {
 
             while (rs.next()) {
-                User user = buildUserFromResult(rs);
-
+                User user = buildEntireUserFromResult(rs);
                 users.add(user);
-
             }
             return users;
         }
     }
 
+    public static User buildEntireUserFromResult(ResultSet rs) throws SQLException {
+        UserRole role = UserRole.valueOf(rs.getString("role"));
+        return new User(rs.getInt("id"),
+                rs.getString("name"),
+                rs.getString("email"),
+                role,
+                rs.getString("biography"),
+                rs.getDate("birthday"));
+    }
 
     public void createUser(User user, String password) throws SQLException {
         String sql = "INSERT INTO Users (name, email, password, role) VALUES (?, ?, ?, ?)";
@@ -81,12 +85,27 @@ public class UserDAO {
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted == 0) {
-                throw new SQLException("Creating user failed, no rows affected");
+                   throw new SQLException("Creating user failed, no rows affected");
             }
         }
     }
 
-    public void updateUser(User user) throws SQLException {
+    public void insertExtraData(User user){
+        String sql = "INSERT INTO user_info (user_id, biography, birthday) VALUES (?, ?, ?)";
+        try(PreparedStatement statement = connection.prepareStatement(sql)){
+            statement.setInt(1, user.getId());
+            statement.setString(2, user.getBiography());
+            statement.setDate(3, user.getBirthday());
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted == 0) {
+                throw new SQLException("Creating user_info failed, no rows affected");
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void updateUser(User user) {
         if (missingId(user)) {
             throw new IllegalArgumentException("Cant update a User without an id");
         }
@@ -101,6 +120,39 @@ public class UserDAO {
             if (updatedRows == 0) {
                 throw new SQLException("Couldn't update user with id: " + user.getId());
             }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public void updateUserInfo(User user){
+        if (missingId(user)) {
+            throw new IllegalArgumentException("Cant update a User without an id");
+        }
+        String sql = "UPDATE user_info SET biography = ?, birthday = ? WHERE  user_id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, user.getBiography());
+            statement.setDate(2, user.getBirthday());
+            statement.setInt(3, user.getId()); // WHERE
+            int updatedRows = statement.executeUpdate();
+            if (updatedRows == 0) {
+                throw new SQLException("Couldn't update user with id: " + user.getId());
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void updatePassword(User user, String password){
+        String sql = "UPDATE users SET password = ? WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, password);
+            statement.setInt(2, user.getId()); // WHERE
+            int updatedRows = statement.executeUpdate();
+            if (updatedRows == 0) {
+                throw new SQLException("Couldn't update user with id: " + user.getId());
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
         }
     }
 

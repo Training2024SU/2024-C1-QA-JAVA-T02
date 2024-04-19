@@ -45,8 +45,26 @@ public class UserService {
         return Collections.emptyList();
     }
 
-    public void updateUser(User user) throws SQLException {
+    public List<User> getAllUsersExtraInfo() {
+        try {
+            return userDAO.getAllUsersExtraInfo();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return Collections.emptyList();
+    }
+
+    public void updateUser(User user) {
         userDAO.updateUser(user);
+    }
+    public void updateUserInfo(User user){
+        userDAO.updateUserInfo(user);
+    }
+    public void updateUserPassword(User user, String password){
+        userDAO.updatePassword(user, password);
+    }
+    public void insertUserInfo(User user){
+        userDAO.insertExtraData(user);
     }
 
     public void deleteUser(int userId) throws SQLException {

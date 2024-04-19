@@ -50,7 +50,7 @@ public class NovelsMenu {
         String readerChoices = messages.getString("novels.choices.reader");
         String employeeChoices = messages.getString("novels.choices.employee");
         MenuChoices menu = new MenuChoices("Novels", visitorChoices, readerChoices,
-                employeeChoices, "");
+                employeeChoices, "", "");
         return menu.showMenu(user);
     }
 

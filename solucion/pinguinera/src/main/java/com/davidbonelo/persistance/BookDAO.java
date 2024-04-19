@@ -37,7 +37,7 @@ public class BookDAO {
         return null;
     }
 
-    public List<Book> getAllBooks() throws SQLException {
+    public List<Book> getAllBooks()  {
         List<Book> books = new ArrayList<>();
         String sql = "SELECT * FROM Books WHERE is_deleted = 0";
         try (PreparedStatement statement = connection.prepareStatement(sql); ResultSet rs =
@@ -45,6 +45,8 @@ public class BookDAO {
             while (rs.next()) {
                 books.add(buildBookFromResult(rs));
             }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
         }
         return books;
     }

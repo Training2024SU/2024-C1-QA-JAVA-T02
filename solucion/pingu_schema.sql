@@ -140,3 +140,26 @@ CREATE TABLE IF NOT EXISTS user_info (
     FOREIGN KEY (user_id)
         REFERENCES Users (id)
 ) ENGINE = InnoDB;
+
+CREATE TABLE control_de_cambios_libreria(
+    usuario VARCHAR(100),
+    accion VARCHAR(100),
+    fecha DATETIME
+);
+
+
+DELIMITER //
+
+CREATE TRIGGER controlInsercionUsuario 
+AFTER INSERT ON Users 
+FOR EACH ROW
+BEGIN
+    INSERT INTO control_de_cambios_libreria (usuario, accion, fecha)
+    VALUES (USER(), 'Insert User', NOW());
+END;
+//
+
+DELIMITER ;
+
+
+DELIMITER ;

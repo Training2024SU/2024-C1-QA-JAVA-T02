@@ -1,0 +1,38 @@
+[
+  {
+    "field": "Ciencia ficción",
+    "pages": 320,
+    "id": 7,
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "copies": 3,
+    "copiesBorrowed": 0
+  },
+  {
+    "field": "Novela histórica",
+    "pages": 528,
+    "id": 8,
+    "title": "Los pilares de la Tierra",
+    "author": "Ken Follett",
+    "copies": 2,
+    "copiesBorrowed": 1
+  },
+  {
+    "field": "Thriller",
+    "pages": 416,
+    "id": 9,
+    "title": "El código Da Vinci",
+    "author": "Dan Brown",
+    "copies": 5,
+    "copiesBorrowed": 2
+  },
+  {
+    "field": "Fantasía",
+    "pages": 672,
+    "id": 10,
+    "title": "El nombre del viento",
+    "author": "Patrick Rothfuss",
+    "copies": 4,
+    "copiesBorrowed": 0
+  }
+]

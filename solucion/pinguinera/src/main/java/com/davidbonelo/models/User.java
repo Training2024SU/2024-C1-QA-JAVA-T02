@@ -1,5 +1,6 @@
 package com.davidbonelo.models;
 
+import java.sql.Date;
 import java.util.ResourceBundle;
 
 import static com.davidbonelo.utils.UserInteractions.askText;
@@ -10,10 +11,22 @@ public class User {
     private String email;
     private UserRole role;
 
+    private String biography;
+    private Date birthday;
+
     public User(String name, String email, UserRole role) {
         this.name = name;
         this.email = email;
         this.role = role;
+    }
+
+    public User(int id, String name, String email, UserRole role, String biography, Date birthday) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.role = role;
+        this.biography = biography;
+        this.birthday = birthday;
     }
 
     public User(int id, String name, String email, UserRole role) {
@@ -28,6 +41,23 @@ public class User {
         String name = askText(messages.getString("user.req.name"));
         String email = askText(messages.getString("user.req.email"));
         return new User(name, email, UserRole.READER);
+    }
+
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public int getId() {
@@ -69,6 +99,8 @@ public class User {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", role=" + role +
+                ", biography='" + biography + '\'' +
+                ", birthday=" + birthday +
                 '}';
     }
 }

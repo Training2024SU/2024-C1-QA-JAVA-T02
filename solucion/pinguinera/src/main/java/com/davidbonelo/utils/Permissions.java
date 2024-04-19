@@ -21,7 +21,10 @@ public class Permissions {
 
     public static boolean validPermission(User user, UserRole requiredRole) {
         if (user == null) return false;
-        if (user.getRole().equals(UserRole.ADMINISTRATOR)) {
+        if (user.getRole().equals(UserRole.SUPER)) {
+            return true;
+        }
+        if (user.getRole().equals(UserRole.ADMINISTRATOR) && ((requiredRole.equals(UserRole.READER)) || (requiredRole.equals(UserRole.EMPLOYEE)))) {
             return true;
         }
         if (user.getRole().equals(UserRole.EMPLOYEE) && requiredRole.equals(UserRole.READER)) {

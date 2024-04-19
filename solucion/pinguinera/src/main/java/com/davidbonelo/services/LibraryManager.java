@@ -28,18 +28,13 @@ public class LibraryManager {
     }
 
     public List<Book> getAllBooks(User user) {
-        try {
-            List<Book> books = bookDAO.getAllBooks();
-            if (validPermission(user, UserRole.EMPLOYEE)) {
-                return books;
-            } else {
-                // Filter unavailable items for users
-                return books.stream().filter(b -> b.getAvailableCopies() >= 1).toList();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        List<Book> books = bookDAO.getAllBooks();
+        if (validPermission(user, UserRole.EMPLOYEE)) {
+            return books;
+        } else {
+            // Filter unavailable items for users
+            return books.stream().filter(b -> b.getAvailableCopies() >= 1).toList();
         }
-        return Collections.emptyList();
     }
 
     public List<Novel> getAllNovels(User user) {
@@ -51,7 +46,7 @@ public class LibraryManager {
                 return novels.stream().filter(n -> n.getAvailableCopies() >= 1).toList();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return Collections.emptyList();
     }

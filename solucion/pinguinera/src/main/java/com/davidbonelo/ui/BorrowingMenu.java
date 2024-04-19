@@ -1,17 +1,13 @@
 package com.davidbonelo.ui;
 
-import com.davidbonelo.models.Borrowing;
-import com.davidbonelo.models.LibraryItem;
-import com.davidbonelo.models.User;
-import com.davidbonelo.models.UserRole;
+import com.davidbonelo.models.*;
 import com.davidbonelo.services.BorrowingsService;
 
 import java.sql.SQLException;
 import java.text.MessageFormat;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.davidbonelo.utils.Permissions.validMenuAccess;
 import static com.davidbonelo.utils.UserInteractions.askDate;
@@ -22,6 +18,10 @@ public class BorrowingMenu {
     private final User user;
     private final BorrowingsService borrowingsService;
     private final ResourceBundle messages = ResourceBundle.getBundle("messages");
+    public static Set<LibraryItem> items = new HashSet<>();
+    public static List<Borrowing> borrowings = new ArrayList<>();
+    private static final AtomicInteger nextId = new AtomicInteger(1);
+
 
     public BorrowingMenu(BorrowingsService borrowingsService, User user) {
         this.borrowingsService = borrowingsService;
@@ -54,16 +54,26 @@ public class BorrowingMenu {
     private int showMenu() {
         String readerChoices = messages.getString("borrowings.choices.reader");
         String employeeChoices = messages.getString("borrowings.choices.employee");
-        MenuChoices menu = new MenuChoices("Borrowings", "", readerChoices, employeeChoices, "");
+        MenuChoices menu = new MenuChoices("Borrowings", "", readerChoices, employeeChoices, "", "");
         return menu.showMenu(user);
     }
 
     private void listBorrowings() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            System.out.println(messages.getString("borrowings.info.list"));
+            borrowings.forEach(System.out::println);
+            return;
+        }
         System.out.println(messages.getString("borrowings.info.list"));
         borrowingsService.getAllBorrowings(user).forEach(System.out::println);
     }
 
     private void listBorrowingItems() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            System.out.println(messages.getString("borrowings.info.list"));
+            items.forEach(System.out::println);
+            return;
+        }
         Set<LibraryItem> items = borrowingsService.getItemsToBorrow();
         System.out.println(messages.getString("borrowings.info.items") + items.size());
         items.forEach(System.out::println);
@@ -85,6 +95,14 @@ public class BorrowingMenu {
     }
 
     private void createRequest() {
+        if (user.getRole().equals(UserRole.SUPER)) {
+            System.out.println(messages.getString("borrowings.info.list"));
+            LocalDate returnDate = askDate(messages.getString("borrowings.req.dueDate"));
+            int id = generateUniqueId();
+            Borrowing borrowing = new Borrowing(id + 1000, returnDate, LocalDate.now(), user, BorrowingStatus.REQUESTED);
+            borrowings.add(borrowing);
+            return;
+        }
         System.out.println(messages.getString("borrowings.info.requesting"));
         LocalDate returnDate = askDate(messages.getString("borrowings.req.dueDate"));
         try {
@@ -107,6 +125,16 @@ public class BorrowingMenu {
     }
 
     private void confirmBorrowing() {
+        if (user.getRole().equals(UserRole.SUPER)) {
+            int borrowingId = askNumber(messages.getString("borrowings.req.confirmId"));
+            borrowings.stream().forEach(borrowing -> {
+                if(borrowing.getId() == borrowingId){
+                    borrowing.setStatusBorrowed();
+                }
+            }
+            );
+            return;
+        }
         if (!validMenuAccess(user, UserRole.EMPLOYEE)) {
             return;
         }
@@ -138,5 +166,9 @@ public class BorrowingMenu {
         }
         int borrowingId = askNumber(messages.getString("borrowings.req.deleteId"));
         borrowingsService.deleteBorrowing(borrowingId);
+    }
+
+    private static int generateUniqueId() {
+        return nextId.getAndIncrement();
     }
 }

@@ -7,6 +7,8 @@ public class Book extends LibraryItem {
     private String field;
     private int pages;
 
+    public Book (){};
+
     public Book(String title, String author, int copies, int copiesBorrowed, String field,
                 int pages) {
         super(title, author, copies, copiesBorrowed);

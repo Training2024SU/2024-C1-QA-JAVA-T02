@@ -49,7 +49,7 @@ public class EssaysMenu {
         String readerChoices = messages.getString("essays.choices.reader");
         String employeeChoices = messages.getString("essays.choices.employee");
         MenuChoices menu = new MenuChoices("Essays", visitorChoices, readerChoices,
-                employeeChoices, "");
+                employeeChoices, "", "");
         return menu.showMenu(user);
     }
 

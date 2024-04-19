@@ -39,7 +39,7 @@ public class LoginMenu {
         if (user == null) {
             System.out.println(messages.getString("login.res.loginBad"));
         } else {
-            System.out.println(messages.getString("login.res.loginOk") + user);
+            System.out.println(messages.getString("login.res.loginOk") + user.getName() + " : " + user.getEmail());
         }
     }
 

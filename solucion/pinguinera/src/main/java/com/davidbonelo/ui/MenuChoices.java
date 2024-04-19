@@ -11,6 +11,7 @@ import static com.davidbonelo.utils.UserInteractions.askNumber;
 
 public class MenuChoices {
     private final String menuName;
+    private final String superChoices;
     private final String visitorChoices;
     private final String readerChoices;
     private final String employeeChoices;
@@ -18,12 +19,13 @@ public class MenuChoices {
     private final ResourceBundle messages = ResourceBundle.getBundle("messages");
 
     public MenuChoices(String menuName, String visitorChoices, String readerChoices,
-                       String employeeChoices, String adminChoices) {
+                       String employeeChoices, String adminChoices, String superChoices) {
         this.menuName = menuName;
         this.visitorChoices = visitorChoices;
         this.readerChoices = readerChoices;
         this.employeeChoices = employeeChoices;
         this.adminChoices = adminChoices;
+        this.superChoices = superChoices;
     }
 
     public int showMenu(User user) {
@@ -72,8 +74,12 @@ public class MenuChoices {
             if (validPermission(user, UserRole.ADMINISTRATOR)) {
                 menuMessage.append(adminChoices);
             }
+            if (validPermission(user, UserRole.SUPER)) {
+                menuMessage.append(superChoices);
+            }
         }
     }
+
 
     private boolean isMainMenu() {
         String mainKeyword = messages.getString("main.keyword");

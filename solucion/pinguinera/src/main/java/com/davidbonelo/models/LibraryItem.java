@@ -6,6 +6,9 @@ public abstract class LibraryItem {
     private String author;
     private int copies;
     private int copiesBorrowed;
+    public LibraryItem() {
+
+    }
 
     LibraryItem(String title, String author, int copies, int copiesBorrowed) {
         this.title = title;
@@ -22,6 +25,10 @@ public abstract class LibraryItem {
         this.copies = copies;
         this.copiesBorrowed = copiesBorrowed;
         checkCopies();
+    }
+
+    public void incrementBorrowed(){
+        this.copiesBorrowed++;
     }
 
     public int getId() {

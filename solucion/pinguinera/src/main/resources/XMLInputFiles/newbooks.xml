@@ -1,0 +1,29 @@
+<libros>
+    <libro>
+        <field>Ficción científica</field>
+        <pages>384</pages>
+        <id>11</id>
+        <title>El fin de la eternidad</title>
+        <author>Isaac Asimov</author>
+        <copies>3</copies>
+        <copiesBorrowed>1</copiesBorrowed>
+    </libro>
+    <libro>
+        <field>Novela de aventuras</field>
+        <pages>336</pages>
+        <id>12</id>
+        <title>La isla del tesoro</title>
+        <author>Robert Louis Stevenson</author>
+        <copies>2</copies>
+        <copiesBorrowed>0</copiesBorrowed>
+    </libro>
+    <libro>
+        <field>Distopía</field>
+        <pages>352</pages>
+        <id>13</id>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <copies>5</copies>
+        <copiesBorrowed>2</copiesBorrowed>
+    </libro>
+</libros>

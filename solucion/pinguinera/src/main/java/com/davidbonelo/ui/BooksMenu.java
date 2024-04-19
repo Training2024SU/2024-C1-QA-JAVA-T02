@@ -7,8 +7,12 @@ import com.davidbonelo.services.BorrowingsService;
 import com.davidbonelo.services.LibraryManager;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
+
+import static com.davidbonelo.ui.BorrowingMenu.items;
 import static com.davidbonelo.utils.Permissions.validMenuAccess;
 import static com.davidbonelo.utils.UserInteractions.askNumber;
 import static com.davidbonelo.utils.UserInteractions.askText;
@@ -19,11 +23,16 @@ public class BooksMenu {
     private final User user;
     private final ResourceBundle messages = ResourceBundle.getBundle("messages");
 
+    // Ghost data
+    public static List<Book> books = new ArrayList<>();
+
+
     public BooksMenu(LibraryManager libraryManager, BorrowingsService borrowingsService,
                      User user) {
         this.libraryManager = libraryManager;
         this.borrowingsService = borrowingsService;
         this.user = user;
+        books = libraryManager.getAllBooks(user);
     }
 
     public void menu() {
@@ -50,24 +59,40 @@ public class BooksMenu {
         String readerChoices = messages.getString("books.choices.reader");
         String employeeChoices = messages.getString("books.choices.employee");
         MenuChoices menu = new MenuChoices("Books", visitorChoices, readerChoices,
-                employeeChoices, "");
+                employeeChoices, "", "");
         return menu.showMenu(user);
     }
 
     private void searchByAuthor() {
         String author = askText(messages.getString("item.req.author"));
+        if (user.getRole().equals(UserRole.SUPER)){
+            libraryManager.filterItemsByAuthor(books, author).forEach(System.out::println);
+            return;
+        }
         libraryManager.filterItemsByAuthor(libraryManager.getAllBooks(user), author).forEach(System.out::println);
     }
 
     private void listBooks() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            books.forEach(System.out::println);;
+            return;
+        }
         libraryManager.getAllBooks(user).forEach(System.out::println);
     }
 
     private void listAuthors() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            libraryManager.getAuthorsList(books).forEach(System.out::println);
+            return;
+        }
         libraryManager.getAuthorsList(libraryManager.getAllBooks(user)).forEach(System.out::println);
     }
 
     private void registerBook() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            books.add(Book.createBookFromInput());
+            return;
+        }
         if (!validMenuAccess(user, UserRole.EMPLOYEE)) {
             return;
         }
@@ -75,6 +100,17 @@ public class BooksMenu {
     }
 
     private void updateBook() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            int bookId = askNumber(messages.getString("books.req.updateId"));
+            books = books.stream().filter(book -> book.getId() != bookId).toList();
+            System.out.println(messages.getString("books.req.bookData"));
+            Book bookTmp = Book.createBookFromInput();
+            bookTmp.setId(bookId);
+            System.out.println(bookTmp);
+            books.add(bookTmp);
+            System.out.println(books);
+            return;
+        }
         if (!validMenuAccess(user, UserRole.EMPLOYEE)) {
             return;
         }
@@ -86,6 +122,11 @@ public class BooksMenu {
     }
 
     private void deleteBook() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            int bookId = askNumber(messages.getString("books.req.deleteId"));
+            books = books.stream().filter(book -> book.getId() != bookId).toList();
+            return;
+        }
         if (!validMenuAccess(user, UserRole.EMPLOYEE)) {
             return;
         }
@@ -94,6 +135,13 @@ public class BooksMenu {
     }
 
     private void addToBorrowing() {
+        if (user.getRole().equals(UserRole.SUPER)){
+            int bookId = askNumber(messages.getString("books.req.toBorrowId"));
+            Book bookToAdd = books.stream().filter(book -> book.getId() == bookId).findFirst().orElse(null);
+            bookToAdd.incrementBorrowed();
+            items.add(bookToAdd);
+            return;
+        }
         if (!validMenuAccess(user, UserRole.READER)) {
             return;
         }

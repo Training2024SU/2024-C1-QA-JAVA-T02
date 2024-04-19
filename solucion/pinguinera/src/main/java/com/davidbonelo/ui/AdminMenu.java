@@ -29,6 +29,7 @@ public class AdminMenu {
 
     public void menu() {
         while (true) {
+
             if (!validMenuAccess(user, UserRole.ADMINISTRATOR)) {
                 return;
             }
@@ -41,6 +42,10 @@ public class AdminMenu {
                 case 4 -> deleteUser();
                 case 5 -> exportInventoryData();
                 case 6 -> importInventoryData();
+                case 7 -> exportInventoryJson();
+                case 8 -> importInventoryJson();
+                case 9 -> exportInventoryXml();
+                case 10 -> importInventoryXml();
                 case 0 -> {
                     return;
                 }
@@ -49,9 +54,24 @@ public class AdminMenu {
         }
     }
 
+    private void exportInventoryXml() {
+        dataService.exportXmlInventory();
+    }
+    private void importInventoryXml() {
+        dataService.importXmlInventory();
+    }
+
+    private void importInventoryJson() {
+        dataService.importJsonInventory();
+    }
+
+    private void exportInventoryJson() {
+        dataService.exportJsonInventory();
+    }
+
     private int showMenu() {
         String adminChoices = messages.getString("admin.choices.admin");
-        MenuChoices menu = new MenuChoices("Admin", "", "", "", adminChoices);
+        MenuChoices menu = new MenuChoices("Admin", "", "", "", adminChoices, "");
         return menu.showMenu(user);
     }
 
@@ -79,12 +99,9 @@ public class AdminMenu {
         User newUser = User.createUserFromInput();
         newUser.setRole(askRole());
         newUser.setId(userId);
-        try {
-            userService.updateUser(newUser);
-            System.out.println(messages.getString("admin.res.updateOk"));
-        } catch (SQLException e) {
-            System.out.println(messages.getString("admin.res.updateBad") + e.getLocalizedMessage());
-        }
+        userService.updateUser(newUser);
+        System.out.println(messages.getString("admin.res.updateOk"));
+
     }
 
     private UserRole askRole() {

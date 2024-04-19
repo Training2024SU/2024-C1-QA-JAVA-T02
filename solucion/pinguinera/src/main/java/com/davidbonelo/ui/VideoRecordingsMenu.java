@@ -104,7 +104,7 @@ public class VideoRecordingsMenu {
         String readerChoices = messages.getString("videos.choices.reader");
         String employeeChoices = messages.getString("videos.choices.employee");
         MenuChoices menu = new MenuChoices("Video Recordings", visitorChoices, readerChoices,
-                employeeChoices, "");
+                employeeChoices, "", "");
         return menu.showMenu(user);
     }
 

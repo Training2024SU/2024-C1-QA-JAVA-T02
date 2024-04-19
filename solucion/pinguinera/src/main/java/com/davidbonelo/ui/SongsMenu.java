@@ -51,7 +51,7 @@ public class SongsMenu {
         String readerChoices = messages.getString("songs.choices.reader");
         String employeeChoices = messages.getString("songs.choices.employee");
         MenuChoices menu = new MenuChoices("Songs", visitorChoices, readerChoices,
-                employeeChoices, "");
+                employeeChoices, "", "");
         return menu.showMenu(user);
     }
 

@@ -12,6 +12,9 @@ import java.sql.Connection;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import static com.davidbonelo.ui.BooksMenu.books;
+import static com.davidbonelo.ui.BorrowingMenu.borrowings;
+import static com.davidbonelo.ui.BorrowingMenu.items;
 import static com.davidbonelo.utils.Permissions.validMenuAccess;
 import static com.davidbonelo.utils.UserInteractions.closeScanner;
 
@@ -45,7 +48,6 @@ public class MainMenu {
         while (true) {
             messages = ResourceBundle.getBundle("messages"); // Refresh if language changed
             user = userService.getLoggedUser();
-
             int menuChoice = showMenu();
             switch (menuChoice) {
                 case 1 -> new LoginMenu(userService).menu();
@@ -55,10 +57,11 @@ public class MainMenu {
                 case 5 -> new SongsMenu(libraryManager, borrowingsService, user).menu();
                 case 6 -> new EssaysMenu(libraryManager, borrowingsService, user).menu();
                 case 7 -> new BorrowingMenu(borrowingsService, user).menu();
-                // case 8 -> new PersonalUserMenu(borrowingsService, user).menu();
-                case 8 -> new AdminMenu(userService, dataService, user).menu();
-                case 9 -> Locale.setDefault(Locale.forLanguageTag("es"));
-                case 10 -> logout(user);
+                case 8 -> new PersonalUserMenu(userService, user).menu();
+                case 9 -> new AdminMenu(userService, dataService, user).menu();
+                case 10 -> reset(user);
+                case 11 -> Locale.setDefault(Locale.forLanguageTag("es"));
+                case 12 -> logout(user);
                 case 0 -> {
                     closeScanner();
                     return;
@@ -72,13 +75,26 @@ public class MainMenu {
         String visitorChoices = messages.getString("main.choices.visitor");
         String readerChoices = messages.getString("main.choices.reader");
         String adminChoices = messages.getString("main.choices.admin");
+        String superChoices = messages.getString("main.choices.super");
         return new MenuChoices(messages.getString("main.keyword"), visitorChoices, readerChoices,
-                "", adminChoices).showMenu(user);
+                "", adminChoices, superChoices).showMenu(user);
     }
 
     private void logout(User user) {
         if (validMenuAccess(user, UserRole.READER)) {
             userService.logOut();
+        }
+    }
+    private void reset(User user){
+        if (validMenuAccess(user, UserRole.SUPER)){
+            try{
+                books.clear();
+                items.clear();
+                borrowings.clear();
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+
         }
     }
 }

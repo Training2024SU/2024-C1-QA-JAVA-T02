@@ -76,3 +76,4 @@ public class UserInteractions {
         return date;
     }
 }
+
