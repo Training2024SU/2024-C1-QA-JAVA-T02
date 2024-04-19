@@ -1,5 +1,7 @@
 package co.com.ejercicio.modelo;
 
+import java.sql.Connection;
+
 public class Cancion {
     private String titulo;
     private String artista;
@@ -17,6 +19,9 @@ public class Cancion {
         this.cantidadEjemplares = cantidadEjemplares;
         this.cantidadPrestado = cantidadPrestado;
         this.cantidadDisponible = cantidadDisponible;
+    }
+
+    public Cancion(Connection conexion) {
     }
 
     public String getTitulo() {

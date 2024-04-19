@@ -11,12 +11,12 @@ public class QueryConstante {
     public static final String DELETE_FROM_PUBLICACIONES = "DELETE FROM publicacion WHERE titulo = ?";
 
     //Query a Tabla video_grabacion en la BD
-    public static final String SELECT_ALL_FROM_VIDEOGRABACIONES= "SELECT * FROM video_grabacion";
+    public static final String SELECT_ALL_FROM_VIDEOGRABACION= "SELECT * FROM video_grabacion";
 
-    public static final String SELECT_ALL_AUTOR_FROM_VIDEOGRABACIONES = "SELECT * FROM video_grabacion WHERE autor = ? " ;
-    public static final String INSERT_VIDEOGRABACIONES = "INSERT INTO video_grabacion (titulo, autor, duracion, cantidad_ejemplares, cantidad_prestado, cantidad_disponible) VALUES (?, ?, ?, ?, ?, ?)";
-    public static final String UPDATE_VIDEOGRABACIONES  = "UPDATE video_grabacion SET titulo = ?, autor = ?, duracion = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ? WHERE titulo = ?";
-    public static final String DELETE_FROM_VIDEOGRABACIONES = "DELETE FROM video_grabacion WHERE titulo = ?";
+    public static final String SELECT_ALL_DIRECTOR_FROM_VIDEOGRABACION = "SELECT * FROM video_grabacion WHERE director = ? " ;
+    public static final String INSERT_VIDEOGRABACION = "INSERT INTO video_grabacion (titulo, director, duracion, cantidad_ejemplares, cantidad_prestado, cantidad_disponible) VALUES (?, ?, ?, ?, ?, ?)";
+    public static final String UPDATE_VIDEOGRABACION  = "UPDATE video_grabacion SET titulo = ?, director = ?, duracion = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ? WHERE titulo = ?";
+    public static final String DELETE_FROM_VIDEOGRABACION = "DELETE FROM video_grabacion WHERE titulo = ?";
 
     //Query a Tabla cancion en la BD
     public static final String SELECT_ALL_FROM_CANCION= "SELECT * FROM cancion";

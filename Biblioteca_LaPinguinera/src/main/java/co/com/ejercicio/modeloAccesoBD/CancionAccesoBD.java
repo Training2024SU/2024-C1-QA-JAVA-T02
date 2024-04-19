@@ -30,8 +30,8 @@ public class CancionAccesoBD {
             statement.setString(3, cancion.getAlbum());
             statement.setString(4, cancion.getDuracion());
             statement.setInt(5, cancion.getCantidadEjemplares());
-            statement.setInt(5, cancion.getCantidadPrestado());
-            statement.setInt(6, cancion.getCantidadDisponible());
+            statement.setInt(6, cancion.getCantidadPrestado());
+            statement.setInt(7, cancion.getCantidadDisponible());
             statement.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
         } catch (SQLException e) {
@@ -54,7 +54,7 @@ public class CancionAccesoBD {
         return canciones;
     }
 
-    public static List<Cancion> obtenerCancionesDeUnArtista(String artista) throws SQLException {
+    public static List<Cancion> obtenerCancionDeUnArtista(String artista) throws SQLException {
         List<Cancion> canciones = new ArrayList<>();
 
         try (PreparedStatement statement = conexion.prepareStatement(SELECT_ALL_ARTISTA_FROM_CANCION)) {
@@ -86,8 +86,8 @@ public class CancionAccesoBD {
             statement.setString(3, cancion.getAlbum());
             statement.setString(4, cancion.getDuracion());
             statement.setInt(5, cancion.getCantidadEjemplares());
-            statement.setInt(5, cancion.getCantidadPrestado());
-            statement.setInt(6, cancion.getCantidadDisponible());
+            statement.setInt(6, cancion.getCantidadPrestado());
+            statement.setInt(7, cancion.getCantidadDisponible());
 
 
             statement.executeUpdate();

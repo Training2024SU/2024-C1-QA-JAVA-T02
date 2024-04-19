@@ -83,13 +83,13 @@ public class GestionEnsayoTesis {
         System.out.println("Ingresa los datos para actualizar");
         System.out.println("Ingresa el titulo");
         String titulo = scanner.nextLine();
-        System.out.println("ingresa el autor");
+        System.out.println("Ingresa el autor");
         String autor = scanner.nextLine();
-        System.out.println("ingresa numero de paginas");
+        System.out.println("Ingresa numero de paginas");
         int numeroPaginas = scanner.nextInt();
-        System.out.println("ingresa cantidad Ejemplares");
+        System.out.println("Ingresa cantidad Ejemplares");
         int cantidadEjemplares = scanner.nextInt();
-        System.out.println("ingresa cantidad prestado");
+        System.out.println("Ingresa cantidad prestado");
         int cantidadPrestado = scanner.nextInt();
         int cantidadDisponible = cantidadEjemplares - cantidadPrestado;
         scanner.nextLine();
