@@ -1,26 +1,46 @@
 package co.com.sofka.businessLogic.generalAdmin;
 
-import co.com.sofka.DAO.Impl.*;
-import co.com.sofka.businessLogic.generalAdmin.interf.*;
+import co.com.sofka.DAO.Impl.AuthorDAOImpl;
+import co.com.sofka.DAO.Impl.BookDAOImpl;
+import co.com.sofka.DAO.Impl.BookLoanDAOImpl;
+import co.com.sofka.DAO.Impl.LoanDAOImpl;
+import co.com.sofka.DAO.Impl.NovelDaoImpl;
+import co.com.sofka.DAO.Impl.NovelLoanDAOImpl;
+import co.com.sofka.DAO.Impl.ResourceDAOImpl;
+import co.com.sofka.DAO.Impl.UserDAOImpl;
+import co.com.sofka.DAO.LoanDAO;
+import co.com.sofka.DAO.ResourceDAO;
+import co.com.sofka.businessLogic.generalAdmin.interf.AuthorManagement;
+import co.com.sofka.businessLogic.generalAdmin.interf.BookLoanManagement;
+import co.com.sofka.businessLogic.generalAdmin.interf.BookManagement;
+import co.com.sofka.businessLogic.generalAdmin.interf.NovelLoanManagement;
+import co.com.sofka.businessLogic.generalAdmin.interf.NovelManagement;
 import co.com.sofka.enums.LoanStatus;
-import co.com.sofka.model.*;
+import co.com.sofka.enums.ResourceType;
+import co.com.sofka.model.Author;
+import co.com.sofka.model.Book;
+import co.com.sofka.model.BookLoan;
+import co.com.sofka.model.Loan;
+import co.com.sofka.model.Novel;
+import co.com.sofka.model.NovelLoan;
+import co.com.sofka.model.Resource;
+import co.com.sofka.model.User;
 
 import java.sql.Date;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
-public class GeneralAdministrativeManagement implements
-        AuthorManagement,
-        BookLoanManagement,
-        BookManagement,
-        NovelManagement,
-        NovelLoanManagement {
+public class GeneralAdministrativeManagement implements AuthorManagement, BookLoanManagement,
+        BookManagement, NovelManagement, NovelLoanManagement {
 
     private final BookDAOImpl bookDAO = new BookDAOImpl();
     private final NovelDaoImpl novelDao = new NovelDaoImpl();
     private final AuthorDAOImpl authorDAO = new AuthorDAOImpl();
     private final BookLoanDAOImpl bookLoanDAO = new BookLoanDAOImpl();
     private final NovelLoanDAOImpl novelLoanDAO = new NovelLoanDAOImpl();
+    private final ResourceDAO resourceDAO = new ResourceDAOImpl();
+    private final LoanDAO loanDAO = new LoanDAOImpl();
 
     @Override
     public void insertAuthor(Author author) {
@@ -34,11 +54,7 @@ public class GeneralAdministrativeManagement implements
 
     @Override
     public Author getAuthorByName(String name) {
-        return authorDAO.getAllAuthors()
-                .stream()
-                .filter(author -> author.getName().equals(name))
-                .findFirst()
-                .orElse(null);
+        return authorDAO.getAllAuthors().stream().filter(author -> author.getName().equals(name)).findFirst().orElse(null);
     }
 
     @Override
@@ -105,12 +121,9 @@ public class GeneralAdministrativeManagement implements
 
     @Override
     public Book getBookByTitle(String title) {
-        return bookDAO.getAllBooks()
-                .stream()
-                .filter(book -> book.getTitle().equals(title))
-                .findFirst()
-                .orElse(null);
+        return bookDAO.getAllBooks().stream().filter(book -> book.getTitle().equals(title)).findFirst().orElse(null);
     }
+
     public Book getBookById(String id) {
         return bookDAO.getBookById(id);
     }
@@ -169,11 +182,7 @@ public class GeneralAdministrativeManagement implements
 
     @Override
     public Novel getNovelByTitle(String title) {
-        return novelDao.getAllNovels()
-                .stream()
-                .filter(novel -> novel.getTitle().equals(title))
-                .findFirst()
-                .orElse(null);
+        return novelDao.getAllNovels().stream().filter(novel -> novel.getTitle().equals(title)).findFirst().orElse(null);
     }
 
     public Novel getNovelById(String id) {
@@ -189,6 +198,62 @@ public class GeneralAdministrativeManagement implements
     @Override
     public void deleteNovel(Novel novel) {
         novelDao.deleteNovel(novel);
+    }
+
+    // Resources
+    public List<Resource> getAllResources(ResourceType type) {
+        return resourceDAO.getAllResources().stream().filter(r -> r.getType() == type).toList();
+    }
+
+    public Resource getResourceDetails(int resourceId) {
+        return resourceDAO.getResourceById(resourceId);
+    }
+
+    public void inisertResource(Resource resource) throws SQLException {
+        resourceDAO.insertResource(resource);
+    }
+
+    public void updateResource(Resource resource) {
+        resourceDAO.updateResource(resource);
+    }
+
+    public void deleteResource(int resourceId) {
+        Resource resource = resourceDAO.getResourceById(resourceId);
+        resourceDAO.deleteResource(resource);
+    }
+
+    // Loans
+    public List<Loan> getAllLoans() {
+        return loanDAO.getAllLoans();
+    }
+
+    public List<Loan> getLoansByEmail(String email) {
+        return getAllLoans().stream().filter(l -> l.getUser().getEmail().equals(email)).toList();
+    }
+
+    public Loan getResourceLoanDetails(int loanId) {
+        return loanDAO.getLoanById(loanId);
+    }
+
+    public void approveResourceLoan(int loanId) {
+        Loan loan = loanDAO.getLoanById(loanId);
+        loan.setStatus(LoanStatus.COMPLETED);
+        loanDAO.updateLoan(loan);
+    }
+
+    public void finishResourceLoan(int loanId) {
+        Loan loan = loanDAO.getLoanById(loanId);
+        loan.setStatus(LoanStatus.FINISHED);
+        loanDAO.updateLoan(loan);
+        for (Resource r : loan.getLentResources()) {
+            r.setQuantityLoaned(r.getQuantityLoaned() - 1);
+            resourceDAO.updateResource(r);
+        }
+    }
+
+    public void deleteResourceLoan(int loanId) {
+        Loan loan = loanDAO.getLoanById(loanId);
+        loanDAO.deleteLoan(loan);
     }
 
     public User getUserByEmail(String email) {
