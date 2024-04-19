@@ -1,6 +1,8 @@
 package Garcia.Juan.database.mysql;
 
 import Garcia.Juan.database.DataBase;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import java.sql.*;
 
@@ -8,7 +10,7 @@ import static Garcia.Juan.database.mysql.MySqlConstants.CONNECTION_STRING;
 import static Garcia.Juan.database.mysql.MySqlConstants.MY_SQL_JDBC_DRIVER;
 
 public class MySqlOperation implements DataBase {
-
+    private PreparedStatement preparedStatement = null;
     private Connection connection= null;
     private Connection connection2;
     private Statement statement=null;
@@ -154,5 +156,18 @@ public class MySqlOperation implements DataBase {
             System.out.println("");
         }
         return columnValue;
+    }
+
+
+    public PreparedStatement prepareStatement(String sqlStatement) throws SQLException {
+        configureDataBaseConnection();
+        preparedStatement = connection.prepareStatement(sqlStatement);
+        return preparedStatement;
+    }
+
+    public void executePreparedStatement() throws SQLException {
+        if (preparedStatement != null) {
+            preparedStatement.execute();
+        }
     }
 }

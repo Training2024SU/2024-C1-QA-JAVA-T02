@@ -1,6 +1,8 @@
 package Garcia.Juan.dialogo;
 
+import Garcia.Juan.CRUD.CRUDImpoExpo;
 import Garcia.Juan.Exporter.CSVProductExporter;
+import Garcia.Juan.Exporter.CSVProductImporter;
 import Garcia.Juan.Exporter.JSONProductExporter;
 import Garcia.Juan.Exporter.XMLProductExporter;
 import Garcia.Juan.model.Producto;
@@ -37,7 +39,15 @@ public class MenuExporImport {
             switch (opcion) {
                 case 1:
                     System.out.println("Importar desde archivo CSV");
-                    // Aquí debes agregar el código de importación desde CSV
+
+                    // Crear un objeto CSVProductImporter
+                    CSVProductImporter csvImporter = new CSVProductImporter();
+
+                    // Importar los productos desde el archivo CSV
+                    List<Producto> productosImportados = csvImporter.importProductsFromCSV(mySqlOperation);
+
+                    // Insertar los productos importados en la base de datos
+                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportados);
                     break;
 
                 case 2:

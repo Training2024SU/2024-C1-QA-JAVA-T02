@@ -61,3 +61,5 @@ d
 4src/main/java/Garcia/Juan/Exporter/JSONExporter.java,1/f/1f7a34a5d4db0990097d8df77bd751d6f0049bbf
 j
 :src/main/java/Garcia/Juan/Exporter/XMLProductExporter.java,a/d/ade122b598abd8894bb307e2a7a50255a3d54f80
+j
+:src/main/java/Garcia/Juan/Exporter/CSVProductImporter.java,c/e/cec2eb2b30a5c05cc1f2fe3992bae669435e0ad9
