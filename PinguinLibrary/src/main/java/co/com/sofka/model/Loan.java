@@ -15,14 +15,20 @@ public class Loan {
     private User user;
     private List<Resource> lentResources;
 
+    public Loan (LocalDate returnDate, User user){
+        this.requestedDate = LocalDate.now();
+        this.returnDate = returnDate;
+        this.status = LoanStatus.REQUESTED;
+        this.user = user;
+    }
+
     public Loan(Integer id, LocalDate requestedDate, LocalDate returnDate, LoanStatus status,
-                User user, List<Resource> lentResources) {
+                User user) {
         this.id = id;
         this.requestedDate = requestedDate;
         this.returnDate = returnDate;
         this.status = status;
         this.user = user;
-        this.lentResources = lentResources;
     }
 
     @Override

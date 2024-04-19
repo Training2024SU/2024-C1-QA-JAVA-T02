@@ -145,4 +145,8 @@ public class MySqlOperation implements DataBase {
         }
 
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
 }
