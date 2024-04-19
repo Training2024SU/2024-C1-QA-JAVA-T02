@@ -1,13 +1,0 @@
-
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-3
-java:S1118"Hide this public constructor.(Ä˜´¬
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-h
-java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª
-A	java:S106‹"+Replace this use of System.out by a logger.(¬ÊÖÜ
-Y
-java:S1128">Remove this unused import 'Garcia.Juan.logica.MetodosUsuario'.(¶¹·­ùÿÿÿÿ

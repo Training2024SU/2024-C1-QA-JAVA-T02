@@ -27,6 +27,7 @@ dependencies {
 
     // Dependencia para el controlador de MongoDB
     implementation 'org.mongodb:mongodb-driver-sync:4.3.3'
+
 }
 
 
