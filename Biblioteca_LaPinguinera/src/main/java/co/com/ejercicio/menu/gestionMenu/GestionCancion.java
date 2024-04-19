@@ -34,18 +34,23 @@ public class GestionCancion {
         cancionAccesoBD.insertarCancion(new Cancion(titulo, artista, album, duracion, cantidadEjemplares, cantidadPrestado, cantidadDisponible));
     }
 
-    public static void gestionObtenerArtistaCancion() throws SQLException {
+    public static void gestionObtenerArtistaCancion() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa el nombre del artista");
+        System.out.println("Ingresa el nombre del artista:");
         String artista = scanner.nextLine();
-        Connection conexion = Conexion.obtenerConexion();
-        CancionAccesoBD cancionAccesoBD = new CancionAccesoBD(conexion);
-        List<Cancion> canciones = obtenerCancionDeUnArtista(artista);
-        for (Cancion cancion : canciones) {
-            System.out.println(cancion);
+        try {
+            Connection conexion = Conexion.obtenerConexion();
+            CancionAccesoBD cancionAccesoBD = new CancionAccesoBD(conexion);
+            List<Cancion> canciones = obtenerCancionDeUnArtista(artista);
+            for (Cancion cancion : canciones) {
+                System.out.println(cancion);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al obtener las canciones del artista: " + e.getMessage());
         }
     }
-public static void gestionObtenerCancion() {
+
+    public static void gestionObtenerCancion() {
     System.out.println("Obteniendo canciones...");
     try {
         Connection conexion = Conexion.obtenerConexion();
