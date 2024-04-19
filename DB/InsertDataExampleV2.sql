@@ -39,7 +39,7 @@ VALUES
 (2, 4.2),
 (3, 5.0);
 
-INSERT INTO Essays (resource_id, academyc_level)
+INSERT INTO Essays (resource_id, academic_level)
 VALUES 
 (4, 'Pregrado'),
 (5, 'Maestría'),
