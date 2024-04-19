@@ -30,14 +30,4 @@ public class JsonUtil {
             return null;
         }
     }
-    public static List<Book> readBookXmlFile(String fileName) {
-        String filePath = "./src/main/resources/XmlInputFiles/";
-        try (Reader reader = new FileReader(filePath + fileName)) {
-            Type type = new TypeToken<List<Book>>(){}.getType();
-            return gson.fromJson(reader, type);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
-    }
 }

@@ -1,11 +1,11 @@
 Type,Id,Title,Author,Copies,Borrowed copies,Field/Genre,Pages/Recommended age
 book,1,Cien años de soledad,Gabriel García Márquez,6,1,Ficción,432
 book,2,El amor en los tiempos del cólera,Gabriel García Márquez,1,1,Ficción,368
-book,3,Crónica de una muerte anunciada,Gabriel García Márquez,2,0,Ficción,128
+book,3,Crónica de una muerte anunciada,Gabriel García Márquez,2,-1,Ficción,128
 book,4,La sombra del viento,Carlos Ruiz Zafón,4,0,Ficción,576
 book,5,Cien años de soledad,Gabriel García Márquez,10,0,Ficción,434
 book,6,Rayuela,Julio Cortázar,5,1,Ficción,700
-novel,1,La casa de los espíritus,Isabel Allende,3,0,Realismo mágico,16
+novel,1,La casa de los espíritus,Isabel Allende,3,-1,Realismo mágico,16
 novel,2,El coronel no tiene quien le escriba,Gabriel García Márquez,4,0,Ficción,18
 novel,3,La ciudad y los perros,Mario Vargas Llosa,1,0,Novela,16
 novel,4,Cien años de soledad,Gabriel García Márquez,2,0,Realismo mágico,18

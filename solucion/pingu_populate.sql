@@ -2,12 +2,12 @@ USE pingu;
 
 INSERT INTO Users (id, name, email, password, role)
 VALUES 
+(7, 'Johan Cifuentes', 'johan@example.com', 'johanpass', 'READER'),
     (2, 'Juan Pérez', 'juan@example.com', 'juanpass', 'ADMINISTRATOR'),
     (3, 'María Gómez', 'maria@example.com', 'mariapass', 'READER'),
     (4, 'Pedro Ramirez', 'pedro@example.com', 'pedropass', 'READER'),
     (5, 'Luisa Martínez', 'luisa@example.com', 'luisapass', 'EMPLOYEE'),
     (6, 'Andrés López', 'andres@example.com', 'andrespass', 'READER'),
-    (7, 'Johan Cifuentes', 'johan@example.com', 'johanpass', 'READER'),
 	(8, 'super', 'super@example.com', 'superpass', 'SUPER');
 
 INSERT INTO Books (id, title, author, copies, copies_borrowed, field, pages)
