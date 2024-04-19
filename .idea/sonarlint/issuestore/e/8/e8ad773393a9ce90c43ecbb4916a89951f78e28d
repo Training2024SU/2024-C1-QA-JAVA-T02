@@ -1,29 +1,21 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$f2b28e31-daaa-48bc-b067-8c663bd6a5a1
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$d2384104-acde-417c-b65e-0db67c096f62
 Y
-java:S1118"Hide this public constructor.(ŸºÆJ$c6ddb3d2-1e63-463e-b493-e12ae02dcc1f
+java:S1118"Hide this public constructor.(ŸºÆJ$b8386bed-ff0d-40b4-a6e0-4acbfca01ae0
 g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$6f6c474a-e6f7-4760-b506-97221084010d
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$08a0ca64-ab3e-407e-8c87-c96e37c1f718
 q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$0b44bec0-1b6c-4216-ac86-f33aefe49f9e
-k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$8b35d45d-38b1-4403-b50a-0b602bbf8fb5
-f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$2fc11cde-c859-4a15-ac21-76218c3ae2ee
-|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$d9eb02df-0713-435c-ac68-59ab3d1761bd
-|	java:S125!"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$9af39ad9-512c-430a-8038-62564f9aab9a
-k	java:S106&"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$7b85838e-6f59-4786-87f0-b23ffee03052
-k	java:S106;"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$53a82043-ac1d-4d3d-994a-8de1fd677e07
-e	java:S106="+Replace this use of System.out by a logger.(®…ê3J$5b30fae3-f9df-4a6d-8de5-2df76b0186a6
-k	java:S106?"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$8cdd57ad-a40b-4cf7-a014-fc4aee06e384
-k	java:S106I"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$ed3810f3-2bcd-4ac5-8122-5f487f372188
-G	java:S106^"+Replace this use of System.out by a logger.(±ËÀ«8´‚Æ¢ï1
-G	java:S106b"+Replace this use of System.out by a logger.(µÅÒò8µ‚Æ¢ï1
-G	java:S106t"+Replace this use of System.out by a logger.(ªÀ‰¾8·‚Æ¢ï1
-L	java:S106x"+Replace this use of System.out by a logger.(­‘Ê‡úÿÿÿÿ8·‚Æ¢ï1
-M	java:S106Š"+Replace this use of System.out by a logger.(×ºûêøÿÿÿÿ8¹‚Æ¢ï1
-H	java:S106"+Replace this use of System.out by a logger.(ò¦õü8¹‚Æ¢ï1
-M	java:S106Ÿ"+Replace this use of System.out by a logger.(Û¤¸øÿÿÿÿ8»‚Æ¢ï1
-H	java:S106£"+Replace this use of System.out by a logger.(ƒÌú’8¼‚Æ¢ï1
-M	java:S106±"+Replace this use of System.out by a logger.(ÙÚ‘€ûÿÿÿÿ8½‚Æ¢ï1
-H	java:S106¶"+Replace this use of System.out by a logger.(Ñ„µÆ8½‚Æ¢ï1
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$7619fba9-5ac6-4e1c-b259-eccbf8a1b344
+k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$792879e9-31fc-49f5-8a8c-ebc9d80e928d
+f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$696588b5-dd4d-4455-9a2e-2abcab14d894
+|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$db976fd8-ae9c-4215-b096-e265374aaa7c
+|	java:S125!"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$7ff1f48b-85fb-44b8-99c8-4c6766b27456
+k	java:S106&"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$19514f38-7584-425c-933f-5f9a239e8508
+k	java:S106;"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$629fd9ee-7e30-402b-8ff5-517e3546a662
+e	java:S106="+Replace this use of System.out by a logger.(®…ê3J$00139a39-0915-47ba-9a47-d67b7b055ca7
+k	java:S106?"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$a6b6bc85-a515-4d52-9cad-e155a5460a30
+k	java:S106I"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$271eb975-2fbe-4b91-a40c-edf8d8613a2f
+
+java:S1128"7Remove this unused import 'Garcia.Juan.util.VistaUtil'.(ú‡šîÿÿÿÿÿ8« „£ï1J$7666bd90-1aac-4be1-a3fe-d5aa081f8606
 s
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$01ac062f-fa12-4a14-9be1-7fff2b770903
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$e4068eb3-bd88-49be-ba1f-65a142437ca0

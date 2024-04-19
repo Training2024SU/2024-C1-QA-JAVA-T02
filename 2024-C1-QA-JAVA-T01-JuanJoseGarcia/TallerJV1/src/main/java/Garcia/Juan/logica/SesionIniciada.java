@@ -60,7 +60,7 @@ public class SesionIniciada {
                             solicitarPrestamo(mySqlOperation, correo);
                             break;
                         case 3:  // Nueva opción para actualizar la información del usuario
-                            actualizarInformacionUsuario(mySqlOperation);
+                            RegistroUsuarios.actualizarInformacionUsuario(mySqlOperation);
                             break;
                         default:
                             ciclo = false;
@@ -94,7 +94,7 @@ public class SesionIniciada {
                             gestionarPrestamo(mySqlOperation);
                             break;
                         case 3:
-                            crearLector(mySqlOperation);
+                            RegistroUsuarios.crearLector(mySqlOperation);
                             break;
                         case 4:
                             List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
@@ -113,10 +113,10 @@ public class SesionIniciada {
                     opcion = pedirOpcion();
                     switch (opcion) {
                         case 1:
-                            registrarSuperUsuario(mySqlOperation);
+                            RegistroUsuarios.registrarSuperUsuario(mySqlOperation);
                             break;
                         case 2:
-                            crearLector(mySqlOperation);
+                            RegistroUsuarios.crearLector(mySqlOperation);
                             break;
                         case 3:
                             gestionarMaterial(mySqlOperation);
@@ -125,7 +125,7 @@ public class SesionIniciada {
                             gestionarPrestamo(mySqlOperation);
                             break;
                         case 5:
-                            registrarAdministrador(mySqlOperation);
+                            RegistroUsuarios.registrarAdministrador(mySqlOperation);
                             break;
                         case 6:
                             List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
@@ -136,7 +136,7 @@ public class SesionIniciada {
                             PrestamosPrueba.menuPrestamosPrueba();
                             break;
                         case 8:
-                            crearAsistente(mySqlOperation);
+                            RegistroUsuarios.crearAsistente(mySqlOperation);
                             break;
                         case 9:
                             MenuExporImport.menuImportExport(); // Llamada al menú de importación/exportación

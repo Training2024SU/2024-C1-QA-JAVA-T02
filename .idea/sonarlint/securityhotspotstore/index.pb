@@ -85,3 +85,5 @@ s
 Csrc/main/java/Garcia/Juan/exporter_importer/CSVProductExporter.java,5/d/5dbf1c5f72312be15ef3a32974b735b9383f7c14
 s
 Csrc/main/java/Garcia/Juan/exporter_importer/CSVProductImporter.java,0/a/0aed872dbca1767b7b499fa89e7da179673b47c4
+f
+6src/main/java/Garcia/Juan/logica/RegistroUsuarios.java,a/1/a16605125d6b3ae82c16e8ba075688e222bd4734
