@@ -5,15 +5,10 @@ import java.util.Scanner;
 
 public class MenuLector {
 
-    private Usuario usuario;
-    private Scanner scanner;
 
-    public MenuLector(Usuario usuario) {
-        this.usuario = usuario;
-        this.scanner = new Scanner(System.in);
-    }
+    private static Scanner scanner = new Scanner(System.in);
 
-    public void mostrarMenu() {
+    public static void mostrarMenu(Usuario usuario) {
         int opcion;
         do {
             System.out.println("Bienvenido, " + usuario.getNombreUsuario());

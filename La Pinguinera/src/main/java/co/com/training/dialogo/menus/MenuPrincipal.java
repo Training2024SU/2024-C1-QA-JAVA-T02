@@ -1,17 +1,20 @@
 package co.com.training.dialogo.menus;
 
 import co.com.training.integration.database.mysql.MySqlOperation;
+import co.com.training.logica.CrudUsuario;
 import co.com.training.modelo.Usuario;
 import co.com.training.util.enums.RolUsuario;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 
 
 public class MenuPrincipal {
 
     private static Map<String, Usuario> usuariosRegistrados = new HashMap<>();
+    private static CrudUsuario usuarioCrud = new CrudUsuario();
 
     public static void mostrarMenuPrincipal() {
 
@@ -52,16 +55,16 @@ public class MenuPrincipal {
         System.out.println("=== Ingresar ===");
         System.out.print("Correo electrónico: ");
         String correoUsuario = scanner.nextLine();
-        System.out.print("Nombre: ");
-        String nombreUsuario = scanner.nextLine();
+
         System.out.print("Contraseña: ");
         String contrasenaUsuario = scanner.nextLine();
-        System.out.print("Rol (ADMINISTRADOR, ASISTENTE, LECTOR): ");
-        String rolUsuario = scanner.nextLine();
 
-        Usuario usuario = usuariosRegistrados.get(correoUsuario);
-        if (usuario != null && usuario.getContrasenaUsuario().equals(contrasenaUsuario)) {
-            System.out.println("¡Bienvenido de vuelta, " + usuario.getNombreUsuario() + "!");
+
+        Optional<Usuario> usuarioOptional = usuarioCrud.validarCredenciales(correoUsuario, contrasenaUsuario);
+
+
+        if (usuarioOptional.isPresent() && usuarioOptional.get().getContrasenaUsuario().equals(contrasenaUsuario)) {
+            System.out.println("¡Bienvenido de vuelta, " + usuarioOptional.get().getNombreUsuario() + "!");
             // Aquí puedes agregar la lógica adicional para el usuario ingresado, como redireccionar a otro menú, etc.
         } else {
             System.out.println("Correo electrónico o contraseña incorrectos. Por favor, inténtalo de nuevo.");

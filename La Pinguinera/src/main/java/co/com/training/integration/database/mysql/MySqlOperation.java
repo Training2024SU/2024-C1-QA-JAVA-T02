@@ -14,10 +14,10 @@ public class MySqlOperation implements DataBase {
     private ResultSet resultSet=null;
 
     private String sqlStatement;
-    private String server;
-    private String dataBaseName;
-    private String user;
-    private String password;
+    private static String server;
+    private static String dataBaseName;
+    private static String user;
+    private static String password;
 
     public String getSqlStatement() {
         return sqlStatement;
@@ -162,14 +162,14 @@ public class MySqlOperation implements DataBase {
         }
     }
 
-    public Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         if (connection == null) {
             connection= DriverManager.getConnection(
                     String.format(CONNECTION_STRING,
-                            this.server,
-                            this.dataBaseName,
-                            this.user,
-                            this.password)
+                            server,
+                            dataBaseName,
+                            user,
+                            password)
             );
             return connection;
         }

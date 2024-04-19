@@ -7,9 +7,18 @@
     <list default="true" id="06d2dd3d-3c81-4db0-b8d9-7f8ba650088c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/dialogo/menus/MenuPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/dialogo/menus/MenuPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/integration/database/mysql/MySqlOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/integration/database/mysql/MySqlOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudLibro.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudLibro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudNovela.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudNovela.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudPrestamo.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudPrestamo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/logica/CrudUsuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/out/production/classes/co/com/training/modelo/Libro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/dialogo/menus/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/dialogo/menus/MenuPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/MySqlOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/integration/database/mysql/MySqlOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/logica/CrudUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/logica/CrudUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/modelo/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/La Pinguinera/src/main/java/co/com/training/modelo/Libro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

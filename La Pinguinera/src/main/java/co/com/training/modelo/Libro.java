@@ -66,4 +66,16 @@ public class Libro {
     public void setCantidadPrestados(int cantidadPrestados) {
         this.cantidadPrestados = cantidadPrestados;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "tituloLibro='" + tituloLibro + '\'' +
+                ", autor='" + autor + '\'' +
+                ", areaConocimiento='" + areaConocimiento + '\'' +
+                ", numeroPaginas=" + numeroPaginas +
+                ", cantidadEjemplares=" + cantidadEjemplares +
+                ", cantidadPrestados=" + cantidadPrestados +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package co.com.training;
 
+import co.com.training.dialogo.menus.MenuPrincipal;
 import co.com.training.integration.database.mysql.MySqlOperation;
 import co.com.training.logica.CrudLibro;
 import co.com.training.logica.CrudNovela;
@@ -28,6 +29,8 @@ public class Main {
         openConnection();
 //        insertarLibroEnBd(preguntarAlUsuario());
 //        selectAllFromLibro();
+
+        MenuPrincipal.mostrarMenuPrincipal();
 
         CrudLibro libroCrud = new CrudLibro(mySqlOperation);
         Libro libro = libroCrud.consultarLibroPorTitulo("Hola");
