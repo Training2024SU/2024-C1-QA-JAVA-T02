@@ -63,3 +63,7 @@ j
 :src/main/java/Garcia/Juan/Exporter/XMLProductExporter.java,a/d/ade122b598abd8894bb307e2a7a50255a3d54f80
 j
 :src/main/java/Garcia/Juan/Exporter/CSVProductImporter.java,c/e/cec2eb2b30a5c05cc1f2fe3992bae669435e0ad9
+k
+;src/main/java/Garcia/Juan/Exporter/JSONProductImporter.java,0/d/0dd28e0250a6346ee86529badcf4151f01d505b8
+j
+:src/main/java/Garcia/Juan/Exporter/XMLProductImporter.java,7/b/7b19645639160dfb70d93ebf8a0045837f491f79

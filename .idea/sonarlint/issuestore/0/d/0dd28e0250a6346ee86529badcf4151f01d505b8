@@ -1,0 +1,8 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8§ƒïï1J$104a4b59-24e3-4d98-a785-74a9d1935621
+„
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Øÿ¿½8¯ƒïï1J$165d3236-de0c-4489-8ca1-7145d94ee843
+r	java:S106""+Replace this use of System.out by a logger.(ÁÑ´ºüÿÿÿÿ8Âƒïï1J$e701be86-51e0-47af-902f-4c5e947b29d9
+r	java:S106'"+Replace this use of System.err by a logger.(ƒÚÍüÿÿÿÿÿ8Ãƒïï1J$318aeb2e-c8d6-4b09-8f93-78f7b49fa4c2
+n
+java:S1168("+Return an empty collection instead of null.(¥¹ï8Åƒïï1J$88ed9d17-3ec6-450f-a83d-a8ed9ba4623b

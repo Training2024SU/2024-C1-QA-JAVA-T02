@@ -1,10 +1,7 @@
 package Garcia.Juan.dialogo;
 
 import Garcia.Juan.CRUD.CRUDImpoExpo;
-import Garcia.Juan.Exporter.CSVProductExporter;
-import Garcia.Juan.Exporter.CSVProductImporter;
-import Garcia.Juan.Exporter.JSONProductExporter;
-import Garcia.Juan.Exporter.XMLProductExporter;
+import Garcia.Juan.Exporter.*;
 import Garcia.Juan.model.Producto;
 
 import java.sql.SQLException;
@@ -71,10 +68,16 @@ public class MenuExporImport {
                     break;
 
                 case 5:
-                    // Llamar a la función para importar desde archivo JSON
                     System.out.println("Importar desde archivo JSON");
-                    // Aquí debes agregar el código de importación desde JSON
-                    break;
+
+                    // Crear un objeto JSONProductImporter
+                    JSONProductImporter jsonImporter = new JSONProductImporter();
+
+                    // Importar los productos desde el archivo JSON
+                    List<Producto> productosImportadosDesdeJSON = jsonImporter.importProductsFromJSON(mySqlOperation);
+
+                    // Insertar los productos importados en la base de datos
+                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosDesdeJSON);
 
                 case 6:
                     System.out.println("Exportar a archivo JSON");

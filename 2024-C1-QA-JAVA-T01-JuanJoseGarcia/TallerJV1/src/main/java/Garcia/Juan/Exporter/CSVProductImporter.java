@@ -4,6 +4,7 @@ import Garcia.Juan.CRUD.CRUDImpoExpo;
 import Garcia.Juan.database.mysql.MySqlOperation;
 import Garcia.Juan.model.Producto;
 import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvIgnore;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.FileReader;
@@ -12,6 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVProductImporter {
+
+    @CsvIgnore
+    private String genero;
+
+    @CsvIgnore
+    private Integer edadMinima;
 
     // Ruta del archivo CSV a importar
     private static final String CSV_FILE_PATH = "/home/dan/Desktop/productos.csv";
