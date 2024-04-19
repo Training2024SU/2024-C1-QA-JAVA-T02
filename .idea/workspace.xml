@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb50b8e1-456a-48a4-9475-2da3204fb581" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,11 @@
     "Gradle.TallerJV1 [:Main.main()].executor": "Run",
     "Gradle.TallerJV1 [:MongoClientConnection.main()].executor": "Run",
     "Gradle.TallerJV1 [:MySQLToMongoDBMigration.main()].executor": "Run",
+    "Gradle.TallerJV1 [:MySQLToMongoDBMigrationAreaGenero.main()].executor": "Run",
+    "Gradle.TallerJV1 [:MySQLToMongoDBMigrationContenido.main()].executor": "Run",
+    "Gradle.TallerJV1 [:MySQLToMongoDBMigrationEdadMin.main()].executor": "Run",
+    "Gradle.TallerJV1 [:MySQLToMongoDBMigrationPrestamo.main()].executor": "Run",
+    "Gradle.TallerJV1 [:MySQLToMongoDBMigrationProducto.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "daniel-morales",

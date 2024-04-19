@@ -1,0 +1,10 @@
+
+ú	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃÈ¡∞8·ﬁ»∂Ô1J$99132f85-31ae-47a7-a804-64995e751ffa
+å
+java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(”˜çª8Çﬂ»∂Ô1J$300d16c2-2ca7-437e-b648-b75c083c4343
+ä
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ñ˙Ÿ‚8Çﬂ»∂Ô1J$78b651ae-3d7f-4d75-8dbc-bc59826849ab
+y
+java:S6437"6Revoke and change this password, as it is compromised.(≈øÅó8àﬂ»∂Ô1J$27968f1b-13b6-4d4d-959b-078acd829883
+m	java:S1065"+Replace this use of System.out by a logger.(ƒØ¶’8íﬂ»∂Ô1J$bfcce6d3-032e-4933-8e6a-a70efbbc02ad
+ñsecrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(”‚º©8Æﬂ»∂Ô1J$740cd39e-d4f7-42f3-91c7-4b463b0442f6
