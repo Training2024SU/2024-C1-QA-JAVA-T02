@@ -18,6 +18,7 @@ public class MenuGestionUsuario {
         System.out.println("1. Realizar Prestamo");
         System.out.println("2. Ver publicaciones Disponibles");
         System.out.println("3. Modificar contraseña");
+        System.out.println("4. Modificar campos de cuenta");
 
         System.out.println("0. Cerrar sesion");
         int opcion = scanner.nextInt();
@@ -37,6 +38,13 @@ public class MenuGestionUsuario {
             case 3:
                 try {
                     gestionModificarContrasenaUsuario();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
+            case 4:
+                try {
+                    gestionActualizarUsuario();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }

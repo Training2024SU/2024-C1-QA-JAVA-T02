@@ -4,6 +4,7 @@ import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.Publicacion;
 import co.com.ejercicio.modeloAccesoBD.PublicacionAccesoBD;
 import co.com.ejercicio.util.CrearArchivo;
+import co.com.ejercicio.util.LeerArchivo;
 import org.json.JSONArray;
 
 import java.sql.Connection;
@@ -135,6 +136,16 @@ public class GestionPublicacion {
 
         CrearArchivo.crearArchivoXML(pathParaArchivo, "publicaciones", publicaciones);
 
+    }
+
+    public static void gestionarImportarJson() {
+        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources\\publicaciones.json";
+        LeerArchivo.leerArchivoJson(pathParaArchivo);
+    }
+
+    public static void gestionarImportarXml() {
+        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources\\publicaciones.xml";
+        LeerArchivo.leerArchivoXml(pathParaArchivo);
     }
 
 

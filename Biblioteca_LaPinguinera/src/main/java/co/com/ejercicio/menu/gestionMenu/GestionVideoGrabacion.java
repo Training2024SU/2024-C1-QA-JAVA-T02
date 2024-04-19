@@ -25,7 +25,6 @@ public class GestionVideoGrabacion {
         System.out.println("Ingresa cantidad prestado");
         int cantidadPrestado = scanner.nextInt();
         int cantidadDisponible = cantidadEjemplares - cantidadPrestado;
-        scanner.nextLine();
 
         Connection conexion = Conexion.obtenerConexion();
         VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);

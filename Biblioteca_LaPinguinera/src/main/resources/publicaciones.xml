@@ -43,7 +43,8 @@
     <void property="titulo">
      <string>Azul</string>
     </void>
-   </object>
+   </object>1
+1
   </void>
   <void method="add">
    <object class="co.com.ejercicio.modelo.Publicacion">
@@ -422,16 +423,16 @@
   <void method="add">
    <object class="co.com.ejercicio.modelo.Publicacion">
     <void property="cantidadDisponible">
-     <int>85</int>
-    </void>
-    <void property="cantidadEjemplares">
-     <int>100</int>
-    </void>
-    <void property="cantidadPrestado">
      <int>15</int>
     </void>
+    <void property="cantidadEjemplares">
+     <int>20</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>5</int>
+    </void>
     <void property="numeroPaginas">
-     <int>432</int>
+     <int>300</int>
     </void>
     <void property="tipo">
      <string>Libro</string>

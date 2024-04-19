@@ -6,8 +6,8 @@ public class QueryConstante {
     public static final String SELECT_ALL_FROM_PUBLICACIONES = "SELECT * FROM publicacion";
 
     public static final String SELECT_ALL_AUTOR_FROM_PUBLICACIONES = "SELECT * FROM publicacion WHERE nombre_autor = ? " ;
-    public static final String INSERT_PUBLICACIONES = "INSERT INTO publicacion (Titulo, Tipo_publicacion, numero_pagina, cantidad_ejemplares, cantidad_prestado, cantidad_disponible, autor_idAutor) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    public static final String UPDATE_PUBLICACIONES = "UPDATE publicacion SET Tipo_publicacion = ?, Numero_pagina = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ?, autor_idAutor = ? WHERE titulo = ?";
+    public static final String INSERT_PUBLICACIONES = "INSERT INTO publicacion (Titulo, Tipo_publicacion, numero_pagina, cantidad_ejemplares, cantidad_prestado, cantidad_disponible, nombre_autor) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    public static final String UPDATE_PUBLICACIONES = "UPDATE publicacion SET Tipo_publicacion = ?, Numero_pagina = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ?, nombre_autor = ? WHERE titulo = ?";
     public static final String DELETE_FROM_PUBLICACIONES = "DELETE FROM publicacion WHERE titulo = ?";
 
     //Query a Tabla video_grabacion en la BD
@@ -31,7 +31,7 @@ public class QueryConstante {
 
     public static final String SELECT_ALL_AUTOR_FROM_ENSAYO_TESIS  = "SELECT * FROM ensayo_tesis WHERE autor = ? " ;
     public static final String INSERT_ENSAYO_TESIS = "INSERT INTO ensayo_tesis (titulo, autor, numero_paginas, cantidad_ejemplares, cantidad_prestado, cantidad_disponible) VALUES (?, ?, ?, ?, ?, ?)";
-    public static final String UPDATE_ENSAYO_TESIS = "UPDATE ensayo_tesis SET Tipo_publicacion = ?, Numero_pagina = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ?, autor_idAutor = ? WHERE titulo = ?";
+    public static final String UPDATE_ENSAYO_TESIS = "UPDATE ensayo_tesis SET titulo = ?, autor = ?, numero_paginas = ?, cantidad_ejemplares = ?, cantidad_prestado = ?, cantidad_disponible = ? WHERE titulo = ?";
     public static final String DELETE_FROM_ENSAYO_TESIS = "DELETE FROM ensayo_tesis WHERE titulo = ?";
 
 

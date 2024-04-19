@@ -27,7 +27,6 @@ public class GestionCancion {
         System.out.println("Ingresa cantidad prestado");
         int cantidadPrestado = scanner.nextInt();
         int cantidadDisponible = cantidadEjemplares - cantidadPrestado;
-        scanner.nextLine();
 
         Connection conexion = Conexion.obtenerConexion();
         CancionAccesoBD cancionAccesoBD = new CancionAccesoBD(conexion);

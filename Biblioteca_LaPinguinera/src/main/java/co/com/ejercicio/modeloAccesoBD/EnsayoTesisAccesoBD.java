@@ -76,14 +76,15 @@ public class EnsayoTesisAccesoBD {
         return ensayosTesis;
     }
 
-    public void actualizarEnsayoTesis(EnsayoTesis ensayoTesis) throws SQLException {
+    public void actualizarEnsayoTesis(EnsayoTesis ensayoTesis, String tituloPrevio) throws SQLException {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_ENSAYO_TESIS)) {
             statement.setString(1, ensayoTesis.getTitulo());
             statement.setString(2, ensayoTesis.getAutor());
             statement.setInt(3, ensayoTesis.getNumeroPaginas());
             statement.setInt(4, ensayoTesis.getCantidadEjemplares());
-            statement.setInt(5, ensayoTesis.getCantidadDisponible());
-
+            statement.setInt(5, ensayoTesis.getCantidadPrestado());
+            statement.setInt(6, ensayoTesis.getCantidadDisponible());
+            statement.setString(7, tituloPrevio);
 
             statement.executeUpdate();
             System.out.println(OPERACION_EXITOSA);

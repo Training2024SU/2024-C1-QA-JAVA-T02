@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.gestionMenu.GestionAdministrador.*;
+import static co.com.ejercicio.menu.gestionMenu.GestionEmpleado.gestionActualizarEmpleado;
 import static co.com.ejercicio.menu.gestionMenu.GestionEmpleado.gestionarModificarContrasenaEmpleado;
 
 
@@ -17,7 +18,8 @@ public class MenuGestionAsistente {
         System.out.println("1. Gestionar Publicacion");
         System.out.println("2. Gestionar préstamos");
         System.out.println("3. Modificar contraseña");
-        System.out.println("4. Gestionar Publicacion Nueva");
+        System.out.println("4. Modificar campos de cuenta");
+        System.out.println("5. Gestionar Publicacion Nueva");
         System.out.println("0. Cerrar sesion");
         System.out.print("Ingrese su opción: ");
         int opcion = scanner.nextInt();
@@ -37,9 +39,14 @@ public class MenuGestionAsistente {
                 } catch (SQLException e){
                     throw new RuntimeException(e);
                 }
-
-                break;
             case 4:
+                try {
+                    gestionActualizarEmpleado();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
+            case 5:
                 gestionarPublicacionNueva();
                 break;
             case 0:

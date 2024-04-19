@@ -23,6 +23,8 @@ public class MenuGestionPublicacion {
         System.out.println(OBTENER_AUTORES);
         System.out.println("6. Exportar publicaciones a Json");
         System.out.println("7. Exportar publicaciones a XML");
+        System.out.println("8. Imprimir publicaciones de archivo json");
+        System.out.println("9. Imprimir publicaciones de archivo xml");
 
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -85,6 +87,12 @@ public class MenuGestionPublicacion {
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+                break;
+            case 8:
+                gestionarImportarJson();
+                break;
+            case 9:
+                gestionarImportarXml();
                 break;
             default:
                 System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 5.");
