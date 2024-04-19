@@ -1,11 +1,7 @@
 package co.com.sofka.model;
 
 import co.com.sofka.enums.ResourceType;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 public abstract class Resource {
     private Integer id;
     private ResourceType type;
@@ -13,6 +9,15 @@ public abstract class Resource {
     private int quantity;
     private int quantityLoaned;
     private Author author;
+
+    protected Resource(ResourceType type, String title, int quantity, int quantityLoaned,
+                       Author author) {
+        this.type = type;
+        this.title = title;
+        this.quantity = quantity;
+        this.quantityLoaned = quantityLoaned;
+        this.author = author;
+    }
 
     protected Resource(int id, ResourceType type, String title, int quantity, int quantityLoaned,
                        Author author) {
@@ -32,5 +37,53 @@ public abstract class Resource {
     public String toString() {
         return "id=" + id + ", type=" + type + ", title='" + title + "', quantity=" + quantity +
                 ", quantityLoaned=" + quantityLoaned + ", author=" + author + '}';
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public ResourceType getType() {
+        return type;
+    }
+
+    public void setType(ResourceType type) {
+        this.type = type;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantityLoaned() {
+        return quantityLoaned;
+    }
+
+    public void setQuantityLoaned(int quantityLoaned) {
+        this.quantityLoaned = quantityLoaned;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }
