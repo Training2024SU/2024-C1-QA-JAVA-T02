@@ -39,6 +39,16 @@ public class ControladorCRUDEmpleado {
             VistaUtil.mostrarMensajeEmpleadoAdministrativoExistente();
             return;
         }
+        List<String> infoAdicional= vista.preguntaInfoAdicional();
+        try{
+            if (!infoAdicional.get(0).equals("NO")){
+                nuevoEmpleado.setEdad(infoAdicional.get(0));
+                nuevoEmpleado.setTelefono(infoAdicional.get(1));
+                empleadoDAO.insertarInfoAdicional(nuevoEmpleado);
+            }
+        } catch (SQLException e){
+            System.out.println("Error info add");
+        }
         sincronizarDatos();
     }
 
@@ -108,4 +118,5 @@ public class ControladorCRUDEmpleado {
             e.printStackTrace();
         }
     }
+
 }

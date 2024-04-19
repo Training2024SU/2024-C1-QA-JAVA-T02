@@ -7,7 +7,7 @@ public class Publicacion {
     private String titulo;
     private TipoPublicacion tipoPublicacion;
     private String autor;
-    private int numPaginas;
+    private String formato;
     private int cantEjemplares;
     private int cantPrestados;
     private int cantDisponible;
@@ -17,12 +17,12 @@ public class Publicacion {
     }
 
     // Constructor con todos los campos, incluyendo `idPublicacion`
-    public Publicacion(int idPublicacion, String titulo, TipoPublicacion tipoPublicacion, String autor, int numPaginas, int cantEjemplares, int cantPrestados, int cantDisponible) {
+    public Publicacion(int idPublicacion, String titulo, TipoPublicacion tipoPublicacion, String autor, String formato, int cantEjemplares, int cantPrestados, int cantDisponible) {
         this.idPublicacion = idPublicacion;
         this.titulo = titulo;
         this.tipoPublicacion = tipoPublicacion;
         this.autor = autor;
-        this.numPaginas = numPaginas;
+        this.formato = formato;
         this.cantEjemplares = cantEjemplares;
         this.cantPrestados = cantPrestados;
         this.cantDisponible = cantDisponible;
@@ -62,12 +62,10 @@ public class Publicacion {
         this.autor = autor;
     }
 
-    public int getNumPaginas() {
-        return numPaginas;
-    }
+    public String getFormato() {        return formato;    }
 
-    public void setNumPaginas(int numPaginas) {
-        this.numPaginas = numPaginas;
+    public void setFormato(String formato) {
+        this.formato = formato;
     }
 
     public int getCantEjemplares() {
@@ -102,14 +100,14 @@ public class Publicacion {
 
         String columnas = String.format(
                 "%-10s %-40s %-25s %-10s %-12s %-12s %-12s",
-                "ID", "Título", "Autor", "Páginas", "Ejemplares", "Prestados", "Disponible"
+                "ID", "Título", "Autor", "Formato", "Ejemplares", "Prestados", "Disponible"
         );
         String datos = String.format(
                 "%s%-10d%s %s%-40s%s %s%-25s%s %s%-10d%s %s%-12d%s %s%-12d%s %s%-12d%s",
                 GREEN, idPublicacion, RESET,
                 GREEN, titulo, RESET,
                 GREEN, autor, RESET,
-                GREEN, numPaginas, RESET,
+                GREEN, formato, RESET,
                 GREEN, cantEjemplares, RESET,
                 GREEN, cantPrestados, RESET,
                 GREEN, cantDisponible, RESET

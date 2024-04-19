@@ -1,14 +1,14 @@
-package co.com.pinguinera.vistas.vistas_novela;
+package co.com.pinguinera.vistas.vista_videograbacion;
 
 import co.com.pinguinera.vistas.VistaUtil;
 
-public class InformacionNovelaVista {
+public class InformacionVideograbacionVista {
 
-    public String pedirTituloNovela() {
+    public String pedirTituloVideo() {
         return VistaUtil.pedirTitulo();
     }
 
-    public String pedirAutorNovela() {
+    public String pedirAutorVideo() {
         return VistaUtil.pedirAutor();
     }
 
@@ -23,4 +23,8 @@ public class InformacionNovelaVista {
     public int pedirCantPrestados() {
         return VistaUtil.pedirCantPrestados();
     }
+
 }
+
+
+

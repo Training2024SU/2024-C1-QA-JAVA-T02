@@ -2,6 +2,7 @@ package co.com.pinguinera.datos.DAO;
 
 import co.com.pinguinera.datos.interfaces.GestorBD;
 import co.com.pinguinera.datos.model.Empleado;
+import co.com.pinguinera.datos.model.Usuario;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +13,7 @@ public class EmpleadoDAO extends AbstractDAO<Empleado> {
 
     private static final String CONSULTA_EMPLEADOS = "SELECT * FROM Empleado";
     private static final String INSERTAR_EMPLEADO = "INSERT INTO Empleado (idEmpleado, Nombre, Contrasena, Correo, Rol, EsAdministrativo) VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String INSERTAR_INFO_ADICIONAL = "INSERT INTO `pinguinera`.`infoadicionalempleado` (`idEmpleado`, `Edad`, `Telefono`) VALUES (LAST_INSERT_ID(), ?, ?)";
     private static final String ACTUALIZAR_EMPLEADO = "UPDATE Empleado SET Nombre = ?, Contrasena = ?, Correo = ?, Rol = ?, EsAdministrativo = ? WHERE idEmpleado = ?";
     private static final String ELIMINAR_EMPLEADO = "DELETE FROM Empleado WHERE idEmpleado = ?";
 
@@ -54,6 +56,13 @@ public class EmpleadoDAO extends AbstractDAO<Empleado> {
         }
     }
 
+    public void insertarInfoAdicional(Empleado empleado) throws SQLException {
+        try (PreparedStatement statement = prepararConsulta(INSERTAR_INFO_ADICIONAL)) {
+            statement.setString(1, empleado.getEdad());
+            statement.setString(2, empleado.getTelefono());
+            statement.executeUpdate();
+        }
+    }
 
     @Override
     public void actualizar(Empleado empleado) throws SQLException {

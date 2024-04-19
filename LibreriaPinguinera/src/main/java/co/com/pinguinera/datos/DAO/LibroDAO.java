@@ -30,7 +30,7 @@ public class LibroDAO extends AbstractDAO<Libro> {
         libro.setIdPublicacion(resultSet.getInt("idPublicacion"));
         libro.setTitulo(resultSet.getString("Titulo"));
         libro.setAutor(resultSet.getString("Autor"));
-        libro.setNumPaginas(resultSet.getInt("Num_paginas"));
+        libro.setFormato(resultSet.getString("Formato"));
         libro.setCantEjemplares(resultSet.getInt("Cant_ejemplares"));
         libro.setCantPrestados(resultSet.getInt("Cant_prestados"));
 
@@ -46,7 +46,7 @@ public class LibroDAO extends AbstractDAO<Libro> {
             statement.setInt(1, libro.getIdPublicacion());
             statement.setString(2, libro.getTitulo());
             statement.setString(3, libro.getAutor());
-            statement.setInt(4, libro.getNumPaginas());
+            statement.setString(4, libro.getFormato());
             statement.setInt(5, libro.getCantEjemplares());
             statement.setInt(6, libro.getCantPrestados());
             statement.executeUpdate();
@@ -58,7 +58,7 @@ public class LibroDAO extends AbstractDAO<Libro> {
         try (PreparedStatement statement = prepararConsulta(ACTUALIZAR_LIBRO)) {
             statement.setString(1, libro.getTitulo());
             statement.setString(2, libro.getAutor());
-            statement.setInt(3, libro.getNumPaginas());
+            statement.setString(3, libro.getFormato());
             statement.setInt(4, libro.getCantEjemplares());
             statement.setInt(5, libro.getCantPrestados());
             statement.setInt(6, libro.getIdPublicacion());

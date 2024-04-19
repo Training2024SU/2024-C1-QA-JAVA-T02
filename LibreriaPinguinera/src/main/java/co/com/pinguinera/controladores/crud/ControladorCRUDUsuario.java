@@ -68,7 +68,7 @@ public class ControladorCRUDUsuario {
             VistaUtil.mostrarMensajeError();
             return;
         }
-        List<String> infoAdicional= vista.preguntaInfoAdicional();
+        List<String> infoAdicional= vista.preguntaInfoAdicionalUpdate();
         try{
             if (!infoAdicional.get(0).equals("NO")){
                 usuarioActualizado.setEdad(infoAdicional.get(0));

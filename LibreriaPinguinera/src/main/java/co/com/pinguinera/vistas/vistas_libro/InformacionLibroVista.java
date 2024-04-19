@@ -12,8 +12,8 @@ public class InformacionLibroVista {
         return VistaUtil.pedirAutor();
     }
 
-    public int pedirNumPaginas() {
-        return VistaUtil.pedirNumPaginas();
+    public String pedirFormato() {
+        return VistaUtil.pedirFormato();
     }
 
     public int pedirCantEjemplares() {

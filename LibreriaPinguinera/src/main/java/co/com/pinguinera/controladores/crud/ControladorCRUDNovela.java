@@ -29,7 +29,7 @@ public class ControladorCRUDNovela {
         Novela nuevaNovela = new Novela();
         nuevaNovela.setTitulo(vista.pedirTituloNovela());
         nuevaNovela.setAutor(vista.pedirAutorNovela());
-        nuevaNovela.setNumPaginas(vista.pedirNumPaginas());
+        nuevaNovela.setFormato(vista.pedirFormato());
         nuevaNovela.setCantEjemplares(vista.pedirCantEjemplares());
         nuevaNovela.setCantPrestados(vista.pedirCantPrestados());
         crudNovelasLocales.agregar(nuevaNovela);
@@ -47,7 +47,7 @@ public class ControladorCRUDNovela {
         Novela novelaActualizada = new Novela();
         novelaActualizada.setTitulo(vista.pedirTituloNovela());
         novelaActualizada.setAutor(vista.pedirAutorNovela());
-        novelaActualizada.setNumPaginas(vista.pedirNumPaginas());
+        novelaActualizada.setFormato(vista.pedirFormato());
         novelaActualizada.setCantEjemplares(vista.pedirCantEjemplares());
         novelaActualizada.setCantPrestados(vista.pedirCantPrestados());
         crudNovelasLocales.actualizar(novelaActualizada);

@@ -14,8 +14,8 @@ public class Novela extends Publicacion {
         this.setTipoPublicacion(TipoPublicacion.NOVELA);
     }
 
-    public Novela(int idPublicacion, String titulo, String autor, int numPaginas, int cantEjemplares, int cantPrestados, int cantDisponible) {
-        super(idPublicacion, titulo, TipoPublicacion.NOVELA, autor, numPaginas, cantEjemplares, cantPrestados, cantDisponible);
+    public Novela(int idPublicacion, String titulo, String autor, String formato, int cantEjemplares, int cantPrestados, int cantDisponible) {
+        super(idPublicacion, titulo, TipoPublicacion.NOVELA, autor, formato, cantEjemplares, cantPrestados, cantDisponible);
     }
 
 }

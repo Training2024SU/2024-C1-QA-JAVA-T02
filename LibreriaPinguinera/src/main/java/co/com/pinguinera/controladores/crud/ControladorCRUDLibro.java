@@ -29,7 +29,7 @@ public class ControladorCRUDLibro {
         Libro nuevoLibro = new Libro();
         nuevoLibro.setTitulo(vista.pedirTituloLibro());
         nuevoLibro.setAutor(vista.pedirAutorLibro());
-        nuevoLibro.setNumPaginas(vista.pedirNumPaginas());
+        nuevoLibro.setFormato(vista.pedirFormato());
         nuevoLibro.setCantEjemplares(vista.pedirCantEjemplares());
         nuevoLibro.setCantPrestados(vista.pedirCantPrestados());
         crudLibrosLocales.agregar(nuevoLibro);
@@ -47,7 +47,7 @@ public class ControladorCRUDLibro {
         Libro libroActualizado = new Libro();
         libroActualizado.setTitulo(vista.pedirTituloLibro());
         libroActualizado.setAutor(vista.pedirAutorLibro());
-        libroActualizado.setNumPaginas(vista.pedirNumPaginas());
+        libroActualizado.setFormato(vista.pedirFormato());
         libroActualizado.setCantEjemplares(vista.pedirCantEjemplares());
         libroActualizado.setCantPrestados(vista.pedirCantPrestados());
         crudLibrosLocales.actualizar(libroActualizado);

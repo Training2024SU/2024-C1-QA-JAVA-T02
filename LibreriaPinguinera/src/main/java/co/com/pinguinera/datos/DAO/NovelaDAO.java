@@ -30,7 +30,7 @@ public class NovelaDAO extends AbstractDAO<Novela> {
         novela.setIdPublicacion(resultSet.getInt("idPublicacion"));
         novela.setTitulo(resultSet.getString("Titulo"));
         novela.setAutor(resultSet.getString("Autor"));
-        novela.setNumPaginas(resultSet.getInt("Num_paginas"));
+        novela.setFormato(resultSet.getString("Formato"));
         novela.setCantEjemplares(resultSet.getInt("Cant_ejemplares"));
         novela.setCantPrestados(resultSet.getInt("Cant_prestados"));
 
@@ -50,7 +50,7 @@ public class NovelaDAO extends AbstractDAO<Novela> {
             statement.setInt(1, novela.getIdPublicacion());
             statement.setString(2, novela.getTitulo());
             statement.setString(3, novela.getAutor());
-            statement.setInt(4, novela.getNumPaginas());
+            statement.setString(4, novela.getFormato());
             statement.setInt(5, novela.getCantEjemplares());
             statement.setInt(6, novela.getCantPrestados());
             statement.executeUpdate();
@@ -63,7 +63,7 @@ public class NovelaDAO extends AbstractDAO<Novela> {
         try (PreparedStatement statement = prepararConsulta(ACTUALIZAR_NOVELA)) {
             statement.setString(1, novela.getTitulo());
             statement.setString(2, novela.getAutor());
-            statement.setInt(3, novela.getNumPaginas());
+            statement.setString(3, novela.getFormato());
             statement.setInt(4, novela.getCantEjemplares());
             statement.setInt(5, novela.getCantPrestados());
             statement.setInt(6, novela.getIdPublicacion());

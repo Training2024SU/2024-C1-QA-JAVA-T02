@@ -40,7 +40,10 @@ public class MenuPrincipalUsuario {
             LOGGER.info("2. Realizar préstamo");
             LOGGER.info("3. Ver todos los libros");
             LOGGER.info("4. Ver todas las novelas");
-            LOGGER.info("5. Salir");
+            LOGGER.info("5. Ver todos los videos");
+            LOGGER.info("6. Ver todas las canciones");
+            LOGGER.info("7. Ver todos los ensayos (tesis)");
+            LOGGER.info("8. Salir");
 
             int opcion = VistaUtil.obtenerOpcion();
 

@@ -45,9 +45,9 @@ public class VistaUtil {
         return scanner.nextLine();
     }
 
-    public static int pedirNumPaginas() {
-        LOGGER.info("Por favor, introduzca el número de páginas");
-        return Integer.parseInt(scanner.nextLine());
+    public static String pedirFormato() {
+        LOGGER.info("Por favor, introduzca el formato");
+        return scanner.nextLine();
     }
 
     public static int pedirCantEjemplares() {

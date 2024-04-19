@@ -6,19 +6,39 @@ public class Empleado {
     private String contrasena;
     private String correo;
     private String rol; // 'ADMINISTRATIVO' o 'ASISTENTE' como ENUM
-    private boolean esAdministrativo; // Representa el TINYINT EsAdministrativo
+    private boolean esAdministrativo;// Representa el TINYINT EsAdministrativo
+    private String edad;
+    private String telefono;
 
     public Empleado() {
         // Constructor vacío
     }
 
-    public Empleado(int idEmpleado, String nombre, String contrasena, String correo, String rol, boolean esAdministrativo) {
+    public Empleado(int idEmpleado, String nombre, String contrasena, String correo, String rol, boolean esAdministrativo,String edad,String telefono) {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.contrasena = contrasena;
         this.correo = correo;
         this.rol = rol;
         this.esAdministrativo = esAdministrativo;
+        this.edad= edad;
+        this.telefono = telefono;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     // Getters y Setters
