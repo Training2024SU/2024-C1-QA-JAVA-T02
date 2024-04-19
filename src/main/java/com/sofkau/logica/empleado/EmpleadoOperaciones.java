@@ -1,5 +1,6 @@
 package com.sofkau.logica.empleado;
 
+import com.sofkau.dialogo.MensajeOperacionBd;
 import com.sofkau.integration.database.ConexionDatabase;
 import com.sofkau.integration.database.mysql.MySqlOperation;
 import com.sofkau.integration.repositorio.EmpleadoRepositorio;
@@ -22,14 +23,9 @@ public class EmpleadoOperaciones {
         empleado.setId(GenerateUniqueId.generateID());
         empleado.setRol(rol);
         EmpleadoRepositorio.crearEmpleado(empleado);
-        Empleado empleadoVal = consultarEmpleado(empleado.getId());
-        if(empleadoVal != null){
-            System.out.println("Empleado " +rol+ " creado correctamente");
+        EmpleadoRepositorio.registroCreacion(empleadoActual.getId(),empleado.getId());
+            MensajeOperacionBd.crearEmpleado();
             System.out.println(empleado);
-            empleados.put(empleadoVal.getId(), empleadoVal);
-        }else{
-            System.out.println("Por favor verifique");
-        }
     }
 
     public EmpleadoOperaciones() {

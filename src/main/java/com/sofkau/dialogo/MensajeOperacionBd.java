@@ -66,4 +66,8 @@ public class MensajeOperacionBd {
         logger.info(ConstantesInserccionBd.MSN_CREARTESIS);
     }
 
+    public static void crearEmpleado() {
+        logger.info(ConstantesInserccionBd.MSN_CREAREMPLEADO);
+    }
+
 }

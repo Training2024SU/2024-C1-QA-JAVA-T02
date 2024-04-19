@@ -27,4 +27,6 @@ public class ConstantesInserccionBd {
 
     public static String MSN_CREARTESIS ="Se ha creado la TESIS correctamente";
 
+    public static String MSN_CREAREMPLEADO ="Se ha creado el empleado correctamente";
+
 }

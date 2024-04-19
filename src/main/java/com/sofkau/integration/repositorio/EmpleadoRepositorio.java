@@ -69,4 +69,10 @@ public class EmpleadoRepositorio {
 
     }
 
+    public static void registroCreacion(String empleadoCreador,String empleadoCreado) {
+        String query = String.format("INSERT INTO registros_creados (id_empleado_creador, id_empleado_creado) VALUES ('%s', '%s')",
+                empleadoCreador,empleadoCreado);
+        IngresoQuery.ejecutarIngresoQuery(query);
+    }
+
 }
