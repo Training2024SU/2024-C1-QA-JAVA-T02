@@ -9,6 +9,7 @@ import co.com.sofka.model.Resource;
 import co.com.sofka.model.User;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,8 +34,9 @@ public class LoanDAOImpl implements LoanDAO {
     public void insertLoan(Loan loan) throws SQLException {
         Connection connection = mySqlOperation.getConnection();
         String id = (loan.getId() == null) ? "NULL" : loan.getId().toString();
-        String query = String.format(insertIntoQuery, id, loan.getRequestedDate(),
-                loan.getReturnDate(), loan.getStatus().toString(), loan.getUser().getId());
+        String query = String.format(insertIntoQuery, id, Date.valueOf(loan.getRequestedDate()),
+                Date.valueOf(loan.getReturnDate()), loan.getStatus().toString(),
+                loan.getUser().getId());
         try (PreparedStatement preparedStatement = connection.prepareStatement(query,
                 Statement.RETURN_GENERATED_KEYS)) {
 
@@ -132,9 +134,9 @@ public class LoanDAOImpl implements LoanDAO {
 
     @Override
     public void updateLoan(Loan loan) {
-        String query = String.format(updateQuery, loan.getRequestedDate(),
-                loan.getRequestedDate(), loan.getStatus().toString(), loan.getUser().getId(),
-                loan.getId());
+        String query = String.format(updateQuery, Date.valueOf(loan.getRequestedDate()),
+                Date.valueOf(loan.getRequestedDate()), loan.getStatus().toString(),
+                loan.getUser().getId(), loan.getId());
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
         // Modifying lent resources is not allowed
