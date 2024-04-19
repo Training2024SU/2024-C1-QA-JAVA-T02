@@ -1,21 +1,0 @@
-
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-3
-java:S1118"Hide this public constructor.(ŸºÆ
-A
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
-K
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
-E	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿ
-@	java:S106"+Replace this use of System.out by a logger.(¤£şÖ
-V	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿ
-V	java:S125!"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿ
-E	java:S106&"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿ
-E	java:S106;"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿ
-?	java:S106="+Replace this use of System.out by a logger.(®…ê3
-E	java:S106?"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ
-E	java:S106I"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿ
-R
-java:S1128"7Remove this unused import 'Garcia.Juan.util.VistaUtil'.(ú‡šîÿÿÿÿÿ
-M
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ

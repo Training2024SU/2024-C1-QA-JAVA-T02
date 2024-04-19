@@ -1,10 +1,17 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8áŞÈ¶ï1J$99132f85-31ae-47a7-a804-64995e751ffa
-Œ
-java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8‚ßÈ¶ï1J$300d16c2-2ca7-437e-b648-b75c083c4343
-Š
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8‚ßÈ¶ï1J$78b651ae-3d7f-4d75-8dbc-bc59826849ab
-y
-java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8ˆßÈ¶ï1J$27968f1b-13b6-4d4d-959b-078acd829883
-m	java:S1065"+Replace this use of System.out by a logger.(Ä¯¦Õ8’ßÈ¶ï1J$bfcce6d3-032e-4933-8e6a-a70efbbc02ad
-–secrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8®ßÈ¶ï1J$740cd39e-d4f7-42f3-91c7-4b463b0442f6
+d
+java:S1192""GDefine a constant instead of duplicating this literal "titulo" 6 times.(¬÷ËÍ8¸‹€¼ï1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8»‹€¼ï1
+f
+java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8ºŒ€¼ï1
+d
+java:S2095%"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8»Œ€¼ï1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8¿Œ€¼ï1
+L	java:S106;"+Replace this use of System.out by a logger.(ŠÈĞ˜øÿÿÿÿ8ÌŒ€¼ï1
+G	java:S106?"+Replace this use of System.out by a logger.(Ä¯¦Õ8ÍŒ€¼ï1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÏŒ€¼ï1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÏŒ€¼ï1
+psecrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8éŒ€¼ï1

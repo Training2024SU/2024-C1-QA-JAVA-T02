@@ -1,0 +1,15 @@
+
+a
+java:S1192z"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåı°
+h
+java:S1192r"MDefine a constant instead of duplicating this literal ", magnitud='" 4 times.(Ä½‘üÿÿÿÿ
+d
+java:S1192o"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„Æşÿÿÿÿ
+r
+java:S1192u"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®Áşÿÿÿÿ
+`
+java:S1192q"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛ
+_
+java:S1192p"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãşÿÿÿÿ
+V	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(´»Áª

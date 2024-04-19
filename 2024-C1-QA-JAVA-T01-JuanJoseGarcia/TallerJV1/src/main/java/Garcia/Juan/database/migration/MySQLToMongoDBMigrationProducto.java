@@ -2,9 +2,12 @@ package Garcia.Juan.database.migration;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.IndexOptions;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,15 +30,16 @@ public class MySQLToMongoDBMigrationProducto {
             MongoDatabase mongoDatabase = mongoClient.getDatabase("bibliotecapingu");
             MongoCollection<Document> collection = mongoDatabase.getCollection("producto");
 
+            // Crear índice único en el campo clave (por ejemplo, 'titulo')
+            collection.createIndex(new Document("titulo", 1), new IndexOptions().unique(true));
+
             // Consulta para obtener datos de MySQL
             Statement statement = mySqlConnection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM producto");
 
-            // Lista para guardar documentos
-            List<Document> documents = new ArrayList<>();
-
-            // Convertir registros a documentos
+            // Convertir registros a documentos e insertarlos en MongoDB
             while (resultSet.next()) {
+                // Crear un documento para el registro
                 Document document = new Document()
                         .append("titulo", resultSet.getString("titulo"))
                         .append("tipo", resultSet.getString("tipo"))
@@ -45,11 +49,17 @@ public class MySQLToMongoDBMigrationProducto {
                         .append("cant_prestados", resultSet.getInt("cant_prestados"))
                         .append("cant_disponibles", resultSet.getInt("cant_disponibles"));
 
-                documents.add(document);
+                // Verificar si el documento ya existe en la colección
+                Bson filter = Filters.eq("titulo", document.getString("titulo"));
+                if (collection.countDocuments(filter) == 0) {
+                    // Si el documento no existe, insertarlo en la colección
+                    collection.insertOne(document);
+                } else {
+                    // El documento ya existe, omitir la inserción
+                    System.out.println("Documento con titulo '" + document.getString("titulo") + "' ya existe. Omite la inserción.");
+                }
             }
 
-            // Insertar documentos en MongoDB
-            collection.insertMany(documents);
             System.out.println("Migración completa para la tabla 'producto'");
 
         } catch (Exception e) {

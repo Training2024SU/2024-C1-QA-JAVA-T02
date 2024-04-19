@@ -1,10 +1,15 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8Å¼Ú¶ï1J$1501566a-e05b-4091-90dc-20b0e8595d89
-Œ
-java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8à¼Ú¶ï1J$3633ff74-cec5-40f6-b10e-8f2f6c015f64
-Š
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8á¼Ú¶ï1J$1cf922ba-b209-45e8-a0a9-96853a9c9f4b
-y
-java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8ä¼Ú¶ï1J$b5deed11-5b8a-4a0e-9b5f-ce117c831ba5
-r	java:S1063"+Replace this use of System.out by a logger.(Ğ´ÁÈøÿÿÿÿ8ì¼Ú¶ï1J$d6ad3ac8-4a69-44f4-a9d3-49b0b23f84ea
-–secrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8½Ú¶ï1J$4dff8aa7-4047-4402-be7c-0b4813c44489
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8áÂû»ï1
+f
+java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8áÃû»ï1
+d
+java:S2095%"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8áÃû»ï1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8èÃû»ï1
+L	java:S1069"+Replace this use of System.out by a logger.(•ÛÿŠıÿÿÿÿ8üÃû»ï1
+L	java:S106="+Replace this use of System.out by a logger.(Ğ´ÁÈøÿÿÿÿ8ıÃû»ï1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÿÃû»ï1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÿÃû»ï1
+psecrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8Äû»ï1
