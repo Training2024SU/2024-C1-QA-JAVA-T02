@@ -8,12 +8,16 @@ import co.com.pinguinera.datos.DAO.*;
 import co.com.pinguinera.datos.crud_local.*;
 import co.com.pinguinera.datos.interfaces.GestorBD;
 import co.com.pinguinera.datos.ImplBD.BaseDatosImpl;
+import co.com.pinguinera.datos.model.publicaciones.Videograbaciones;
 import co.com.pinguinera.servicios.GestorAccesoUsuarios;
 import co.com.pinguinera.servicios.GestorAccesoEmpleados;
 import co.com.pinguinera.servicios.integracion.*;
+import co.com.pinguinera.vistas.vista_cancion.InformacionCancionVista;
 import co.com.pinguinera.vistas.vista_empleado.InformacionEmpleadoVista;
+import co.com.pinguinera.vistas.vista_ensayos.InformacionEnsayosVista;
 import co.com.pinguinera.vistas.vista_usuario.MenuPrincipalUsuario;
 import co.com.pinguinera.vistas.vista_usuario.InformacionUsuarioVista;
+import co.com.pinguinera.vistas.vista_videograbacion.InformacionVideograbacionVista;
 import co.com.pinguinera.vistas.vistas_administrativo.MenuPrincipalAdministrativo;
 import co.com.pinguinera.vistas.vistas_asistente.MenuAdministrarPrestamos;
 import co.com.pinguinera.vistas.vistas_asistente.MenuPrincipalAsistente;
@@ -38,6 +42,9 @@ public class MenuPrincipalFactory {
         PrestamoDAO prestamoDAO = new PrestamoDAO(gestorBD);
         LibroDAO libroDAO = new LibroDAO(gestorBD);
         NovelaDAO novelaDAO = new NovelaDAO(gestorBD);
+        VideoDAO videoDAO = new VideoDAO(gestorBD);
+        CancionDAO cancionDAO = new CancionDAO(gestorBD);
+        EnsayoDAO ensayoDAO = new EnsayoDAO(gestorBD);
 
         // Crear instancias de los CRUD locales
         CRUDUsuariosLocales crudUsuariosLocales = new CRUDUsuariosLocales();
@@ -45,6 +52,9 @@ public class MenuPrincipalFactory {
         CRUDPrestamosLocales crudPrestamosLocales = new CRUDPrestamosLocales();
         CRUDLibrosLocales crudLibrosLocales = new CRUDLibrosLocales();
         CRUDNovelasLocales crudNovelasLocales = new CRUDNovelasLocales();
+        CRUDVideosLocales crudVideosLocales = new CRUDVideosLocales();
+        CRUDCancionesLocales crudCancionesLocales = new CRUDCancionesLocales();
+        CRUDEnsayosLocales crudEnsayosLocales = new CRUDEnsayosLocales();
 
         // Crear instancias de los sincronizadores
         SincronizadorUsuario sincronizadorUsuario = new SincronizadorUsuario(usuarioDAO, crudUsuariosLocales);
@@ -52,6 +62,9 @@ public class MenuPrincipalFactory {
         SincronizadorPrestamos sincronizadorPrestamos = new SincronizadorPrestamos(prestamoDAO, crudPrestamosLocales);
         SincronizadorLibros sincronizadorLibros = new SincronizadorLibros(libroDAO, crudLibrosLocales);
         SincronizadorNovelas sincronizadorNovelas = new SincronizadorNovelas(novelaDAO, crudNovelasLocales);
+        SincronizadorVideos sincronizadorVideos = new SincronizadorVideos(videoDAO,crudVideosLocales);
+        SincronizadorCanciones sincronizadorCanciones = new SincronizadorCanciones(cancionDAO,crudCancionesLocales);
+        SincronizadorEnsayos sincronizadorEnsayos= new SincronizadorEnsayos(ensayoDAO,crudEnsayosLocales);
 
         // Crear instancias de las vistas
         InformacionUsuarioVista informacionUsuarioVista = new InformacionUsuarioVista();
@@ -59,6 +72,9 @@ public class MenuPrincipalFactory {
         InformacionPrestamoVista informacionPrestamoVista = new InformacionPrestamoVista();
         InformacionLibroVista informacionLibroVista = new InformacionLibroVista();
         InformacionNovelaVista informacionNovelaVista = new InformacionNovelaVista();
+        InformacionVideograbacionVista informacionVideograbacionVista = new InformacionVideograbacionVista();
+        InformacionCancionVista informacionCancionVista = new InformacionCancionVista();
+        InformacionEnsayosVista informacionEnsayosVista = new InformacionEnsayosVista();
 
         // Crear instancias de los gestores de acceso
         GestorAccesoUsuarios gestorAccesoUsuarios = new GestorAccesoUsuarios(usuarioDAO);
@@ -97,6 +113,21 @@ public class MenuPrincipalFactory {
                 sincronizadorNovelas
         );
 
+        ControladorCRUDVideograbaciones controladorCRUDVideograbaciones = new ControladorCRUDVideograbaciones(
+                informacionVideograbacionVista,
+                crudVideosLocales,
+                videoDAO,
+                sincronizadorVideos
+        );
+
+        ControladorCRUDCanciones controladorCRUDCanciones = new ControladorCRUDCanciones(
+                informacionCancionVista,crudCancionesLocales,cancionDAO,sincronizadorCanciones
+        );
+
+        ControladorCRUDEnsayos controladorCRUDEnsayos = new ControladorCRUDEnsayos(
+                informacionEnsayosVista,crudEnsayosLocales,ensayoDAO,sincronizadorEnsayos
+        );
+
         ControladorCRUDEmpleado controladorCRUDEmpleado = new ControladorCRUDEmpleado(
                 informacionEmpleadoVista,
                 crudEmpleadosLocales,
@@ -109,7 +140,10 @@ public class MenuPrincipalFactory {
                 controladorCRUDUsuario,
                 controladorCRUDPrestamo,
                 controladorCRUDLibro,
-                controladorCRUDNovela
+                controladorCRUDNovela,
+                controladorCRUDVideograbaciones,
+                controladorCRUDEnsayos,
+                controladorCRUDCanciones
         );
 
         // Asignar MenuPrincipalUsuario a UsuarioSesionControlador
@@ -127,7 +161,7 @@ public class MenuPrincipalFactory {
 // Crear instancia de MenuPrincipalAsistente
         MenuPrincipalAsistente menuPrincipalAsistente = new MenuPrincipalAsistente(
                 controladorCRUDLibro,
-                controladorCRUDNovela,
+                controladorCRUDNovela, //Falta agregar las otras 3 categorias
                 controladorCRUDPrestamo,
                 menuAdministrarPrestamos // Pasa la instancia de MenuAdministrarPrestamos como argumento
         );
@@ -148,6 +182,9 @@ public class MenuPrincipalFactory {
                 controladorCRUDEmpleado,
                 controladorCRUDNovela,
                 controladorCRUDLibro,
+                controladorCRUDVideograbaciones,
+                controladorCRUDEnsayos,
+                controladorCRUDCanciones,
                 menuAdministrarPrestamos
         );
 

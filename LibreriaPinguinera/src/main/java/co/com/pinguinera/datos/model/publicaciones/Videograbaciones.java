@@ -8,10 +8,10 @@ public class Videograbaciones extends Publicacion {
     public Videograbaciones() {
         //
         super();
-        this.setTipoPublicacion(TipoPublicacion.LIBRO);
+        this.setTipoPublicacion(TipoPublicacion.VIDEO);
     }
 
     public Videograbaciones(int idPublicacion, String titulo, String autor, String formato, int cantEjemplares, int cantPrestados, int cantDisponible) {
-        super(idPublicacion, titulo, TipoPublicacion.LIBRO, autor, formato, cantEjemplares, cantPrestados, cantDisponible);
+        super(idPublicacion, titulo, TipoPublicacion.VIDEO, autor, formato, cantEjemplares, cantPrestados, cantDisponible);
     }
 }

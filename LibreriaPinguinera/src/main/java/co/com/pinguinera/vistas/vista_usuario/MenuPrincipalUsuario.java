@@ -1,10 +1,7 @@
 package co.com.pinguinera.vistas.vista_usuario;
 
 import co.com.pinguinera.LoggerUtil;
-import co.com.pinguinera.controladores.crud.ControladorCRUDUsuario;
-import co.com.pinguinera.controladores.crud.ControladorCRUDPrestamo;
-import co.com.pinguinera.controladores.crud.ControladorCRUDLibro;
-import co.com.pinguinera.controladores.crud.ControladorCRUDNovela;
+import co.com.pinguinera.controladores.crud.*;
 import co.com.pinguinera.vistas.VistaUtil;
 
 import java.util.Scanner;
@@ -18,16 +15,26 @@ public class MenuPrincipalUsuario {
     private final ControladorCRUDPrestamo controladorPrestamo;
     private final ControladorCRUDLibro controladorCRUDLibro;
     private final ControladorCRUDNovela controladorCRUDNovela;
+    private final ControladorCRUDVideograbaciones controladorCRUDVideograbaciones;
+    private final ControladorCRUDEnsayos controladorCRUDEnsayos;
+    private final ControladorCRUDCanciones controladorCRUDCanciones;
+
     private final Scanner scanner;
 
     public MenuPrincipalUsuario(ControladorCRUDUsuario controladorCRUDUsuario,
                                 ControladorCRUDPrestamo controladorPrestamo,
                                 ControladorCRUDLibro controladorCRUDLibro,
-                                ControladorCRUDNovela controladorCRUDNovela) {
+                                ControladorCRUDNovela controladorCRUDNovela,
+                                ControladorCRUDVideograbaciones controladorCRUDVideograbaciones,
+                                ControladorCRUDEnsayos controladorCRUDEnsayos,
+                                ControladorCRUDCanciones controladorCRUDCanciones) {
         this.controladorCRUDUsuario = controladorCRUDUsuario;
         this.controladorPrestamo = controladorPrestamo;
         this.controladorCRUDLibro = controladorCRUDLibro;
         this.controladorCRUDNovela = controladorCRUDNovela;
+        this.controladorCRUDVideograbaciones = controladorCRUDVideograbaciones;
+        this.controladorCRUDEnsayos = controladorCRUDEnsayos;
+        this.controladorCRUDCanciones = controladorCRUDCanciones;
         this.scanner = new Scanner(System.in);
     }
 
@@ -61,6 +68,15 @@ public class MenuPrincipalUsuario {
                     controladorCRUDNovela.obtenerTodasNovelas();
                     break;
                 case 5:
+                    controladorCRUDVideograbaciones.obtenerTodosVideos();
+                    break;
+                case 6:
+                    controladorCRUDCanciones.obtenerTodosCanciones();
+                    break;
+                case 7:
+                    controladorCRUDEnsayos.obtenerTodosEnsayos();
+                    break;
+                case 8:
                     LOGGER.info("Saliendo del menú...");
                     continuar = false;
                     break;

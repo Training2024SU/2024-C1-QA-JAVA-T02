@@ -2,7 +2,6 @@ package co.com.pinguinera.servicios.integracion;
 
 import co.com.pinguinera.datos.DAO.VideoDAO;
 import co.com.pinguinera.datos.crud_local.CRUDVideosLocales;
-import co.com.pinguinera.datos.model.publicaciones.Libro;
 import co.com.pinguinera.datos.model.publicaciones.Videograbaciones;
 
 import java.sql.SQLException;

@@ -24,7 +24,7 @@ public class ControladorCRUDVideograbaciones {
         this.sincronizadorVideos = sincronizadorVideos;
     }
 
-    public void registrarLibro() {
+    public void registrarVideo() {
         Videograbaciones nuevoVideo = new Videograbaciones();
         nuevoVideo.setTitulo(vista.pedirTituloVideo());
         nuevoVideo.setAutor(vista.pedirAutorVideo());
@@ -42,7 +42,7 @@ public class ControladorCRUDVideograbaciones {
         VistaUtil.mostrarMensajeExito();
     }
 
-    public void actualizarLibro() {
+    public void actualizarVideo() {
         Videograbaciones videoActualizado = new Videograbaciones();
         videoActualizado.setTitulo(vista.pedirTituloVideo());
         videoActualizado.setAutor(vista.pedirAutorVideo());
@@ -60,7 +60,7 @@ public class ControladorCRUDVideograbaciones {
         VistaUtil.mostrarMensajeExito();
     }
 
-    public void eliminarLibro() {
+    public void eliminarVideo() {
         String titulo = vista.pedirTituloVideo();
         Videograbaciones videoAEliminar = new Videograbaciones();
         videoAEliminar.setTitulo(titulo);
@@ -75,10 +75,13 @@ public class ControladorCRUDVideograbaciones {
         VistaUtil.mostrarMensajeExito();
     }
 
-    public void obtenerTodosLibros() {
+    public void obtenerTodosVideos() {
+
         try {
+
             List<Videograbaciones> videosBD = videoDAO.obtenerTodos();
             videosBD.forEach(System.out::println);
+
         } catch (SQLException e) {
             VistaUtil.mostrarMensajeSolicitudFallida();
         }

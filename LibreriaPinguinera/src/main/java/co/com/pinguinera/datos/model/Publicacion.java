@@ -103,7 +103,7 @@ public class Publicacion {
                 "ID", "Título", "Autor", "Formato", "Ejemplares", "Prestados", "Disponible"
         );
         String datos = String.format(
-                "%s%-10d%s %s%-40s%s %s%-25s%s %s%-10d%s %s%-12d%s %s%-12d%s %s%-12d%s",
+                "%s%-10d%s %s%-40s%s %s%-25s%s %s%-10s%s %s%-12d%s %s%-12d%s %s%-12d%s",
                 GREEN, idPublicacion, RESET,
                 GREEN, titulo, RESET,
                 GREEN, autor, RESET,

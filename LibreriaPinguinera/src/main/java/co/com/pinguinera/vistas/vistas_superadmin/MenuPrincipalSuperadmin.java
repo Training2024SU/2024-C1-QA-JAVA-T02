@@ -20,6 +20,9 @@ public class MenuPrincipalSuperadmin {
     private final ControladorCRUDPrestamo controladorCRUDPrestamo;
     private final MenuAdministrarPrestamos menuAdministrarPrestamos;
     private final ControladorCRUDEmpleado controladorCRUDEmpleado;
+    private final ControladorCRUDVideograbaciones controladorCRUDVideograbaciones;
+    private final ControladorCRUDEnsayos controladorCRUDEnsayos;
+    private final ControladorCRUDCanciones controladorCRUDCanciones;
 
     private MenuPrincipalUsuario menuPrincipalUsuario;
     private MenuPrincipalAsistente menuPrincipalAsistente;
@@ -29,14 +32,21 @@ public class MenuPrincipalSuperadmin {
                                    ControladorCRUDPrestamo controladorCRUDPrestamo,
                                    ControladorCRUDEmpleado controladorCRUDEmpleado,
                                    ControladorCRUDNovela controladorCRUDNovela,
-                                   ControladorCRUDLibro controladorCRUDLibro, MenuAdministrarPrestamos menuAdministrarPrestamos) {
+                                   ControladorCRUDLibro controladorCRUDLibro,
+                                   ControladorCRUDVideograbaciones controladorCRUDVideograbaciones,
+                                   ControladorCRUDEnsayos controladorCRUDEnsayos,
+                                   ControladorCRUDCanciones controladorCRUDCanciones,
+                                   MenuAdministrarPrestamos menuAdministrarPrestamos) {
         this.controladorCRUDLibro = controladorCRUDLibro;
         this.controladorCRUDNovela = controladorCRUDNovela;
         this.controladorCRUDPrestamo = controladorCRUDPrestamo;
+        this.controladorCRUDVideograbaciones = controladorCRUDVideograbaciones;
+        this.controladorCRUDCanciones = controladorCRUDCanciones;
+        this.controladorCRUDEnsayos = controladorCRUDEnsayos;
         this.menuAdministrarPrestamos = menuAdministrarPrestamos;
 
 
-        this.menuPrincipalUsuario = new MenuPrincipalUsuario(controladorCRUDUsuario,controladorCRUDPrestamo,controladorCRUDLibro,controladorCRUDNovela);
+        this.menuPrincipalUsuario = new MenuPrincipalUsuario(controladorCRUDUsuario,controladorCRUDPrestamo,controladorCRUDLibro,controladorCRUDNovela,controladorCRUDVideograbaciones,controladorCRUDEnsayos,controladorCRUDCanciones);
         this.menuPrincipalAsistente = new MenuPrincipalAsistente(controladorCRUDLibro,controladorCRUDNovela,controladorCRUDPrestamo,menuAdministrarPrestamos);
         this.menuPrincipalAdministrativo = new MenuPrincipalAdministrativo(controladorCRUDUsuario,controladorCRUDPrestamo, controladorCRUDEmpleado,controladorCRUDNovela,controladorCRUDLibro);
         this.controladorCRUDEmpleado = controladorCRUDEmpleado;
