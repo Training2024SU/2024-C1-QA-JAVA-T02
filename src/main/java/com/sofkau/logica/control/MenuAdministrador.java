@@ -18,6 +18,9 @@ public class MenuAdministrador {
     protected static void menuAdministrador(int op) {
 
         switch (op) {
+            case 0-> {
+                option = 0;
+            }
             case 1 -> {
                 Menu.nombre();
                 String nombre = scannerGlobal.nextLine();

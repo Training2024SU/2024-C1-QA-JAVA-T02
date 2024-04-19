@@ -17,6 +17,9 @@ public class MenuPropietario {
     protected static void menuPropietario(int op) {
 
         switch (op) {
+            case 0-> {
+                option = 0;
+            }
             case 1 -> {
                 Menu.nombre();
                 String nombre = scannerGlobal.nextLine();

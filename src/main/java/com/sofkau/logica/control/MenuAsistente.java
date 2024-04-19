@@ -26,6 +26,9 @@ public class MenuAsistente {
 
     protected static void menuAsistente(int op) {
         switch (op) {
+            case 0-> {
+                option = 0;
+            }
             case 1 -> {
                 Menu.ingresoLibro();
                 Menu.ingresoTitulo();

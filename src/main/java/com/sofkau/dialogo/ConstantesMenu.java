@@ -11,6 +11,8 @@ public class ConstantesMenu {
     public static final String MSN_REGISTROUSUARIO ="3. Registrarse";
     public static final String MSN_SALIR ="4. Salir";
 
+    public static final String MSN_MENUPRIN ="Presiona 0 para regresar a este menú";
+
     public static final String MSN_CREARASIS ="2. Crear asistente";
 
     public static final String MSN_CREARPROPIETARIO ="1. Crear propietario";
@@ -69,6 +71,8 @@ public class ConstantesMenu {
 
     public static final String MSN_LISTARPUBLICACIONAUTOR="5. LISTAR PUBLICACIONES POR AUTOR";
 
+    public static final String MSN_PERFILUSUARIO="6. Modificar perfil";
+
     public static final String MSN_CREARADMIN="1. CREAR USUARIO ADMINISTRADOR";
 
     public static final String MSN_ENTRARADMINISTRADOR="2. VER OPCIONES ADMINISTRADOR";
@@ -103,6 +107,15 @@ public class ConstantesMenu {
     public static final String MSN_INGRESAR_PAIS = "Ingrese el país:";
     public static final String MSN_INGRESAR_FECHA = "Ingrese la fecha (formato: yyyy-MM-dd):";
     public static final String MSN_GENERARDATOS = "3. Generar datos desde archivos JSON y XML:";
-
     public static final String MSN_EXPORTARDATOS = "4. Exportar datos desde archivos JSON y XML:";
+
+    public static final String MSN_VER_INFO_PERFIL = "1. Ver información de perfil";
+    public static final String MSN_INGRESAR_INFO_PERFIL = "2. Ingresar información de perfil";
+    public static final String MSN_ACTUALIZAR_INFO_PERFIL = "3. Actualizar información de perfil";
+    public static final String MSN_ACTUALIZAR_CONTRASENA = "4. Actualizar contraseña";
+
+    public static final String MSN_CONTACTO = "Ingrese número de contacto";
+
+    public static final String MSN_DIRECCION = "Ingrese su direccion";
+
 }

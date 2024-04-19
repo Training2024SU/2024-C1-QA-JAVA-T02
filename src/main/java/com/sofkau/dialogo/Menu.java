@@ -9,6 +9,7 @@ public class Menu {
 
     public static void menuPrincipal(){
         System.out.println(ConstantesMenu.MSN_BIENVENIDA);
+        System.out.println(MSN_MENUPRIN);
         System.out.println(ConstantesMenu.MSN_INICIOUSER);
         System.out.println(ConstantesMenu.MSN_INICIOEMP);
         System.out.println(ConstantesMenu.MSN_REGISTROUSUARIO);
@@ -129,6 +130,7 @@ public class Menu {
         System.out.println(MSN_LISTARNOVELASU);
         System.out.println(MSN_LISTARAUTORESU);
         System.out.println(MSN_LISTARPUBLICACIONAUTOR);
+        System.out.println(MSN_PERFILUSUARIO);
     }
 
     public static void entregarLibroUsuario() {
@@ -193,4 +195,18 @@ public class Menu {
         System.out.println(ConstantesMenu.MSN_INGRESAR_PAIS);
     }
 
+    public static void menuPerfilUsuario() {
+        System.out.println(MSN_VER_INFO_PERFIL);
+        System.out.println(MSN_INGRESAR_INFO_PERFIL);
+        System.out.println(MSN_ACTUALIZAR_INFO_PERFIL);
+        System.out.println(MSN_ACTUALIZAR_CONTRASENA);
+    }
+
+    public static void ingresoContacto() {
+        System.out.println(MSN_CONTACTO);
+    }
+
+    public static void ingresoDireccio() {
+        System.out.println(MSN_DIRECCION);
+    }
 }

@@ -7,6 +7,7 @@ import com.sofkau.logica.empleado.EmpleadoOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
 import com.sofkau.logica.tesis.TesisOperaciones;
+import com.sofkau.logica.usuario.PerfilModificableOperaciones;
 import com.sofkau.logica.usuario.UsuarioOperaciones;
 import com.sofkau.logica.videograbacion.VideoGrabacionOperaciones;
 import com.sofkau.util.generar.GenerarAutores;
@@ -39,6 +40,9 @@ public class ControlIngreso {
     protected static VideoGrabacionOperaciones videoGrabacionOperaciones = new VideoGrabacionOperaciones();
 
     protected static TesisOperaciones tesisOperaciones = new TesisOperaciones();
+
+    protected static PerfilModificableOperaciones perfilOp = new PerfilModificableOperaciones();
+
 
     protected static final Logger logger = Logger.getLogger(ControlIngreso.class.getName());
 

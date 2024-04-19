@@ -2,6 +2,7 @@ package com.sofkau.integration.repositorio;
 
 import com.sofkau.integration.database.ConexionDatabase;
 import com.sofkau.integration.database.mysql.MySqlOperation;
+import com.sofkau.model.PerfilModificable;
 import com.sofkau.model.Usuario;
 import com.sofkau.util.CommonOperacion.IngresoQuery;
 

@@ -21,6 +21,9 @@ public class MenuUsuario {
         scannerGlobal.nextLine();
 
         switch (op) {
+            case 0-> {
+                option = 0;
+            }
             case 1-> {
                 Menu.ingresoTitulo();
                 String titulo = scannerGlobal.nextLine();
@@ -46,7 +49,9 @@ public class MenuUsuario {
             case 5-> {
                 Menu.nombre();
                 String nombre = scannerGlobal.nextLine();
-                publicacionOp.listarPublicacionesPorAutor(nombre);
+            }
+            case 6-> {
+                    MenuPerfilUsuario.menuPerfilUsuario();
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");
