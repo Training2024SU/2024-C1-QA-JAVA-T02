@@ -44,20 +44,20 @@ public class Menu {
         System.out.println(SELECCIONE);
         System.out.println(GESTIONAR_MATERIAL);
         System.out.println(CONSULTAR_PRESTAMOS);
-        System.out.println("3. Exportar e importar inventario"); // Nueva opción
-        System.out.println("4. " + SALIR);
+        System.out.println("3. Actualizar información personal");
+        System.out.println("4. Exportar e importar inventario");
+        System.out.println("5. " + SALIR);
     }
 
     public static void menuAdmin() {
         System.out.println(SELECCIONE);
         System.out.println(GESTIONAR_MATERIAL);
         System.out.println(CONSULTAR_PRESTAMOS);
-        System.out.println(REGISTRAR_ASISTENTE);
-        System.out.println(INFO_USUARIOS);
-        System.out.println("5. Exportar e importar inventario"); // Nueva opción
+        System.out.println("3. Actualizar información personal");
+        System.out.println("4. Crear lector");
+        System.out.println("5. Exportar e importar inventario");
         System.out.println("6. " + SALIR);
     }
-
 
     public static void menuProductos(){
         System.out.println(SELECCIONE);
@@ -77,15 +77,15 @@ public class Menu {
     public static void menuSuperUsuario() {
         System.out.println(SELECCIONE);
         System.out.println("1. Crear superusuario");
-        System.out.println("2. Registrar lector");
-        System.out.println("3. Gestionar materiales");
-        System.out.println("4. Gestionar préstamos");
-        System.out.println("5. Registrar administrador");
-        System.out.println("6. Consultar usuarios");
-        System.out.println("7. Simulación de préstamos");
-        System.out.println("8. Crear asistente");
-        System.out.println("9. Exportar e importar inventario"); // Nueva opción
-        System.out.println("10. " + SALIR);
+        System.out.println("2. Gestionar materiales");
+        System.out.println("3. Gestionar préstamos");
+        System.out.println("4. Registrar administrador");
+        System.out.println("5. Consultar usuarios y exportar lista de usuarios a CSV");
+        System.out.println("6. Simulación de préstamos");
+        System.out.println("7. Crear asistente");
+        System.out.println("8. Actualizar información personal");
+        System.out.println("9. Exportar e importar inventario");
+        System.out.println("10. Salir");
     }
 
 }
