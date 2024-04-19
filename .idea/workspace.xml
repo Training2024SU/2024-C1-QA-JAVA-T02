@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb50b8e1-456a-48a4-9475-2da3204fb581" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e46ea76d01dfffba3f6cb1275bbdf7d9f5dc6eb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e46ea76d01dfffba3f6cb1275bbdf7d9f5dc6eb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f810d1be9570a083d7221cf81b98dd8848fc285" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f810d1be9570a083d7221cf81b98dd8848fc285" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d89aadffcc2bdbcb6adfaebdbdec99db38ac10f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d89aadffcc2bdbcb6adfaebdbdec99db38ac10f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bdd86b12c101322684e051b55b558b2eab245ab9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bdd86b12c101322684e051b55b558b2eab245ab9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c70e5ab6aae5c2a73f9cd87e82791de07549def2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c70e5ab6aae5c2a73f9cd87e82791de07549def2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f5a109b5a860d517f6b7776a802ff784e4e860cf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f5a109b5a860d517f6b7776a802ff784e4e860cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f4aa3478fef799a589c665211ced4db187ab796" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f4aa3478fef799a589c665211ced4db187ab796" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fabf2f820b747828071b7594ea7756da3679ada4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fabf2f820b747828071b7594ea7756da3679ada4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/CRUD/CrudUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/Exporter/CSVProductExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/Exporter/CSVProductExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/dialogo/MenuExporImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/dialogo/MenuExporImport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/io/CSVExporter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/io/CSVImporter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/model/Producto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

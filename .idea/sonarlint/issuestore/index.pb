@@ -57,3 +57,7 @@ g
 7src/main/java/Garcia/Juan/Exporter/ProductExporter.java,9/0/90920baf279544cdd42da4382e665ae151c16e2b
 j
 :src/main/java/Garcia/Juan/Exporter/CSVProductExporter.java,4/f/4f4aa3478fef799a589c665211ced4db187ab796
+d
+4src/main/java/Garcia/Juan/Exporter/JSONExporter.java,1/f/1f7a34a5d4db0990097d8df77bd751d6f0049bbf
+j
+:src/main/java/Garcia/Juan/Exporter/XMLProductExporter.java,a/d/ade122b598abd8894bb307e2a7a50255a3d54f80

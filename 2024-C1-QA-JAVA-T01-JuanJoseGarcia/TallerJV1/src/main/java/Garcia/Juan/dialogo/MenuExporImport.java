@@ -1,6 +1,8 @@
 package Garcia.Juan.dialogo;
 
 import Garcia.Juan.Exporter.CSVProductExporter;
+import Garcia.Juan.Exporter.JSONProductExporter;
+import Garcia.Juan.Exporter.XMLProductExporter;
 import Garcia.Juan.model.Producto;
 
 import java.sql.SQLException;
@@ -14,12 +16,10 @@ import static Garcia.Juan.dialogo.ConstantesDialogo.SELECCIONE;
 
 public class MenuExporImport {
 
-    // Menú que presenta opciones de importación y exportación al usuario
     public static void menuImportExport() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
 
-        // Ciclo para mantener el menú abierto hasta que el usuario elija salir
         while (!salir) {
             System.out.println(SELECCIONE);
             System.out.println("1. Importar desde archivo CSV");
@@ -30,24 +30,20 @@ public class MenuExporImport {
             System.out.println("6. Exportar a archivo JSON");
             System.out.println("7. " + SALIR);
 
-            // Lee la opción del usuario
             int opcion = scanner.nextInt();
 
-            // Utiliza un switch para manejar la opción seleccionada
+            List<Producto> productos;
+
             switch (opcion) {
                 case 1:
-                    // Llamar a la función para importar desde archivo CSV
                     System.out.println("Importar desde archivo CSV");
                     // Aquí debes agregar el código de importación desde CSV
                     break;
 
                 case 2:
-                    // Llamar a la función para exportar a archivo CSV
                     System.out.println("Exportar a archivo CSV");
-                    List<Producto> productos = getProductsFromTable(mySqlOperation);
-                    System.out.println(productos);
+                    productos = getProductsFromTable(mySqlOperation);
                     CSVProductExporter.exportProductsToCSV(productos);
-                    // Aquí debes agregar el código de exportación a CSV
                     break;
 
                 case 3:
@@ -59,6 +55,8 @@ public class MenuExporImport {
                 case 4:
                     // Llamar a la función para exportar a archivo XML
                     System.out.println("Exportar a archivo XML");
+                    productos = getProductsFromTable(mySqlOperation);
+                    XMLProductExporter.exportProductsToXML(productos);
                     // Aquí debes agregar el código de exportación a XML
                     break;
 
@@ -69,13 +67,12 @@ public class MenuExporImport {
                     break;
 
                 case 6:
-                    // Llamar a la función para exportar a archivo JSON
                     System.out.println("Exportar a archivo JSON");
-                    // Aquí debes agregar el código de exportación a JSON
+                    productos = getProductsFromTable(mySqlOperation);
+                    JSONProductExporter.exportProductsToJSON(productos);
                     break;
 
                 case 7:
-                    // Opción para salir del menú
                     salir = true;
                     System.out.println("Saliendo...");
                     break;
@@ -84,6 +81,7 @@ public class MenuExporImport {
                     System.out.println("Opción no válida. Por favor, inténtelo de nuevo.");
                     break;
             }
+
         }
 
         // Cerrar el escáner
