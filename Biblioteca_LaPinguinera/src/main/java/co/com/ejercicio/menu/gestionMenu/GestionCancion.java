@@ -1,10 +1,12 @@
 package co.com.ejercicio.menu.gestionMenu;
 import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.Cancion;
+import co.com.ejercicio.modelo.EnsayoTesis;
 import co.com.ejercicio.modeloAccesoBD.CancionAccesoBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.constantesMenu.OperacionExitosaOFallida.OPERACION_FALLIDA;
@@ -79,9 +81,20 @@ public class GestionCancion {
 
     public static void gestionActualizarCancion() throws SQLException {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el titulo de la cancion que quieres actualizar");
+        String tituloDeCancion = scanner.nextLine();
+
+        Connection conexion = Conexion.obtenerConexion();
+        CancionAccesoBD cancionAccesoBD = new CancionAccesoBD(conexion);
+
+        List<Cancion> todasLascanciones = cancionAccesoBD.obtenerTodasLasCanciones();
+
+        try{
+            Cancion cancion = obtenerCancionPorTitulo(todasLascanciones, tituloDeCancion);
+
         System.out.println("Ingresa los datos para actualizar");
-        System.out.println("Ingresa el titulo");
-        String titulo = scanner.nextLine();
+        System.out.println("Ingresa el titulo nuevo");
+        String tituloNuevo = scanner.nextLine();
         System.out.println("Ingresa el artista");
         String artista = scanner.nextLine();
         System.out.println("Ingresa el album");
@@ -96,9 +109,27 @@ public class GestionCancion {
         scanner.nextLine();
         System.out.println("Actualizando cancion...");
 
-        Connection conexion = Conexion.obtenerConexion();
-        CancionAccesoBD cancionAccesoBD = new CancionAccesoBD(conexion);
-        cancionAccesoBD.actualizarCancion(new Cancion (titulo, artista, album, duracion,
-                cantidadEjemplares, cantidadPrestado, cantidadDisponible));
+            cancion.setTitulo(tituloNuevo);
+            cancion.setArtista(artista);
+            cancion.setAlbum(album);
+            cancion.setDuracion(duracion);
+            cancion.setCantidadEjemplares(cantidadEjemplares);
+            cancion.setCantidadPrestado(cantidadPrestado);
+            cancion.setCantidadDisponible(cantidadDisponible);
+
+            cancionAccesoBD.actualizarCancion(cancion, tituloDeCancion);
+
+        } catch (NoSuchElementException e){
+            System.out.println("La cancion con ese titulo no existe");
+        }
+
     }
+    private static Cancion obtenerCancionPorTitulo(List<Cancion> listaDeCanciones, String titulo){
+        return listaDeCanciones.stream()
+                .filter(cancion -> titulo.equals(cancion.getTitulo()))
+                .findFirst()
+                .orElseThrow();
+    }
+
+
 }

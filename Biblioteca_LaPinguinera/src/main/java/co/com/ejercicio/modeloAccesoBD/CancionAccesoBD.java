@@ -79,7 +79,7 @@ public class CancionAccesoBD {
         return canciones;
     }
 
-    public void actualizarCancion(Cancion cancion) throws SQLException {
+    public void actualizarCancion(Cancion cancion, String tituloPrevio) throws SQLException {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_CANCION)) {
             statement.setString(1, cancion.getTitulo());
             statement.setString(2, cancion.getArtista());
@@ -88,6 +88,7 @@ public class CancionAccesoBD {
             statement.setInt(5, cancion.getCantidadEjemplares());
             statement.setInt(6, cancion.getCantidadPrestado());
             statement.setInt(7, cancion.getCantidadDisponible());
+            statement.setString(8, tituloPrevio);
 
 
             statement.executeUpdate();

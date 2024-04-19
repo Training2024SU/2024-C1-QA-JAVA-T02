@@ -115,7 +115,7 @@ public class GestionEnsayoTesis {
             ensayoTesisAccesoBD.actualizarEnsayoTesis(ensayoTesis, tituloDelEnsayo);
 
         } catch (NoSuchElementException e){
-            System.out.println("El ensayo con ese nombre no existe");
+            System.out.println("El ensayo con ese titulo no existe");
         }
 
 
