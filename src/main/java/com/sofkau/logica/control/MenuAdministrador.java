@@ -1,5 +1,9 @@
 package com.sofkau.logica.control;
 
+import com.sofkau.archivehandler.json.exportar.ExportaraCancionJson;
+import com.sofkau.archivehandler.json.importar.ImportarCancionJson;
+import com.sofkau.archivehandler.xml.exportar.ExportarCancionXML;
+import com.sofkau.archivehandler.xml.importar.ImportarCancionXML;
 import com.sofkau.dialogo.Menu;
 import com.sofkau.model.Empleado;
 import com.sofkau.util.enums.Roles;
@@ -36,6 +40,12 @@ public class MenuAdministrador {
 
                 empleadoOp.registrarEmpleado(new Empleado(nombre,correo,contrasena), Roles.ASISTENTE.toString());
 
+            }case 3 -> {
+         /*       ImportarCancionJson.guardarCancionJson();*/
+                ImportarCancionXML.guardarCancionXml();
+            }case 4 -> {
+                /*ExportaraCancionJson.exportarCancionJson();*/
+                ExportarCancionXML.exportarCancionXml();
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

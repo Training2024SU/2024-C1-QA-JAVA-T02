@@ -41,4 +41,8 @@ public class TesisOperaciones {
         // Actualizar en el repositorio
         TesisRepositorio.actualizarTesis(tesis);
     }
+
+    public ArrayList<Tesis> getListaTesis() {
+        return listaTesis;
+    }
 }

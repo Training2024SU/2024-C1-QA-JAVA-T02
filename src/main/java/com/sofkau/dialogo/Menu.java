@@ -19,6 +19,8 @@ public class Menu {
         System.out.println(ConstantesMenu.MSN_BIENVENIDA);
         System.out.println(ConstantesMenu.MSN_CREARPROPIETARIO);
         System.out.println(ConstantesMenu.MSN_CREARASIS);
+        System.out.println(MSN_GENERARDATOS);
+        System.out.println(MSN_EXPORTARDATOS);
     }
 
     public static void ingresoEmpleadoAdmin(){

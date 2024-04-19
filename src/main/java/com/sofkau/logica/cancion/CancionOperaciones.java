@@ -49,10 +49,12 @@ public class CancionOperaciones {
             System.out.println(cancion);
         }
     }
-
-
     public void actualizarCancion(Cancion cancion) {
         // Actualizar en el repositorio
         CancionRepositorio.actualizarCancion(cancion);
+    }
+
+    public ArrayList<Cancion> getListacanciones() {
+        return listaCanciones;
     }
 }

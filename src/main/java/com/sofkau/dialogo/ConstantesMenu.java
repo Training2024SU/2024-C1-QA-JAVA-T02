@@ -102,5 +102,7 @@ public class ConstantesMenu {
     public static final String MSN_INGRESAR_CAMPO_ESTUDIO = "Ingrese el campo de estudio:";
     public static final String MSN_INGRESAR_PAIS = "Ingrese el país:";
     public static final String MSN_INGRESAR_FECHA = "Ingrese la fecha (formato: yyyy-MM-dd):";
+    public static final String MSN_GENERARDATOS = "3. Generar datos desde archivos JSON y XML:";
 
+    public static final String MSN_EXPORTARDATOS = "4. Exportar datos desde archivos JSON y XML:";
 }

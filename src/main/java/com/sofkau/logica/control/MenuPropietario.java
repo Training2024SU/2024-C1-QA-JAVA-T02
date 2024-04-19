@@ -28,8 +28,12 @@ public class MenuPropietario {
 
                 empleadoOp.registrarEmpleado(new Empleado(nombre,correo,contrasena), Roles.ASISTENTE.toString());
 
-            }
-            default -> {
+            }case 2 -> {
+
+
+            }case 3 -> {
+
+            } default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");
                 option = 0;
             }

@@ -46,4 +46,8 @@ public class VideoGrabacionOperaciones {
         // Actualizar en el repositorio
         VideoGrabacionRepositorio.actualizarVideoGrabacion(videoGrabacion);
     }
+
+    public ArrayList<VideoGrabacion> getListaVideoGrabaciones() {
+        return listaVideoGrabaciones;
+    }
 }
