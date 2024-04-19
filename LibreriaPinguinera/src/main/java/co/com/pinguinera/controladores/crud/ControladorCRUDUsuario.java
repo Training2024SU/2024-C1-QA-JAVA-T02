@@ -68,6 +68,16 @@ public class ControladorCRUDUsuario {
             VistaUtil.mostrarMensajeError();
             return;
         }
+        List<String> infoAdicional= vista.preguntaInfoAdicional();
+        try{
+            if (!infoAdicional.get(0).equals("NO")){
+                usuarioActualizado.setEdad(infoAdicional.get(0));
+                usuarioActualizado.setTelefono(infoAdicional.get(1));
+                usuarioDAO.actualizarInfoAdicional(usuarioActualizado);
+            }
+        } catch (SQLException e){
+            System.out.println("Error info update");
+        }
         sincronizarDatos();
         VistaUtil.mostrarMensajeExito();
     }

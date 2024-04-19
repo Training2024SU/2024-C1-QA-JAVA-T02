@@ -55,6 +55,21 @@ public class InformacionUsuarioVista {
             infoAdicional.add("NO");
             return infoAdicional;
         }
+    }
 
+    public List<String> preguntaInfoAdicionalUpdate(){
+        LOGGER.info("Desea actualizar la información adicional? (Edad y telefono)");
+        LOGGER.info("1 para si, 0 para no");
+        int opcion = Integer.parseInt(scanner.nextLine());
+        List<String> infoAdicional =new ArrayList<>();
+        if(opcion == 1) {
+            infoAdicional.add(pedirEdadUsuario());
+            infoAdicional.add(pedirTelefonoUsuario());
+            return infoAdicional;
+        }
+        else{
+            infoAdicional.add("NO");
+            return infoAdicional;
+        }
     }
 }

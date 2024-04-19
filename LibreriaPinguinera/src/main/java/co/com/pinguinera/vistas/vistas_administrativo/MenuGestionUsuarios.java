@@ -17,7 +17,7 @@ public class MenuGestionUsuarios {
     public void mostrarMenu() {
         LOGGER.info("\nGestión de usuarios");
         LOGGER.info("1. Agregar usuario");
-        LOGGER.info("2. Actualizar usuario");
+        LOGGER.info("2. Actualizar info usuario");
         LOGGER.info("3. Eliminar usuario");
         LOGGER.info("4. Listar todos los usuarios");
         LOGGER.info("5. " + MenuConstantes.OPCION_VOLVER);
