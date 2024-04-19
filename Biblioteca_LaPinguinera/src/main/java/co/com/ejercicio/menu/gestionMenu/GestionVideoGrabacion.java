@@ -6,6 +6,7 @@ import co.com.ejercicio.modeloAccesoBD.VideoGrabacionAccesoBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import static co.com.ejercicio.menu.constantesMenu.OperacionExitosaOFallida.OPERACION_FALLIDA;
 import static co.com.ejercicio.modeloAccesoBD.VideoGrabacionAccesoBD.obtenerVideoGrabacionesDeUnDirector;
@@ -37,7 +38,7 @@ public class GestionVideoGrabacion {
         String director = scanner.nextLine();
         try {
             Connection conexion = Conexion.obtenerConexion();
-            VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
+            new VideoGrabacionAccesoBD(conexion);
             List<VideoGrabacion> videoGrabaciones = obtenerVideoGrabacionesDeUnDirector(director);
             for (VideoGrabacion videoGrabacion : videoGrabaciones) {
                 System.out.println(videoGrabacion);
@@ -77,9 +78,20 @@ public class GestionVideoGrabacion {
 
     public static void gestionActualizarVideograbacion() throws SQLException {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el titulo de la videograbacion que quieres actualizar");
+        String tituloVideograbacion = scanner.nextLine();
+
+        Connection conexion = Conexion.obtenerConexion();
+        VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
+
+        List<VideoGrabacion> todasLasVideograbaciones = videoGrabacionAccesoBD.obtenerTodasLasVideoGrabaciones();
+
+        try{
+            VideoGrabacion videoGrabacion = obtenerVideograbacionPorTitulo(todasLasVideograbaciones, tituloVideograbacion);
+
         System.out.println("Ingresa los datos para actualizar");
-        System.out.println("Ingresa el titulo");
-        String titulo = scanner.nextLine();
+        System.out.println("Ingresa el titulo nuevo");
+        String tituloNuevo = scanner.nextLine();
         System.out.println("Ingresa el director");
         String director = scanner.nextLine();
         System.out.println("Ingresa la duracion");
@@ -89,12 +101,26 @@ public class GestionVideoGrabacion {
         System.out.println("Ingresa cantidad prestado");
         int cantidadPrestado = scanner.nextInt();
         int cantidadDisponible = cantidadEjemplares - cantidadPrestado;
-        scanner.nextLine();
-        System.out.println("Actualizando cancion...");
+        System.out.println("Actualizando videograbacion...");
 
-        Connection conexion = Conexion.obtenerConexion();
-        VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
-        videoGrabacionAccesoBD.actualizarVideoGrabacion(new VideoGrabacion (titulo, director, duracion,
-                cantidadEjemplares, cantidadPrestado, cantidadDisponible));
+            videoGrabacion.setTitulo(tituloNuevo);
+            videoGrabacion.setDirector(director);
+            videoGrabacion.setDuracion(duracion);
+            videoGrabacion.setCantidadEjemplares(cantidadEjemplares);
+            videoGrabacion.setCantidadPrestado(cantidadPrestado);
+            videoGrabacion.setCantidadDisponible(cantidadDisponible);
+
+            videoGrabacionAccesoBD.actualizarVideoGrabacion(videoGrabacion, tituloVideograbacion);
+
+        } catch (NoSuchElementException e){
+            System.out.println("La videograbacion con ese titulo no existe");
+        }
+    }
+
+    private static VideoGrabacion obtenerVideograbacionPorTitulo(List<VideoGrabacion> listaDeVideograbaciones, String titulo){
+        return listaDeVideograbaciones.stream()
+                .filter(videoGrabacion -> titulo.equals(videoGrabacion.getTitulo()))
+                .findFirst()
+                .orElseThrow();
     }
 }

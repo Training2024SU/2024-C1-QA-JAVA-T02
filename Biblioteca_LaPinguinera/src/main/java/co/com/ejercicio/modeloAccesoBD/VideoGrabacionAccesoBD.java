@@ -76,7 +76,7 @@ public class VideoGrabacionAccesoBD {
         return videoGrabaciones;
     }
 
-    public void actualizarVideoGrabacion(VideoGrabacion videoGrabacion) throws SQLException {
+    public void actualizarVideoGrabacion(VideoGrabacion videoGrabacion, String tituloPrevio) throws SQLException {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_VIDEOGRABACION)) {
             statement.setString(1, videoGrabacion.getTitulo());
             statement.setString(2, videoGrabacion.getDirector());
@@ -84,6 +84,7 @@ public class VideoGrabacionAccesoBD {
             statement.setInt(4, videoGrabacion.getCantidadEjemplares());
             statement.setInt(5, videoGrabacion.getCantidadPrestado());
             statement.setInt(6, videoGrabacion.getCantidadDisponible());
+            statement.setString(7, tituloPrevio);
 
 
             statement.executeUpdate();

@@ -18,10 +18,10 @@ public class EnsayoTesisAccesoBD {
     private static Connection conexion;
 
     public EnsayoTesisAccesoBD(Connection conexion) {
-        this.conexion = conexion;
+        EnsayoTesisAccesoBD.conexion = conexion;
     }
 
-    public void insertarEnsayoTesis(EnsayoTesis ensayoTesis) throws SQLException {
+    public void insertarEnsayoTesis(EnsayoTesis ensayoTesis) {
         try {
             PreparedStatement statement = conexion.prepareStatement(INSERT_ENSAYO_TESIS);
             statement.setString(1, ensayoTesis.getTitulo());
@@ -76,7 +76,7 @@ public class EnsayoTesisAccesoBD {
         return ensayosTesis;
     }
 
-    public void actualizarEnsayoTesis(EnsayoTesis ensayoTesis, String tituloPrevio) throws SQLException {
+    public void actualizarEnsayoTesis(EnsayoTesis ensayoTesis, String tituloPrevio) {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_ENSAYO_TESIS)) {
             statement.setString(1, ensayoTesis.getTitulo());
             statement.setString(2, ensayoTesis.getAutor());

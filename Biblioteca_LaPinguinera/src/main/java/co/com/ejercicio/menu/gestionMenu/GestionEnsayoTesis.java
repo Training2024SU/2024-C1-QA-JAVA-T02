@@ -2,9 +2,7 @@ package co.com.ejercicio.menu.gestionMenu;
 
 import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.EnsayoTesis;
-import co.com.ejercicio.modelo.Publicacion;
 import co.com.ejercicio.modeloAccesoBD.EnsayoTesisAccesoBD;
-import co.com.ejercicio.modeloAccesoBD.PublicacionAccesoBD;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -43,7 +41,7 @@ public class GestionEnsayoTesis {
         System.out.println("Ingresa el nombre del autor");
         String autor = scanner.nextLine();
         Connection conexion = Conexion.obtenerConexion();
-        EnsayoTesisAccesoBD ensayoTesisAccesoBD = new EnsayoTesisAccesoBD(conexion);
+        new EnsayoTesisAccesoBD(conexion);
         List<EnsayoTesis> ensayosTesis = obtenerEnsayoTesisDeUnAutor(autor);
         for (EnsayoTesis ensayoTesis : ensayosTesis) {
             System.out.println(ensayoTesis);
