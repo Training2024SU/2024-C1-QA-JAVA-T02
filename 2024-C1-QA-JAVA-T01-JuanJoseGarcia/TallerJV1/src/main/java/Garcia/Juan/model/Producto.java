@@ -1,14 +1,18 @@
 package Garcia.Juan.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Producto {
     private String titulo;
     private String tipo;
     private String autor;
-    private String magnitud;  // Renombramos 'numeroPaginas' a 'magnitud'
+    private String magnitud;
     private int cantidadEjemplares;
     private int cantidadPrestados;
     private int cantidadDisponibles;
+    @JsonIgnore
     private String genero;
+   @JsonIgnore
     private int edadMinima;
 
     public Producto(String titulo, String tipo, String autor, String magnitud, int cantidadPrestados, int cantidadEjemplares, int cantidadDisponibles, String genero, int edadMinima) {

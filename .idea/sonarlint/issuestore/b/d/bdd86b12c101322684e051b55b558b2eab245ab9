@@ -1,15 +1,15 @@
 
 
-java:S1192v"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåı°8ÿÎ°›ï1J$34639c50-a158-45fc-aaab-d123171b1c1a
+java:S1192z"KDefine a constant instead of duplicating this literal "Producto{ " 4 times.(ãåı°8ÿÎ°›ï1J$249cda81-47ec-4d55-abbd-98044fca6076
 •
-java:S1192n"MDefine a constant instead of duplicating this literal ", magnitud='" 4 times.(Ä½‘üÿÿÿÿ8ÿÎ°›ï1J$29137592-ce55-47ab-89d3-855100cb4d11
+java:S1192r"MDefine a constant instead of duplicating this literal ", magnitud='" 4 times.(Ä½‘üÿÿÿÿ8áÏ÷Ÿï1J$e2601f1c-d319-4eef-9d5e-10517976eab6
 ‘
-java:S1192k"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„Æşÿÿÿÿ8ÿÎ°›ï1J$8c146675-458a-4403-96aa-74d290faa7c2
+java:S1192o"IDefine a constant instead of duplicating this literal "titulo='" 4 times.(Éñ„Æşÿÿÿÿ8ÿÎ°›ï1J$1df5683e-f5b1-485c-be79-e4426d87f1db
 Ÿ
-java:S1192q"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®Áşÿÿÿÿ8€Ï°›ï1J$e56e2fe2-635c-493b-9953-07c468f377b7
+java:S1192u"WDefine a constant instead of duplicating this literal ", cantidadDisponibles=" 4 times.(âû®Áşÿÿÿÿ8áÏ÷Ÿï1J$05f1c71a-71b4-4683-a1bb-7c895fbea5df
 
-java:S1192m"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛ8€Ï°›ï1J$a2361c69-e586-45bc-9613-64fee2f51bd3
+java:S1192q"JDefine a constant instead of duplicating this literal ", autor='" 4 times.(ÃÎÚÛ8€Ï°›ï1J$0f149945-b435-4040-9d43-47cb8196a6d0
 Œ
-java:S1192l"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹8€Ï°›ï1J$42b973e4-d279-4af2-8f8e-92bb128ab94e
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãşÿÿÿÿ8‚Ï°›ï1J$2676bcd9-3735-4dd8-a4d5-a99696728704
-ƒ	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(´»Áª8‹Ï°›ï1J$7fa2b64a-8091-4478-b08c-50ad599654f5
+java:S1192p"IDefine a constant instead of duplicating this literal ", tipo='" 5 times.(´ÂŸ¹8€Ï°›ï1J$fb100183-b9b6-4ea9-9944-2c80ed8e549e
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÂ‘ãşÿÿÿÿ8‚Ï°›ï1J$a5e0fda5-d918-4a36-972d-86f1b8f070e5
+ƒ	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(´»Áª8ëÏ÷Ÿï1J$f7a35666-a1d0-464b-af0c-5fac00474695

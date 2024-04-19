@@ -3,6 +3,7 @@ package Garcia.Juan.dialogo;
 import Garcia.Juan.CRUD.CRUDImpoExpo;
 import Garcia.Juan.Exporter.*;
 import Garcia.Juan.model.Producto;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -56,7 +57,10 @@ public class MenuExporImport {
                 case 3:
                     // Llamar a la función para importar desde archivo XML
                     System.out.println("Importar desde archivo XML");
-                    // Aquí debes agregar el código de importación desde XML
+                    // Crear un objeto XmlMapper para leer archivos XML
+                    XmlMapper xmlMapper = new XmlMapper();
+                    List<Producto> productosImportadorXML = XMLProductImporter.importProductsFromXML(mySqlOperation);
+                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadorXML);
                     break;
 
                 case 4:

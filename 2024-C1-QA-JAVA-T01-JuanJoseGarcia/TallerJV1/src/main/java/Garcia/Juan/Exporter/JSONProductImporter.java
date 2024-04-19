@@ -14,10 +14,7 @@ public class JSONProductImporter {
 
     // Ruta del archivo JSON a importar
     private static final String JSON_FILE_PATH = "/home/dan/Desktop/productos.json";
-    @JsonIgnore
-    private String genero;
 
-    @JsonIgnore
     private Integer edadMinima;
 
     // Método para importar datos desde un archivo JSON e insertarlos en la base de datos

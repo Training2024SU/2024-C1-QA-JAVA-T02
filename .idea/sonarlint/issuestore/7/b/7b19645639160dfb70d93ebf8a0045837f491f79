@@ -1,4 +1,8 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿJ$3cb8456f-e26f-41d4-b946-682a624a4df4
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(–Şøñ8ÏÙŸï1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡”·îûÿÿÿÿ8‹¡åŸï1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(–Şøñ8’¡åŸï1
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Ï¿å‘üÿÿÿÿ8“¡åŸï1
+G	java:S106"+Replace this use of System.out by a logger.(ß€§8›¡åŸï1
+L	java:S106"+Replace this use of System.err by a logger.(¡õ¹Èùÿÿÿÿ8›¡åŸï1
