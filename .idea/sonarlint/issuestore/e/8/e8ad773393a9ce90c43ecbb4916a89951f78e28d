@@ -1,21 +1,21 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$aaf71853-4210-489e-b9ed-482c0bca3bff
-Y
-java:S1118"Hide this public constructor.(ŸºÆJ$3b75ee1a-b2dd-4ac7-9b23-ca88d217e087
-g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$8a5926f7-26c8-45fe-af92-dbd6c6007f03
-q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$9d65c0ba-a26f-4dd9-bee3-7120ce6a8252
-k	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿJ$e7290742-78a5-43b3-805e-b60befaaeb70
-f	java:S106"+Replace this use of System.out by a logger.(¤£şÖJ$c7daa1f8-0df1-4689-bda2-dd94acd9bf5c
-|	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿJ$1f9968aa-6019-49c1-ac92-f1faeaa39e3a
-|	java:S125!"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿJ$40d763b7-b312-4bea-985c-461302c5b986
-k	java:S106&"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿJ$639fdddf-cc3b-4bdf-ad62-ac846a865d5d
-k	java:S106;"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿJ$df503d20-1965-47e4-9953-5cc172434f9b
-e	java:S106="+Replace this use of System.out by a logger.(®…ê3J$a238d398-48b1-4cba-b976-74a15d76751e
-k	java:S106?"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿJ$978113c4-f137-4778-84e7-8e83f4785c2a
-k	java:S106I"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿJ$7aa09e9e-942f-41f9-a848-d22537a7f955
-
-java:S1128"7Remove this unused import 'Garcia.Juan.util.VistaUtil'.(ú‡šîÿÿÿÿÿ8« „£ï1J$4ee4d938-e926-4db5-b43e-2be4b8e27a3e
-s
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$c9f2895c-8816-48b8-a8f4-adf09250737d
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
+3
+java:S1118"Hide this public constructor.(ŸºÆ
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+E	java:S106"+Replace this use of System.out by a logger.(İ«ü‹üÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(¤£şÖ
+V	java:S125"<This block of commented-out lines of code should be removed.(ÜÄ­¤ıÿÿÿÿ
+V	java:S125!"<This block of commented-out lines of code should be removed.(›óùÿÿÿÿ
+E	java:S106&"+Replace this use of System.out by a logger.(èï­îÿÿÿÿÿ
+E	java:S106;"+Replace this use of System.out by a logger.(á¬Ì…ùÿÿÿÿ
+?	java:S106="+Replace this use of System.out by a logger.(®…ê3
+E	java:S106?"+Replace this use of System.out by a logger.(êõ¾¥şÿÿÿÿ
+E	java:S106I"+Replace this use of System.out by a logger.(†€¬ƒûÿÿÿÿ
+R
+java:S1128"7Remove this unused import 'Garcia.Juan.util.VistaUtil'.(ú‡šîÿÿÿÿÿ
+M
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ

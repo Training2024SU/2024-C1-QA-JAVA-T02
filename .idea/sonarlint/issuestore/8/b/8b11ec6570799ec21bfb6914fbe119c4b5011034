@@ -1,24 +1,0 @@
-
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$c949857d-307f-4b1a-9471-76236d8481f6
-^
-java:S1118"Hide this public constructor.(¸ÿØúÿÿÿÿJ$63703836-a34f-4b46-86a8-b2770353eed1
-g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$8b4f3be6-f0fa-4100-97ce-a7521e390a3d
-q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$ebb74248-4f52-448e-8a40-0758f83294f6
-“
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¯å‡úÿÿÿÿJ$8887a036-e10b-4a60-a6e7-463e8b7d3c61
-¯
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¯å‡úÿÿÿÿJ$8d7e6143-fec4-4cb7-a435-54f9d09133d0
-]	java:S131""Add a default case to this switch.(°€àâJ$44bc697d-8627-4a6d-8b25-6744c792d42f
-e	java:S106!"+Replace this use of System.out by a logger.(ª…ıJ$2223a99a-5697-464a-a2a9-04bfdece3f16
-f	java:S106""+Replace this use of System.out by a logger.(ò¤µæJ$217893fd-0b43-4a7e-b81e-6dabe9f8f6f3
-k	java:S106("+Replace this use of System.out by a logger.(Ú²ÂêøÿÿÿÿJ$0f1e1a08-194c-4487-ae27-31436cdb72f3
-e	java:S106,"+Replace this use of System.out by a logger.(›ù¼LJ$1a0e77bf-8465-4813-b8b0-69de6d6cc6fb
-k	java:S1063"+Replace this use of System.out by a logger.(¡†Ü«ıÿÿÿÿJ$f561c6ce-1385-425a-a139-b79ad4fa7534
-f	java:S1064"+Replace this use of System.out by a logger.(ò¤µæJ$1a9644fc-f112-48a1-a212-f2b1f5513d0f
-k	java:S106;"+Replace this use of System.out by a logger.(ôº¼¸ùÿÿÿÿJ$60cd58cc-f401-4fbf-9aed-c840001b1eb4
-k	java:S106C"+Replace this use of System.out by a logger.(ã…éüÿÿÿÿJ$6476f4db-ee94-47e0-ba37-1e3e3407643c
-]	java:S131J""Add a default case to this switch.(ü‹¢ïJ$5e34d64a-6860-421a-a838-7ac91f2aa35f
-s
-java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿJ$2e896948-d91f-402a-9452-7b8572f0319c

@@ -1,15 +1,0 @@
-
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…î8”–¸“ï1J$a4f890c4-977f-44a2-993d-c00e5e591975
-`
-java:S1118"Hide this public constructor.(öÔ¢Ş8²–¸“ï1J$ee970e0f-77d4-4219-aa99-b2af701ea2d8
-n
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†8³–¸“ï1J$d3487f66-3b05-4dad-a22e-1b052583e308
-x
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†8´–¸“ï1J$41d96c6c-4deb-46ea-bcc6-41f39a7c7a75
-x
-java:S1172"5Remove this unused method parameter "mySqlOperation".(¶¢Ç8·–¸“ï1J$91a9dd36-3a1c-43f4-a5e1-2195154f7959
-r	java:S1061"+Replace this use of System.out by a logger.(óÒüÀüÿÿÿÿ8»–¸“ï1J$fef26319-833a-4a84-9917-ce6fd05da7f1
-x
-java:S11726"5Remove this unused method parameter "mySqlOperation".(¤Ç¿8¼–¸“ï1J$7a71e105-cf04-4134-9d08-5db4b927a0a7
-|
-java:S1068"4Remove this unused "GET_ALL_PRODUCTS" private field.(½×˜øÿÿÿÿ8÷è¶œï1J$25621b93-5620-417c-b620-41cca4da0251

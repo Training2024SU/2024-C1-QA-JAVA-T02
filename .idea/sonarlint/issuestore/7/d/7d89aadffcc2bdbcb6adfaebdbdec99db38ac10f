@@ -1,13 +1,13 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üwJ$320d55d2-868a-4380-b28d-3783a1c24796
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
+3
+java:S1118"Hide this public constructor.(Ä˜´¬
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+h
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª
+A	java:S106‹"+Replace this use of System.out by a logger.(¬ÊÖÜ
 Y
-java:S1118"Hide this public constructor.(Ä˜´¬J$2060dd7f-97a6-4fcf-9e55-75bdac8e85f1
-g
-java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†J$4306ee9b-1956-42ea-a021-9f8a54a0feed
-q
-java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†J$8d5a1a3b-d152-4e85-b032-132ba7e3ba2d
-o
-java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ãë×ª8‚¥Š¦ï1
-H	java:S106‹"+Replace this use of System.out by a logger.(¬ÊÖÜ8¥Š¦ï1
-†
-java:S1128">Remove this unused import 'Garcia.Juan.logica.MetodosUsuario'.(¶¹·­ùÿÿÿÿ8æø£ï1J$96f22b8a-16a1-465d-b9a8-c57205e4ca74
+java:S1128">Remove this unused import 'Garcia.Juan.logica.MetodosUsuario'.(¶¹·­ùÿÿÿÿ
