@@ -4,6 +4,7 @@ import Garcia.Juan.CRUD.CRUDImpoExpo;
 import Garcia.Juan.database.mysql.MySqlOperation;
 import Garcia.Juan.model.Producto;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -13,19 +14,18 @@ import java.util.List;
  */
 public class JSONProductImporter {
 
-    private static final String JSON_FILE_PATH = "/home/dan/Desktop/productos.json";
-
     /**
      * Importa productos desde un archivo JSON y los inserta en la base de datos.
      *
      * @param mySqlOperation Objeto MySqlOperation para realizar operaciones de base de datos.
+     * @param jsonFilePath La ruta del archivo JSON a importar.
      * @return Lista de productos importados desde el archivo JSON.
      */
-    public static List<Producto> importProductsFromJSON(MySqlOperation mySqlOperation) {
+    public static List<Producto> importProductsFromJSON(MySqlOperation mySqlOperation, String jsonFilePath) {
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
-            List<Producto> productos = objectMapper.readValue(new File(JSON_FILE_PATH), objectMapper.getTypeFactory().constructCollectionType(List.class, Producto.class));
+            List<Producto> productos = objectMapper.readValue(new File(jsonFilePath), objectMapper.getTypeFactory().constructCollectionType(List.class, Producto.class));
 
             CRUDImpoExpo.insertProducts(mySqlOperation, productos);
             System.out.println("Productos importados exitosamente desde el archivo JSON.");

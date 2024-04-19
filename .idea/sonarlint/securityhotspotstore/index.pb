@@ -47,3 +47,7 @@ s
 Csrc/main/java/Garcia/Juan/exporter_importer/CSVProductExporter.java,5/d/5dbf1c5f72312be15ef3a32974b735b9383f7c14
 s
 Csrc/main/java/Garcia/Juan/exporter_importer/XMLProductExporter.java,c/6/c6d19e77c942dfcea7d4d46ad4d3d8e8d907a48e
+s
+Csrc/main/java/Garcia/Juan/exporter_importer/CSVProductImporter.java,0/a/0aed872dbca1767b7b499fa89e7da179673b47c4
+s
+Csrc/main/java/Garcia/Juan/exporter_importer/XMLProductImporter.java,f/b/fb814fe27d4dab9b6315213ef64ba2b7eecf293f

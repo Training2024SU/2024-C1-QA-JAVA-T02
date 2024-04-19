@@ -50,8 +50,10 @@ public class MenuExporImport {
             switch (opcion) {
                 case 1:
                     // Importar desde CSV
+                    System.out.print("Por favor, ingresa la ruta del archivo CSV a importar: ");
+                    String csvFilePath = scanner.nextLine();
                     CSVProductImporter csvImporter = new CSVProductImporter();
-                    List<Producto> productosImportados = csvImporter.importProductsFromCSV(mySqlOperation);
+                    List<Producto> productosImportados = csvImporter.importProductsFromCSV(mySqlOperation, csvFilePath);
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportados);
                     break;
                 case 2:
@@ -63,7 +65,9 @@ public class MenuExporImport {
                     break;
                 case 3:
                     // Importar desde XML
-                    List<Producto> productosImportadosXML = XMLProductImporter.importProductsFromXML(mySqlOperation);
+                    System.out.print("Por favor, ingresa la ruta del archivo XML a importar: ");
+                    String xmlFilePath = scanner.nextLine(); // Leer la ruta especificada por el usuario
+                    List<Producto> productosImportadosXML = XMLProductImporter.importProductsFromXML(mySqlOperation, xmlFilePath);
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosXML);
                     break;
                 case 4:
@@ -75,8 +79,9 @@ public class MenuExporImport {
                     break;
                 case 5:
                     // Importar desde JSON
-                    JSONProductImporter jsonImporter = new JSONProductImporter();
-                    List<Producto> productosImportadosJSON = jsonImporter.importProductsFromJSON(mySqlOperation);
+                    System.out.print("Por favor, ingresa la ruta del archivo JSON a importar: ");
+                    String jsonFilePath = scanner.nextLine(); // Leer la ruta especificada por el usuario
+                    List<Producto> productosImportadosJSON = JSONProductImporter.importProductsFromJSON(mySqlOperation, jsonFilePath);
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosJSON);
                     break;
                 case 6:

@@ -14,20 +14,19 @@ import java.util.List;
  */
 public class XMLProductImporter {
 
-    private static final String XML_FILE_PATH = "/home/dan/Desktop/productos.xml";
-
     /**
      * Importa productos desde un archivo XML y los inserta en la base de datos.
      *
      * @param mySqlOperation Objeto MySqlOperation para realizar operaciones de base de datos.
+     * @param xmlFilePath    La ruta del archivo XML a importar.
      * @return Lista de productos importados desde el archivo XML.
      */
-    public static List<Producto> importProductsFromXML(MySqlOperation mySqlOperation) {
+    public static List<Producto> importProductsFromXML(MySqlOperation mySqlOperation, String xmlFilePath) {
         XmlMapper xmlMapper = new XmlMapper();
         List<Producto> productos = null;
 
         try {
-            productos = xmlMapper.readValue(new File(XML_FILE_PATH), xmlMapper.getTypeFactory().constructCollectionType(List.class, Producto.class));
+            productos = xmlMapper.readValue(new File(xmlFilePath), xmlMapper.getTypeFactory().constructCollectionType(List.class, Producto.class));
 
             CRUDImpoExpo.insertProducts(mySqlOperation, productos);
             System.out.println("Productos importados exitosamente desde el archivo XML.");

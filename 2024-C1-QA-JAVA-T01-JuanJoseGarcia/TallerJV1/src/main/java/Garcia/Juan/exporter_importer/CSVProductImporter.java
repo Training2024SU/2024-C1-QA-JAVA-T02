@@ -15,23 +15,21 @@ import java.util.List;
  */
 public class CSVProductImporter {
 
-    // Ruta del archivo CSV a importar
-    private static final String CSV_FILE_PATH = "/home/dan/Desktop/productos.csv";
-
     /**
      * Importa productos desde un archivo CSV y los inserta en la base de datos.
      *
      * @param mySqlOperation Objeto MySqlOperation para realizar operaciones de base de datos.
+     * @param csvFilePath Ruta del archivo CSV a importar.
      * @return Lista de productos importados desde el archivo CSV.
      */
-    public static List<Producto> importProductsFromCSV(MySqlOperation mySqlOperation) {
+    public static List<Producto> importProductsFromCSV(MySqlOperation mySqlOperation, String csvFilePath) {
         List<Producto> productos = new ArrayList<>();
 
-        try (CSVReader reader = new CSVReader(new FileReader(CSV_FILE_PATH))) {
-            String[] line;
-
+        try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
+            // Salta la primera línea (encabezados)
             reader.readNext();
 
+            String[] line;
             while ((line = reader.readNext()) != null) {
                 Producto producto = new Producto();
                 producto.setTitulo(line[0]);
@@ -44,11 +42,14 @@ public class CSVProductImporter {
 
                 productos.add(producto);
             }
+
+            // Inserta productos en la base de datos
             CRUDImpoExpo.insertProducts(mySqlOperation, productos);
             System.out.println("Productos importados exitosamente desde el archivo CSV.");
         } catch (IOException | NumberFormatException | CsvValidationException e) {
             System.err.println("Error al leer el archivo CSV: " + e.getMessage());
         }
+
         return productos;
     }
 }
