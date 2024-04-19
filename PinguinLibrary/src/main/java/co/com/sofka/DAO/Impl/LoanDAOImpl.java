@@ -8,8 +8,11 @@ import co.com.sofka.model.Loan;
 import co.com.sofka.model.Resource;
 import co.com.sofka.model.User;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +30,46 @@ public class LoanDAOImpl implements LoanDAO {
             + " = %s;";
 
     @Override
-    public void insertLoan(Loan loan) {
+    public void insertLoan(Loan loan) throws SQLException {
+        Connection connection = mySqlOperation.getConnection();
+        String id = (loan.getId() == null) ? "NULL" : loan.getId().toString();
+        String query = String.format(insertIntoQuery, id, loan.getRequestedDate(),
+                loan.getReturnDate(), loan.getStatus().toString(), loan.getUser().getId());
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query,
+                Statement.RETURN_GENERATED_KEYS)) {
 
+            connection.setAutoCommit(false);
+            int insertedRows = preparedStatement.executeUpdate();
+            if (insertedRows == 0) {
+                throw new SQLException("Loan creation failed, no rows affected");
+            }
+            if (loan.getId() == null) {
+                // Get and set auto generated id
+                try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        loan.setId(generatedKeys.getInt(1));
+                    } else throw new SQLException("Couldn't obtain generated id");
+                }
+            }
+            // insert extra data for every type
+            insertLoanResources(loan);
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            throw new RuntimeException(e);
+        } finally {
+            connection.setAutoCommit(true);
+        }
+    }
+
+    private void insertLoanResources(Loan loan) throws SQLException {
+        // TODO: Optimize with a batch query
+        for (Resource r : loan.getLentResources()) {
+            String sql = "INSERT INTO loan_resources (loan_id, resource_id) VALUES (%s, %s)";
+            sql = String.format(sql, loan.getId(), r.getId());
+            mySqlOperation.setSqlStatement(sql);
+            mySqlOperation.executeSqlStatementVoid();
+        }
     }
 
     @Override
@@ -44,7 +85,6 @@ public class LoanDAOImpl implements LoanDAO {
         } catch (SQLException e) {
             throw new RuntimeException("Error fetching loans: " + e.getMessage(), e);
         }
-
         return loans;
     }
 

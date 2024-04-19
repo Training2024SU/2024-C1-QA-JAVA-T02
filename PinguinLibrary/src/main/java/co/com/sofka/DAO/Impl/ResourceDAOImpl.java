@@ -42,7 +42,7 @@ public class ResourceDAOImpl implements ResourceDAO {
             connection.setAutoCommit(false);
             int insertedRows = preparedStatement.executeUpdate();
             if (insertedRows == 0) {
-                throw new SQLException("Borrowing creation failed, no rows affected");
+                throw new SQLException("Resource creation failed, no rows affected");
             }
             if (resource.getId() == null) {
                 // Get and set auto generated id
