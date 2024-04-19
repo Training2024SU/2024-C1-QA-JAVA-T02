@@ -28,6 +28,12 @@ dependencies {
     // Dependencia para el controlador de MongoDB
     implementation 'org.mongodb:mongodb-driver-sync:4.3.3'
 
+    dependencies {
+        implementation 'org.slf4j:slf4j-api:1.7.32' // Dependencia SLF4J
+        implementation 'ch.qos.logback:logback-classic:1.2.6' // Implementación Logback
+    }
+
+
 }
 
 

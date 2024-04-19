@@ -19,3 +19,11 @@ S
 #src/main/java/Garcia/Juan/Main.java,4/0/4086675b31863c171655d447433b565b8b90a85e
 f
 6src/main/java/Garcia/Juan/dialogo/MenuExporImport.java,f/a/fabf2f820b747828071b7594ea7756da3679ada4
+_
+/src/main/java/Garcia/Juan/database/MonDBMi.java,5/e/5ee6b19942dfe7783f35417d574eb80ea6b9f09d
+a
+1src/main/java/Garcia/Juan/database/migration.java,a/2/a2001c1222413807e9ab812d63cf02a44aa97f48
+y
+Isrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigration.java,b/4/b4ed122bafe82eff1a31e345a4f2f12f905605f7
+€
+Psrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationUsuario.java,3/2/32cb4e0312435fba099e63782cece80449d31e42
