@@ -7,6 +7,7 @@ import static co.com.sofka.businessLogic.generalUser.UserProfileFunctions.userPr
 import static co.com.sofka.businessLogic.reader.ReaderAuthorFunctions.readerAuthorMenuOptions;
 import static co.com.sofka.businessLogic.reader.ReaderBookFunctions.readerBookMenuOptions;
 import static co.com.sofka.businessLogic.reader.ReaderNovelFunctions.readerNovelMenuOptions;
+import static co.com.sofka.businessLogic.reader.ReaderResourceFunctions.readerResourceMenuOptions;
 import static co.com.sofka.menu.MenuConstant.enterYourOptionMessage;
 import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
@@ -23,9 +24,10 @@ public class ReaderFunctions {
             switch (option) {
                 case 1 -> readerBookMenuOptions(user);
                 case 2 -> readerNovelMenuOptions(user);
-                case 3 -> readerAuthorMenuOptions(user);
-                case 4 -> userProfileMenuOptions(user);
-                case 5 -> {
+                case 3 -> readerResourceMenuOptions(user);
+                case 4 -> readerAuthorMenuOptions(user);
+                case 5 -> userProfileMenuOptions(user);
+                case 6 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
                 }

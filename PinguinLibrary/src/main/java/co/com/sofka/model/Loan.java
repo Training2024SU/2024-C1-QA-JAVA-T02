@@ -31,7 +31,7 @@ public class Loan {
 
     @Override
     public String toString() {
-        return "Loan{" + "id=" + id + ", requestedDate=" + requestedDate + ", returnDate=" + returnDate + ", status=" + status + ", user=" + user + '}';
+        return "Loan{" + "id=" + id + ", requestedDate=" + requestedDate + ", returnDate=" + returnDate + ", status=" + status + ", user=" + user.getName() + '}';
     }
 
     public String toStringWithResources() {

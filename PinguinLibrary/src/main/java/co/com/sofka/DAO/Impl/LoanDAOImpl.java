@@ -54,7 +54,7 @@ public class LoanDAOImpl implements LoanDAO {
                 }
             }
             // insert extra data for every type
-            insertLoanResources(loan);
+            insertLoanResources(loan, connection);
             connection.commit();
         } catch (SQLException e) {
             connection.rollback();
@@ -64,14 +64,16 @@ public class LoanDAOImpl implements LoanDAO {
         }
     }
 
-    private void insertLoanResources(Loan loan) throws SQLException {
-        // TODO: Optimize with a batch query
+    private void insertLoanResources(Loan loan, Connection connection) throws SQLException {
+        String sql = "INSERT INTO loan_resources (loan_id, resource_id, type) VALUES ( ?, ?, ? )";
+        PreparedStatement statement = connection.prepareStatement(sql);
         for (Resource r : loan.getLentResources()) {
-            String sql = "INSERT INTO loan_resources (loan_id, resource_id) VALUES (%s, %s)";
-            sql = String.format(sql, loan.getId(), r.getId());
-            mySqlOperation.setSqlStatement(sql);
-            mySqlOperation.executeSqlStatementVoid();
+            statement.setInt(1,loan.getId());
+            statement.setInt(2,r.getId());
+            statement.setString(3, r.getType().toString());
+            statement.addBatch();
         }
+        statement.executeBatch();
     }
 
     @Override

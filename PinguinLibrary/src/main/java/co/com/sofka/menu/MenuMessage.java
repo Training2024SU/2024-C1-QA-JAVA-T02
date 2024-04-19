@@ -104,10 +104,12 @@ public class MenuMessage {
         System.out.println(MenuConstant.separator);
         System.out.printf((MenuConstant.bookOptionsMessage) + "%n", 1);
         System.out.printf((MenuConstant.novelOptionsMessage) + "%n", 2);
-        System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 3);
-        System.out.printf((MenuConstant.profileOptionsMessage) + "%n", 4);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
+        System.out.printf((MenuConstant.resourceOptionsMessage) + "%n", 3);
+        System.out.printf((MenuConstant.authorOptionsMessage) + "%n", 4);
+        System.out.printf((MenuConstant.profileOptionsMessage) + "%n", 5);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
     }
+
     public static void readerBookMenuMessage(User user){
         System.out.printf((MenuConstant.personalizedWelcomeBookMessage) + "%n", user.getName());
         System.out.println(MenuConstant.separator);
@@ -127,6 +129,20 @@ public class MenuMessage {
         System.out.printf((MenuConstant.seeMyNovelLoansMessage) + "%n", 4);
         System.out.printf((MenuConstant.returnNovelMessage) + "%n", 5);
         System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
+    }
+
+    public static void readerResourceMenuMessage(User user){
+        System.out.printf((MenuConstant.personalizedWelcomeResourceMessage) + "%n", user.getName());
+        System.out.println(MenuConstant.separator);
+        System.out.printf((MenuConstant.seeAllSongsMessage) + "%n", 1);
+        System.out.printf((MenuConstant.seeAllVideoMessage) + "%n", 2);
+        System.out.printf((MenuConstant.seeAllEssayMessage) + "%n", 3);
+        System.out.printf((MenuConstant.selectResourceMessage) + "%n", 4);
+        System.out.printf((MenuConstant.listSelectedResourcesMessage) + "%n", 5);
+        System.out.printf((MenuConstant.requestLoanMessage) + "%n", 6);
+        System.out.printf((MenuConstant.seeMyResourceLoansMessage) + "%n", 7);
+        System.out.printf((MenuConstant.seeMyLoanDetailsMessage) + "%n", 8);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 9);
     }
 
     public static void readerAuthorMenuMessage(User user){

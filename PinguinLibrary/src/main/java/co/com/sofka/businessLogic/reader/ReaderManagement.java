@@ -37,14 +37,8 @@ import java.util.stream.Collectors;
 
 import static co.com.sofka.enums.LoanStatus.FINISHED;
 
-public class ReaderManagement implements
-        GetAllAvailableBooks,
-        GetAvailableBookByTitle,
-        GetAllAvailableNovels,
-        GetAvailableNovelByTitle,
-        GetAllAuthors,
-        LoanABook,
-        LoanANovel {
+public class ReaderManagement implements GetAllAvailableBooks, GetAvailableBookByTitle,
+        GetAllAvailableNovels, GetAvailableNovelByTitle, GetAllAuthors, LoanABook, LoanANovel {
     private final BookDAOImpl bookDAO = new BookDAOImpl();
     private final NovelDaoImpl novelDao = new NovelDaoImpl();
     private final AuthorDAOImpl authorDAO = new AuthorDAOImpl();
@@ -56,33 +50,19 @@ public class ReaderManagement implements
     private final Set<Resource> resourcesToLoan = new HashSet<>();
 
     public List<Book> getAllAvailableBooks() {
-        return bookDAO.getAllBooks()
-                .stream()
-                .filter(book -> book.getQuantityAvailable() >= 1)
-                .collect(Collectors.toList());
+        return bookDAO.getAllBooks().stream().filter(book -> book.getQuantityAvailable() >= 1).collect(Collectors.toList());
     }
 
     public Book getAvailableBookByTitle(String title) {
-        return bookDAO.getAllBooks()
-                .stream()
-                .filter(book -> (book.getQuantityAvailable() >= 1 && book.getTitle().equals(title)))
-                .findFirst()
-                .orElse(null);
+        return bookDAO.getAllBooks().stream().filter(book -> (book.getQuantityAvailable() >= 1 && book.getTitle().equals(title))).findFirst().orElse(null);
     }
 
     public List<Novel> getAllAvailableNovels() {
-        return novelDao.getAllNovels()
-                .stream()
-                .filter(novel -> novel.getQuantityAvailable() >= 1)
-                .collect(Collectors.toList());
+        return novelDao.getAllNovels().stream().filter(novel -> novel.getQuantityAvailable() >= 1).collect(Collectors.toList());
     }
 
     public Novel getAvailableNovelByTitle(String title) {
-        return novelDao.getAllNovels()
-                .stream()
-                .filter(novel -> (novel.getQuantityAvailable() >= 1 && novel.getTitle().equals(title)))
-                .findFirst()
-                .orElse(null);
+        return novelDao.getAllNovels().stream().filter(novel -> (novel.getQuantityAvailable() >= 1 && novel.getTitle().equals(title))).findFirst().orElse(null);
     }
 
     public List<Author> getAllAuthors() {
@@ -90,23 +70,11 @@ public class ReaderManagement implements
     }
 
     public List<NovelLoan> getAllUserNovelLoan(User user) {
-        return novelLoanDAO.getAllNovelLoans()
-                .stream()
-                .filter(novelLoan -> novelLoan
-                        .getUser()
-                        .getId()
-                        .equals(user.getId()))
-                .collect(Collectors.toList());
+        return novelLoanDAO.getAllNovelLoans().stream().filter(novelLoan -> novelLoan.getUser().getId().equals(user.getId())).collect(Collectors.toList());
     }
 
     public List<BookLoan> getAllUserBookLoan(User user) {
-        return bookLoanDAO.getAllBookLoans()
-                .stream()
-                .filter(bookLoan -> bookLoan
-                        .getUser()
-                        .getId()
-                        .equals(user.getId()))
-                .collect(Collectors.toList());
+        return bookLoanDAO.getAllBookLoans().stream().filter(bookLoan -> bookLoan.getUser().getId().equals(user.getId())).collect(Collectors.toList());
     }
 
 
@@ -114,11 +82,7 @@ public class ReaderManagement implements
         book.setQuantityLoaned(book.getQuantityLoaned() + 1);
         book.setQuantityAvailable(book.getQuantityAvailable() - 1);
         bookDAO.updateBook(book);
-        BookLoan bookLoan = new BookLoan(UUID.randomUUID().toString(),
-                user,
-                book,
-                null,
-                null,
+        BookLoan bookLoan = new BookLoan(UUID.randomUUID().toString(), user, book, null, null,
                 LoanStatus.REQUESTED);
         bookLoanDAO.insertBookLoan(bookLoan);
     }
@@ -136,12 +100,8 @@ public class ReaderManagement implements
         novel.setQuantityLoaned(novel.getQuantityLoaned() + 1);
         novel.setQuantityAvailable(novel.getQuantityAvailable() - 1);
         novelDao.updateNovel(novel);
-        NovelLoan novelLoan = new NovelLoan(UUID.randomUUID().toString(),
-                user,
-                novel,
-                null,
-                null,
-                LoanStatus.REQUESTED);
+        NovelLoan novelLoan = new NovelLoan(UUID.randomUUID().toString(), user, novel, null, null
+                , LoanStatus.REQUESTED);
         novelLoanDAO.insertNovelLoan(novelLoan);
     }
 
@@ -163,6 +123,10 @@ public class ReaderManagement implements
         resourcesToLoan.add(resource);
     }
 
+    public Set<Resource> getSelectedResources() {
+        return resourcesToLoan;
+    }
+
     public void requestLoan(User user, LocalDate returnDate) throws SQLException {
         Loan loan = new Loan(returnDate, user);
         loan.setLentResources(resourcesToLoan.stream().toList());
@@ -182,7 +146,11 @@ public class ReaderManagement implements
         return loanDAO.getAllLoans().stream().filter(l -> l.getUser().getId().equals(user.getId())).toList();
     }
 
-    public Loan getResourceLoanDetails(int loanId){
-        return loanDAO.getLoanById(loanId);
+    public Loan getResourceLoanDetails(User user, int loanId) {
+        Loan loan = loanDAO.getLoanById(loanId);
+        if (loan.getUser().getId().equals(user.getId())) {
+            return loan;
+        }
+        return null;
     }
 }

@@ -8,6 +8,8 @@ public class MenuConstant {
     public static String personalizedWelcomeBookLoanMessage = "Welcome to Book Loans Menu, %s";
     public static String personalizedWelcomeNovelMessage = "Welcome to Novel Menu, %s";
     public static String personalizedWelcomeNovelLoanMessage = "Welcome to Novel Loans Menu, %s";
+    public static String personalizedWelcomeResourceMessage = "Welcome to Resources Menu, %s";
+    public static String personalizedWelcomeResourceLoanMessage = "Welcome to Resources Loans Menu, %s";
     public static String personalizedWelcomeAuthorMessage = "Welcome to Author Menu, %s";
     public static String personalizedWelcomeUserMessage = "Welcome to User Menu, %s";
     public static String personalizedWelcomeProfileMessage = "Welcome to Profile Menu, %s";
@@ -70,6 +72,29 @@ public class MenuConstant {
     public static String deleteNovelLoanMessage = "%s. Delete novel loan";
     public static String seeMyNovelLoansMessage = "%s. See my novel loans";
 
+    // Resource options
+    public static String resourceOptionsMessage = "%s. Other resources options";
+    public static String seeAllSongsMessage = "%s. See all songs";
+    public static String seeAllVideoMessage = "%s. See all video recordings";
+    public static String seeAllEssayMessage = "%s. See all essays";
+    public static String selectResourceMessage = "%s. Select a resource to loan";
+    public static String listSelectedResourcesMessage = "%s. List selected resources for loan";
+    public static String createResourceMessage = "%s. Create resource";
+    public static String updateResourceMessage = "%s. Update resource";
+    public static String deleteResourceMessage = "%s. Delete resource";
+    public static String exportResourceInfoMessage = "%s. Export resources data in json file";
+
+    // Resource loan options
+    public static String resourceLoanOptionsMessage = "%s. Resource loan options";
+    public static String requestLoanMessage = "%s. Request resource loan";
+    public static String seeMyResourceLoansMessage = "%s. See my resource loans";
+    public static String seeMyLoanDetailsMessage = "%s. See my loan details";
+    public static String seeResourceLoansMessage = "%s. See all resource loans";
+    public static String seeLoanDetailsMessage = "%s. See a resource loan details";
+    public static String searchLoansByEmailMessage = "%s. Search resource loans by email";
+    public static String approveLoanMessage = "%s. Approve resource loan";
+    public static String finishLoanMessage = "%s. Finish resource loan";
+    public static String deleteResourceLoanMessage = "%s. Delete resource loan";
 
 
     // Author options

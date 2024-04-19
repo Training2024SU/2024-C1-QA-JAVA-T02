@@ -35,8 +35,7 @@ public abstract class Resource {
 
     @Override
     public String toString() {
-        return "id=" + id + ", type=" + type + ", title='" + title + "', quantity=" + quantity +
-                ", quantityLoaned=" + quantityLoaned + ", author=" + author + '}';
+        return " id=" + id + ", type=" + type + ", title='" + title + "', quantity=" + quantity + ", quantityLoaned=" + quantityLoaned + ", author=" + author.getName() + " ";
     }
 
     public Integer getId() {
