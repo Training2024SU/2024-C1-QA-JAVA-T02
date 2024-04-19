@@ -125,33 +125,33 @@ public class SesionIniciada {
                     case 1:
                         RegistroUsuarios.registrarSuperUsuario(mySqlOperation);
                         break;
-                    case 3:
+                    case 2:
                         gestionarMaterial(mySqlOperation);
                         break;
-                    case 4:
+                    case 3:
                         gestionarPrestamo(mySqlOperation);
                         break;
-                    case 5:
+                    case 4:
                         RegistroUsuarios.registrarAdministrador(mySqlOperation);
                         break;
-                    case 6:
+                    case 5:
                         List<Usuario> usuarios = getUsersFromTable(mySqlOperation);
                         System.out.println(usuarios);
                         CSVExporter.exportToCSV(usuarios);
                         break;
-                    case 7:
+                    case 6:
                         PrestamosPrueba.menuPrestamosPrueba();
                         break;
-                    case 8:
+                    case 7:
                         RegistroUsuarios.crearAsistente(mySqlOperation);
                         break;
-                    case 9:
+                    case 8:
                         RegistroUsuarios.actualizarInformacionUsuario(mySqlOperation);
                         break;
-                    case 10:
+                    case 9:
                         MenuExporImport.menuImportExport();
                         break;
-                    case 11:
+                    case 10:
                         ciclo = false;
                         break;
                     default:

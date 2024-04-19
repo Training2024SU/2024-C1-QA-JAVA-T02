@@ -15,18 +15,16 @@ public class CSVProductExporter {
      * Exporta una lista de productos a un archivo CSV.
      *
      * @param productos La lista de productos a exportar.
+     * @param filePath  La ruta de archivo CSV de salida.
      */
-    public static void exportProductsToCSV(List<Producto> productos) {
-        // Ruta de archivo CSV de salida
-        String filePath = "/home/dan/Desktop/productos.csv";
-
+    public static void exportProductsToCSV(List<Producto> productos, String filePath) {
         // Uso de un bloque try-with-resources para cerrar automáticamente el CSVWriter
         try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
-            // Escribe encabezados en el archivo CSV
+            // Escribir encabezados en el archivo CSV
             String[] headers = {"Título", "Tipo", "Autor", "Magnitud", "Cantidad de Ejemplares", "Cantidad de Prestados", "Cantidad Disponibles"};
             writer.writeNext(headers);
 
-            // Escribe datos de productos en el archivo CSV
+            // Escribir datos de productos en el archivo CSV
             for (Producto producto : productos) {
                 String[] data = {
                         producto.getTitulo(),

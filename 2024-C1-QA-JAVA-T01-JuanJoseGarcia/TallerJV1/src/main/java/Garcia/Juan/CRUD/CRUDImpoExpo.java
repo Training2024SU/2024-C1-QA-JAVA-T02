@@ -80,7 +80,6 @@ public class CRUDImpoExpo {
 
             // Ejecuta el lote de declaraciones preparadas
             preparedStatement.executeBatch();
-            System.out.println("Productos insertados exitosamente.");
         } catch (SQLException e) {
             System.err.println("Error al insertar productos: " + e.getMessage());
         } finally {

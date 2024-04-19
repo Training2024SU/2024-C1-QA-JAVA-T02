@@ -1,0 +1,36 @@
+
+a
+java:S1301V"KReplace this "switch" statement by "if" statements to increase readability.(°€àâ
+G
+java:S1153Q"1Directly append the argument of String.valueOf().(ó½¸ü
+G
+java:S1153R"1Directly append the argument of String.valueOf().(ä áœ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
+3
+java:S1118"Hide this public constructor.(¦ø¶
+A
+java:S3010"+Remove this assignment of "mySqlOperation".(¾ÈÜ†
+K
+java:S2209"5Change this instance-reference to a static reference.(¾ÈÜ†
+E	java:S106"+Replace this use of System.out by a logger.(²Ï¿’üÿÿÿÿ
+E	java:S106#"+Replace this use of System.out by a logger.(âĞÕıÿÿÿÿ
+@	java:S106&"+Replace this use of System.out by a logger.(÷Á†ä
+@	java:S106'"+Replace this use of System.out by a logger.(ÙŒÉ
+@	java:S106)"+Replace this use of System.out by a logger.(ÑËöà
+?	java:S106+"+Replace this use of System.out by a logger.(ª…ı
+K
+java:S1172="5Remove this unused method parameter "mySqlOperation".(‘ŒíÍ
+@	java:S106?"+Replace this use of System.out by a logger.(ÑËØ
+E	java:S106D"+Replace this use of System.out by a logger.(ÀçÖøıÿÿÿÿ
+@	java:S106E"+Replace this use of System.out by a logger.(±‚¡
+E	java:S106H"+Replace this use of System.out by a logger.(Ú÷íğÿÿÿÿÿ
+E	java:S106I"+Replace this use of System.out by a logger.(ƒ‰ÁĞùÿÿÿÿ
+@	java:S106J"+Replace this use of System.out by a logger.(·µ¦ñ
+E	java:S106M"+Replace this use of System.out by a logger.(Üˆ¯úÿÿÿÿ
+@	java:S106O"+Replace this use of System.out by a logger.(È©ƒ«
+E	java:S106P"+Replace this use of System.out by a logger.(Ú÷íğÿÿÿÿÿ
+@	java:S106Q"+Replace this use of System.out by a logger.(ó½¸ü
+@	java:S106R"+Replace this use of System.out by a logger.(ä áœ
+7	java:S131V""Add a default case to this switch.(°€àâ
+M
+java:S1068"2Remove this unused "mySqlOperation" private field.(ÍÊÇúÿÿÿÿ

@@ -39,48 +39,58 @@ public class MenuExporImport {
             System.out.println("6. Exportar a archivo JSON");
             System.out.println("7. " + SALIR);
 
+            // Leer la opción del usuario
             int opcion = scanner.nextInt();
+            scanner.nextLine(); // Consumir el salto de línea restante
 
+            // Declarar la lista de productos
             List<Producto> productos;
 
+            // Manejar las diferentes opciones del menú
             switch (opcion) {
                 case 1:
+                    // Importar desde CSV
                     CSVProductImporter csvImporter = new CSVProductImporter();
                     List<Producto> productosImportados = csvImporter.importProductsFromCSV(mySqlOperation);
                     CRUDImpoExpo.insertProducts(mySqlOperation, productosImportados);
                     break;
-
                 case 2:
+                    // Exportar a CSV
                     productos = getProductsFromTable(mySqlOperation);
-                    CSVProductExporter.exportProductsToCSV(productos);
+                    System.out.print("Por favor, ingresa la ruta de salida del archivo CSV: ");
+                    String filePath = scanner.nextLine();
+                    CSVProductExporter.exportProductsToCSV(productos, filePath);
                     break;
-
                 case 3:
-                    List<Producto> productosImportadorXML = XMLProductImporter.importProductsFromXML(mySqlOperation);
-                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadorXML);
+                    // Importar desde XML
+                    List<Producto> productosImportadosXML = XMLProductImporter.importProductsFromXML(mySqlOperation);
+                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosXML);
                     break;
-
                 case 4:
+                    // Exportar a XML
                     productos = getProductsFromTable(mySqlOperation);
-                    XMLProductExporter.exportProductsToXML(productos);
+                    System.out.print("Por favor, ingresa la ruta de salida del archivo XML: ");
+                    String filePath3 = scanner.nextLine();
+                    XMLProductExporter.exportProductsToXML(productos,filePath3);
                     break;
-
                 case 5:
+                    // Importar desde JSON
                     JSONProductImporter jsonImporter = new JSONProductImporter();
-                    List<Producto> productosImportadosDesdeJSON = jsonImporter.importProductsFromJSON(mySqlOperation);
-                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosDesdeJSON);
+                    List<Producto> productosImportadosJSON = jsonImporter.importProductsFromJSON(mySqlOperation);
+                    CRUDImpoExpo.insertProducts(mySqlOperation, productosImportadosJSON);
                     break;
-
                 case 6:
+                    // Exportar a JSON
                     productos = getProductsFromTable(mySqlOperation);
-                    JSONProductExporter.exportProductsToJSON(productos);
+                    System.out.print("Por favor, ingresa la ruta de salida del archivo JSON: ");
+                    String filePath1 = scanner.nextLine();
+                    JSONProductExporter.exportProductsToJSON(productos,filePath1);
                     break;
-
                 case 7:
+                    // Salir
                     salir = true;
                     System.out.println("Saliendo...");
                     break;
-
                 default:
                     System.out.println("Opción no válida. Por favor, inténtelo de nuevo.");
                     break;

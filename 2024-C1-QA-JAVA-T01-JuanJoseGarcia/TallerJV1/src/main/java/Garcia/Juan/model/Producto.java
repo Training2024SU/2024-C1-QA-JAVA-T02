@@ -10,9 +10,8 @@ public class Producto {
     private int cantidadEjemplares;
     private int cantidadPrestados;
     private int cantidadDisponibles;
-    @JsonIgnore
     private String genero;
-   @JsonIgnore
+
     private int edadMinima;
 
     public Producto(String titulo, String tipo, String autor, String magnitud, int cantidadPrestados, int cantidadEjemplares, int cantidadDisponibles, String genero, int edadMinima) {

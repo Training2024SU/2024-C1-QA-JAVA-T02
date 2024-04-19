@@ -75,17 +75,18 @@ public class Menu {
     }
 
     public static void menuSuperUsuario() {
-        System.out.println(SELECCIONE);
-        System.out.println("1. Crear superusuario");
-        System.out.println("2. Gestionar materiales");
-        System.out.println("3. Gestionar préstamos");
-        System.out.println("4. Registrar administrador");
-        System.out.println("5. Consultar usuarios y exportar lista de usuarios a CSV");
-        System.out.println("6. Simulación de préstamos");
-        System.out.println("7. Crear asistente");
-        System.out.println("8. Actualizar información personal");
-        System.out.println("9. Exportar e importar inventario");
-        System.out.println("10. Salir");
+        System.out.println("Por favor seleccione una opción:");
+        System.out.println("1. Registrar superusuario.");
+        System.out.println("2. Gestionar materiales.");
+        System.out.println("3. Gestionar préstamos.");
+        System.out.println("4. Registrar administrador.");
+        System.out.println("5. Consultar usuarios y exportar lista de usuarios a CSV.");
+        System.out.println("6. Simulación de préstamos.");
+        System.out.println("7. Crear asistente.");
+        System.out.println("8. Actualizar información de usuario.");
+        System.out.println("9. Exportar e importar inventario.");
+        System.out.println("10. Salir.");
     }
+
 
 }
