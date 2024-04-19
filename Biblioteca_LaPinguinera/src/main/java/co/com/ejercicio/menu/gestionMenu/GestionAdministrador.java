@@ -12,6 +12,7 @@ import java.util.Scanner;
 import java.util.List;
 
 import static co.com.ejercicio.menu.dialogos.MenuGestionPublicacion.menuPublicacion;
+import static co.com.ejercicio.menu.dialogos.MenuGestionPublicacionNueva.menuPublicacionNueva;
 import static co.com.ejercicio.menu.gestionMenu.GestionEmpleado.mostrarMenuGestionEmpleado;
 import static co.com.ejercicio.menu.gestionMenu.GestionUsuario.mostrarMenuGestionUsuarios;
 import static co.com.ejercicio.menu.gestionMenu.GestionPrestamo.mostrarMenuGestionPrestamo;
@@ -38,6 +39,14 @@ public class GestionAdministrador {
         System.out.println("Gestionando Publicaciones...");
         menuPublicacion();
     }
+
+    public static void gestionarPublicacionNueva(){
+        //gestionar libros
+        System.out.println("Gestionando Publicaciones Nuevas...");
+        menuPublicacionNueva();
+    }
+
+
 
     public static void gestionarPrestamos() {
         //gestionar préstamos

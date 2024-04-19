@@ -17,6 +17,7 @@ public class MenuGestionAsistente {
         System.out.println("1. Gestionar Publicacion");
         System.out.println("2. Gestionar préstamos");
         System.out.println("3. Modificar contraseña");
+        System.out.println("4. Gestionar Publicacion Nueva");
         System.out.println("0. Cerrar sesion");
         System.out.print("Ingrese su opción: ");
         int opcion = scanner.nextInt();
@@ -37,6 +38,9 @@ public class MenuGestionAsistente {
                     throw new RuntimeException(e);
                 }
 
+                break;
+            case 4:
+                gestionarPublicacionNueva();
                 break;
             case 0:
                 System.out.println("Cerraste Sesion");

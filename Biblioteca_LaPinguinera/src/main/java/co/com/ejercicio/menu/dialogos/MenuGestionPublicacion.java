@@ -21,18 +21,6 @@ public class MenuGestionPublicacion {
         System.out.println(ACTUALIZAR);
         System.out.println(ELIMINAR);
         System.out.println(OBTENER_AUTORES);
-        System.out.println("6. Insertar ensayo");
-        System.out.println("7. Obtener ensayo");
-        System.out.println("8. Actualizar ensayo");
-        System.out.println("9. Eliminar ensayo");
-        System.out.println("10. Insertar grabacion");
-        System.out.println("11. Obtener grabacion");
-        System.out.println("12. Actualizar grabacion");
-        System.out.println("13. Eliminar grabacion");
-        System.out.println("14. Insertar cancion");
-        System.out.println("15. Obtener cancion");
-        System.out.println("16. Actualizar cancion");
-        System.out.println("17. Eliminar cancion");
 
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -82,50 +70,9 @@ public class MenuGestionPublicacion {
                 }
                 mostrarMenuAdministrador();
                 break;
-            case 6:
-                try {
-                    gestionInsertarEnsayo();
-                    mostrarMenuAdministrador();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                break;
-            case 7:
-                try {
-                    gestionObtenerEnsayoTesis();
-                    mostrarMenuAdministrador();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                break;
-            case 8:
-                try {
-                    gestionActualizarEnsayoTesis();
-                    mostrarMenuAdministrador();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                break;
-            case 9:
-                try {
-                    gestionEliminarEnsayoTesis();
-                    mostrarMenuAdministrador();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                break;
-            case 10:
-                try {
-                    gestionObtenerAutoresEnsayo();
-                    mostrarMenuAdministrador();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                mostrarMenuAdministrador();
-                break;
 
             default:
-                System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 4.");
+                System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 5.");
         }
         scanner.close();
     }

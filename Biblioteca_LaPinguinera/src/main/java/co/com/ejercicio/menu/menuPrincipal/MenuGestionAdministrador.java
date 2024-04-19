@@ -20,6 +20,7 @@ public class MenuGestionAdministrador {
         System.out.println(TipoGestion.GESTION_TRES.getValue());
         System.out.println(TipoGestion.GESTION_CUATRO.getValue());
         System.out.println("5. Modificar contrasena");
+        System.out.println("6. Gestionar publicaciones nuevas");
         System.out.println("0. Cerrar sesion");
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -44,6 +45,10 @@ public class MenuGestionAdministrador {
                 } catch (SQLException e){
                     throw new RuntimeException(e);
                 }
+                break;
+
+            case 6:
+                gestionarPublicacionNueva();
                 break;
             case 0:
                 System.out.println("Cerraste Sesion");
