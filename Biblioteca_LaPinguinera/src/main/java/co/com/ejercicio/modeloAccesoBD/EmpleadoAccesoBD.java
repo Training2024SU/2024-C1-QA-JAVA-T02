@@ -1,6 +1,7 @@
 package co.com.ejercicio.modeloAccesoBD;
 
 import co.com.ejercicio.modelo.Empleado;
+import co.com.ejercicio.modelo.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -46,6 +47,19 @@ public class EmpleadoAccesoBD {
         }
     }
 
+    public void modificarEmpleado(Empleado empleado) throws SQLException{
+        try (PreparedStatement stmt = conexion.prepareStatement(UPDATE_EMPLEADO)) {
+            stmt.setString(1, empleado.getNombre());
+            stmt.setString(2, empleado.getCorreo());
+            stmt.setInt(3, empleado.getIdEmpleado());
+
+            stmt.executeUpdate();
+            System.out.println(OPERACION_EXITOSA);
+        } catch (SQLException e) {
+            System.out.println(OPERACION_FALLIDA + e);
+        }
+    }
+
 
     public List<Empleado> obtenerTodosLosEmpleados() throws SQLException {
         List<Empleado> empleados = new ArrayList<>();
@@ -61,5 +75,17 @@ public class EmpleadoAccesoBD {
             System.out.println(OPERACION_FALLIDA + e);
         }
         return empleados;
+    }
+
+    public void actualizarContrasena(Empleado empleado, String nuevaContrasena ) throws SQLException {
+        try (PreparedStatement statement = conexion.prepareStatement(UPDATE_PASSWORD_EMPLEADO)) {
+            statement.setString(1, nuevaContrasena);
+            statement.setInt(2, empleado.getIdEmpleado());
+
+            statement.executeUpdate();
+            System.out.println(OPERACION_EXITOSA);
+        } catch (SQLException e) {
+            System.out.println(OPERACION_FALLIDA + (e));
+        }
     }
 }

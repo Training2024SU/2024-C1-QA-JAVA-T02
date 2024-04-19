@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.constantesMenu.ConstanteParaMenu.*;
+import static co.com.ejercicio.menu.gestionMenu.GestionConfirmarPrestamo.confirmarPrestamo;
 import static co.com.ejercicio.menu.gestionMenu.GestionPrestamo.*;
 
 public class MenuGestionPrestamo {
@@ -16,6 +17,7 @@ public class MenuGestionPrestamo {
         System.out.println(OBTENER);
         System.out.println(ACTUALIZAR);
         System.out.println(ELIMINAR);
+        System.out.println("5. Confirmar prestamo");
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
 
@@ -45,8 +47,15 @@ public class MenuGestionPrestamo {
                     throw new RuntimeException(e);
                 }
                 break;
+            case 5:
+                try {
+                    confirmarPrestamo();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
             default:
-                System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 4.");
+                System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 5.");
         }
     }
 }

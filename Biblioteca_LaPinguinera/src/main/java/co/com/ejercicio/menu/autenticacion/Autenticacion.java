@@ -7,7 +7,7 @@ public class Autenticacion {
 // ADMINSTRADOR
     public static final String NOMBRE_ADMIN = "Jhon Doe";
     private static final String CORREO_ADMIN = "administrador@pingu.com.co";
-    private static final String CONTRASENA_ADMIN = "contraseñasegura123456";
+    private static final String CONTRASENA_ADMIN = "contrasenasegura123456";
 
     private static final String CORREO_SUPER_USUARIO = "super";
     private static final String CONTRASENA_SUPER_USUARIO = "super";
@@ -27,7 +27,7 @@ public class Autenticacion {
 
     public static boolean autenticarSuperUsuario(String correo, String contrasena) {
         if (correo.equals(CORREO_SUPER_USUARIO) && contrasena.equals(CONTRASENA_SUPER_USUARIO)) {
-            return true; // El administrador es correcto
+            return true; // El superUsuario es correcto
         }
         return false;
     }

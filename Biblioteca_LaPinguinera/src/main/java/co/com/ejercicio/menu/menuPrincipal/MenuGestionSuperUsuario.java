@@ -8,8 +8,7 @@ import java.util.Scanner;
 import static co.com.ejercicio.menu.constantesMenu.ConstanteParaMenu.ELIGE_OPCION;
 import static co.com.ejercicio.menu.dialogos.MenuPrincipal.mostrarMenu;
 import static co.com.ejercicio.menu.gestionMenu.GestionAdministrador.*;
-import static co.com.ejercicio.menu.gestionMenu.GestionSuperUsuario.gestionInsertarAdministrador;
-import static co.com.ejercicio.menu.gestionMenu.GestionSuperUsuario.gestionarPrestamosSuperUsuario;
+import static co.com.ejercicio.menu.gestionMenu.GestionSuperUsuario.*;
 
 public class MenuGestionSuperUsuario {
 
@@ -20,7 +19,7 @@ public class MenuGestionSuperUsuario {
         System.out.println("¿Qué desea gestionar?");
         System.out.println("1. Crear administrador");
         System.out.println("2. Simular prestamos");
-        System.out.println("3. Restableser prestamos");
+        System.out.println("3. Modificar administrador");
         System.out.println("0. Cerrar sesion");
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -37,6 +36,12 @@ public class MenuGestionSuperUsuario {
             case 2:
                 gestionarPrestamosSuperUsuario();
                 break;
+            case 3:
+                try{
+                    gestionModificarAdministrador();
+                } catch (SQLException e){
+                    throw new RuntimeException(e);
+                }
             case 0:
                 System.out.println("Cerraste Sesion");
                 mostrarMenu();

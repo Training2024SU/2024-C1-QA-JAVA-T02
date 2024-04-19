@@ -23,11 +23,60 @@ public class MapearTablasBD {
             throw new RuntimeException(e);
         }
     }
+
+    // Mapeo cancion
+    public static Cancion mapearResultSetACancion(ResultSet resultSet) throws SQLException {
+        try {
+            return new Cancion(
+                    resultSet.getString("titulo"),
+                    resultSet.getString("artista"),
+                    resultSet.getString("album"),
+                    resultSet.getString("duracion"),
+                    resultSet.getInt("cantidad_ejemplares"),
+                    resultSet.getInt("cantidad_prestado"),
+                    resultSet.getInt("cantidad_disponible")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Mapeo ensayo_tesis
+    public static EnsayoTesis mapearResultSetAEnsayoTesis(ResultSet resultSet) throws SQLException {
+        try {
+            return new EnsayoTesis(
+                    resultSet.getString("titulo"),
+                    resultSet.getString("autor"),
+                    resultSet.getInt("numero_paginas"),
+                    resultSet.getInt("cantidad_ejemplares"),
+                    resultSet.getInt("cantidad_prestado"),
+                    resultSet.getInt("cantidad_disponible")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Mapeo video_grabacion
+    public static VideoGrabacion mapearResultSetAVideoGrabacion(ResultSet resultSet) throws SQLException {
+        try {
+            return new VideoGrabacion(
+                    resultSet.getString("titulo"),
+                    resultSet.getString("director"),
+                    resultSet.getString("duracion"),
+                    resultSet.getInt("cantidad_ejemplares"),
+                    resultSet.getInt("cantidad_prestado"),
+                    resultSet.getInt("cantidad_disponible")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
     // Mapeo Usuario
     public static Usuario mapearResultSetAUsuario(ResultSet resultSet) throws SQLException {
         try {
             return new Usuario(
-                    resultSet.getString("nombre"), resultSet.getString("correo"),
+                    resultSet.getString("correo"), resultSet.getString("nombre"),
                     resultSet.getString("contrasenia")
             );
         } catch (SQLException e) {
@@ -64,7 +113,6 @@ public class MapearTablasBD {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static Administrador mapearResultSetAAdministrador(ResultSet resultSet) throws SQLException {

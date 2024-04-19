@@ -39,13 +39,17 @@ public class MenuGestionEmpleado {
                 break;
             case 3:
                 try {
-                    gestionEliminarEmpleado();
+                    gestionActualizarEmpleado();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
                 break;
             case 4:
-                gestionActualizarEmpleado();
+                try {
+                    gestionEliminarEmpleado();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
                 break;
             default:
                 System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 4.");

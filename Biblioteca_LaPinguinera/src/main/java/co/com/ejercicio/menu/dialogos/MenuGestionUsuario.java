@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.dialogos.MenuPrincipal.mostrarMenu;
+import static co.com.ejercicio.menu.gestionMenu.GestionPrestarPublicacion.datosPrestamo;
 import static co.com.ejercicio.menu.gestionMenu.GestionPublicacion.gestionObtenerPublicacion;
 import static co.com.ejercicio.menu.gestionMenu.GestionUsuario.*;
 import static co.com.ejercicio.menu.constantesMenu.ConstanteParaMenu.*;
@@ -16,21 +17,26 @@ public class MenuGestionUsuario {
         System.out.println("¿ Que desea realizar ? ");
         System.out.println("1. Realizar Prestamo");
         System.out.println("2. Ver publicaciones Disponibles");
+        System.out.println("3. Modificar contraseña");
+
         System.out.println("0. Cerrar sesion");
         int opcion = scanner.nextInt();
         scanner.nextLine();
 
         switch (opcion) {
             case 1:
-                try {
-                    gestionInsertarUsuario();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
+                datosPrestamo();
                 break;
             case 2:
                 try {
                     gestionObtenerPublicacion();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
+            case 3:
+                try {
+                    gestionModificarContrasenaUsuario();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
@@ -72,8 +78,11 @@ public class MenuGestionUsuario {
                 }
                 break;
             case 3:
-                gestionActualizarUsuario();
-
+                try {
+                    gestionActualizarUsuario();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
                 break;
             case 4:
                 try {

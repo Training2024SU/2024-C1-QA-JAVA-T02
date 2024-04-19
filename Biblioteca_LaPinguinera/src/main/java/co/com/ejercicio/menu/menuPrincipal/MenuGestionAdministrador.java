@@ -2,6 +2,7 @@ package co.com.ejercicio.menu.menuPrincipal;
 
 import co.com.ejercicio.util.enums.TipoGestion;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.gestionMenu.GestionAdministrador.*;
@@ -18,6 +19,7 @@ public class MenuGestionAdministrador {
         System.out.println(TipoGestion.GESTION_DOS.getValue());
         System.out.println(TipoGestion.GESTION_TRES.getValue());
         System.out.println(TipoGestion.GESTION_CUATRO.getValue());
+        System.out.println("5. Modificar contrasena");
         System.out.println("0. Cerrar sesion");
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -35,6 +37,13 @@ public class MenuGestionAdministrador {
                 break;
             case 4:
                 gestionarPrestamos();
+                break;
+            case 5:
+                try {
+                    gestionarModificarContrasenaAdministrador();
+                } catch (SQLException e){
+                    throw new RuntimeException(e);
+                }
                 break;
             case 0:
                 System.out.println("Cerraste Sesion");
