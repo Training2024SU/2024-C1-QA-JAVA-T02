@@ -5,17 +5,21 @@ public class Usuario {
     private String correo;
     private String nombre;
     private String contrasena;
+    private String edad;
+    private String telefono;
 
     public Usuario() {
         // Constructor vacío
     }
 
     // Constructor con todos los campos
-    public Usuario(int idUsuario, String correo, String nombre, String contrasena) {
+    public Usuario(int idUsuario, String correo, String nombre, String contrasena,String edad,String telefono) {
         this.idUsuario = idUsuario;
         this.correo = correo;
         this.nombre = nombre;
         this.contrasena = contrasena;
+        this.edad= edad;
+        this.telefono = telefono;
     }
 
     // Getters y Setters
@@ -51,6 +55,21 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 
     @Override
     public String toString() {

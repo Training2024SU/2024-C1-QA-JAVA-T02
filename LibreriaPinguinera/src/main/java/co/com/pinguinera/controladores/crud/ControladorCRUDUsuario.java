@@ -32,11 +32,22 @@ public class ControladorCRUDUsuario {
         nuevoUsuario.setNombre(vista.pedirNombreUsuario());
         nuevoUsuario.setCorreo(vista.pedirCorreoUsuario());
         nuevoUsuario.setContrasena(vista.pedirContrasenaUsuario());
+
         crudUsuariosLocales.agregar(nuevoUsuario);
         try {
             usuarioDAO.insertar(nuevoUsuario);
         } catch (SQLException e) {
             VistaUtil.mostrarMensajeError();
+        }
+        List<String> infoAdicional= vista.preguntaInfoAdicional();
+        try{
+            if (!infoAdicional.get(0).equals("NO")){
+                nuevoUsuario.setEdad(infoAdicional.get(0));
+                nuevoUsuario.setTelefono(infoAdicional.get(1));
+                usuarioDAO.insertarInfoAdicional(nuevoUsuario);
+            }
+        } catch (SQLException e){
+            System.out.println("Error info add");
         }
         sincronizarDatos();
         VistaUtil.mostrarMensajeExito();

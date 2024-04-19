@@ -19,6 +19,7 @@ public class MenuPrincipalSuperadmin {
     private final ControladorCRUDNovela controladorCRUDNovela;
     private final ControladorCRUDPrestamo controladorCRUDPrestamo;
     private final MenuAdministrarPrestamos menuAdministrarPrestamos;
+    private final ControladorCRUDEmpleado controladorCRUDEmpleado;
 
     private MenuPrincipalUsuario menuPrincipalUsuario;
     private MenuPrincipalAsistente menuPrincipalAsistente;
@@ -38,6 +39,7 @@ public class MenuPrincipalSuperadmin {
         this.menuPrincipalUsuario = new MenuPrincipalUsuario(controladorCRUDUsuario,controladorCRUDPrestamo,controladorCRUDLibro,controladorCRUDNovela);
         this.menuPrincipalAsistente = new MenuPrincipalAsistente(controladorCRUDLibro,controladorCRUDNovela,controladorCRUDPrestamo,menuAdministrarPrestamos);
         this.menuPrincipalAdministrativo = new MenuPrincipalAdministrativo(controladorCRUDUsuario,controladorCRUDPrestamo, controladorCRUDEmpleado,controladorCRUDNovela,controladorCRUDLibro);
+        this.controladorCRUDEmpleado = controladorCRUDEmpleado;
     }
 
 
@@ -66,6 +68,7 @@ public class MenuPrincipalSuperadmin {
                     menuPrincipalAdministrativo.mostrarMenu();
                     break;
                 case 4:
+                    controladorCRUDEmpleado.registrarAdministrativo();
                     //Metodo para crear admins
                     break;
                 case 5:

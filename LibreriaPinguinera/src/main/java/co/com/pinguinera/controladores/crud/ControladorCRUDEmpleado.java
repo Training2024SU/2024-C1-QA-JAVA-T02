@@ -42,6 +42,22 @@ public class ControladorCRUDEmpleado {
         sincronizarDatos();
     }
 
+    public void registrarAdministrativo() {
+        Empleado nuevoEmpleado = new Empleado();
+        nuevoEmpleado.setNombre(vista.pedirNombre());
+        nuevoEmpleado.setCorreo(vista.pedirCorreo());
+        nuevoEmpleado.setContrasena(vista.pedirContrasena());
+        nuevoEmpleado.setRol("ADMINISTRATIVO");
+        nuevoEmpleado.setEsAdministrativo(true);
+        crudEmpleadosLocales.agregar(nuevoEmpleado);
+        try {
+            empleadoDAO.insertar(nuevoEmpleado);
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeEmpleadoAdministrativoExistente();
+            return;
+        }
+        sincronizarDatos();
+    }
 
     public void obtenerTodosEmpleados() {
         try {
@@ -84,7 +100,6 @@ public class ControladorCRUDEmpleado {
         sincronizarDatos();
         VistaUtil.mostrarMensajeExito();
     }
-
 
     private void sincronizarDatos() {
         try {
