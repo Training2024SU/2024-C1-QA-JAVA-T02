@@ -21,6 +21,8 @@ public class MenuGestionPublicacion {
         System.out.println(ACTUALIZAR);
         System.out.println(ELIMINAR);
         System.out.println(OBTENER_AUTORES);
+        System.out.println("6. Exportar publicaciones a Json");
+        System.out.println("7. Exportar publicaciones a XML");
 
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -70,7 +72,20 @@ public class MenuGestionPublicacion {
                 }
                 mostrarMenuAdministrador();
                 break;
-
+            case 6:
+                try {
+                    gestionarExportarAJson();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
+            case 7:
+                try {
+                    gestionarExportarAXML();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
             default:
                 System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 5.");
         }

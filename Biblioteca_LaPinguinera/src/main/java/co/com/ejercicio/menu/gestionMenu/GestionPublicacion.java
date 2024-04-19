@@ -3,6 +3,8 @@ package co.com.ejercicio.menu.gestionMenu;
 import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.Publicacion;
 import co.com.ejercicio.modeloAccesoBD.PublicacionAccesoBD;
+import co.com.ejercicio.util.CrearArchivo;
+import org.json.JSONArray;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -108,4 +110,34 @@ public class GestionPublicacion {
                 tipoPublicacion, numPaginas, cantidadEjemplares,
                 canPrestado, canDisponible, nombreAutor));
     }
+
+    public static void gestionarExportarAJson() throws SQLException {
+
+        Connection conexion = Conexion.obtenerConexion();
+        PublicacionAccesoBD publicacionAccesoBD = new PublicacionAccesoBD(conexion);
+        List<Publicacion> publicaciones = publicacionAccesoBD.obtenerTodasLasPublicaciones();
+
+        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
+
+        JSONArray publicacionesJSON = new JSONArray(publicaciones);
+
+        CrearArchivo.crearArchivoJson(pathParaArchivo, "publicaciones", publicacionesJSON);
+
+    }
+
+    public static void gestionarExportarAXML() throws SQLException {
+
+        Connection conexion = Conexion.obtenerConexion();
+        PublicacionAccesoBD publicacionAccesoBD = new PublicacionAccesoBD(conexion);
+        List<Publicacion> publicaciones = publicacionAccesoBD.obtenerTodasLasPublicaciones();
+
+        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
+
+        CrearArchivo.crearArchivoXML(pathParaArchivo, "publicaciones", publicaciones);
+
+    }
+
+
+
+
 }

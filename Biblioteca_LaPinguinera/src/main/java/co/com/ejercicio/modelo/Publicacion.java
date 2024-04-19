@@ -24,6 +24,8 @@ public class Publicacion {
         this.nombreAutor = nombreAutor;
     }
 
+    public Publicacion(){}
+
     public  String getTitulo() {
         return titulo;
     }
