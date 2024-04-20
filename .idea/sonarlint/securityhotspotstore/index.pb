@@ -11,3 +11,9 @@ Ssrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationAreaGenero.
 Rsrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationContenido.java,f/8/f8b4612a19324f5248f432d731a36d6f61d8cca0
 s
 Csrc/main/java/Garcia/Juan/database/migration/ConnectionMangaer.java,5/f/5f151b45f4e53389a580ca7de657771f8dd3e664
+Ä
+Psrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationEdadMin.java,8/5/85b0ee40f507c6ddcaa7d209761be85cc2a9145c
+Å
+Qsrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationPrestamo.java,8/6/86c76884f70acba08d991102bb4a816d4e392546
+Ä
+Psrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationUsuario.java,3/2/32cb4e0312435fba099e63782cece80449d31e42
