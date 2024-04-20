@@ -1,4 +1,4 @@
-package Garcia.Juan.database.util;
+package Garcia.Juan.database.migration;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -12,10 +12,10 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 
-    private static final String mySqlUrl = "jdbc:mysql://localhost:3306/bibliotecapingu";
-    private static final String mySqlUser = "root";
-    private static final String mySqlPassword = "#32zvv48dH";
-    private static final String mongoConnectionString = "mongodb+srv://dm34mg:sTuFu28myI2b7Bs2@bibliotecapingu.vzsvhqa.mongodb.net/?retryWrites=true&w=majority&appName=Bibliotecapingu";
+    private static final String mySqlUrl = System.getenv("MYSQL_URL");
+    private static final String mySqlUser = System.getenv("MYSQL_USER");
+    private static final String mySqlPassword = System.getenv("MYSQL_PASSWORD");
+    private static final String mongoConnectionString = System.getenv("MONGO_CONNECTION_STRING");
 
     public static Connection getMySQLConnection() throws SQLException {
         return DriverManager.getConnection(mySqlUrl, mySqlUser, mySqlPassword);

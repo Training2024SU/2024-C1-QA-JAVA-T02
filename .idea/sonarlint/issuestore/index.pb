@@ -17,3 +17,7 @@ Psrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationEdadMin.jav
 Qsrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationPrestamo.java,8/6/86c76884f70acba08d991102bb4a816d4e392546
 €
 Psrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationUsuario.java,3/2/32cb4e0312435fba099e63782cece80449d31e42
+s
+Csrc/main/java/Garcia/Juan/database/migration/ConnectionManager.java,1/3/132295af95b2d98be1e5565955dd7b16799aa7f7
+b
+2src/main/java/Garcia/Juan/database/ConexionBD.java,0/4/043edac46ff27a582d798d23324f6e6f477fd890
