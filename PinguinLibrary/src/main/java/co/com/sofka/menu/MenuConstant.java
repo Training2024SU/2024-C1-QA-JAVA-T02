@@ -52,16 +52,14 @@ public class MenuConstant {
 
 
     // Novel options
+    public static String novelOptionsMessage = "%s. Novel options";
     public static String seeAllNovelsMessage = "%s. See all novels";
     public static String createNovelMessage = "%s. Create novel";
     public static String updateNovelMessage = "%s. Update novel";
     public static String deleteNovelMessage = "%s. Delete novel";
     public static String seeNovelByNameMessage = "%s. See novel by name";
-    public static String novelOptionsMessage = "%s. Novel options";
     public static String returnNovelMessage = "%s. Return novel loan";
     public static String exportNovelInfoMessage = "%s. Export novel data in csv file";
-    public static String novelLoanOptions = "%s. Novel loan options";
-
 
 
     // Novel loan options

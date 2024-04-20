@@ -8,6 +8,8 @@ import static co.com.sofka.businessLogic.generalAdmin.AdministratorBookFunctions
 import static co.com.sofka.businessLogic.generalAdmin.AdministratorBookLoanFunctions.administratorBookLoanMenuOptions;
 import static co.com.sofka.businessLogic.generalAdmin.AdministratorNovelFunctions.administratorNovelMenuOptions;
 import static co.com.sofka.businessLogic.generalAdmin.AdministratorNovelLoanFunctions.administratorNovelLoanMenuOptions;
+import static co.com.sofka.businessLogic.generalAdmin.AdministratorResourceFunctions.administratorResourceMenuOptions;
+import static co.com.sofka.businessLogic.generalAdmin.AdministratorResourceLoanFunctions.administratorResourceLoanMenuOptions;
 import static co.com.sofka.businessLogic.generalUser.UserProfileFunctions.userProfileMenuOptions;
 import static co.com.sofka.menu.MenuConstant.enterYourOptionMessage;
 import static co.com.sofka.menu.MenuConstant.exitingMessage;
@@ -26,10 +28,12 @@ public class AdministratorFunctions {
                 case 2 -> administratorBookLoanMenuOptions(user);
                 case 3 -> administratorNovelMenuOptions(user);
                 case 4 -> administratorNovelLoanMenuOptions(user);
-                case 5 -> administratorAuthorMenuOptions(user);
-                case 6 -> administratorUserMenuOptions(user);
-                case 7 -> userProfileMenuOptions(user);
-                case 8 -> {
+                case 5 -> administratorResourceMenuOptions(user);
+                case 6 -> administratorResourceLoanMenuOptions(user);
+                case 7 -> administratorAuthorMenuOptions(user);
+                case 8 -> administratorUserMenuOptions(user);
+                case 9 -> userProfileMenuOptions(user);
+                case 0 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
                 }

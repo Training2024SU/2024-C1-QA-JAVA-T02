@@ -25,8 +25,8 @@ public class LoanDAOImpl implements LoanDAO {
             "return_date, status, user_id) VALUES (%s, '%s', '%s', '%s', '%s');";
     private static final String selectAllQuery = "SELECT * FROM Loans l LEFT JOIN user u ON l" +
             ".user_id = u.id WHERE l.is_deleted = 0;";
-    private static final String updateQuery = "UPDATE Loans SET loan_id = %s, request_date = " +
-            "'%s', return_date = '%s', status = " + "'%s' WHERE is_deleted = 0 AND loan_id = %s;";
+    private static final String updateQuery = "UPDATE Loans SET request_date = '%s', return_date "
+            + "= '%s', status = " + "'%s' WHERE is_deleted = 0 AND loan_id = %s;";
     private static final String deleteQuery = "UPDATE Loans SET is_deleted = 1 WHERE " + "loan_id"
             + " = %s;";
 
@@ -68,8 +68,8 @@ public class LoanDAOImpl implements LoanDAO {
         String sql = "INSERT INTO loan_resources (loan_id, resource_id, type) VALUES ( ?, ?, ? )";
         PreparedStatement statement = connection.prepareStatement(sql);
         for (Resource r : loan.getLentResources()) {
-            statement.setInt(1,loan.getId());
-            statement.setInt(2,r.getId());
+            statement.setInt(1, loan.getId());
+            statement.setInt(2, r.getId());
             statement.setString(3, r.getType().toString());
             statement.addBatch();
         }
@@ -137,8 +137,7 @@ public class LoanDAOImpl implements LoanDAO {
     @Override
     public void updateLoan(Loan loan) {
         String query = String.format(updateQuery, Date.valueOf(loan.getRequestedDate()),
-                Date.valueOf(loan.getRequestedDate()), loan.getStatus().toString(),
-                loan.getUser().getId(), loan.getId());
+                Date.valueOf(loan.getRequestedDate()), loan.getStatus().toString(), loan.getId());
         mySqlOperation.setSqlStatement(query);
         mySqlOperation.executeSqlStatementVoid();
         // Modifying lent resources is not allowed

@@ -57,4 +57,17 @@ public class Utils {
         }
         return date;
     }
+
+    public static ResourceType askResourceType(String prompt) {
+        ResourceType type = null;
+        while (type == null) {
+            try {
+                String text = askString(prompt).toUpperCase();
+                type = ResourceType.valueOf(text);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input, type the name of the type: ");
+            }
+        }
+        return type;
+    }
 }

@@ -5,9 +5,15 @@ import co.com.sofka.model.Author;
 import java.util.List;
 
 public interface AuthorDAO {
-    public void insertAuthor(Author author);
-    public List<Author> getAllAuthors();
-    public Author getAuthorById(String id);
-    public void updateAuthor(Author author);
-    public void deleteAuthor(Author author);
+    void insertAuthor(Author author);
+
+    List<Author> getAllAuthors();
+
+    Author getAuthorById(String id);
+
+    Author getAuthorByName(String name);
+
+    void updateAuthor(Author author);
+
+    void deleteAuthor(Author author);
 }

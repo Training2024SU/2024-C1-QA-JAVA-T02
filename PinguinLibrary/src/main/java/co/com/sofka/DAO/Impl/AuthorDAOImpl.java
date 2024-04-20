@@ -12,13 +12,13 @@ import static co.com.sofka.businessLogic.Library.mySqlOperation;
 
 public class AuthorDAOImpl implements AuthorDAO {
 
-    private static final String insertIntoQuery = "INSERT INTO author (id, name) VALUES ('%s', '%s');";
+    private static final String insertIntoQuery = "INSERT INTO author (id, name) VALUES ('%s', " +
+            "'%s');";
     private static final String selectAllQuery = "SELECT id, name FROM author";
     private static final String updateQuery = "UPDATE author SET " +
             "name = '%s' " +
             "WHERE id = '%s';";
     private static final String deleteQuery = "DELETE FROM author WHERE id = '%s';";
-
 
 
     @Override
@@ -37,12 +37,12 @@ public class AuthorDAOImpl implements AuthorDAO {
         ResultSet resultSet = mySqlOperation.getResultSet();
 
         try {
-            while(resultSet.next()){
-                String id   = resultSet.getString("id");
+            while (resultSet.next()) {
+                String id = resultSet.getString("id");
                 String name = resultSet.getString("name");
                 authors.add(new Author(id, name));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return authors;
@@ -56,6 +56,12 @@ public class AuthorDAOImpl implements AuthorDAO {
                 .findFirst()
                 .orElse(null);
     }
+
+    @Override
+    public Author getAuthorByName(String name) {
+        return getAllAuthors().stream().filter(author -> author.getName().equals(name)).findFirst().orElse(null);
+    }
+
     @Override
     public void updateAuthor(Author author) {
         String query = String.format(updateQuery, author.getName(), author.getId());

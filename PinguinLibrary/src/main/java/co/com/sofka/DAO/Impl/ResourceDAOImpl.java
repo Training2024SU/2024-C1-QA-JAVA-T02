@@ -53,27 +53,26 @@ public class ResourceDAOImpl implements ResourceDAO {
                 }
             }
             // insert extra data for every type
-            insertResourceDetails(resource);
+            insertResourceDetails(resource, connection);
             connection.commit();
         } catch (SQLException e) {
             connection.rollback();
-            throw new RuntimeException(e);
+            throw new SQLException(e);
         } finally {
             connection.setAutoCommit(true);
         }
     }
 
-    private void insertResourceDetails(Resource resource) throws SQLException {
+    private void insertResourceDetails(Resource resource, Connection connection) throws SQLException {
         String sql = null;
         if (resource instanceof Song song) {
             sql = "INSERT INTO Songs VALUES (" + song.getId() + ", " + song.getDuration() + ");";
         } else if (resource instanceof VideoRecording video) {
-            sql = "INSERT INTO Video_recordings VALUES (" + video.getId() + ", " + video.getResolution() + ");";
+            sql = "INSERT INTO Video_recordings VALUES (" + video.getId() + ", '" + video.getResolution() + "');";
         } else if (resource instanceof Essay essay) {
-            sql = "INSERT INTO Essays VALUES (" + essay.getId() + ", " + essay.getAcademicLevel() + ");";
+            sql = "INSERT INTO Essays VALUES (" + essay.getId() + ", '" + essay.getAcademicLevel() + "');";
         }
-        mySqlOperation.setSqlStatement(sql);
-        mySqlOperation.executeSqlStatementVoid();
+        connection.prepareStatement(sql).executeUpdate();
     }
 
     @Override
