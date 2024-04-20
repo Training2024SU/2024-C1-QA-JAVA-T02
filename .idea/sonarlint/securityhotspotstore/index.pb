@@ -5,3 +5,9 @@ S
 #src/main/java/Garcia/Juan/Main.java,4/0/4086675b31863c171655d447433b565b8b90a85e
 `
 0src/main/java/Garcia/Juan/CRUD/CRUDImpoExpo.java,f/2/f20e77ba759e6aa50edfb233fc2abfe0c23d6aec
+ƒ
+Ssrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationAreaGenero.java,1/3/1351f8da81136f53ac4b06cf8bb8f98cedb030f2
+‚
+Rsrc/main/java/Garcia/Juan/database/migration/MySQLToMongoDBMigrationContenido.java,f/8/f8b4612a19324f5248f432d731a36d6f61d8cca0
+s
+Csrc/main/java/Garcia/Juan/database/migration/ConnectionMangaer.java,5/f/5f151b45f4e53389a580ca7de657771f8dd3e664

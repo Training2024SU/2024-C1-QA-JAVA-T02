@@ -1,0 +1,5 @@
+
+
+java:S1192"LDefine a constant instead of duplicating this literal "area_genero" 3 times.(äå˜¥8ËéğËï1J$1e06a6f9-3d1a-4d2d-b7ee-24a16de609ae
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8ÏéğËï1J$4b04d8a8-965f-4eae-b223-febae2f7eab4
+r	java:S106'"+Replace this use of System.out by a logger.(È‚´«ùÿÿÿÿ8åéğËï1J$25d921a3-3912-4f93-b639-40120e639355
