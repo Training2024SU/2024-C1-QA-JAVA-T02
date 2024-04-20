@@ -1,15 +1,15 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8áÂû»ï1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8ÁòÑÇï1
 f
-java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8áÃû»ï1
+java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8úòÑÇï1
 d
-java:S2095%"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8áÃû»ï1
+java:S2095%"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8úòÑÇï1
 S
-java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8èÃû»ï1
-L	java:S1069"+Replace this use of System.out by a logger.(•ÛÿŠıÿÿÿÿ8üÃû»ï1
-L	java:S106="+Replace this use of System.out by a logger.(Ğ´ÁÈøÿÿÿÿ8ıÃû»ï1
+java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8ÿòÑÇï1
+L	java:S1069"+Replace this use of System.out by a logger.(•ÛÿŠıÿÿÿÿ8ŠóÑÇï1
+L	java:S106="+Replace this use of System.out by a logger.(Ğ´ÁÈøÿÿÿÿ8‹óÑÇï1
 M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÿÃû»ï1
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8óÑÇï1
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÿÃû»ï1
-psecrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8Äû»ï1
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8óÑÇï1
+–secrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8Äû»ï1J$e7542f2f-477f-4c55-b6ed-17a4f30aa95d

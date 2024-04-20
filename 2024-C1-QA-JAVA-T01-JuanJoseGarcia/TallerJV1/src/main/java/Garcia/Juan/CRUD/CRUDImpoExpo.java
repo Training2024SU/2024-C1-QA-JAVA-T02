@@ -6,7 +6,9 @@ import java.sql.SQLException;
 import Garcia.Juan.database.mysql.MySqlOperation;
 import Garcia.Juan.model.Producto;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Clase que realiza operaciones CRUD para suministrar datos a las clases de importaciones
@@ -61,38 +63,62 @@ public class CRUDImpoExpo {
      * @param productos Lista de productos a insertar.
      */
     public static void insertProducts(MySqlOperation mySqlOperation, List<Producto> productos) {
-        // Declaración preparada para la inserción de productos
-        PreparedStatement preparedStatement = null;
+        // Preparar la declaración para verificar si un producto ya existe en la base de datos
+        PreparedStatement checkDuplicateStmt = null;
+        PreparedStatement insertStmt = null;
+        Set<String> existingProducts = new HashSet<>();
+
         try {
-            // Prepara la consulta SQL para insertar un nuevo producto
-            preparedStatement = mySqlOperation.prepareStatement(INSERT_PRODUCT);
+            // Prepara la consulta para verificar si un producto ya existe en la base de datos
+            checkDuplicateStmt = mySqlOperation.prepareStatement("SELECT titulo FROM producto WHERE titulo = ?");
+
+            // Verifica los títulos de productos existentes en la base de datos
+            for (Producto producto : productos) {
+                checkDuplicateStmt.setString(1, producto.getTitulo());
+                ResultSet rs = checkDuplicateStmt.executeQuery();
+                if (rs.next()) {
+                    // Si el producto ya existe, añade el título al conjunto de productos existentes
+                    existingProducts.add(producto.getTitulo());
+                }
+                rs.close();
+            }
+
+            // Prepara la consulta SQL para insertar nuevos productos
+            insertStmt = mySqlOperation.prepareStatement(INSERT_PRODUCT);
 
             // Itera sobre la lista de productos y establece los parámetros de la declaración preparada
             for (Producto producto : productos) {
-                preparedStatement.setString(1, producto.getTitulo());
-                preparedStatement.setString(2, producto.getTipo());
-                preparedStatement.setString(3, producto.getAutor());
-                preparedStatement.setString(4, producto.getMagnitud());
-                preparedStatement.setInt(5, producto.getCantidadEjemplares());
-                preparedStatement.setInt(6, producto.getCantidadPrestados());
-                preparedStatement.addBatch(); // Agrega la instrucción al lote
+                // Si el título del producto no está en el conjunto de productos existentes, procede a insertar
+                if (!existingProducts.contains(producto.getTitulo())) {
+                    insertStmt.setString(1, producto.getTitulo());
+                    insertStmt.setString(2, producto.getTipo());
+                    insertStmt.setString(3, producto.getAutor());
+                    insertStmt.setString(4, producto.getMagnitud());
+                    insertStmt.setInt(5, producto.getCantidadEjemplares());
+                    insertStmt.setInt(6, producto.getCantidadPrestados());
+                    insertStmt.addBatch(); // Agrega la instrucción al lote
+                }
             }
 
             // Ejecuta el lote de declaraciones preparadas
-            preparedStatement.executeBatch();
+            insertStmt.executeBatch();
         } catch (SQLException e) {
             System.err.println("Error al insertar productos: " + e.getMessage());
         } finally {
-            // Cierra la declaración preparada y otros recursos
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    System.err.println("Error al cerrar PreparedStatement: " + e.getMessage());
+            // Cierra las declaraciones preparadas y otros recursos
+            try {
+                if (checkDuplicateStmt != null) {
+                    checkDuplicateStmt.close();
                 }
+                if (insertStmt != null) {
+                    insertStmt.close();
+                }
+                // Cierra la conexión a la base de datos
+                mySqlOperation.close();
+            } catch (SQLException e) {
+                System.err.println("Error al cerrar PreparedStatement o conexión: " + e.getMessage());
             }
-            // Cierra la conexión a la base de datos
-            mySqlOperation.close();
         }
     }
+
 }

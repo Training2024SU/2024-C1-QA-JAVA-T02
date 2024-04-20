@@ -4,17 +4,11 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.IndexOptions;
 import org.bson.Document;
-import org.bson.conversions.Bson;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MySQLToMongoDBMigrationProducto {
     public static void main(String[] args) {
@@ -29,9 +23,6 @@ public class MySQLToMongoDBMigrationProducto {
             MongoClient mongoClient = MongoClients.create(connectionString);
             MongoDatabase mongoDatabase = mongoClient.getDatabase("bibliotecapingu");
             MongoCollection<Document> collection = mongoDatabase.getCollection("producto");
-
-            // Crear índice único en el campo clave (por ejemplo, 'titulo')
-            collection.createIndex(new Document("titulo", 1), new IndexOptions().unique(true));
 
             // Consulta para obtener datos de MySQL
             Statement statement = mySqlConnection.createStatement();
@@ -49,15 +40,8 @@ public class MySQLToMongoDBMigrationProducto {
                         .append("cant_prestados", resultSet.getInt("cant_prestados"))
                         .append("cant_disponibles", resultSet.getInt("cant_disponibles"));
 
-                // Verificar si el documento ya existe en la colección
-                Bson filter = Filters.eq("titulo", document.getString("titulo"));
-                if (collection.countDocuments(filter) == 0) {
-                    // Si el documento no existe, insertarlo en la colección
-                    collection.insertOne(document);
-                } else {
-                    // El documento ya existe, omitir la inserción
-                    System.out.println("Documento con titulo '" + document.getString("titulo") + "' ya existe. Omite la inserción.");
-                }
+                // Insertar el documento en la colección
+                collection.insertOne(document);
             }
 
             System.out.println("Migración completa para la tabla 'producto'");
