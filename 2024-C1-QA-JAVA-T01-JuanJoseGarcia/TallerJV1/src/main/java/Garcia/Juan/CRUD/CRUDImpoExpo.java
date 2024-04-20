@@ -63,32 +63,21 @@ public class CRUDImpoExpo {
      * @param productos Lista de productos a insertar.
      */
     public static void insertProducts(MySqlOperation mySqlOperation, List<Producto> productos) {
-        // Preparar la declaración para verificar si un producto ya existe en la base de datos
-        PreparedStatement checkDuplicateStmt = null;
-        PreparedStatement insertStmt = null;
         Set<String> existingProducts = new HashSet<>();
 
-        try {
-            // Prepara la consulta para verificar si un producto ya existe en la base de datos
-            checkDuplicateStmt = mySqlOperation.prepareStatement("SELECT titulo FROM producto WHERE titulo = ?");
+        try (PreparedStatement checkDuplicateStmt = mySqlOperation.prepareStatement("SELECT titulo FROM producto WHERE titulo = ?");
+             PreparedStatement insertStmt = mySqlOperation.prepareStatement(INSERT_PRODUCT)) {
 
-            // Verifica los títulos de productos existentes en la base de datos
             for (Producto producto : productos) {
                 checkDuplicateStmt.setString(1, producto.getTitulo());
-                ResultSet rs = checkDuplicateStmt.executeQuery();
-                if (rs.next()) {
-                    // Si el producto ya existe, añade el título al conjunto de productos existentes
-                    existingProducts.add(producto.getTitulo());
+                try (ResultSet rs = checkDuplicateStmt.executeQuery()) {
+                    if (rs.next()) {
+                        existingProducts.add(producto.getTitulo());
+                    }
                 }
-                rs.close();
             }
 
-            // Prepara la consulta SQL para insertar nuevos productos
-            insertStmt = mySqlOperation.prepareStatement(INSERT_PRODUCT);
-
-            // Itera sobre la lista de productos y establece los parámetros de la declaración preparada
             for (Producto producto : productos) {
-                // Si el título del producto no está en el conjunto de productos existentes, procede a insertar
                 if (!existingProducts.contains(producto.getTitulo())) {
                     insertStmt.setString(1, producto.getTitulo());
                     insertStmt.setString(2, producto.getTipo());
@@ -96,28 +85,15 @@ public class CRUDImpoExpo {
                     insertStmt.setString(4, producto.getMagnitud());
                     insertStmt.setInt(5, producto.getCantidadEjemplares());
                     insertStmt.setInt(6, producto.getCantidadPrestados());
-                    insertStmt.addBatch(); // Agrega la instrucción al lote
+                    insertStmt.addBatch();
                 }
             }
 
-            // Ejecuta el lote de declaraciones preparadas
             insertStmt.executeBatch();
         } catch (SQLException e) {
             System.err.println("Error al insertar productos: " + e.getMessage());
         } finally {
-            // Cierra las declaraciones preparadas y otros recursos
-            try {
-                if (checkDuplicateStmt != null) {
-                    checkDuplicateStmt.close();
-                }
-                if (insertStmt != null) {
-                    insertStmt.close();
-                }
-                // Cierra la conexión a la base de datos
-                mySqlOperation.close();
-            } catch (SQLException e) {
-                System.err.println("Error al cerrar PreparedStatement o conexión: " + e.getMessage());
-            }
+            mySqlOperation.close();
         }
     }
 
