@@ -2,8 +2,8 @@ package Garcia.Juan.util;
 
 public enum EstadoPrestamo {
 
-    ESTADO_UNO("SOLICITADO"),ESTADO_DOS("REALIZADO"),
-
+    ESTADO_UNO("SOLICITADO"),
+    ESTADO_DOS("REALIZADO"),
     ESTADO_TRES("FINALIZADO");
 
     private String value;

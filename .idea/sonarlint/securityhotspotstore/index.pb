@@ -51,3 +51,5 @@ s
 Csrc/main/java/Garcia/Juan/exporter_importer/CSVProductImporter.java,0/a/0aed872dbca1767b7b499fa89e7da179673b47c4
 s
 Csrc/main/java/Garcia/Juan/exporter_importer/XMLProductImporter.java,f/b/fb814fe27d4dab9b6315213ef64ba2b7eecf293f
+b
+2src/main/java/Garcia/Juan/util/EstadoPrestamo.java,2/f/2fff974d49d7d944f02cde7aea46fd2959e206f6

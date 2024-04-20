@@ -1,17 +1,19 @@
 
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw
-E	java:S106"+Replace this use of System.out by a logger.(ãçÇäüÿÿÿÿ
-@	java:S106!"+Replace this use of System.out by a logger.(ÑÚŠù
-@	java:S106$"+Replace this use of System.out by a logger.(œ©Úí
-@	java:S106("+Replace this use of System.out by a logger.(‰ÊØ¥
-@	java:S106+"+Replace this use of System.out by a logger.(İ…®
-@	java:S1063"+Replace this use of System.out by a logger.(ÔÊ ©
-@	java:S106:"+Replace this use of System.out by a logger.(Üû‡
-E	java:S106<"+Replace this use of System.out by a logger.(²±‘´úÿÿÿÿ
-E	java:S106E"+Replace this use of System.out by a logger.(“«İ±ıÿÿÿÿ
-@	java:S106S"+Replace this use of System.out by a logger.(âşŠ™
-E	java:S106T"+Replace this use of System.out by a logger.(¾Íƒüşÿÿÿÿ
-@	java:S106U"+Replace this use of System.out by a logger.(‘ÜÖ­
-E	java:S106V"+Replace this use of System.out by a logger.(†…œ–üÿÿÿÿ
-E	java:S106W"+Replace this use of System.out by a logger.(òÛÖ™ùÿÿÿÿ
-@	java:S106k"+Replace this use of System.out by a logger.(ùğ
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­²üw8¹Ó£Éï1J$d69329c2-bda7-4cc1-b91e-9234e1aa4d34
+r	java:S106"+Replace this use of System.out by a logger.(ãçÇäüÿÿÿÿ8Àº¡Éï1J$46843c91-aded-45b6-b6c2-54061f6a9930
+m	java:S106!"+Replace this use of System.out by a logger.(ÑÚŠù8Àº¡Éï1J$eefb35bd-bc1c-4b7a-9a0f-2a27f6465645
+r	java:S106$"+Replace this use of System.out by a logger.(è¾«Ûşÿÿÿÿ8ŞÓ£Éï1J$f4476f91-41c4-4e06-80e3-e9600a5a2371
+m	java:S106'"+Replace this use of System.out by a logger.(‰ÊØ¥8ŞÓ£Éï1J$4380451e-ab10-484a-887e-b035476dd2d4
+m	java:S106*"+Replace this use of System.out by a logger.(İ…®8ŞÓ£Éï1J$8f68542b-25a4-48d4-a3f9-2f6498a091ed
+m	java:S1063"+Replace this use of System.out by a logger.(ÔÊ ©8ŞÓ£Éï1J$e4b08e95-328a-4465-acf4-9f6d97033a0e
+m	java:S106:"+Replace this use of System.out by a logger.(Üû‡8ŞÓ£Éï1J$b16636ab-3ab2-4f45-b79c-efc7b3e38fad
+r	java:S106<"+Replace this use of System.out by a logger.(²±‘´úÿÿÿÿ8àÓ£Éï1J$f9a7faec-8ba3-426b-b679-ab5ccf836d9e
+r	java:S106E"+Replace this use of System.out by a logger.(“«İ±ıÿÿÿÿ8İÏ¦Éï1J$f7322a24-631d-461d-8abb-c07c3bfcc042
+m	java:S106S"+Replace this use of System.out by a logger.(âşŠ™8İÏ¦Éï1J$b0d71621-36d5-47b6-9faf-635e35c12380
+r	java:S106T"+Replace this use of System.out by a logger.(¾Íƒüşÿÿÿÿ8İÏ¦Éï1J$b1b4792d-512f-4ab1-bf83-fe8d6a5ff659
+m	java:S106U"+Replace this use of System.out by a logger.(‘ÜÖ­8İÏ¦Éï1J$b95badc3-e3f5-4cb1-ad2e-ee6e30afb2ab
+r	java:S106V"+Replace this use of System.out by a logger.(†…œ–üÿÿÿÿ8ŞÏ¦Éï1J$09302f2c-b75a-431d-8401-0f7b5f8e8f70
+r	java:S106W"+Replace this use of System.out by a logger.(òÛÖ™ùÿÿÿÿ8ßÏ¦Éï1J$e48a09cc-17e8-4da2-87ce-a2a5c0c59132
+m	java:S106k"+Replace this use of System.out by a logger.(ùğ8£“¨Éï1J$3c8fa022-012a-4d3b-93d3-e1ac0becd8c3
+„
+java:S1128"<Remove this unused import 'Garcia.Juan.util.EstadoPrestamo'.(¡©¦Áùÿÿÿÿ8ç½©Éï1J$3be357af-2c48-4da5-ba56-a880c8babdf8

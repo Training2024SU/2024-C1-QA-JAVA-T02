@@ -33,9 +33,8 @@ public class PrestamosPrueba {
         System.out.println("Ingrese el correo del usuario:");
         String correoUsuario = scanner.nextLine();
 
-        System.out.println("Seleccione el estado del préstamo (SOLICITADO, REALIZADO, FINALIZADO):");
-        EstadoPrestamo estado = EstadoPrestamo.valueOf(scanner.nextLine().toUpperCase());
-        String estadoString = estado.toString();
+        System.out.println("Ingrese el estado del préstamo:");
+        String estado = scanner.nextLine();
 
         System.out.println("Ingrese la fecha de salida (YYYY-MM-DD):");
         Date fechaSalida = java.sql.Date.valueOf(scanner.nextLine());
@@ -43,8 +42,9 @@ public class PrestamosPrueba {
         System.out.println("Ingrese la fecha de devolución (YYYY-MM-DD):");
         Date fechaDevolucion = java.sql.Date.valueOf(scanner.nextLine());
 
+
         // Crear el objeto Prestamo con los datos proporcionados por el usuario
-        Prestamo prestamo = new Prestamo(id, estadoString, fechaSalida, fechaDevolucion, correoUsuario);
+        Prestamo prestamo = new Prestamo(id, estado, fechaSalida, fechaDevolucion, correoUsuario);
 
         // Agregar el préstamo a la lista de préstamos
         prestamos.add(prestamo);

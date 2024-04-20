@@ -1,10 +1,10 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8İ¦ÔÇï1
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌéÁ°8İ¦ÔÇï1J$19e5f7d9-76bd-465d-90e8-1c24e41a9e8c
 Œ
-java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8ŞŠÔÇï1J$781ea55a-0aed-4f24-8d22-8497a3ed8966
+java:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(Ó÷»8ŞŠÔÇï1J$2ab8f689-2cd5-4d6f-9a2a-c46cff120c53
 Š
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8ßŠÔÇï1J$9e288dbd-49ac-4c20-93e2-1ec7b0074a85
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(–úÙâ8ßŠÔÇï1J$ac2bf599-8740-4e84-9669-1d4b898abfca
 y
-java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8âŠÔÇï1J$cb772ec2-4b2f-4fbd-88c3-d85958a505d2
-m	java:S106/"+Replace this use of System.out by a logger.(Ä¯¦Õ8èŠÔÇï1J$3467caaa-861b-43d6-9fce-7bc9dc393b32
-–secrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8şŠÔÇï1J$953bc316-172f-4479-b885-5918a1e967fe
+java:S6437"6Revoke and change this password, as it is compromised.(Å¿—8âŠÔÇï1J$a96c338e-36cf-459b-8b1b-7353da8e54f3
+m	java:S106/"+Replace this use of System.out by a logger.(Ä¯¦Õ8èŠÔÇï1J$03c38076-be2d-43d4-8515-38267ef43aaf
+–secrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(Óâ¼©8şŠÔÇï1J$67977bd1-d7a1-4a98-b41d-c01b1ba21b4d
