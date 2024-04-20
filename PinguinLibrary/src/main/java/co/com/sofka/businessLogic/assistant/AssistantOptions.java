@@ -12,15 +12,14 @@ import static co.com.sofka.menu.MenuConstant.enterYourOptionMessage;
 import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.assistantMenuMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
+import static co.com.sofka.utils.Utils.askInt;
 
 public class AssistantOptions {
     public static void assistantMenu(User user) {
         boolean keepMenu = true;
         while (keepMenu) {
             assistantMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option) {
                 case 1 -> administratorBookMenuOptions(user);
                 case 2 -> administratorBookLoanMenuOptions(user);

@@ -6,8 +6,8 @@ import co.com.sofka.model.User;
 import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.readerNovelMenuMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class ReaderNovelFunctions {
     private static final ReaderManagement readerManagement = new ReaderManagement();
@@ -15,8 +15,7 @@ public class ReaderNovelFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             readerNovelMenuMessage(user);
-            System.out.print("Enter your option: ");
-            int option = getIntOption();
+            int option = askInt("Enter your option: ");
             switch (option){
                 case 1:
                     System.out.println(readerManagement.getAllAvailableNovels());
@@ -44,14 +43,12 @@ public class ReaderNovelFunctions {
     }
 
     private static void returnNovelLoan() {
-        System.out.println("Enter novel loan id: ");
-        String id = getStringOption();
+        String id = askString("Enter novel loan id: ");
         readerManagement.returnNovelLoan(id);
     }
 
     private static void loanNovelOption(User user) {
-        System.out.println("Enter novel name: ");
-        String novel = getStringOption();
+        String novel = askString("Enter novel name: ");
         Novel novelToLoan =  readerManagement.getAvailableNovelByTitle(novel);
         if(novelToLoan == null){
             System.out.println("There are not available options");
@@ -60,8 +57,7 @@ public class ReaderNovelFunctions {
         }
     }
     private static void seeNovelByNameOption() {
-        System.out.print("Enter the title: ");
-        String name = getStringOption();
+        String name = askString("Enter the title: ");
         System.out.println(readerManagement.getAvailableNovelByTitle(name));
     }
 }

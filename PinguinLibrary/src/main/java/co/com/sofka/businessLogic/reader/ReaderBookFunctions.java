@@ -5,8 +5,8 @@ import co.com.sofka.model.User;
 
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.readerBookMenuMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class ReaderBookFunctions {
     private static final ReaderManagement readerManagement = new ReaderManagement();
@@ -15,38 +15,25 @@ public class ReaderBookFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             readerBookMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
-            switch (option){
-                case 1:
-                    seeAllBooks();
-                    break;
-                case 2:
-                    seeBookByName();
-                    break;
-                case 3:
-                    loanBook(user);
-                    break;
-                case 4:
-                    seeAllUserLoan(user);
-                    break;
-                case 5:
-                    returnBookLoan();
-                    break;
-                case 6:
+            int option = askInt(enterYourOptionMessage);
+            switch (option) {
+                case 1 -> seeAllBooks();
+                case 2 -> seeBookByName();
+                case 3 -> loanBook(user);
+                case 4 -> seeAllUserLoan(user);
+                case 5 -> returnBookLoan();
+                case 6 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
-                    break;
-                default:
-                    System.out.println(incorrectOptionMessage);
+                }
+                default -> System.out.println(incorrectOptionMessage);
             }
         }
 
     }
 
     private static void returnBookLoan() {
-        System.out.println("Enter book loan id: ");
-        String id = getStringOption();
+        String id = askString("Enter book loan id: ");
         readerManagement.returnBookLoan(id);
     }
 
@@ -73,8 +60,7 @@ public class ReaderBookFunctions {
     }
 
     private static void loanBook(User user) {
-        System.out.println("Enter book name: ");
-        String book = getStringOption();
+        String book = askString("Enter book name: ");
         Book bookToLoan =  readerManagement.getAvailableBookByTitle(book);
         if(bookToLoan == null){
             System.out.println("There are not available options");
@@ -83,8 +69,7 @@ public class ReaderBookFunctions {
         }
     }
     private static void seeBookByName() {
-        System.out.print("Enter the title: ");
-        String name = getStringOption();
+        String name = askString("Enter the title: ");
         System.out.println(readerManagement.getAvailableBookByTitle(name));
     }
 }

@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.readerAuthorMenuMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class ReaderAuthorFunctions {
     public static final ReaderManagement readerManagement = new ReaderManagement();
@@ -20,15 +20,13 @@ public class ReaderAuthorFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             readerAuthorMenuMessage(user);
-            System.out.println(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option){
                 case 1:
                     seeAuthorsAndTheirBooks();
                     break;
                 case 2:
-                    System.out.println("Enter author's name: ");
-                    String name = getStringOption();
+                    String name = askString("Enter author's name: ");
                     seeAuthorAndTheirBooks(name);
                     break;
                 case 3:

@@ -1,24 +1,42 @@
 package co.com.sofka.utils;
 
+import co.com.sofka.enums.ResourceType;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Utils {
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public static int getIntOption() {
-        Scanner scanner = new Scanner(System.in);
-        int option = 0;
-        try {
-            option = scanner.nextInt();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return option;
+    private Utils() {
+        throw new IllegalStateException("Utility Class");
     }
 
-    public static String getStringOption() {
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+    public static int askInt(String prompt) {
+        prompt += "\n> ";
+        System.out.print(prompt);
+        // Invalid integer handling
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input, enter an integer");
+            System.out.print(prompt);
+            scanner.next(); // clear invalid input
+        }
+        int input = scanner.nextInt();
+        scanner.nextLine(); // clear buffer
+        return input;
+    }
+
+    public static String askString(String prompt) {
+        prompt += "\n> ";
+        System.out.print(prompt);
+        String input = scanner.nextLine().trim();
+        // Invalid input handling
+        while (input.isEmpty()) {
+            System.out.println("Invalid input, enter a non empty string");
+            System.out.print(prompt);
+            input = scanner.nextLine().trim();
+        }
+        return input;
     }
 
     public static LocalDate askDate(String prompt) {

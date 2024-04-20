@@ -10,8 +10,9 @@ import java.time.LocalDate;
 import java.util.UUID;
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorBookLoanMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askDate;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorBookLoanFunctions {
     private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
@@ -20,8 +21,7 @@ public class AdministratorBookLoanFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             administratorBookLoanMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option){
                 case 1:
                     createBookLoan();
@@ -50,22 +50,14 @@ public class AdministratorBookLoanFunctions {
     }
 
     private static BookLoan getBookLoanData(){
-        System.out.print("Enter user's email: ");
-        String email = getStringOption();
-
-        System.out.print("Enter book's title: ");
-        String bookTitle = getStringOption();
-
-        System.out.print("Enter loan date format(yyyy-mm-dd): ");
-        LocalDate loanDate = LocalDate.parse(getStringOption());
+        String email = askString("Enter user's email: ");
+        String bookTitle = askString("Enter book's title: ");
+        LocalDate loanDate = askDate("Enter loan date format(yyyy-mm-dd): ");
         Date loanDateD = Date.valueOf(loanDate);
-
-        System.out.print("Enter return date format(yyyy-mm-dd): ");
-        LocalDate returnDate = LocalDate.parse(getStringOption());
+        LocalDate returnDate = askDate("Enter return date format(yyyy-mm-dd): ");
         Date returnDateD = Date.valueOf(returnDate);
-
-        System.out.print("Enter loan status (REQUESTED/COMPLETED/FINISHED): ");
-        LoanStatus status = LoanStatus.valueOf(getStringOption());
+        String statusS = askString("Enter loan status (REQUESTED/COMPLETED/FINISHED): ");
+        LoanStatus status = LoanStatus.valueOf(statusS);
 
         return new BookLoan(UUID.randomUUID().toString(),
                 generalAdministrativeManagement.getUserByEmail(email),
@@ -86,11 +78,9 @@ public class AdministratorBookLoanFunctions {
     }
 
     private static void editAcceptBookLoan(){
-        System.out.println("Enter book loan id: ");
-        String id = getStringOption();
+        String id = askString("Enter book loan id: ");
         BookLoan oldBookLoan = generalAdministrativeManagement.getBookLoanById(id);
-        System.out.println("Edit/Accept");
-        String option = getStringOption();
+        String option = askString("Edit/Accept");
         switch (option.toLowerCase()){
             case "edit":
                 editBookLoan(oldBookLoan);
@@ -114,8 +104,7 @@ public class AdministratorBookLoanFunctions {
     }
 
     private static void deleteBookLoan(){
-        System.out.println("Enter book title: ");
-        String title = getStringOption();
+        String title = askString("Enter book title: ");
         Book book = generalAdministrativeManagement.getBookByTitle(title);
         generalAdministrativeManagement.deleteBook(book);
     }

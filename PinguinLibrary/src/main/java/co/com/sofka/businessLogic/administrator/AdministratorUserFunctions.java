@@ -12,8 +12,8 @@ import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.administratorUserMenuMessage;
 import static co.com.sofka.utils.Utils.askDate;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorUserFunctions {
     private static final AdministratorManagement administratorManagement =
@@ -25,8 +25,7 @@ public class AdministratorUserFunctions {
         boolean keepMenu = true;
         while (keepMenu) {
             administratorUserMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option) {
                 case 1 -> insertUser();
                 case 2 -> seeAllUsers();
@@ -43,14 +42,13 @@ public class AdministratorUserFunctions {
     }
 
     private static void deleteUser() {
-        System.out.println("Enter user's email: ");
-        String email = getStringOption();
+        String email = askString("Enter user's email: ");
         administratorManagement.deleteUser(generalAdministrativeManagement.getUserByEmail(email));
     }
 
     private static void updateUser() {
-        System.out.println("Enter user's email: ");
-        User oldUser = generalAdministrativeManagement.getUserByEmail(getStringOption());
+        String email = askString("Enter user's email: ");
+        User oldUser = generalAdministrativeManagement.getUserByEmail(email);
         System.out.println("ENTER NEW DATA");
         User newUser = getUserData();
         newUser.setId(oldUser.getId());
@@ -58,24 +56,21 @@ public class AdministratorUserFunctions {
     }
 
     private static User getUserData() {
-        System.out.println("Enter name: ");
-        String name = getStringOption();
-        System.out.println("Enter email: ");
-        String email = getStringOption();
-        System.out.println("Enter password: ");
-        String password = getStringOption();
-        System.out.println("Enter user role: (ADMINISTRATOR/ASSISTANT/READER)");
-        UserType role = UserType.valueOf(getStringOption());
+        System.out.println();
+        String name = askString("Enter name: ");
+        String email = askString("Enter email: ");
+        String password = askString("Enter password: ");
+        String roleS = askString("Enter user role: (ADMINISTRATOR/ASSISTANT/READER)");
+        UserType role = UserType.valueOf(askString(roleS));
         LocalDate birthDate = askDate("Enter Birth Date: ");
-        System.out.println("Enter phone number: ");
-        String phone = getStringOption();
+        String phone = askString("Enter phone number: ");
         return new User(UUID.randomUUID().toString(), name, email, password, role, birthDate,
                 phone);
     }
 
     private static void seeUserByEmail() {
-        System.out.println("Enter user's email: ");
-        System.out.println(generalAdministrativeManagement.getUserByEmail(getStringOption()));
+        String email = askString("Enter user's email: ");
+        System.out.println(generalAdministrativeManagement.getUserByEmail(email));
     }
 
     private static void seeAllUsers() {

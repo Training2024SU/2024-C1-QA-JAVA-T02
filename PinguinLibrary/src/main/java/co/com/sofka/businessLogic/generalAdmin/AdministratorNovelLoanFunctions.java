@@ -9,8 +9,9 @@ import java.util.UUID;
 
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorNovelLoanMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askDate;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorNovelLoanFunctions {
     private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
@@ -18,8 +19,7 @@ public class AdministratorNovelLoanFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             administratorNovelLoanMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option){
                 case 1:
                     createNovelLoan();
@@ -48,22 +48,15 @@ public class AdministratorNovelLoanFunctions {
         generalAdministrativeManagement.insertNovelLoan(novelLoan);
     }
     private static NovelLoan getNovelLoanData(){
-        System.out.print("Enter user's email: ");
-        String email = getStringOption();
-
-        System.out.print("Enter novel's title: ");
-        String novelTitle = getStringOption();
-
-        System.out.print("Enter loan date format(yyyy-mm-dd): ");
-        LocalDate loanDate = LocalDate.parse(getStringOption());
+        String email = askString("Enter user's email: ");
+        String novelTitle = askString("Enter novel's title: ");
+        LocalDate loanDate = askDate("Enter loan date format(yyyy-mm-dd): ");
         Date loanDateD = Date.valueOf(loanDate);
-
-        System.out.print("Enter return date format(yyyy-mm-dd): ");
-        LocalDate returnDate = LocalDate.parse(getStringOption());
+        LocalDate returnDate = askDate("Enter return date format(yyyy-mm-dd): ");
         Date returnDateD = Date.valueOf(returnDate);
 
-        System.out.print("Enter loan status (REQUESTED/COMPLETED/FINISHED): ");
-        LoanStatus status = LoanStatus.valueOf(getStringOption());
+        String statusS = askString("Enter loan status (REQUESTED/COMPLETED/FINISHED): ");
+        LoanStatus status = LoanStatus.valueOf(statusS);
 
         return new NovelLoan(UUID.randomUUID().toString(),
                 generalAdministrativeManagement.getUserByEmail(email),
@@ -85,11 +78,9 @@ public class AdministratorNovelLoanFunctions {
     }
 
     private static void editAcceptNovelLoan(){
-        System.out.println("Enter novel loan id: ");
-        String id = getStringOption();
+        String id = askString("Enter novel loan id: ");
         NovelLoan oldNovelLoan = generalAdministrativeManagement.getNovelLoanById(id);
-        System.out.println("Edit/Accept");
-        String option = getStringOption();
+        String option = askString("Edit/Accept");
         switch (option.toLowerCase()){
             case "edit":
                 editNovelLoan(oldNovelLoan);
@@ -111,8 +102,7 @@ public class AdministratorNovelLoanFunctions {
         generalAdministrativeManagement.approveNovelLoan(novelLoan);
     }
     private static void deleteNovelLoan(){
-        System.out.println("Enter novel title: ");
-        String title = getStringOption();
+        String title = askString("Enter novel title: ");
         Novel novel = generalAdministrativeManagement.getNovelByTitle(title);
         generalAdministrativeManagement.deleteNovel(novel);
     }

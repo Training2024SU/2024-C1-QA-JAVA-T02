@@ -209,7 +209,7 @@ public class GeneralAdministrativeManagement implements AuthorManagement, BookLo
         return resourceDAO.getResourceById(resourceId);
     }
 
-    public void inisertResource(Resource resource) throws SQLException {
+    public void insertResource(Resource resource) throws SQLException {
         resourceDAO.insertResource(resource);
     }
 

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 import static co.com.sofka.utils.Utils.askDate;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askString;
 
 
 public class Authentication {
@@ -38,11 +38,11 @@ public class Authentication {
     }
 
     public static void register() {
-        String name = askForName();
-        String email = askForEmail();
-        String password = askForPassword();
+        String name = askString("Enter your name: ");
+        String email = askString("Enter your email: ");
+        String password = askString("Enter your password: ");
         LocalDate birthDate = askDate("Enter your birth date: ");
-        String phone = askForPhone();
+        String phone = askString("Enter your phone number: ");
         User user = verifyEmail(email);
         if (user != null) {
             System.out.println("There is an user with that email");
@@ -52,26 +52,6 @@ public class Authentication {
                     birthDate, phone);
             userDAOImpl.insertUser(user);
         }
-    }
-
-    public static String askForName() {
-        System.out.println("Enter your name: ");
-        return getStringOption();
-    }
-
-    public static String askForEmail() {
-        System.out.println("Enter your email: ");
-        return getStringOption();
-    }
-
-    public static String askForPassword() {
-        System.out.println("Enter your password: ");
-        return getStringOption();
-    }
-
-    public static String askForPhone() {
-        System.out.println("Enter your phone number: ");
-        return getStringOption();
     }
 
     public static User verifyEmail(String email) {

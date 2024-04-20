@@ -12,8 +12,8 @@ import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.userProfileMenuMessage;
 import static co.com.sofka.utils.Utils.askDate;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class UserProfileFunctions {
 
@@ -24,8 +24,7 @@ public class UserProfileFunctions {
         boolean keepMenu = true;
         while (keepMenu) {
             userProfileMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option) {
                 case 1 -> updateProfile(user);
                 case 2 -> changePassword(user);
@@ -44,13 +43,10 @@ public class UserProfileFunctions {
             System.out.println("Current data: ");
             printUserProfile(validUser);
             System.out.println("ENTER NEW DATA");
-            System.out.println("Enter name: ");
-            String name = getStringOption();
-            System.out.println("Enter email: ");
-            String email = getStringOption();
+            String name = askString("Enter name: ");
+            String email = askString("Enter email: ");
             LocalDate birthDate = askDate("Enter Birth Date: ");
-            System.out.println("Enter phone number: ");
-            String phone = getStringOption();
+            String phone = askString("Enter phone number: ");
             validUser.setName(name);
             validUser.setEmail(email);
             validUser.setBirthDate(birthDate);
@@ -70,8 +66,7 @@ public class UserProfileFunctions {
     private static void changePassword(User user) {
         User validUser = validateUser(user);
         if (validUser != null) {
-            System.out.println("Enter new password: ");
-            String password = getStringOption();
+            String password = askString("Enter new password: ");
             validUser.setPassword(password);
             administratorManagement.updateUser(validUser);
         }

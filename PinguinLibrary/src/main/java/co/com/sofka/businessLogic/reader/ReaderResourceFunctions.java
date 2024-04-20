@@ -14,7 +14,7 @@ import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.readerResourceMenuMessage;
 import static co.com.sofka.utils.Utils.askDate;
-import static co.com.sofka.utils.Utils.getIntOption;
+import static co.com.sofka.utils.Utils.askInt;
 
 public class ReaderResourceFunctions {
     private static final ReaderManagement readerManagement = new ReaderManagement();
@@ -23,8 +23,7 @@ public class ReaderResourceFunctions {
         boolean keepMenu = true;
         while (keepMenu) {
             readerResourceMenuMessage(user);
-            System.out.print("Enter your option: ");
-            int option = getIntOption();
+            int option = askInt("Enter your option: ");
             switch (option) {
                 case 1 -> listResources(ResourceType.SONG);
                 case 2 -> listResources(ResourceType.VIDEO_RECORDING);
@@ -50,8 +49,7 @@ public class ReaderResourceFunctions {
     }
 
     private static void selectResource() {
-        System.out.println("Enter the id of the resource you want to select: ");
-        int id = getIntOption();
+        int id = askInt("Enter the id of the resource you want to select: ");
         readerManagement.selectResourceToLoan(id);
         System.out.println("Resource selected, you can select more or complete the request\n");
     }
@@ -83,8 +81,7 @@ public class ReaderResourceFunctions {
     }
 
     private static void myLoanDetails(User user) {
-        System.out.println("Enter the id of the loan you want to see its details: ");
-        int id = getIntOption();
+        int id = askInt("Enter the id of the loan you want to see its details: ");
         Loan loan = readerManagement.getResourceLoanDetails(user, id);
         if (loan != null) {
             System.out.println("Loan details: ");

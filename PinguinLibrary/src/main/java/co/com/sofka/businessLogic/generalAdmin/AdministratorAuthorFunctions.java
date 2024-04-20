@@ -7,8 +7,8 @@ import java.util.UUID;
 
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorAuthorLoanMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorAuthorFunctions {
     private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
@@ -16,8 +16,7 @@ public class AdministratorAuthorFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             administratorAuthorLoanMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option){
                 case 1:
                     createAuthor();
@@ -49,8 +48,7 @@ public class AdministratorAuthorFunctions {
     }
 
     private static String getAuthorData() {
-        System.out.print("Enter author's name: ");
-        return getStringOption();
+        return askString("Enter author's name: ");
     }
 
     private static void seeAllAuthors(){

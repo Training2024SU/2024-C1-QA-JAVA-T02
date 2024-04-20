@@ -10,15 +10,14 @@ import static co.com.sofka.menu.MenuConstant.enterYourOptionMessage;
 import static co.com.sofka.menu.MenuConstant.exitingMessage;
 import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.superuserMenuMessage;
-import static co.com.sofka.utils.Utils.getIntOption;
+import static co.com.sofka.utils.Utils.askInt;
 
 public class SuperuserFunctions {
 
     public static void superuserMenu(User user) {
         while (true) {
             superuserMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
+            int option = askInt(enterYourOptionMessage);
             switch (option) {
                 case 1 -> readerMenu(user);
                 case 2 -> assistantMenu(user);

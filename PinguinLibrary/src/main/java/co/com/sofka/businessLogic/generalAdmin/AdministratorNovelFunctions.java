@@ -8,42 +8,27 @@ import java.util.UUID;
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorNovelMenuMessage;
 import static co.com.sofka.utils.CsvNovelManagement.exportNovelsData;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorNovelFunctions {
     private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
     public static void administratorNovelMenuOptions(User user){
-        boolean keepMenu = true;
-        while (keepMenu){
+        while (true){
             administratorNovelMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
-            switch (option){
-                case 1:
-                    insertNovel();
-                    break;
-                case 2:
-                    seeAllNovels();
-                    break;
-                case 3:
-                    seeNovelByTitle();
-                    break;
-                case 4:
-                    updateNovel();
-                    break;
-                case 5:
-                    deleteNovel();
-                    break;
-                case 6:
-                    exportNovelsData();
-                    break;
-                case 7:
+            int option = askInt(enterYourOptionMessage);
+            switch (option) {
+                case 1 -> insertNovel();
+                case 2 -> seeAllNovels();
+                case 3 -> seeNovelByTitle();
+                case 4 -> updateNovel();
+                case 5 -> deleteNovel();
+                case 6 -> exportNovelsData();
+                case 7 -> {
                     System.out.println(exitingMessage);
-                    keepMenu = false;
-                    break;
-                default:
-                    System.out.println(incorrectOptionMessage);
+                    return;
+                }
+                default -> System.out.println(incorrectOptionMessage);
             }
         }
     }
@@ -54,23 +39,12 @@ public class AdministratorNovelFunctions {
     }
 
     private static Novel getNovelData(){
-        System.out.print("Enter novel title: ");
-        String title = getStringOption();
-
-        System.out.print("Enter author's name: ");
-        String author = getStringOption();
-
-        System.out.print("Enter category: ");
-        String gender = getStringOption();
-
-        System.out.print("Enter recommended age: ");
-        int recommendedAge = getIntOption();
-
-        System.out.print("Enter quantity: ");
-        int quantity = getIntOption();
-
-        System.out.print("Enter quantity loaned: ");
-        int quantityLoaned = getIntOption();
+        String title = askString("Enter novel title: ");
+        String author = askString("Enter author's name: ");
+        String gender = askString("Enter category: ");
+        int recommendedAge = askInt("Enter recommended age: ");
+        int quantity = askInt("Enter quantity: ");
+        int quantityLoaned = askInt("Enter quantity loaned: ");
 
         Novel novel = new Novel();
         novel.setId(UUID.randomUUID().toString());
@@ -88,14 +62,12 @@ public class AdministratorNovelFunctions {
     }
 
     private static void seeNovelByTitle(){
-        System.out.print("Enter novel title: ");
-        String title = getStringOption();
+        String title = askString("Enter novel title: ");
         System.out.println(generalAdministrativeManagement.getNovelByTitle(title));
     }
 
     private static void updateNovel(){
-        System.out.print("Enter novel id: ");
-        String id = getStringOption();
+        String id = askString("Enter novel id: ");
         Novel newNovel = getNovelData();
         Novel oldNovel = generalAdministrativeManagement.getNovelById(id);
         newNovel.setId(oldNovel.getId());
@@ -103,8 +75,7 @@ public class AdministratorNovelFunctions {
     }
 
     private static void deleteNovel(){
-        System.out.print("Enter novel title: ");
-        String title = getStringOption();
+        String title = askString("Enter novel title: ");
         generalAdministrativeManagement.deleteNovel(generalAdministrativeManagement.getNovelByTitle(title));
     }
 }

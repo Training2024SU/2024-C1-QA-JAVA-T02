@@ -10,8 +10,8 @@ import java.util.UUID;
 import static co.com.sofka.menu.MenuConstant.*;
 import static co.com.sofka.menu.MenuMessage.administratorBookMenuMessage;
 import static co.com.sofka.utils.CsvBookManagement.exportBooksData;
-import static co.com.sofka.utils.Utils.getIntOption;
-import static co.com.sofka.utils.Utils.getStringOption;
+import static co.com.sofka.utils.Utils.askInt;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorBookFunctions {
     private static final GeneralAdministrativeManagement generalAdministrativeManagement = new GeneralAdministrativeManagement();
@@ -20,33 +20,19 @@ public class AdministratorBookFunctions {
         boolean keepMenu = true;
         while (keepMenu){
             administratorBookMenuMessage(user);
-            System.out.print(enterYourOptionMessage);
-            int option = getIntOption();
-            switch (option){
-                case 1:
-                    insertBook();
-                    break;
-                case 2:
-                    seeAllBooks();
-                    break;
-                case 3:
-                    seeBookByTitle();
-                    break;
-                case 4:
-                    updateBook();
-                    break;
-                case 5:
-                    deleteBook();
-                    break;
-                case 6:
-                    exportBooksData();
-                    break;
-                case 7:
+            int option = askInt(enterYourOptionMessage);
+            switch (option) {
+                case 1 -> insertBook();
+                case 2 -> seeAllBooks();
+                case 3 -> seeBookByTitle();
+                case 4 -> updateBook();
+                case 5 -> deleteBook();
+                case 6 -> exportBooksData();
+                case 7 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
-                    break;
-                default:
-                    System.out.println(incorrectOptionMessage);
+                }
+                default -> System.out.println(incorrectOptionMessage);
             }
         }
     }
@@ -57,20 +43,11 @@ public class AdministratorBookFunctions {
     }
 
     private static Book getBookData(){
-        System.out.print("Enter book title: ");
-        String title = getStringOption();
-
-        System.out.print("Enter author's name: ");
-        String author = getStringOption();
-
-        System.out.print("Enter category: ");
-        String category = getStringOption();
-
-        System.out.print("Enter quantity: ");
-        int quantity = getIntOption();
-
-        System.out.print("Enter quantity loaned: ");
-        int quantityLoaned = getIntOption();
+        String title = askString("Enter book title: ");
+        String author = askString("Enter author's name: ");
+        String category = askString("Enter category: ");
+        int quantity = askInt("Enter quantity: ");
+        int quantityLoaned = askInt("Enter quantity loaned: ");
 
         Book book = new Book();
         book.setId(UUID.randomUUID().toString());
@@ -87,14 +64,12 @@ public class AdministratorBookFunctions {
     }
 
     private static void seeBookByTitle(){
-        System.out.print("Enter book title: ");
-        String title = getStringOption();
+        String title = askString("Enter book title: ");
         System.out.println(generalAdministrativeManagement.getBookByTitle(title));
     }
 
     private static void updateBook(){
-        System.out.print("Enter book id: ");
-        String id = getStringOption();
+        String id = askString("Enter book id: ");
         Book newBook = getBookData();
         Book oldBook = generalAdministrativeManagement.getBookById(id);
         newBook.setId(oldBook.getId());
@@ -102,8 +77,7 @@ public class AdministratorBookFunctions {
     }
 
     private static void deleteBook(){
-        System.out.print("Enter book title: ");
-        String title = getStringOption();
+        String title = askString("Enter book title: ");
         generalAdministrativeManagement.deleteBook(generalAdministrativeManagement.getBookByTitle(title));
     }
 }
