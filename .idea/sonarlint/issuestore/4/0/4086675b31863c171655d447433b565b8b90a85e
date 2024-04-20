@@ -1,0 +1,56 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šƒ ™ûÿÿÿÿ
+X
+java:S1854!"BRemove this useless assignment to local variable "sesionIniciada".(¶Å®
+^
+java:S1854 "CRemove this useless assignment to local variable "metodosPrestamo".(Ü”†»ıÿÿÿÿ
+^
+java:S1854"CRemove this useless assignment to local variable "metodosProducto".(Ô†Ü’şÿÿÿÿ
+]
+java:S1854"BRemove this useless assignment to local variable "metodosUsuario".(ó…­Şúÿÿÿÿ
+V
+java:S1854"@Remove this useless assignment to local variable "crudPrestamo".(õÛğ
+V
+java:S1854"@Remove this useless assignment to local variable "crudProducto".(ß»™î
+Z
+java:S1854"?Remove this useless assignment to local variable "crudUsuario".(ñ³¯¸ıÿÿÿÿ
+Z
+java:S1854"?Remove this useless assignment to local variable "metodosMain".(§÷Œˆøÿÿÿÿ
+W
+java:S1854"<Remove this useless assignment to local variable "conexion".(ãœÿøúÿÿÿÿ
+E
+java:S2440"*Remove this instantiation of "ConexionBD".(ãœÿøúÿÿÿÿ
+H
+java:S1481"-Remove this unused "conexion" local variable.(ãœÿøúÿÿÿÿ
+F
+java:S2440"+Remove this instantiation of "MetodosMain".(§÷Œˆøÿÿÿÿ
+K
+java:S1481"0Remove this unused "metodosMain" local variable.(§÷Œˆøÿÿÿÿ
+F
+java:S2440"+Remove this instantiation of "CrudUsuario".(ñ³¯¸ıÿÿÿÿ
+K
+java:S1481"0Remove this unused "crudUsuario" local variable.(ñ³¯¸ıÿÿÿÿ
+B
+java:S2440",Remove this instantiation of "CrudProducto".(ß»™î
+G
+java:S1481"1Remove this unused "crudProducto" local variable.(ß»™î
+B
+java:S2440",Remove this instantiation of "CrudPrestamo".(õÛğ
+G
+java:S1481"1Remove this unused "crudPrestamo" local variable.(õÛğ
+I
+java:S2440".Remove this instantiation of "MetodosUsuario".(ó…­Şúÿÿÿÿ
+N
+java:S1481"3Remove this unused "metodosUsuario" local variable.(ó…­Şúÿÿÿÿ
+J
+java:S2440"/Remove this instantiation of "MetodosProducto".(Ô†Ü’şÿÿÿÿ
+O
+java:S1481"4Remove this unused "metodosProducto" local variable.(Ô†Ü’şÿÿÿÿ
+J
+java:S2440 "/Remove this instantiation of "MetodosPrestamo".(Ü”†»ıÿÿÿÿ
+O
+java:S1481 "4Remove this unused "metodosPrestamo" local variable.(Ü”†»ıÿÿÿÿ
+D
+java:S2440!".Remove this instantiation of "SesionIniciada".(¶Å®
+I
+java:S1481!"3Remove this unused "sesionIniciada" local variable.(¶Å®

@@ -1,0 +1,13 @@
+
+‰
+java:S1598"ëThis file "ConnectionMangaer.java" should be located in "Garcia/Juan/database/util" directory, not in "/home/dan/Desktop/QA/2024-C1-QA-JAVA-T02/2024-C1-QA-JAVA-T01-JuanJoseGarcia/TallerJV1/src/main/java/Garcia/Juan/database/migration".(ÍªŸ8¾ÀîËï1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÍªŸ8ÀÀîËï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­–ô 8ĞÀîËï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ö±Ç8ĞÀîËï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ç¯¯úûÿÿÿÿ8ÑÀîËï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ûí¶ò8ÑÀîËï1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ˆƒ™Ø8ÕÀîËï1
+X
+java:S6437"6Revoke and change this password, as it is compromised.(Ò¸†¹ÿÿÿÿÿ8ÙÀîËï1
+psecrets:S6694"PMake sure this MongoDB database password gets changed and removed from the code.(ûí¶ò8‘ÁîËï1
