@@ -3,11 +3,16 @@ package com.sofkau.logica.prestamo;
 import com.sofkau.dialogo.MensajeOperacionBd;
 import com.sofkau.integration.repositorio.EmpleadoRepositorio;
 import com.sofkau.integration.repositorio.PrestamoRepositorio;
+import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
+import com.sofkau.logica.tesis.TesisOperaciones;
+import com.sofkau.logica.videograbacion.VideoGrabacionOperaciones;
 import com.sofkau.model.Empleado;
 import com.sofkau.model.Prestamo;
+import com.sofkau.model.VideoGrabacion;
 import com.sofkau.util.CommonOperacion.GenerateUniqueId;
 import com.sofkau.util.enums.EstadoPrestamo;
+import com.sofkau.util.enums.Material;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -88,9 +93,8 @@ public class PrestamoOperaciones {
 
     }
 
-
     // Actualiza el estado de un prestamo
-    public void actualizarEstadoPrestamo(EstadoPrestamo estado, String idPrestamo){
+    public void actualizarEstadoPrestamo(EstadoPrestamo estado, String idPrestamo, Material material){
        Prestamo prestamo = getPrestamo(idPrestamo);
        Date fechaActual = new Date();
         if(!prestamos.isEmpty()){
@@ -98,7 +102,7 @@ public class PrestamoOperaciones {
             PrestamoRepositorio.actualizarPrestamo(prestamo);
             if(estado == EstadoPrestamo.FINALIZADO){
                 // Se devuelve publicacion del stock
-                publicacionOp.actualizarCantidadPrestadaPublicacion(prestamo.getTituloPublicacion(),1,true);
+                devolverMaterialStock(idPrestamo,material);
             }
             if(estado == EstadoPrestamo.FINALIZADO && fechaActual.after(prestamo.getFechaDevolucion()) ){
                 System.out.println("El usuario no cumplio con la fecha de devolución");
@@ -111,7 +115,24 @@ public class PrestamoOperaciones {
         }
     }
 
+    private void devolverMaterialStock(String idPrestamo, Material material){
 
+        switch (material){
+            case PUBLICACION -> {
+                publicacionOp.actualizarCantidadPrestadaPublicacion(prestamos.get(idPrestamo).getTituloPublicacion(),
+                        1,true);
+            }case CANCION -> {
+                String  tituloCancion =  PrestamoCancionOperaciones.getPrestamoCancion(idPrestamo);
+                CancionOperaciones.actualizarStock(true,tituloCancion);
+            }case VIDEOGRABACION -> {
+                String tituloVideo = PrestamoVideoGrabacionOperaciones.getPrestamoVideograbacion(idPrestamo);
+                VideoGrabacionOperaciones.actualizarStockVideograbacion(true,tituloVideo);
+            }case TESIS -> {
+                String tituloTesis = PrestamoTesisOperaciones.getPrestamoTesis(idPrestamo);
+                TesisOperaciones.actualizarStockTesis(true,tituloTesis);
+            }
+        }
+    }
 
     //Consulta todos los prestamos en base de datos
     public void getPrestamos() {
@@ -128,7 +149,19 @@ public class PrestamoOperaciones {
         for (Prestamo prestamo : prestamos.values()) {
             // Verificar si el préstamo pertenece al usuario con el correo especificado
             if (prestamo.getCorreoUsuario().equals(correoUsuario)) {
-                System.out.println(prestamo);
+                String  tituloCancion =  PrestamoCancionOperaciones.getPrestamoCancion(prestamo.getId());
+                String tituloVideo = PrestamoVideoGrabacionOperaciones.getPrestamoVideograbacion(prestamo.getId());
+                String tituloTesis = PrestamoTesisOperaciones.getPrestamoTesis(prestamo.getId());
+
+                if(tituloCancion != null){
+                    System.out.println(prestamo+" Título canción: "+ tituloCancion);
+                }else if(tituloVideo != null){
+                    System.out.println(prestamo+" Título video grabación: "+ tituloVideo);
+                }else if(tituloTesis != null){
+                    System.out.println(prestamo+" Título tesis: "+ tituloTesis);
+                }else{
+                    System.out.println(prestamo+" Título: "+ prestamo.getTituloPublicacion());
+                }
             }
         }
     }

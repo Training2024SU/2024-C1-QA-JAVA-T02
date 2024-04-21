@@ -125,4 +125,13 @@ public class ConstantesMenu {
     public static final String MSN_PRESTAMO_VIDEOGRABACION = "2. Prestar Videograbación";
     public static final String MSN_PRESTAMO_TESIS = "3. Prestar Tesis";
 
+    public static final String MSN_ENTREGAR_MATERIAL = "5. Entregar material";
+    public static final String MSN_DEVOLUCION_MATERIAL = "6. Devolución material";
+    public static final String MSN_LIBRO = "Libro";
+    public static final String MSN_NOVELA = "Novela";
+    public static final String MSN_CANCION = "Canción";
+    public static final String MSN_VIDEOGRABACION = "Video grabación";
+    public static final String MSN_TESIS = "Tesis";
+
+
 }

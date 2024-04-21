@@ -4,6 +4,7 @@ import com.sofkau.dialogo.Menu;
 import com.sofkau.model.*;
 import com.sofkau.util.CommonOperacion.GenerateUniqueId;
 import com.sofkau.util.enums.EstadoPrestamo;
+import com.sofkau.util.enums.Material;
 import com.sofkau.util.enums.TipoPublicacion;
 
 import java.text.ParseException;
@@ -118,20 +119,24 @@ public class MenuAsistente {
                         new AreaGenero(titulo,genero),new EdadSugerida(titulo,edadSugeridad),
                         tituloAntiguo);
             }case 5 ->{
-                Menu.IngresoIdPrestamo();
+                /*Menu.IngresoIdPrestamo();
                 String idPrestamo = scannerGlobal.nextLine();
-                prestamoOp.actualizarEstadoPrestamo(EstadoPrestamo.REALIZADO,idPrestamo);
+                prestamoOp.actualizarEstadoPrestamo(EstadoPrestamo.REALIZADO,idPrestamo, Material.PUBLICACION);*/
+                Menu.ingresoTipoMaterial();
+                int opcionPrest = scannerGlobal.nextInt();
+                scannerGlobal.nextLine();
+                MenuPrestamoEmpleado.menuEntregaMaterial(opcionPrest);
 
             }case 6 ->{
-                Menu.IngresoIdPrestamo();
-                String idPrestamo = scannerGlobal.nextLine();
-                prestamoOp.actualizarEstadoPrestamo(EstadoPrestamo.FINALIZADO,idPrestamo);
-
+                Menu.ingresoTipoMaterial();
+                int opcionPrest = scannerGlobal.nextInt();
+                scannerGlobal.nextLine();
+                MenuPrestamoEmpleado.menuDevolucionMaterial(opcionPrest);
             }case 7 ->{
+                Menu.ingresoTipoMaterial();
                 Menu.listarPrestamos();
                 Menu.correo();
                 String correo = scannerGlobal.nextLine();
-
                 prestamoOp.listarPrestamosPorCorreo(correo);
             }case 8->{
                 Menu.ingresoAutor();

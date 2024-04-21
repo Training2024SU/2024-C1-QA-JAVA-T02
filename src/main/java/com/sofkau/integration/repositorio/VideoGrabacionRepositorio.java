@@ -57,7 +57,7 @@ public class VideoGrabacionRepositorio {
     }
 
     public static void actualizarVideoGrabacion(VideoGrabacion videoGrabacion) {
-        String query = String.format("UPDATE videograbacion SET sinopsis = '%s', genero = '%s', autor = '%s', calificacion = %f, tipo = '%s', cantidad_copia = %d, cantidad_prestado = %d WHERE titulo = '%s'",
+        String query = String.format("UPDATE videograbacion SET sinopsis = '%s', genero = '%s', autor = '%s', calificacion = %d, tipo = '%s', cantidad_copia = %d, cantidad_prestado = %d WHERE titulo = '%s'",
                 videoGrabacion.getSinopsis(), videoGrabacion.getGenero(), videoGrabacion.getAutor(), videoGrabacion.getCalificacion(), videoGrabacion.getTipo(), videoGrabacion.getCantidadCopia(), videoGrabacion.getCantidadPrestado(), videoGrabacion.getTitulo());
         IngresoQuery.ejecutarIngresoQuery(query);
     }

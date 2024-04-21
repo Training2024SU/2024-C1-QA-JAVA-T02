@@ -1,15 +1,11 @@
 package com.sofkau.logica.prestamo;
 
-import com.sofkau.dialogo.MensajeOperacionBd;
-import com.sofkau.integration.repositorio.CancionRepositorio;
 import com.sofkau.integration.repositorio.PrestamoCancionRepositorio;
-import com.sofkau.integration.repositorio.PrestamoRepositorio;
-import com.sofkau.logica.cancion.CancionOperaciones;
-import com.sofkau.model.Prestamo;
-import com.sofkau.util.CommonOperacion.GenerateUniqueId;
-import com.sofkau.util.enums.EstadoPrestamo;
 
-import java.util.Date;
+import com.sofkau.logica.cancion.CancionOperaciones;
+
+
+
 import java.util.HashMap;
 
 public class PrestamoCancionOperaciones {
@@ -29,6 +25,10 @@ public class PrestamoCancionOperaciones {
 
     public void getPrestamosCancion(){
         prestamosCancion = PrestamoCancionRepositorio.consultarPrestamosCancion();
+    }
+
+    public static String getPrestamoCancion(String idPrestamo) {
+        return prestamosCancion.get(idPrestamo);
     }
 
 }

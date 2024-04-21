@@ -28,4 +28,9 @@ public class PrestamoTesisOperaciones {
     public void getPrestamosTesis() {
         prestamosTesis = PrestamoTesisRepositorio.consultarPrestamosTesis();
     }
+
+    public static String getPrestamoTesis(String idPrestamo) {
+        return prestamosTesis.get(idPrestamo);
+    }
+
 }

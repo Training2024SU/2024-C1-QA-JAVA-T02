@@ -41,8 +41,8 @@ public class Menu {
         System.out.println(ConstantesMenu.MSN_CREARNOVELA);
         System.out.println(ConstantesMenu.MSN_ACTUALIZARLIBRO);
         System.out.println(ConstantesMenu.MSN_ACTUALIZARNOVELA);
-        System.out.println(MSN_ENTREGARLIBRO);
-        System.out.println(MSN_LIBRODEV);
+        System.out.println(MSN_ENTREGAR_MATERIAL);
+        System.out.println(MSN_DEVOLUCION_MATERIAL);
         System.out.println(MSN_LISTARPRESTAMOS);
         System.out.println(MSN_INGRESOAU);
         System.out.println(ConstantesMenu.MSN_CREARCANCION);
@@ -210,11 +210,14 @@ public class Menu {
         System.out.println(MSN_DIRECCION);
     }
 
-    public static void ingresoPrestamoOtroMaterial() {
-        System.out.println(MSN_PRESTAMO_CANCION);
-        System.out.println(MSN_PRESTAMO_VIDEOGRABACION);
-        System.out.println(MSN_PRESTAMO_TESIS);
+    public static void ingresoTipoMaterial() {
+            System.out.println("1. " + MSN_LIBRO);
+            System.out.println("2. " + MSN_NOVELA);
+            System.out.println("3. " + MSN_CANCION);
+            System.out.println("4. " + MSN_VIDEOGRABACION);
+            System.out.println("5. " + MSN_TESIS);
     }
+
 
 
 }

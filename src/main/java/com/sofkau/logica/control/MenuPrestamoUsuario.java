@@ -9,12 +9,9 @@ import com.sofkau.util.enums.TipoPublicacion;
 import static com.sofkau.logica.control.ControlIngreso.*;
 
 public class MenuPrestamoUsuario {
-    private static PrestamoCancionOperaciones prestCancionOp = new PrestamoCancionOperaciones();
-    private static PrestamoVideoGrabacionOperaciones prestVideoGrabacionOp = new PrestamoVideoGrabacionOperaciones();
-    private static PrestamoTesisOperaciones prestamoTesisOp = new PrestamoTesisOperaciones();
 
     public static void mostrarMenuPrestamo() {
-        Menu.ingresoPrestamoOtroMaterial();
+        Menu.ingresoTipoMaterial();
         int op = scannerGlobal.nextInt();
         scannerGlobal.nextLine();
 
@@ -62,7 +59,6 @@ public class MenuPrestamoUsuario {
                 }else{
                     prestamoTesisOp.registrarPrestamoTesis(tituloTes,fechaDevTes,usuarioOp.getUsuarioActual().getCorreo());
                 }
-
                 break;
             default:
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

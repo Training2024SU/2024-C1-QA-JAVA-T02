@@ -24,4 +24,8 @@ public class PrestamoVideoGrabacionOperaciones {
     public void getPrestamosVideoGrabacion() {
         prestamosVideoGrabacion = PrestamoVideograbacionRepositorio.consultarPrestamosVideoGrabacion();
     }
+
+    public static String getPrestamoVideograbacion(String idPrestamo) {
+        return prestamosVideoGrabacion.get(idPrestamo);
+    }
 }

@@ -4,7 +4,10 @@ import com.sofkau.dialogo.Menu;
 import com.sofkau.logica.Autor.AutorOperaciones;
 import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.empleado.EmpleadoOperaciones;
+import com.sofkau.logica.prestamo.PrestamoCancionOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
+import com.sofkau.logica.prestamo.PrestamoTesisOperaciones;
+import com.sofkau.logica.prestamo.PrestamoVideoGrabacionOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
 import com.sofkau.logica.tesis.TesisOperaciones;
 import com.sofkau.logica.usuario.PerfilModificableOperaciones;
@@ -42,6 +45,10 @@ public class ControlIngreso {
     protected static TesisOperaciones tesisOperaciones = new TesisOperaciones();
 
     protected static PerfilModificableOperaciones perfilOp = new PerfilModificableOperaciones();
+
+    protected static PrestamoCancionOperaciones prestCancionOp = new PrestamoCancionOperaciones();
+    protected static PrestamoVideoGrabacionOperaciones prestVideoGrabacionOp = new PrestamoVideoGrabacionOperaciones();
+    protected static PrestamoTesisOperaciones prestamoTesisOp = new PrestamoTesisOperaciones();
 
 
     protected static final Logger logger = Logger.getLogger(ControlIngreso.class.getName());

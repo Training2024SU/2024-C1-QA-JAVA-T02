@@ -79,7 +79,6 @@ public class Prestamo {
                 ", fechaDevolucion=" + fechaDevolucion +
                 ", estadoPrestamo='" + estadoPrestamo + '\'' +
                 ", correoUsuario='" + correoUsuario + '\'' +
-                ", tituloPublicacion='" + tituloPublicacion + '\'' +
                 '}';
     }
 }
