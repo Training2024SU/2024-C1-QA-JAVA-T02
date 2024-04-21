@@ -17,6 +17,8 @@ public class EmpleadoOperaciones {
 
     private Empleado empleadoActual;
 
+    private static Empleado empleadoPerfil;
+
     private static HashMap<String, Empleado> empleados = new HashMap<>();
 
     public void registrarEmpleado(Empleado empleado, String rol) {
@@ -59,6 +61,15 @@ public class EmpleadoOperaciones {
         }
 
        return false;
+    }
+
+    public Empleado buscarEmpleadoPorCorreo(String correo) {
+        Optional<Empleado> empleado = empleados.values().stream()
+                .filter(e -> e.getCorreo().equals(correo))
+                .findFirst();
+
+        empleadoPerfil = empleado.get();
+        return empleado.get();
     }
 
     private Empleado consultarEmpleado(String Id){

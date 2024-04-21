@@ -16,7 +16,7 @@ public class PerfilModificableOperaciones {
 
     public void getPerfiles(){
         HashMap<String, String> direcciones = PerfilUsuarioRepositorio.consultarDireccionesUsuarios();
-        HashMap<String, String> contactos = PerfilUsuarioRepositorio.consultarDireccionesUsuarios();
+        HashMap<String, String> contactos = PerfilUsuarioRepositorio.consultarContactosUsuarios();
 
         for (String idUsuario : direcciones.keySet()) {
             // Obtener la dirección y el contacto correspondientes a esta clave

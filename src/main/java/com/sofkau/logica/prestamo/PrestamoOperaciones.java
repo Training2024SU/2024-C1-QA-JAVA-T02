@@ -9,6 +9,7 @@ import com.sofkau.logica.tesis.TesisOperaciones;
 import com.sofkau.logica.videograbacion.VideoGrabacionOperaciones;
 import com.sofkau.model.Empleado;
 import com.sofkau.model.Prestamo;
+import com.sofkau.model.Publicacion;
 import com.sofkau.model.VideoGrabacion;
 import com.sofkau.util.CommonOperacion.GenerateUniqueId;
 import com.sofkau.util.enums.EstadoPrestamo;
@@ -155,12 +156,16 @@ public class PrestamoOperaciones {
 
                 if(tituloCancion != null){
                     System.out.println(prestamo+" Título canción: "+ tituloCancion);
+                    System.out.println(CancionOperaciones.getCancionPorTitulo(tituloCancion));
                 }else if(tituloVideo != null){
                     System.out.println(prestamo+" Título video grabación: "+ tituloVideo);
+                    System.out.println(VideoGrabacionOperaciones.getVideograbacionPorTitulo(tituloVideo));
                 }else if(tituloTesis != null){
                     System.out.println(prestamo+" Título tesis: "+ tituloTesis);
+                    System.out.println(TesisOperaciones.getTesisPorTitulo(tituloTesis));
                 }else{
                     System.out.println(prestamo+" Título: "+ prestamo.getTituloPublicacion());
+                    System.out.println( publicacionOp.buscarPublicacionTitulo(prestamo.getTituloPublicacion()));
                 }
             }
         }

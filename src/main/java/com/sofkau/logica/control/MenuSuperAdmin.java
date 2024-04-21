@@ -65,6 +65,8 @@ public class MenuSuperAdmin {
                 }else{
                     modoSuperAdmin = true;
                 }
+            }case 7 ->{
+               MenuPerfilEmpleado.menuPerfilEmpleado();
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

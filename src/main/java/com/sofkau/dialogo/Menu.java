@@ -161,6 +161,7 @@ public class Menu {
         } else {
             System.out.println(MSN_MODOSUPERADMIN);
         }
+        System.out.println(MSN_PERFILEMPLEADO);
     }
 
     public static void ingresoLetra(){

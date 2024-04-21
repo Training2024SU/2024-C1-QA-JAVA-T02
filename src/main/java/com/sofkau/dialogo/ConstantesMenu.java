@@ -49,7 +49,6 @@ public class ConstantesMenu {
     public static final String MSN_INGRESOAU ="8. Ingresar autor";
     public static final String MSN_LISTARPRESTAMOS ="7. Consultar Prestamos lector";
 
-
     public static final String MSN_INGRESOIDPRESTAMO ="Ingrese el ID del prestamo";
 
     public static final String MSN_TITULOACTULIZAR ="Por favor el TITULO a ACTUALIZAR";
@@ -132,6 +131,8 @@ public class ConstantesMenu {
     public static final String MSN_CANCION = "Canción";
     public static final String MSN_VIDEOGRABACION = "Video grabación";
     public static final String MSN_TESIS = "Tesis";
+
+    public static String MSN_PERFILEMPLEADO ="7. Modificar perfil Empleado";
 
 
 }

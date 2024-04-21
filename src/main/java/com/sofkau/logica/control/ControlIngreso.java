@@ -4,6 +4,7 @@ import com.sofkau.dialogo.Menu;
 import com.sofkau.logica.Autor.AutorOperaciones;
 import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.empleado.EmpleadoOperaciones;
+import com.sofkau.logica.empleado.PerfilEmpleadoOperaciones;
 import com.sofkau.logica.prestamo.PrestamoCancionOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
 import com.sofkau.logica.prestamo.PrestamoTesisOperaciones;
@@ -49,6 +50,8 @@ public class ControlIngreso {
     protected static PrestamoCancionOperaciones prestCancionOp = new PrestamoCancionOperaciones();
     protected static PrestamoVideoGrabacionOperaciones prestVideoGrabacionOp = new PrestamoVideoGrabacionOperaciones();
     protected static PrestamoTesisOperaciones prestamoTesisOp = new PrestamoTesisOperaciones();
+
+    protected static PerfilEmpleadoOperaciones perfilEmpleadoOp = new PerfilEmpleadoOperaciones();
 
 
     protected static final Logger logger = Logger.getLogger(ControlIngreso.class.getName());
