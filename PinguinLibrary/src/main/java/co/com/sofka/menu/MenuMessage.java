@@ -198,7 +198,8 @@ public class MenuMessage {
         System.out.printf((MenuConstant.assistantMenuMessage) + "%n", 2);
         System.out.printf((MenuConstant.administratorMenuMessage) + "%n", 3);
         System.out.printf((MenuConstant.createUserMessage) + "%n", 4);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 5);
+        System.out.printf((MenuConstant.restoreSULoansMessage) + "%n", 5);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 6);
     }
 
     public static void userProfileMenuMessage(User user) {

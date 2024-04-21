@@ -17,6 +17,7 @@ import co.com.sofka.businessLogic.generalAdmin.interf.NovelLoanManagement;
 import co.com.sofka.businessLogic.generalAdmin.interf.NovelManagement;
 import co.com.sofka.enums.LoanStatus;
 import co.com.sofka.enums.ResourceType;
+import co.com.sofka.enums.UserType;
 import co.com.sofka.model.Author;
 import co.com.sofka.model.Book;
 import co.com.sofka.model.BookLoan;
@@ -254,6 +255,15 @@ public class GeneralAdministrativeManagement implements AuthorManagement, BookLo
     public void deleteResourceLoan(int loanId) {
         Loan loan = loanDAO.getLoanById(loanId);
         loanDAO.deleteLoan(loan);
+    }
+
+    public void restoreSuperUserLoans() {
+        List<Loan> superUserLoans =
+                loanDAO.getAllLoans().stream().filter(l -> l.getUser().getRole() == UserType.SUPERUSER).toList();
+        for (Loan loan : superUserLoans) {
+            finishResourceLoan(loan.getId());
+            deleteResourceLoan(loan.getId());
+        }
     }
 
     public User getUserByEmail(String email) {

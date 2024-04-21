@@ -123,6 +123,7 @@ public class MenuConstant {
     public static String readerMenuMessage = "%s. Reader menu";
     public static String assistantMenuMessage = "%s. Assistant menu";
     public static String administratorMenuMessage = "%s. Administrator menu";
+    public static String restoreSULoansMessage = "%s. Restore super user loans";
 
     // Exiting message
     public static String exitingMessage = "Bye...";
