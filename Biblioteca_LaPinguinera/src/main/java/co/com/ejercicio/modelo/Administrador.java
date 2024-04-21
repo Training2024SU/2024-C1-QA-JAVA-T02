@@ -10,14 +10,24 @@ public class Administrador {
     private String correo;
     private String contrasenia;
 
-    private String departamentoAdministrado;
+    private String departamentoAdministrado; //Nuevo campo
+    private String telefono; //Nuevo campo
 
-    public Administrador(int id, String nombre, String correo, String contrasenia, String departamentoAdministrado) {
+    public Administrador(int id, String nombre, String correo, String contrasenia, String departamentoAdministrado, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.contrasenia = contrasenia;
         this.departamentoAdministrado = departamentoAdministrado;
+        this.telefono = telefono;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public int getId() {
@@ -68,6 +78,7 @@ public class Administrador {
                 ", correo='" + correo + '\'' +
                 ", contrasenia='" + contrasenia + '\'' +
                 ", departamentoAdministrado='" + departamentoAdministrado + '\'' +
+                ", telefono='" + telefono + '\'' +
                 '}';
     }
 }

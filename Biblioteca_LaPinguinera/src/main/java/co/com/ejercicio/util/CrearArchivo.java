@@ -11,22 +11,24 @@ import java.io.IOException;
 
 public class CrearArchivo {
 
-    public static void crearArchivoJson(String path, String nombreArchivo,  JSONArray jsonArray){
+    public static String PATH_RECURSOS = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
 
-        String filePath = path + "\\" + nombreArchivo + ".json";
+    public static void crearArchivoJson( String nombreArchivo,  JSONArray jsonArray){
+
+        String filePath = PATH_RECURSOS + "\\" + nombreArchivo + ".json";
         String texto = jsonArray.toString();
 
         guardarArchivo(filePath, texto);
 
     }
 
-    public static void crearArchivoXML(String path, String nombreArchivo, Object obj) {
+    public static void crearArchivoXML(String nombreArchivo, Object obj) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         XMLEncoder xmlEncoder = new XMLEncoder(outputStream);
         xmlEncoder.writeObject(obj);
         xmlEncoder.close();
 
-        String filePath = path + "\\" + nombreArchivo + ".xml";
+        String filePath = PATH_RECURSOS + "\\" + nombreArchivo + ".xml";
         String texto = outputStream.toString();
 
         guardarArchivo(filePath, texto);

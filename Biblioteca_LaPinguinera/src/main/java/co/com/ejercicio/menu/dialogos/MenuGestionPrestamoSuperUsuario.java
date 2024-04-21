@@ -17,7 +17,7 @@ public class MenuGestionPrestamoSuperUsuario {
             System.out.println(OBTENER);
             System.out.println(ACTUALIZAR);
             System.out.println(ELIMINAR);
-            System.out.println("5. Salir");
+            System.out.println("0. Salir");
             System.out.print(ELIGE_OPCION);
             int opcion = scanner.nextInt();
 
@@ -34,13 +34,12 @@ public class MenuGestionPrestamoSuperUsuario {
                 case 4:
                     eliminarPrestamoSuperUsuario();
                     break;
-                case 5:
+                case 0:
                     continuarMenu = false;
                     break;
                 default:
-                    System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 4.");
+                    System.out.println("Opción no válida. Por favor ingrese un número entre 0 y 4.");
             }
         }
-
     }
 }

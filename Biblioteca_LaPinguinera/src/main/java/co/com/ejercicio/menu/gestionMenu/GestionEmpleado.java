@@ -34,12 +34,17 @@ public class GestionEmpleado {
         System.out.println("Ingrese contraseña");
         String contrasenia = scanner.nextLine();
         String rol = Roles.TIPO_DOS.getvalue();
+        System.out.println("Ingrese la edad");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese el telefono");
+        String telefono = scanner.nextLine();
 
 
 
         Connection conexion = Conexion.obtenerConexion();
         EmpleadoAccesoBD empleadoAccesoBD =new EmpleadoAccesoBD(conexion);
-        Empleado empleado = new Empleado(id, nombreEmpleado,correo,contrasenia, rol);
+        Empleado empleado = new Empleado(id, nombreEmpleado,correo,contrasenia, rol, edad, telefono);
         empleadoAccesoBD.insertarEmpleado(empleado);
     }
 
@@ -71,6 +76,7 @@ public class GestionEmpleado {
         System.out.println("Ingresa el correo del empleado a modificar");
         String correoEmpleado = scanner.nextLine();
 
+
         Connection conexion = Conexion.obtenerConexion();
         EmpleadoAccesoBD empleadoAccesoBD = new EmpleadoAccesoBD(conexion);
         List<Empleado> listadoEmpleados = empleadoAccesoBD.obtenerTodosLosEmpleados();
@@ -83,8 +89,17 @@ public class GestionEmpleado {
             System.out.println("Ingrese el correo nuevo");
             String correo = scanner.nextLine();
 
+            System.out.println("Ingrese la edad");
+            int edad = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Ingrese el telefono");
+            String telefono = scanner.nextLine();
+
             empleado.setNombre(nombre);
             empleado.setCorreo(correo);
+            empleado.setEdad(edad);
+            empleado.setTelefono(telefono);
 
             empleadoAccesoBD.modificarEmpleado(empleado);
 

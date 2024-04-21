@@ -113,39 +113,47 @@ public class GestionPublicacion {
     }
 
     public static void gestionarExportarAJson() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el nombre del archivo a exportar");
+        String nombreArchivo = scanner.nextLine();
 
         Connection conexion = Conexion.obtenerConexion();
         PublicacionAccesoBD publicacionAccesoBD = new PublicacionAccesoBD(conexion);
         List<Publicacion> publicaciones = publicacionAccesoBD.obtenerTodasLasPublicaciones();
 
-        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
-
         JSONArray publicacionesJSON = new JSONArray(publicaciones);
 
-        CrearArchivo.crearArchivoJson(pathParaArchivo, "publicaciones", publicacionesJSON);
+        CrearArchivo.crearArchivoJson( nombreArchivo, publicacionesJSON);
 
     }
 
     public static void gestionarExportarAXML() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el nombre del archivo a exportar");
+        String nombreArchivo = scanner.nextLine();
 
         Connection conexion = Conexion.obtenerConexion();
         PublicacionAccesoBD publicacionAccesoBD = new PublicacionAccesoBD(conexion);
         List<Publicacion> publicaciones = publicacionAccesoBD.obtenerTodasLasPublicaciones();
 
-        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
-
-        CrearArchivo.crearArchivoXML(pathParaArchivo, "publicaciones", publicaciones);
+        CrearArchivo.crearArchivoXML(nombreArchivo, publicaciones);
 
     }
 
     public static void gestionarImportarJson() {
-        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources\\publicaciones.json";
-        LeerArchivo.leerArchivoJson(pathParaArchivo);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el nombre del archivo a leer");
+        String nombreArchivo = scanner.nextLine();
+
+        LeerArchivo.leerArchivoJson(nombreArchivo);
     }
 
     public static void gestionarImportarXml() {
-        String pathParaArchivo = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources\\publicaciones.xml";
-        LeerArchivo.leerArchivoXml(pathParaArchivo);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el nombre del archivo a leer");
+        String nombreArchivo = scanner.nextLine();
+
+        LeerArchivo.leerArchivoXml(nombreArchivo);
     }
 
 

@@ -11,9 +11,12 @@ import static co.com.ejercicio.menu.gestionMenu.GestionVideoGrabacion.*;
 
 public class MenuGestionPublicacionNueva {
     public static void menuPublicacionNueva() {
+
         Scanner scanner = new Scanner(System.in);
 
+        boolean continuarMenu = true;
 
+        while(continuarMenu){
         System.out.println("MENÚ DE GESTIÓN DE PUBLICACIONES NUEVAS");
         System.out.println("¿Qué desea hacer?");
         System.out.println("1. Insertar ensayo");
@@ -31,6 +34,7 @@ public class MenuGestionPublicacionNueva {
         System.out.println("13. Obtener artistas de canciones");
         System.out.println("14. Actualizar cancion");
         System.out.println("15. Eliminar cancion");
+        System.out.println("0. Salir");
 
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -139,10 +143,14 @@ public class MenuGestionPublicacionNueva {
                     throw new RuntimeException(e);
                 }
                 break;
+            case 0:
+                continuarMenu = false;
+                break;
 
             default:
                 System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 15.");
+            }
         }
-        scanner.close();
     }
 }
+

@@ -2,7 +2,6 @@ package co.com.ejercicio.menu.dialogos;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-
 import static co.com.ejercicio.menu.dialogos.MenuPrincipal.mostrarMenu;
 import static co.com.ejercicio.menu.gestionMenu.GestionPrestarPublicacion.datosPrestamo;
 import static co.com.ejercicio.menu.gestionMenu.GestionPublicacion.gestionObtenerPublicacion;
@@ -13,13 +12,16 @@ import static co.com.ejercicio.menu.constantesMenu.ConstanteParaMenu.*;
 public class MenuGestionUsuario {
 
     public static void menuAccionesUsuario(){
+        boolean continuarMenu = true;
+
+        while(continuarMenu){
         Scanner scanner = new Scanner(System.in);
         System.out.println("¿ Que desea realizar ? ");
         System.out.println("1. Realizar Prestamo");
         System.out.println("2. Ver publicaciones Disponibles");
         System.out.println("3. Modificar contraseña");
         System.out.println("4. Modificar campos de cuenta");
-
+        System.out.println("5. Ver publicaciones nuevas");
         System.out.println("0. Cerrar sesion");
         int opcion = scanner.nextInt();
         scanner.nextLine();
@@ -49,16 +51,16 @@ public class MenuGestionUsuario {
                     throw new RuntimeException(e);
                 }
                 break;
-            case 0:
-                System.out.println("Cerraste Sesion");
-                mostrarMenu();
-
+            case 5:
+                gestionarPublicacionNuevaParaUsuario();
                 break;
-        }
+            case 0:
+                continuarMenu = false;
+                break;
+             }
+         }
     }
-
-
-    public static void interactuarConUsuario(){
+       public static void interactuarConUsuario(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENÚ DE GESTIÓN DE USUARIOS");
         System.out.println("¿Qué desea hacer con los usuarios?");

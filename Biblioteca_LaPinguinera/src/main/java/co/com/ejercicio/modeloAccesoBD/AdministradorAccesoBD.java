@@ -30,6 +30,7 @@ public class AdministradorAccesoBD {
             stmt.setString(3, administrador.getCorreo());
             stmt.setString(4, administrador.getContrasenia());
             stmt.setString(5, String.valueOf(administrador.getDepartamentoAdministrado()));
+            stmt.setString(6, administrador.getTelefono());
             stmt.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
         } catch (SQLException e) {
@@ -59,7 +60,9 @@ public class AdministradorAccesoBD {
             stmt.setString(1, administrador.getNombre());
             stmt.setString(2, administrador.getCorreo());
             stmt.setString(3, administrador.getDepartamentoAdministrado());
-            stmt.setInt(4, administrador.getId());
+            stmt.setString(4, administrador.getTelefono());
+            stmt.setInt(5, administrador.getId());
+
             stmt.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
         } catch (SQLException e) {

@@ -26,6 +26,8 @@ public class UsuarioAccesoBD {
             statement.setString(1, usuario.getCorreo());
             statement.setString(2, usuario.getNombre());
             statement.setString(3, usuario.getContrasenia());
+            statement.setInt(4, usuario.getEdad());
+            statement.setString(5, usuario.getTelefono());
             statement.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
         } catch (SQLException e) {
@@ -51,7 +53,9 @@ public class UsuarioAccesoBD {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_USUARIO)) {
             statement.setString(1, usuario.getNombre());
             statement.setString(2, usuario.getCorreo());
-            statement.setString(3, usuario.getContrasenia());
+            statement.setInt(3, usuario.getEdad());
+            statement.setString(4, usuario.getTelefono());
+            statement.setString(5, usuario.getContrasenia());
 
             statement.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
@@ -65,6 +69,7 @@ public class UsuarioAccesoBD {
             statement.setString(1, nuevaContrasena);
             statement.setString(2, usuario.getCorreo());
             statement.setString(3, usuario.getContrasenia());
+
 
             statement.executeUpdate();
             System.out.println(OPERACION_EXITOSA);

@@ -7,9 +7,14 @@ import java.io.*;
 
 public class LeerArchivo {
 
-    public static void leerArchivoJson(String path){
+    public static String PATH_RECURSOS = "C:\\Users\\User\\OneDrive\\Documents\\sofka\\EntregasSubidasAGitHub\\ModuloJava\\2024-C1-QA-JAVA-T02\\Biblioteca_LaPinguinera\\src\\main\\resources";
+
+    public static void leerArchivoJson(String nombreArchivo){
+
+        String filePath = PATH_RECURSOS + "\\" + nombreArchivo + ".json";
+
         try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(new FileInputStream(path), "UTF-8"))) {
+                new InputStreamReader(new FileInputStream(filePath), "UTF-8"))) {
             String line;
             // Read and print each line of the JSON file
             while ((line = reader.readLine()) != null) {
@@ -20,9 +25,11 @@ public class LeerArchivo {
         }
     }
 
-    public static void leerArchivoXml(String path){
+    public static void leerArchivoXml(String nombreArchivo){
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+        String filePath = PATH_RECURSOS + "\\" + nombreArchivo + ".xml";
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             // Read and print each line of the XML file
             while ((line = reader.readLine()) != null) {

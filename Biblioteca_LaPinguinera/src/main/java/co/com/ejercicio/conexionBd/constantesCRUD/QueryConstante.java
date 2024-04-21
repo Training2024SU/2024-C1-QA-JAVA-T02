@@ -47,9 +47,9 @@ public class QueryConstante {
     //Query a Tabla Usuario en la BD
 
     public static final String SELECT_ALL_FROM_USUARIO = "SELECT * FROM usuario";
-    public static final String INSERT_USUARIO = "INSERT INTO usuario (correo, nombre, contrasenia) VALUES (?, ?, ?)";
+    public static final String INSERT_USUARIO = "INSERT INTO usuario (correo, nombre, contrasenia, edad, telefono) VALUES (?, ?, ?, ?, ?)";
 
-    public static final String UPDATE_USUARIO = "UPDATE usuario SET nombre = ?, correo = ? WHERE contrasenia = ?";
+    public static final String UPDATE_USUARIO = "UPDATE usuario SET nombre = ?, correo = ?, edad = ?, telefono = ? WHERE contrasenia = ?";
 
     public static final String UPDATE_PASSWORD_USUARIO = "UPDATE usuario set contrasenia = ?  WHERE correo = ? AND contrasenia = ?";
 
@@ -65,13 +65,13 @@ public class QueryConstante {
 
     //Query a Tabla Empleado en la BD
 
-    public static final String INSERT_EMPLEADO = "INSERT INTO empleado (idEmpleado, nombre, correo, contrasenia, rol) VALUES (?, ?, ?, ?, ?)";
+    public static final String INSERT_EMPLEADO = "INSERT INTO empleado (idEmpleado, nombre, correo, contrasenia, rol, edad, telefono) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-    public static final String UPDATE_EMPLEADO = "UPDATE empleado SET nombre = ?, correo = ? WHERE idEmpleado = ?";
+    public static final String UPDATE_EMPLEADO = "UPDATE empleado SET nombre = ?, correo = ?, edad = ?, telefono = ? WHERE idEmpleado = ?";
 
-    public static final String INSERT_ADMINISTRADOR = "INSERT INTO administrador (id, nombre, correo, contrasenia, departamentoAdministrado) VALUES (?, ?, ?, ?, ?)";
+    public static final String INSERT_ADMINISTRADOR = "INSERT INTO administrador (id, nombre, correo, contrasenia, departamentoAdministrado, telefono) VALUES (?, ?, ?, ?, ?, ?)";
 
-    public static final String UPDATE_ADMINISTRADOR = "UPDATE administrador SET nombre = ?, correo = ?, departamentoAdministrado = ? WHERE id = ?";
+    public static final String UPDATE_ADMINISTRADOR = "UPDATE administrador SET nombre = ?, correo = ?, departamentoAdministrado = ?, telefono = ? WHERE id = ?";
 
 
     public static final String DELETE_FROM_EMPLEADO = "DELETE FROM empleado WHERE idEmpleado = ?";

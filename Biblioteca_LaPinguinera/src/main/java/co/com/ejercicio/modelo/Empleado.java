@@ -9,13 +9,33 @@ public class Empleado {
     private String correo;
     private String contrasenia;
     private String rol;
+    private int edad; //Nuevo campo
+    private String telefono; //Nuevo campo
 
-    public Empleado(int idEmpleado, String nombre, String correo, String contrasenia, String rol) {
+    public Empleado(int idEmpleado, String nombre, String correo, String contrasenia, String rol, int edad, String telefono) {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.correo = correo;
         this.contrasenia = contrasenia;
         this.rol = rol;
+        this.edad = edad;
+        this.telefono = telefono;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public int getIdEmpleado() {
@@ -65,7 +85,9 @@ public class Empleado {
                 ", nombre='" + nombre + '\'' +
                 ", correo='" + correo + '\'' +
                 ", contrasenia='" + contrasenia + '\'' +
-                ", rol=" + rol +
+                ", rol='" + rol + '\'' +
+                ", edad=" + edad +
+                ", telefono='" + telefono + '\'' +
                 '}';
     }
 }

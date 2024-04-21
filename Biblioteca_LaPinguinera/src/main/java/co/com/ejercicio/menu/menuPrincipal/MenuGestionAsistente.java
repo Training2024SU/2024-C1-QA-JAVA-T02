@@ -39,6 +39,7 @@ public class MenuGestionAsistente {
                 } catch (SQLException e){
                     throw new RuntimeException(e);
                 }
+                break;
             case 4:
                 try {
                     gestionActualizarEmpleado();

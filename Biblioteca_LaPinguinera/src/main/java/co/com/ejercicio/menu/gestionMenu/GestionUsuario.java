@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import static co.com.ejercicio.menu.dialogos.MenuGestionPublicacionNuevaUsuario.menuPublicacionNuevaParaUsuario;
 import static co.com.ejercicio.menu.dialogos.MenuGestionUsuario.interactuarConUsuario;
+import static co.com.ejercicio.menu.gestionMenu.GestionPublicacion.mostrarMenuGestionPublicacion;
 
 public class GestionUsuario {
 
@@ -28,11 +30,16 @@ public class GestionUsuario {
         String nombre = scanner.nextLine();
         System.out.println("Ingrese contraseña");
         String contrasenia = scanner.nextLine();
+        System.out.println("Ingrese edad");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese telefono");
+        String telefono = scanner.nextLine();
 
 
         Connection conexion = Conexion.obtenerConexion();
         UsuarioAccesoBD usuarioAccesoBD =new UsuarioAccesoBD(conexion);
-        Usuario usuario = new Usuario(correo, nombre, contrasenia);
+        Usuario usuario = new Usuario(correo, nombre, contrasenia, edad, telefono);
         usuarioAccesoBD.agregarUsuario(usuario);
     }
 
@@ -71,13 +78,20 @@ public class GestionUsuario {
 
             System.out.println("Ingrese el nombre nuevo");
             String nombre = scanner.nextLine();
-            System.out.println("Ingrese el correo nuevo");
-            String correo = scanner.nextLine();
+
+            System.out.println("Ingrese la edad");
+            int edad = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Ingrese el telefono");
+            String telefono = scanner.nextLine();
 
             usuario.setNombre(nombre);
-            usuario.setCorreo(correo);
+            usuario.setEdad(edad);
+            usuario.setTelefono(telefono);
 
             usuarioAccesoBD.actualizarUsuario(usuario);
+
         } catch (NoSuchElementException e){
             System.out.println("Usuario con correo: " + correoUsuario + " no existe");
         }
@@ -121,6 +135,11 @@ public class GestionUsuario {
                 .filter(usuario -> correo.equals(usuario.getCorreo()))
                 .filter(usuario -> contrasena.equals(usuario.getContrasenia()))
                 .findFirst().orElseThrow();
+    }
+
+    public static void gestionarPublicacionNuevaParaUsuario(){
+        System.out.println("Visualizando publicaciones nuevas de la libreria...");
+        menuPublicacionNuevaParaUsuario();
     }
 
 }

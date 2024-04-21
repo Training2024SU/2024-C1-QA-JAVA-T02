@@ -2,7 +2,6 @@ package co.com.ejercicio.menu.gestionMenu;
 
 import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.Administrador;
-import co.com.ejercicio.modelo.Usuario;
 import co.com.ejercicio.modeloAccesoBD.AdministradorAccesoBD;
 
 import java.sql.Connection;

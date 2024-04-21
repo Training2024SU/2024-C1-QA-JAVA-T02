@@ -77,7 +77,9 @@ public class MapearTablasBD {
         try {
             return new Usuario(
                     resultSet.getString("correo"), resultSet.getString("nombre"),
-                    resultSet.getString("contrasenia")
+                    resultSet.getString("contrasenia"),
+                    resultSet.getInt("edad"),
+                    resultSet.getString("telefono")
             );
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -108,7 +110,10 @@ public class MapearTablasBD {
                     resultSet.getString("nombre"),
                     resultSet.getString("correo"),
                     resultSet.getString("contrasenia"),
-                    resultSet.getString("rol")
+                    resultSet.getString("rol"),
+                    resultSet.getInt("edad"),
+                    resultSet.getString("telefono")
+
             );
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -122,7 +127,8 @@ public class MapearTablasBD {
                     resultSet.getString("nombre"),
                     resultSet.getString("correo"),
                     resultSet.getString("contrasenia"),
-                    resultSet.getString("departamentoAdministrado")
+                    resultSet.getString("departamentoAdministrado"),
+                    resultSet.getString("telefono")
             );
         }catch (SQLException e) {
             throw new RuntimeException(e);

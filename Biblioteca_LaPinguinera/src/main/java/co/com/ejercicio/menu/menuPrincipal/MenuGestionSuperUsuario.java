@@ -15,6 +15,9 @@ public class MenuGestionSuperUsuario {
     public static void menuSuperUsuario(){
         Scanner scanner = new Scanner(System.in);
 
+        boolean continuarMenu = true;
+
+        while(continuarMenu){
         System.out.println("MENÚ DE GESTIÓN - SUPER USUARIO");
         System.out.println("¿Qué desea gestionar?");
         System.out.println("1. Crear administrador");
@@ -43,14 +46,11 @@ public class MenuGestionSuperUsuario {
                     throw new RuntimeException(e);
                 }
             case 0:
-                System.out.println("Cerraste Sesion");
-                mostrarMenu();
+                continuarMenu = false;
                 break;
             default:
-                System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 4.");
-                System.out.println(" ");
-                mostrarMenuAdministrador();
-                System.out.println(" ");
+                System.out.println("Opción no válida. Por favor ingrese un número entre 0 y 3.");
+            }
         }
     }
 }

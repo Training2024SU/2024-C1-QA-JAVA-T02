@@ -5,13 +5,17 @@ public class Usuario {
     private String correo;
     private String nombre;
     private String contrasenia;
+    private int edad; //Nuevo campo
+    private String telefono; //Nuevo campo
 
 
-    public Usuario(String correo,String nombre,String contrasenia) {
+    public Usuario(String correo,String nombre,String contrasenia, int edad, String telefono) {
 
         this.correo = correo;
         this.nombre = nombre;
         this.contrasenia = contrasenia;
+        this.edad = edad;
+        this.telefono = telefono;
 
     }
 
@@ -41,12 +45,30 @@ public class Usuario {
         this.contrasenia = contrasenia;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
                 "correo='" + correo + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", contrasenia='" + contrasenia + '\'' +
+                ", edad=" + edad +
+                ", telefono='" + telefono + '\'' +
                 '}';
     }
 }

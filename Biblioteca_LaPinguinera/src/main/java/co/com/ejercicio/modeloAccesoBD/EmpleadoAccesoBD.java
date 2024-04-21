@@ -30,6 +30,8 @@ public class EmpleadoAccesoBD {
             stmt.setString(3, empleado.getCorreo());
             stmt.setString(4, empleado.getContrasenia());
             stmt.setString(5, String.valueOf(empleado.getRol()));
+            stmt.setInt(6, empleado.getEdad());
+            stmt.setString(7, empleado.getTelefono());
             stmt.executeUpdate();
             System.out.println(OPERACION_EXITOSA);
         } catch (SQLException e) {
@@ -51,7 +53,11 @@ public class EmpleadoAccesoBD {
         try (PreparedStatement stmt = conexion.prepareStatement(UPDATE_EMPLEADO)) {
             stmt.setString(1, empleado.getNombre());
             stmt.setString(2, empleado.getCorreo());
-            stmt.setInt(3, empleado.getIdEmpleado());
+            stmt.setInt(3, empleado.getEdad());
+            stmt.setString(4, empleado.getTelefono());
+            stmt.setInt(5, empleado.getIdEmpleado());
+
+
 
             stmt.executeUpdate();
             System.out.println(OPERACION_EXITOSA);

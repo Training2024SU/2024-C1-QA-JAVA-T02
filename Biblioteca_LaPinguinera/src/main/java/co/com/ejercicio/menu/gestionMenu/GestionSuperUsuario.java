@@ -2,10 +2,7 @@ package co.com.ejercicio.menu.gestionMenu;
 
 import co.com.ejercicio.conexionBd.Conexion;
 import co.com.ejercicio.modelo.Administrador;
-import co.com.ejercicio.modelo.Empleado;
 import co.com.ejercicio.modeloAccesoBD.AdministradorAccesoBD;
-import co.com.ejercicio.modeloAccesoBD.EmpleadoAccesoBD;
-import co.com.ejercicio.util.enums.Roles;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,7 +10,6 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.List;
 
-import static co.com.ejercicio.menu.gestionMenu.GestionPrestamo.mostrarMenuGestionPrestamo;
 import static co.com.ejercicio.menu.gestionMenu.GestionPrestamoSuperUsuario.mostrarMenuGestionPrestamoSuperUsuario;
 import static co.com.ejercicio.menu.menuPrincipal.MenuGestionSuperUsuario.menuSuperUsuario;
 
@@ -38,12 +34,15 @@ public class GestionSuperUsuario {
         String contrasenia = scanner.nextLine();
         System.out.println("Ingrese departamento que administra");
         String departamentoAdministrado = scanner.nextLine();
+        System.out.println("Ingrese el telefono");
+        String telefono = scanner.nextLine();
+
 
 
 
         Connection conexion = Conexion.obtenerConexion();
         AdministradorAccesoBD administradorAccesoBD = new AdministradorAccesoBD(conexion);
-        Administrador administrador = new Administrador(id, nombre,correo,contrasenia, departamentoAdministrado);
+        Administrador administrador = new Administrador(id, nombre,correo,contrasenia, departamentoAdministrado, telefono);
         administradorAccesoBD.insertarAdministrador(administrador);
     }
 
@@ -62,16 +61,21 @@ public class GestionSuperUsuario {
         try {
             Administrador administrador = obtenerAdminitradorPorSuId(administradores, idAdministrador);
 
+            System.out.println("Ingresa los datos para actualizar la informacion");
             System.out.println("Ingrese el nombre nuevo");
             String nombre = scanner.nextLine();
             System.out.println("Ingrese el correo nuevo");
             String correo = scanner.nextLine();
             System.out.println("Ingrese el departamento administrado nuevo");
             String departamento = scanner.nextLine();
+            System.out.println("Ingrese el telefono nuevo");
+            String telefono = scanner.nextLine();
+            System.out.println("Actualizando informacion de administrador...");
 
             administrador.setNombre(nombre);
             administrador.setCorreo(correo);
             administrador.setDepartamentoAdministrado(departamento);
+            administrador.setTelefono(telefono);
 
             administradorAccesoBD.modificarAdministrador(administrador);
 
