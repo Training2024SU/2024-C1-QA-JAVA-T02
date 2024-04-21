@@ -8,7 +8,7 @@ import com.sofkau.util.enums.Roles;
 import java.util.ArrayList;
 
 public class TesisOperaciones {
-    ArrayList<Tesis> listaTesis = new ArrayList<>();
+    static ArrayList<Tesis> listaTesis = new ArrayList<>();
 
     public TesisOperaciones() {
         getTesis();
@@ -37,10 +37,39 @@ public class TesisOperaciones {
         }
     }
 
+
+
     public void actualizarTesis(Tesis tesis) {
         // Actualizar en el repositorio
         TesisRepositorio.actualizarTesis(tesis);
     }
+
+    public static Tesis getTesisPorTitulo(String titulo) {
+        return listaTesis.stream()
+                .filter(tesis -> tesis.getTitulo().equals(titulo))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public static void actualizarStockTesis(boolean addStock, String titulo){
+        Tesis tesis = getTesisPorTitulo(titulo);
+        if(tesis != null){
+            if(addStock){
+                tesis.setCantidadPrestado(tesis.getCantidadPrestado() - 1);
+            } else {
+                tesis.setCantidadPrestado(tesis.getCantidadPrestado() + 1);
+            }
+            TesisRepositorio.actualizarTesis(tesis);
+            listaTesis.stream()
+                    .filter(tes -> tes.getTitulo().equals(titulo))
+                    .findFirst()
+                    .ifPresent(tes -> {
+                        tes.setCantidadPrestado(tesis.getCantidadPrestado());
+                    });
+        }
+    }
+
+
 
     public ArrayList<Tesis> getListaTesis() {
         return listaTesis;

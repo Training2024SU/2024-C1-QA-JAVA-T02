@@ -52,6 +52,8 @@ public class MenuUsuario {
             }
             case 6-> {
                     MenuPerfilUsuario.menuPerfilUsuario();
+            }case 7 ->{
+                MenuPrestamoUsuario.mostrarMenuPrestamo();
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

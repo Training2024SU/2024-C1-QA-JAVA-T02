@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class VideoGrabacionOperaciones {
-    ArrayList<VideoGrabacion> listaVideoGrabaciones = new ArrayList<>();
+    static ArrayList<VideoGrabacion> listaVideoGrabaciones = new ArrayList<>();
 
     static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -46,6 +46,30 @@ public class VideoGrabacionOperaciones {
         // Actualizar en el repositorio
         VideoGrabacionRepositorio.actualizarVideoGrabacion(videoGrabacion);
     }
+
+    public static VideoGrabacion getVideograbacionPorTitulo(String titulo) {
+        return listaVideoGrabaciones.stream()
+                .filter(video -> video.getTitulo().equals(titulo))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public static void actualizarStockVideograbacion(boolean addStock, String titulo){
+        VideoGrabacion videograbacion = getVideograbacionPorTitulo(titulo);
+        if(videograbacion != null){
+            if(addStock){
+                videograbacion.setCantidadPrestado(videograbacion.getCantidadPrestado() - 1);
+            } else {
+                videograbacion.setCantidadPrestado(videograbacion.getCantidadPrestado() + 1);
+            }
+            VideoGrabacionRepositorio.actualizarVideoGrabacion(videograbacion);
+            listaVideoGrabaciones.stream()
+                    .filter(video -> video.getTitulo().equals(titulo))
+                    .findFirst()
+                    .ifPresent(video -> video.setCantidadPrestado(videograbacion.getCantidadPrestado()));
+        }
+    }
+
 
     public ArrayList<VideoGrabacion> getListaVideoGrabaciones() {
         return listaVideoGrabaciones;

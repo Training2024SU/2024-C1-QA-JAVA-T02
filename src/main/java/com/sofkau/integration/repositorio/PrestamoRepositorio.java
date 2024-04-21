@@ -28,6 +28,16 @@ public class PrestamoRepositorio {
         IngresoQuery.ejecutarIngresoQuery(query);
     }
 
+    public static void crearPrestamoOtroMaterial(Prestamo prestamo) {
+        String query = String.format("INSERT INTO Prestamo (id_prestamo, fecha_prestamo, fecha_devolucion, estado, correo_usuario) VALUES ('%s', '%s', '%s', '%s', '%s')",
+                prestamo.getId(),
+                new java.sql.Date(prestamo.getFechaPrestamo().getTime()),
+                new java.sql.Date(prestamo.getFechaDevolucion().getTime()),
+                prestamo.getEstadoPrestamo(),
+                prestamo.getCorreoUsuario());
+        IngresoQuery.ejecutarIngresoQuery(query);
+    }
+
     public static HashMap<String, Prestamo> consultarPrestamos() {
         String query = "SELECT * FROM Prestamo";
         IngresoQuery.ejecutarConsultaQuery(query);

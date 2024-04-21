@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class CancionOperaciones {
-    ArrayList<Cancion> listaCanciones = new ArrayList<>();
+    static ArrayList<Cancion> listaCanciones = new ArrayList<>();
 
     static SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -29,13 +29,6 @@ public class CancionOperaciones {
         listaCanciones = CancionRepositorio.consultarCanciones();
     }
 
-    // Retorna todos los registros que posean el titulo de la canción
-    public ArrayList<Cancion> getCancionesPorTitulo(String titulo) {
-        return listaCanciones.stream()
-                .filter(cancion -> cancion.getTitulo().equals(titulo))
-                .collect(Collectors.toCollection(ArrayList::new));
-    }
-
     public void mostrarCanciones() {
             for (Cancion cancion : listaCanciones) {
                 if((cancion.getCantidadCopia() - cancion.getCantidadPrestado())> 0){
@@ -49,9 +42,35 @@ public class CancionOperaciones {
             System.out.println(cancion);
         }
     }
-    public void actualizarCancion(Cancion cancion) {
+    public static void actualizarCancion(Cancion cancion) {
         // Actualizar en el repositorio
         CancionRepositorio.actualizarCancion(cancion);
+    }
+
+    public static  void actualizarStock (boolean addStock, String titulo ){
+        Cancion cancion = getCancionPorTitulo(titulo);
+        if(addStock){
+            cancion.setCantidadPrestado(cancion.getCantidadPrestado()-1);
+        }else{
+            cancion.setCantidadPrestado(cancion.getCantidadPrestado()+1);
+        }
+        if(cancion != null){
+            actualizarCancion(cancion);
+            // Utiliza un stream para buscar la canción por título y luego actualizarla
+            listaCanciones.stream()
+                    .filter(cancionn -> cancion.getTitulo().equals(titulo))
+                    .findFirst()
+                    .ifPresent(cancionn -> {
+                        cancionn.setCantidadPrestado(cancion.getCantidadPrestado());
+                    });
+        }
+    }
+
+    public static Cancion getCancionPorTitulo(String titulo) {
+        return listaCanciones.stream()
+                .filter(cancion -> cancion.getTitulo().equals(titulo))
+                .findFirst()
+                .orElse(null);
     }
 
     public ArrayList<Cancion> getListacanciones() {

@@ -46,11 +46,9 @@ public class Menu {
         System.out.println(MSN_LISTARPRESTAMOS);
         System.out.println(MSN_INGRESOAU);
         System.out.println(ConstantesMenu.MSN_CREARCANCION);
-        System.out.println(ConstantesMenu.MSN_LISTARCANCIONES);
         System.out.println(ConstantesMenu.MSN_CREARVIDEOGRABACION);
-        System.out.println(ConstantesMenu.MSN_LISTARVIDEOGRABACIONES);
         System.out.println(ConstantesMenu.MSN_CREARTESIS);
-        System.out.println(ConstantesMenu.MSN_LISTARTESIS);
+
     }
 
     public static void prestamo(){
@@ -131,6 +129,8 @@ public class Menu {
         System.out.println(MSN_LISTARAUTORESU);
         System.out.println(MSN_LISTARPUBLICACIONAUTOR);
         System.out.println(MSN_PERFILUSUARIO);
+        System.out.println(MSN_PRESTAMOMATERIAL);
+
     }
 
     public static void entregarLibroUsuario() {
@@ -209,4 +209,12 @@ public class Menu {
     public static void ingresoDireccio() {
         System.out.println(MSN_DIRECCION);
     }
+
+    public static void ingresoPrestamoOtroMaterial() {
+        System.out.println(MSN_PRESTAMO_CANCION);
+        System.out.println(MSN_PRESTAMO_VIDEOGRABACION);
+        System.out.println(MSN_PRESTAMO_TESIS);
+    }
+
+
 }

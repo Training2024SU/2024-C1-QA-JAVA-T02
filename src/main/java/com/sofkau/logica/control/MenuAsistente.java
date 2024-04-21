@@ -162,8 +162,6 @@ public class MenuAsistente {
                 cancionOperaciones.crearCancion(new Cancion(titulo,genero,nombreAutor,letra,fechaLanzamiento,cantEjemplar,cantPres));
 
             }case 10 ->{
-
-            }case 11 ->{
                 Menu.ingresoTitulo();
                 String titulo = scannerGlobal.nextLine();
                 Menu.ingresoGenero();
@@ -182,10 +180,7 @@ public class MenuAsistente {
                 int cantPres = scannerGlobal.nextInt();
 
                 videoGrabacionOperaciones.crearVideoGrabacion(new VideoGrabacion(titulo, sinopsis, genero, nombreAutor,calificacion,tipo, cantEjemplar, cantPres));
-
-            }case 12 ->{
-
-            }case 13 ->{
+            }case 11 ->{
                 Menu.ingresoTitulo();
                 String tituloTesis = scannerGlobal.nextLine();
                 Menu.ingresoAutor();
@@ -211,9 +206,10 @@ public class MenuAsistente {
                         autorTesis,campoEstudioTesis,paisTesis,cantEjemplar,cantPres
                 ));
 
-            }case 14 ->{
+            }case 12 ->{
 
             }
+
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");
                 option = 0;

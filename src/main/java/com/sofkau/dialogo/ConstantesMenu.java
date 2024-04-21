@@ -73,6 +73,9 @@ public class ConstantesMenu {
 
     public static final String MSN_PERFILUSUARIO="6. Modificar perfil";
 
+    public static final String MSN_PRESTAMOMATERIAL="7. Prestar otro material";
+
+
     public static final String MSN_CREARADMIN="1. CREAR USUARIO ADMINISTRADOR";
 
     public static final String MSN_ENTRARADMINISTRADOR="2. VER OPCIONES ADMINISTRADOR";
@@ -90,10 +93,10 @@ public class ConstantesMenu {
     public static final String MSN_CREARCANCION = "9. Crear Canción";
     public static final String MSN_LISTARCANCIONES = "10. Listar Canciones";
 
-    public static final String MSN_CREARVIDEOGRABACION = "11. Crear Videograbación";
+    public static final String MSN_CREARVIDEOGRABACION = "10. Crear Videograbación";
     public static final String MSN_LISTARVIDEOGRABACIONES = "12. Listar Videograbaciones";
 
-    public static final String MSN_CREARTESIS = "13. Crear Tesis";
+    public static final String MSN_CREARTESIS = "11. Crear Tesis";
     public static final String MSN_LISTARTESIS = "14. Listar Tesis";
 
     public static final String MSN_FECHA_LANZAMIENTO = "Ingreso de fecha de lanzamiento (formato: yyyy-MM-dd):";
@@ -117,5 +120,9 @@ public class ConstantesMenu {
     public static final String MSN_CONTACTO = "Ingrese número de contacto";
 
     public static final String MSN_DIRECCION = "Ingrese su direccion";
+
+    public static final String MSN_PRESTAMO_CANCION = "1. Prestar Canción";
+    public static final String MSN_PRESTAMO_VIDEOGRABACION = "2. Prestar Videograbación";
+    public static final String MSN_PRESTAMO_TESIS = "3. Prestar Tesis";
 
 }

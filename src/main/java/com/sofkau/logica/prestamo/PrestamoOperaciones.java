@@ -35,19 +35,13 @@ public class PrestamoOperaciones {
         prestamo.setTituloPublicacion(titulo);
         Date fechaPrestamo = new Date();
         Date fechaDevolucion = null;
-        try {
-            fechaDevolucion = formato.parse(dateDevolucion);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        // calcula la diferencia en milisegundos y lo convierte a días
-            long diferenciaEnDias = (fechaDevolucion.getTime() - fechaPrestamo.getTime()) / (1000 * 60 * 60 * 24);
 
-            // Validar que la fecha de devolución no sea menor que la fecha actual y sea máximo 15 días después de la fecha de préstamo
-            if (!(fechaDevolucion.after(fechaPrestamo) && diferenciaEnDias <= 15)) {
-                System.out.println("Por favor ingrese una fecha de devolucion valida");
-                return;
-            }
+        fechaDevolucion = obtenerFechaDevolucionValida(dateDevolucion,fechaPrestamo);
+
+        if(fechaDevolucion == null){
+            System.out.println("Por favor ingrese una fecha de devolucion valida");
+            return;
+        }
 
         prestamo.setFechaPrestamo(fechaPrestamo);
         prestamo.setFechaDevolucion(fechaDevolucion);
@@ -64,6 +58,36 @@ public class PrestamoOperaciones {
         publicacionOp.actualizarCantidadPrestadaPublicacion(prestamo.getTituloPublicacion(),1,false);
     }
 
+    public static String registrarPrestamoOtroMaterial (String dateDevolucion, String correoUsuario){
+        Prestamo prestamo = new Prestamo();
+        prestamo.setId(GenerateUniqueId.generateID());
+        prestamo.setCorreoUsuario(correoUsuario);
+        Date fechaPrestamo = new Date();
+        Date fechaDevolucion = null;
+
+        fechaDevolucion = obtenerFechaDevolucionValida(dateDevolucion,fechaPrestamo);
+
+        if(fechaDevolucion == null){
+            System.out.println("Por favor ingrese una fecha de devolucion valida");
+            return null;
+        }
+
+        prestamo.setFechaPrestamo(fechaPrestamo);
+        prestamo.setFechaDevolucion(fechaDevolucion);
+        prestamo.setEstadoPrestamo(EstadoPrestamo.SOLICITADO.toString());
+
+        PrestamoRepositorio.crearPrestamoOtroMaterial(prestamo);
+
+        // Se actualiza el prestamo en la lista
+        prestamos.put(prestamo.getId(), prestamo);
+
+        MensajeOperacionBd.crearPrestamo();
+
+        //Se retorna el id del prestamo
+        return prestamo.getId();
+
+    }
+
 
     // Actualiza el estado de un prestamo
     public void actualizarEstadoPrestamo(EstadoPrestamo estado, String idPrestamo){
@@ -76,7 +100,6 @@ public class PrestamoOperaciones {
                 // Se devuelve publicacion del stock
                 publicacionOp.actualizarCantidadPrestadaPublicacion(prestamo.getTituloPublicacion(),1,true);
             }
-
             if(estado == EstadoPrestamo.FINALIZADO && fechaActual.after(prestamo.getFechaDevolucion()) ){
                 System.out.println("El usuario no cumplio con la fecha de devolución");
             }
@@ -87,6 +110,8 @@ public class PrestamoOperaciones {
             MensajeOperacionBd.errorActualizacionPrestamo();
         }
     }
+
+
 
     //Consulta todos los prestamos en base de datos
     public void getPrestamos() {
@@ -104,9 +129,28 @@ public class PrestamoOperaciones {
             // Verificar si el préstamo pertenece al usuario con el correo especificado
             if (prestamo.getCorreoUsuario().equals(correoUsuario)) {
                 System.out.println(prestamo);
-            }else{
-                System.out.println("No hay prestamos para este usuario");
             }
+        }
+    }
+
+    public static Date obtenerFechaDevolucionValida(String dateDevolucion, Date fechaPrestamo) {
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        Date fechaDevolucion = null;
+
+        try {
+            fechaDevolucion = formato.parse(dateDevolucion);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Calcula la diferencia en milisegundos y lo convierte a días
+        long diferenciaEnDias = (fechaDevolucion.getTime() - fechaPrestamo.getTime()) / (1000 * 60 * 60 * 24);
+
+        // Valida que la fecha de devolución no sea menor que la fecha actual y sea máximo 15 días después de la fecha de préstamo
+        if (fechaDevolucion.after(fechaPrestamo) && diferenciaEnDias <= 15) {
+            return fechaDevolucion;
+        } else {
+            return null;
         }
     }
 
