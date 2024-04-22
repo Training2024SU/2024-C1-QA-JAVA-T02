@@ -1,0 +1,15 @@
+
+}
+java:S1118":Add a private constructor to hide the implicit public one.(¨·”ş8¿Úí•ğ1J$33010744-0034-4148-8103-b273301e023f
+m	java:S106"+Replace this use of System.out by a logger.(¤¤ Ê8¿Úí•ğ1J$05dd8a1a-e348-48e1-b235-4aa60c01c947
+m	java:S106"+Replace this use of System.out by a logger.(ñôí¡8¿Úí•ğ1J$e7190fbe-43f3-4b1d-99c3-2a3e6c489f3a
+m	java:S106"+Replace this use of System.out by a logger.(¿úÔŒ8¿Úí•ğ1J$2514ef6c-9eb7-4857-b9fa-e37ce785e572
+m	java:S106"+Replace this use of System.out by a logger.(ïßûŸ8¿Úí•ğ1J$2cd4416d-f111-4354-a7a4-3f3fa342f39c
+r	java:S106"+Replace this use of System.out by a logger.(€¡İùÿÿÿÿ8¿Úí•ğ1J$e6116922-9aa8-4ced-9f12-c8c72f4f33b5
+r	java:S106*"+Replace this use of System.out by a logger.(ú»Á†şÿÿÿÿ8¿Úí•ğ1J$f6151cc2-f6f6-429a-a092-8c08c4a8bfe7
+¶
+java:S1130."nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(±Îµäüÿÿÿÿ8‰Ø×œğ1J$181876eb-45ae-4785-9d60-8dc13d7109c7
+m	java:S106/"+Replace this use of System.out by a logger.(É—¦¸8¿Úí•ğ1J$129194cb-60d1-407f-a895-5a7e0b07dd34
+r	java:S1060"+Replace this use of System.out by a logger.(¡³°øÿÿÿÿ8¿Úí•ğ1J$f723b86c-25e4-4707-9b3a-bc417336fefb
+m	java:S1062"+Replace this use of System.out by a logger.(î¯ú¡8¿Úí•ğ1J$1188b408-9ffa-4334-b1dc-26c25d9bfb5c
+r	java:S106F"+Replace this use of System.out by a logger.(—ŒëÁúÿÿÿÿ8‘ºğœğ1J$ac7e3c2c-4d05-4c5f-882b-1021d988fdb3

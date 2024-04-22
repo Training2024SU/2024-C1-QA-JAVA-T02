@@ -1,0 +1,35 @@
+
+}
+java:S1118":Add a private constructor to hide the implicit public one.(ÈĞÔÒ8¨¨•ğ1J$3803c687-0300-411c-852d-db72335d2d90
+°
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ªÂ¶v8†àÕ–ğ1J$49efc46a-b0dc-401d-8536-1071b74bb5e6
+m	java:S106"+Replace this use of System.out by a logger.(ïÖ8¨¨•ğ1J$46f27235-b35c-4391-b405-dbf9b501ab11
+m	java:S106"+Replace this use of System.out by a logger.(±áä¸8¨¨•ğ1J$774aa19c-5dba-4844-89ce-68337692641c
+ƒ
+java:S1612"@Replace this lambda with method reference 'System.out::println'.(¨ñ¤²8¨¨•ğ1J$9aa17fd7-276b-4813-9344-8f41b2cc5ca6
+m	java:S106"+Replace this use of System.out by a logger.(¨ñ¤²8¨¨•ğ1J$d1cba171-31aa-4b51-859b-d1f7433242a9
+m	java:S106"+Replace this use of System.out by a logger.(ôÄ»8¨¨•ğ1J$95972442-1077-4caa-bb56-a5972df054e5
+m	java:S106"+Replace this use of System.out by a logger.(„÷ˆ¾8¨¨•ğ1J$703da864-5c7a-43dd-8225-211d99698f06
+ˆ
+java:S1612"@Replace this lambda with method reference 'System.out::println'.(â­İšüÿÿÿÿ8Šÿ•ğ1J$7176af41-34cc-4eb2-ac4f-fb2394d9d21f
+r	java:S106"+Replace this use of System.out by a logger.(â­İšüÿÿÿÿ8¨¨•ğ1J$06715f0f-3f6a-4729-8b0b-be1b62a31554
+r	java:S106#"+Replace this use of System.out by a logger.(Å•’™ùÿÿÿÿ8¨¨•ğ1J$b2523d59-1280-4824-bb57-c4200580863a
+r	java:S106$"+Replace this use of System.out by a logger.(Øçüÿÿÿÿ8¨¨•ğ1J$713d46b9-2cb6-4438-8462-176ced75fc7a
+r	java:S106%"+Replace this use of System.out by a logger.(‹¥‡ıÿÿÿÿ8¨¨•ğ1J$d550dcec-099f-4d20-af90-10e551f9d15f
+r	java:S106&"+Replace this use of System.out by a logger.(íİ´ùÿÿÿÿ8¨¨•ğ1J$df80e99c-ffe5-4601-b3c1-6189d621f96e
+r	java:S106'"+Replace this use of System.out by a logger.(ùß´ ıÿÿÿÿ8¨¨•ğ1J$aea7e861-d404-481f-b2be-9bbeb60e2630
+r	java:S106("+Replace this use of System.out by a logger.(­³ÁÒıÿÿÿÿ8¨¨•ğ1J$39c92115-9304-4ca1-aa0d-fd85f5cf13e4
+l	java:S106)"+Replace this use of System.out by a logger.(ŠüÖ|8¨¨•ğ1J$6413dbb6-65a2-4193-9294-b5d0e2b00cff
+r	java:S106-"+Replace this use of System.out by a logger.(ßÌòôÿÿÿÿÿ8¨¨•ğ1J$e8955817-553e-4ce3-9ab4-04b8332fb919
+m	java:S106."+Replace this use of System.out by a logger.(ØÂòÅ8¨¨•ğ1J$6940ea6e-bc20-4c2c-88d1-03312513aeeb
+l	java:S1060"+Replace this use of System.out by a logger.(øÈ¾}8¨¨•ğ1J$76d2505c-3ab1-4576-8f70-43000f03db76
+m	java:S1062"+Replace this use of System.out by a logger.(ÍëŒ§8¨¨•ğ1J$d1aa7cd0-971f-44dc-91ec-97992ad28382
+m	java:S1064"+Replace this use of System.out by a logger.(íµôĞ8¨¨•ğ1J$6e57173f-afbf-439b-8b8b-9b2cfa81b289
+r	java:S1066"+Replace this use of System.out by a logger.(‰Ü——ùÿÿÿÿ8¨¨•ğ1J$35b7766e-a684-408c-9e20-63b3380b6acd
+r	java:S106D"+Replace this use of System.out by a logger.(çŸ¢öùÿÿÿÿ8¨¨•ğ1J$8d801a25-1725-4dbb-9049-036ce5d89ce7
+r	java:S106E"+Replace this use of System.out by a logger.(¹Æ¬ëüÿÿÿÿ8¨¨•ğ1J$044c2ae8-3784-4a56-9c4a-32280fd5174c
+m	java:S106G"+Replace this use of System.out by a logger.(’–8¨¨•ğ1J$8ba3e1fb-78c7-48e8-9001-a9b603ed0ec0
+m	java:S106I"+Replace this use of System.out by a logger.(Àİ³û8¨¨•ğ1J$0d262d17-40ee-4beb-9543-48f74577c588
+m	java:S106N"+Replace this use of System.out by a logger.(àËŞï8¨¨•ğ1J$0179fbfa-f4e9-4c1e-be2f-6ee040cd667d
+r	java:S106O"+Replace this use of System.out by a logger.(ıÆøÿÿÿÿ8ŒËŞ–ğ1J$a145c7cc-3ba2-4492-8e12-188d3c6241a6
+m	java:S106Z"+Replace this use of System.out by a logger.(ÓÛá‡8èîà–ğ1J$b340fe6a-6d5d-46cd-a3cc-4b9a6b0addb8

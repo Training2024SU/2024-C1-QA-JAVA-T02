@@ -1,0 +1,20 @@
+
+œ
+java:S1104"YMake publicaciones a static final constant or non-public and provide accessors if needed.(¥ÿîì8Õä¶Ÿð1J$2811fc69-3aa9-40bc-a0b3-6993d5d8cf3d
+v
+java:S1444"3Make this "public static publicaciones" field final(¥ÿîì8Õä¶Ÿð1J$51c1ed14-e09b-456e-ae97-46ecb7afee66
+’
+java:S2095\"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(´¢Žß8ýä¶Ÿð1J$cf2e02f6-4456-44f7-bc27-b958606e080b
+•
+java:S2095["MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¤”‘îýÿÿÿÿ8ýä¶Ÿð1J$0f71849f-fc80-4013-8dbd-37aad4983964
+“
+java:S2095U"PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(«Þó°8ýä¶Ÿð1J$88e182cd-ca77-4a6d-bbd0-90b70781c5fe
+–
+java:S2095T"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(²å¯Øüÿÿÿÿ8ýä¶Ÿð1J$7b21362d-0a25-4541-946b-0e6c306c8839
+`
+java:S2386"Make this member "protected".(¥ÿîì8ÿä¶Ÿð1J$617c2ae5-c0a1-4b2b-8b9d-f6c9bdf33e7b
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(†›ÝŸúÿÿÿÿ8ÿä¶Ÿð1J$76ea36c7-79ea-4d1f-9107-4d31e7657040
+m	java:S106,"+Replace this use of System.out by a logger.(õ±ª‡8‡å¶Ÿð1J$e9198110-8d86-4cc9-9ffa-4f3d2cb9fa5b
+r	java:S106B"+Replace this use of System.out by a logger.(®Ì®Óúÿÿÿÿ8Œå¶Ÿð1J$5c3e1a4a-f6f6-4777-a7c6-4de2ff3ec736
+r	java:S106_"+Replace this use of System.out by a logger.(®³•Éüÿÿÿÿ8Þ•»Ÿð1J$8805a18e-6c70-4ad9-a002-9f9efcbf8c91
