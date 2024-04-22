@@ -113,9 +113,9 @@ public class ResourceDAOImpl implements ResourceDAO {
         if (resource instanceof Song song) {
             sql = "UPDATE Songs SET duration = " + song.getDuration() + " WHERE resource_id = " + song.getId() + ";";
         } else if (resource instanceof VideoRecording video) {
-            sql = "UPDATE Video_recordings SET resolution = " + video.getResolution() + " WHERE " + "resource_id = " + video.getId() + ";";
+            sql = "UPDATE Video_recordings SET resolution = '" + video.getResolution() + "' WHERE " + "resource_id = " + video.getId() + ";";
         } else if (resource instanceof Essay essay) {
-            sql = "UPDATE Essays SET academic_level = " + essay.getAcademicLevel() + " WHERE " +
+            sql = "UPDATE Essays SET academic_level = '" + essay.getAcademicLevel() + "' WHERE " +
                     "resource_id = " + essay.getId() + ";";
         }
         mySqlOperation.setSqlStatement(sql);
