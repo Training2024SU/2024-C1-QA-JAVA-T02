@@ -10,6 +10,9 @@ public abstract class Resource {
     private int quantityLoaned;
     private Author author;
 
+    protected Resource() {
+    }
+
     protected Resource(ResourceType type, String title, int quantity, int quantityLoaned,
                        Author author) {
         this.type = type;

@@ -92,7 +92,8 @@ public class MenuMessage {
         System.out.printf((MenuConstant.updateResourceMessage) + "%n", 5);
         System.out.printf((MenuConstant.deleteResourceMessage) + "%n", 6);
         System.out.printf((MenuConstant.exportResourceInfoMessage) + "%n", 7);
-        System.out.printf((MenuConstant.backMessageMessage) + "%n", 8);
+        System.out.printf((MenuConstant.importResourceInfoMessage) + "%n", 8);
+        System.out.printf((MenuConstant.backMessageMessage) + "%n", 9);
     }
 
     public static void administratorResourceLoanMenuMessage(User user) {

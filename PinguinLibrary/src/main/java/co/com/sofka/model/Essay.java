@@ -5,6 +5,9 @@ import co.com.sofka.enums.ResourceType;
 public class Essay extends Resource {
     private String academicLevel;
 
+    public Essay() {
+    }
+
     public Essay(ResourceType type, String title, int quantity, int quantityLoaned, Author author
             , String academicLevel) {
         super(type, title, quantity, quantityLoaned, author);

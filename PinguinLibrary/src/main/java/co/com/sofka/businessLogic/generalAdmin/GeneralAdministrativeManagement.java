@@ -26,11 +26,15 @@ import co.com.sofka.model.Novel;
 import co.com.sofka.model.NovelLoan;
 import co.com.sofka.model.Resource;
 import co.com.sofka.model.User;
+import co.com.sofka.utils.DataManagement;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class GeneralAdministrativeManagement implements AuthorManagement, BookLoanManagement,
         BookManagement, NovelManagement, NovelLoanManagement {
@@ -266,8 +270,40 @@ public class GeneralAdministrativeManagement implements AuthorManagement, BookLo
         }
     }
 
+    public void exportResourcesToCSV(String fileName) {
+    }
+
+    public void exportResourcesToFile(String fileName, String extension) throws IOException {
+        // get all resources with details, and group them by their type
+        Map<ResourceType, List<Resource>> resourcesByType =
+                resourceDAO.getAllResources().stream().map(r -> getResourceDetails(r.getId())).collect(Collectors.groupingBy(Resource::getType));
+
+        // save a file for every type of resource
+        for (Map.Entry<ResourceType, List<Resource>> entry : resourcesByType.entrySet()) {
+            ResourceType resourceType = entry.getKey();
+            List<Resource> resourceList = entry.getValue();
+            String name = "";
+            switch (resourceType) {
+                case SONG -> name = fileName + "_songs" + extension;
+                case VIDEO_RECORDING -> name = fileName + "_videos" + extension;
+                case ESSAY -> name = fileName + "_essays" + extension;
+            }
+            switch (extension) {
+                case ".json" -> DataManagement.exportResourcesToJson(name, resourceList);
+                case ".xml" -> DataManagement.exportResourcesToXML(name, resourceList);
+            }
+        }
+    }
+
     public User getUserByEmail(String email) {
         UserDAOImpl userDAO = new UserDAOImpl();
         return userDAO.findUserByEmail(email);
+    }
+
+    public void importFromFile(String fileName, String extension, ResourceType resourceType) throws SQLException, IOException {
+        List<Resource> resources = DataManagement.importFromFile(fileName, extension, resourceType);
+        for (Resource resource : resources) {
+            resourceDAO.insertResource(resource);
+        }
     }
 }

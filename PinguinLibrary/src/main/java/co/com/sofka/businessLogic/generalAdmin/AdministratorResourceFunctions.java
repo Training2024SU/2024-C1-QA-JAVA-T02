@@ -1,11 +1,11 @@
 package co.com.sofka.businessLogic.generalAdmin;
 
-import co.com.sofka.businessLogic.reader.ReaderManagement;
 import co.com.sofka.enums.ResourceType;
 import co.com.sofka.model.Resource;
 import co.com.sofka.model.ResourceFactory;
 import co.com.sofka.model.User;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -14,9 +14,9 @@ import static co.com.sofka.menu.MenuConstant.incorrectOptionMessage;
 import static co.com.sofka.menu.MenuMessage.administratorResourceMenuMessage;
 import static co.com.sofka.utils.Utils.askInt;
 import static co.com.sofka.utils.Utils.askResourceType;
+import static co.com.sofka.utils.Utils.askString;
 
 public class AdministratorResourceFunctions {
-    private static final ReaderManagement readerManagement = new ReaderManagement();
     private static final GeneralAdministrativeManagement administrativeManagement =
             new GeneralAdministrativeManagement();
 
@@ -32,8 +32,9 @@ public class AdministratorResourceFunctions {
                 case 4 -> createResource();
                 case 5 -> updateResource();
                 case 6 -> deleteResource();
-                case 7 -> exportResourceInfo();
-                case 8 -> {
+                case 7 -> exportResourcesInfo();
+                case 8 -> importResourcesInfo();
+                case 9 -> {
                     System.out.println(exitingMessage);
                     keepMenu = false;
                 }
@@ -43,14 +44,15 @@ public class AdministratorResourceFunctions {
     }
 
     private static void listResources(ResourceType type) {
-        List<Resource> resources = readerManagement.getAvailableResources(type);
+        List<Resource> resources = administrativeManagement.getAllResources(type);
         System.out.println("List of " + type + "S available: ");
         resources.forEach(System.out::println);
     }
 
     private static void createResource() {
         System.out.println("Adding a new resource: ");
-        ResourceType type = askResourceType("Enter the new resource type: (Song, Video_recording, Essay)");
+        ResourceType type = askResourceType("Enter the new resource type: (Song, Video_recording,"
+                + " Essay)");
         Resource resource = ResourceFactory.getResourceFromInput(type);
         try {
             administrativeManagement.insertResource(resource);
@@ -78,6 +80,39 @@ public class AdministratorResourceFunctions {
         administrativeManagement.deleteResource(id);
     }
 
-    private static void exportResourceInfo() {
+    private static void exportResourcesInfo() {
+        System.out.println("Select the format you want for the exported file: ");
+        int formatOption = askInt("1. CSV | 2. JSON | 3. XML |");
+        String fileName = askString("Enter the name for the exported file: ");
+        try {
+            switch (formatOption) {
+//                case 1 -> administrativeManagement.exportResourcesToCSV(fileName);
+                case 2 -> administrativeManagement.exportResourcesToFile(fileName, ".json");
+                case 3 -> administrativeManagement.exportResourcesToFile(fileName, ".xml");
+                default -> System.out.println("Unknown option");
+            }
+            System.out.println("Successful data export\n");
+        } catch (Exception e) {
+            System.out.println("Couldn't export resources info, " + e.getLocalizedMessage());
+        }
+    }
+
+    private static void importResourcesInfo() {
+        System.out.println("Select the type of resource you want to import: ");
+        ResourceType resourceType = askResourceType("Song | Video_recording | Essay");
+        System.out.println("Select the format of the file you want to import: ");
+        int formatOption = askInt("1. CSV | 2. JSON | 3. XML |");
+        String fileName = askString("Enter the path or name of the file to import: ");
+        try {
+            switch (formatOption) {
+//                case 1 -> administrativeManagement.exportResourcesToCSV(fileName);
+                case 2 -> administrativeManagement.importFromFile(fileName, ".json", resourceType);
+                case 3 -> administrativeManagement.importFromFile(fileName, ".xml", resourceType);
+                default -> System.out.println("Unknown option");
+            }
+            System.out.println("Successful data import\n");
+        } catch (SQLException | IOException e) {
+            System.out.println("Couldn't import resources info, " + e.getLocalizedMessage());
+        }
     }
 }

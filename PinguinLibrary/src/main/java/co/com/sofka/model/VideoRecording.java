@@ -5,6 +5,9 @@ import co.com.sofka.enums.ResourceType;
 public class VideoRecording extends Resource {
     private String resolution;
 
+    public VideoRecording() {
+    }
+
     public VideoRecording(ResourceType type, String title, int quantity, int quantityLoaned,
                           Author author, String resolution) {
         super(type, title, quantity, quantityLoaned, author);

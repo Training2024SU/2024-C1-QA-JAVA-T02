@@ -17,8 +17,8 @@ public class Authentication {
         int attempts = 0;
         boolean loggedIn = false;
         while (attempts < 3 && !loggedIn) {
-            String email = askForEmail();
-            String password = askForPassword();
+            String email = askString("Enter your email: ");
+            String password = askString("Enter your password: ");
             user = verifyEmail(email);
             if (user == null) {
                 System.out.println("Incorrect email. Please try again.");

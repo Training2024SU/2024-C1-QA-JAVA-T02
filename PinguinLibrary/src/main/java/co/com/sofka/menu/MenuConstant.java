@@ -80,7 +80,8 @@ public class MenuConstant {
     public static String createResourceMessage = "%s. Create resource";
     public static String updateResourceMessage = "%s. Update resource";
     public static String deleteResourceMessage = "%s. Delete resource";
-    public static String exportResourceInfoMessage = "%s. Export resources data in json file";
+    public static String exportResourceInfoMessage = "%s. Export resources data to a file";
+    public static String importResourceInfoMessage = "%s. Import resources data to a file";
 
     // Resource loan options
     public static String resourceLoanOptionsMessage = "%s. Resource loan options";

@@ -5,6 +5,9 @@ import co.com.sofka.enums.ResourceType;
 public class Song extends Resource {
     private int duration;
 
+    public Song() {
+    }
+
     public Song(ResourceType type, String title, int quantity, int quantityLoaned,
                 Author author, int duration) {
         super(type, title, quantity, quantityLoaned, author);
