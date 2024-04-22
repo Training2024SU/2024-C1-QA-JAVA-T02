@@ -26,13 +26,13 @@
   <void method="add">
    <object class="co.com.ejercicio.modelo.Publicacion">
     <void property="cantidadDisponible">
-     <int>100</int>
+     <int>99</int>
     </void>
     <void property="cantidadEjemplares">
      <int>120</int>
     </void>
     <void property="cantidadPrestado">
-     <int>20</int>
+     <int>21</int>
     </void>
     <void property="numeroPaginas">
      <int>78</int>
@@ -43,8 +43,7 @@
     <void property="titulo">
      <string>Azul</string>
     </void>
-   </object>1
-1
+   </object>
   </void>
   <void method="add">
    <object class="co.com.ejercicio.modelo.Publicacion">

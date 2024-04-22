@@ -23,6 +23,8 @@ public class MenuGestionSuperUsuario {
         System.out.println("1. Crear administrador");
         System.out.println("2. Simular prestamos");
         System.out.println("3. Modificar administrador");
+        System.out.println("4. Verificar funcionalidades publicaciones");
+        System.out.println("5. Verificar funcionalidades publicaciones nuevas");
         System.out.println("0. Cerrar sesion");
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -45,11 +47,17 @@ public class MenuGestionSuperUsuario {
                 } catch (SQLException e){
                     throw new RuntimeException(e);
                 }
+            case 4:
+                gestionarPublicacion();
+                break;
+            case 5:
+                gestionarPublicacionNueva();
+                break;
             case 0:
                 continuarMenu = false;
                 break;
             default:
-                System.out.println("Opción no válida. Por favor ingrese un número entre 0 y 3.");
+                System.out.println("Opción no válida. Por favor ingrese un número entre 0 y 5.");
             }
         }
     }

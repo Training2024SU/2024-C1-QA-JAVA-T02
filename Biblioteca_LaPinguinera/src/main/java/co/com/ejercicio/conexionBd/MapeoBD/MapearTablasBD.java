@@ -58,9 +58,9 @@ public class MapearTablasBD {
     }
 
     // Mapeo video_grabacion
-    public static VideoGrabacion mapearResultSetAVideoGrabacion(ResultSet resultSet) throws SQLException {
+    public static Videograbacion mapearResultSetAVideoGrabacion(ResultSet resultSet) throws SQLException {
         try {
-            return new VideoGrabacion(
+            return new Videograbacion(
                     resultSet.getString("titulo"),
                     resultSet.getString("director"),
                     resultSet.getString("duracion"),

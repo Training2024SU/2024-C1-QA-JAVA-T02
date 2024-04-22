@@ -1,6 +1,6 @@
 package co.com.ejercicio.modeloAccesoBD;
 
-import co.com.ejercicio.modelo.VideoGrabacion;
+import co.com.ejercicio.modelo.Videograbacion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.com.ejercicio.conexionBd.MapeoBD.MapearTablasBD.mapearResultSetACancion;
 import static co.com.ejercicio.conexionBd.MapeoBD.MapearTablasBD.mapearResultSetAVideoGrabacion;
 import static co.com.ejercicio.conexionBd.constantesCRUD.QueryConstante.*;
 import static co.com.ejercicio.menu.constantesMenu.OperacionExitosaOFallida.OPERACION_EXITOSA;
@@ -21,7 +20,7 @@ public class VideoGrabacionAccesoBD {
         this.conexion = conexion;
     }
 
-    public void insertarVideoGrabacion(VideoGrabacion videoGrabacion) throws SQLException {
+    public void insertarVideoGrabacion(Videograbacion videoGrabacion) throws SQLException {
         try {
             PreparedStatement statement = conexion.prepareStatement(INSERT_VIDEOGRABACION);
             statement.setString(1, videoGrabacion.getTitulo());
@@ -37,8 +36,8 @@ public class VideoGrabacionAccesoBD {
         }
     }
 
-    public List<VideoGrabacion> obtenerTodasLasVideoGrabaciones() throws SQLException {
-        List<VideoGrabacion> videoGrabaciones = new ArrayList<>();
+    public List<Videograbacion> obtenerTodasLasVideoGrabaciones() throws SQLException {
+        List<Videograbacion> videoGrabaciones = new ArrayList<>();
         try {
             PreparedStatement statement = conexion.prepareStatement(SELECT_ALL_FROM_VIDEOGRABACION);
             ResultSet resultSet = statement.executeQuery();
@@ -52,15 +51,15 @@ public class VideoGrabacionAccesoBD {
         return videoGrabaciones;
     }
 
-    public static List<VideoGrabacion> obtenerVideoGrabacionesDeUnDirector(String director) throws SQLException {
-        List<VideoGrabacion> videoGrabaciones = new ArrayList<>();
+    public static List<Videograbacion> obtenerVideoGrabacionesDeUnDirector(String director) throws SQLException {
+        List<Videograbacion> videoGrabaciones = new ArrayList<>();
 
         try (PreparedStatement statement = conexion.prepareStatement(SELECT_ALL_DIRECTOR_FROM_VIDEOGRABACION)) {
             statement.setString(1, director);
 
             try (ResultSet resultSet = statement.executeQuery()) {
                 while (resultSet.next()) {
-                    VideoGrabacion videoGrabacion = new VideoGrabacion(
+                    Videograbacion videoGrabacion = new Videograbacion(
                             resultSet.getString("titulo"),
                             resultSet.getString("director"),
                             resultSet.getString("duracion"),
@@ -76,7 +75,7 @@ public class VideoGrabacionAccesoBD {
         return videoGrabaciones;
     }
 
-    public void actualizarVideoGrabacion(VideoGrabacion videoGrabacion, String tituloPrevio) throws SQLException {
+    public void actualizarVideoGrabacion(Videograbacion videoGrabacion, String tituloPrevio) throws SQLException {
         try (PreparedStatement statement = conexion.prepareStatement(UPDATE_VIDEOGRABACION)) {
             statement.setString(1, videoGrabacion.getTitulo());
             statement.setString(2, videoGrabacion.getDirector());

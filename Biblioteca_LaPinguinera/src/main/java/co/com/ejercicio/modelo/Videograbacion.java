@@ -1,6 +1,6 @@
 package co.com.ejercicio.modelo;
 
-public class VideoGrabacion {
+public class Videograbacion {
     private String titulo;
     private String director;
     private String duracion;
@@ -8,7 +8,7 @@ public class VideoGrabacion {
     private int cantidadPrestado;
     private int cantidadDisponible;
 
-    public VideoGrabacion(String titulo, String director, String duracion, int cantidadEjemplares, int cantidadPrestado, int cantidadDisponible) {
+    public Videograbacion(String titulo, String director, String duracion, int cantidadEjemplares, int cantidadPrestado, int cantidadDisponible) {
         this.titulo = titulo;
         this.director = director;
         this.duracion = duracion;

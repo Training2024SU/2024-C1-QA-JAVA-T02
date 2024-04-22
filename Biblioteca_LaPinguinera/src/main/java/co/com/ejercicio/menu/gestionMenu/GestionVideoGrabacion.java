@@ -1,7 +1,7 @@
 package co.com.ejercicio.menu.gestionMenu;
 
 import co.com.ejercicio.conexionBd.Conexion;
-import co.com.ejercicio.modelo.VideoGrabacion;
+import co.com.ejercicio.modelo.Videograbacion;
 import co.com.ejercicio.modeloAccesoBD.VideoGrabacionAccesoBD;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -29,7 +29,7 @@ public class GestionVideoGrabacion {
 
         Connection conexion = Conexion.obtenerConexion();
         VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
-        videoGrabacionAccesoBD.insertarVideoGrabacion(new VideoGrabacion(titulo, director, duracion, cantidadEjemplares, cantidadPrestado, cantidadDisponible));
+        videoGrabacionAccesoBD.insertarVideoGrabacion(new Videograbacion(titulo, director, duracion, cantidadEjemplares, cantidadPrestado, cantidadDisponible));
     }
 
     public static void gestionObtenerDirectorVideoGrabacion() throws SQLException {
@@ -39,8 +39,8 @@ public class GestionVideoGrabacion {
         try {
             Connection conexion = Conexion.obtenerConexion();
             new VideoGrabacionAccesoBD(conexion);
-            List<VideoGrabacion> videoGrabaciones = obtenerVideoGrabacionesDeUnDirector(director);
-            for (VideoGrabacion videoGrabacion : videoGrabaciones) {
+            List<Videograbacion> videoGrabaciones = obtenerVideoGrabacionesDeUnDirector(director);
+            for (Videograbacion videoGrabacion : videoGrabaciones) {
                 System.out.println(videoGrabacion);
             }
         } catch (SQLException e) {
@@ -53,8 +53,8 @@ public class GestionVideoGrabacion {
         try {
             Connection conexion = Conexion.obtenerConexion();
             VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
-            List<VideoGrabacion> videoGrabaciones = videoGrabacionAccesoBD.obtenerTodasLasVideoGrabaciones();
-            for (VideoGrabacion videoGrabacion : videoGrabaciones) {
+            List<Videograbacion> videoGrabaciones = videoGrabacionAccesoBD.obtenerTodasLasVideoGrabaciones();
+            for (Videograbacion videoGrabacion : videoGrabaciones) {
                 System.out.println(videoGrabacion);
             }
         } catch (SQLException e) {
@@ -84,10 +84,10 @@ public class GestionVideoGrabacion {
         Connection conexion = Conexion.obtenerConexion();
         VideoGrabacionAccesoBD videoGrabacionAccesoBD = new VideoGrabacionAccesoBD(conexion);
 
-        List<VideoGrabacion> todasLasVideograbaciones = videoGrabacionAccesoBD.obtenerTodasLasVideoGrabaciones();
+        List<Videograbacion> todasLasVideograbaciones = videoGrabacionAccesoBD.obtenerTodasLasVideoGrabaciones();
 
         try{
-            VideoGrabacion videoGrabacion = obtenerVideograbacionPorTitulo(todasLasVideograbaciones, tituloVideograbacion);
+            Videograbacion videoGrabacion = obtenerVideograbacionPorTitulo(todasLasVideograbaciones, tituloVideograbacion);
 
         System.out.println("Ingresa los datos para actualizar");
         System.out.println("Ingresa el titulo nuevo");
@@ -117,9 +117,9 @@ public class GestionVideoGrabacion {
         }
     }
 
-    private static VideoGrabacion obtenerVideograbacionPorTitulo(List<VideoGrabacion> listaDeVideograbaciones, String titulo){
+    private static Videograbacion obtenerVideograbacionPorTitulo(List<Videograbacion> listaDeVideograbaciones, String titulo){
         return listaDeVideograbaciones.stream()
-                .filter(videoGrabacion -> titulo.equals(videoGrabacion.getTitulo()))
+                .filter(videograbacion -> titulo.equals(videograbacion.getTitulo()))
                 .findFirst()
                 .orElseThrow();
     }

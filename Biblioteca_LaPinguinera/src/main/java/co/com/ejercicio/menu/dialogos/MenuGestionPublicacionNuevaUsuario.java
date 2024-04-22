@@ -29,7 +29,7 @@ public class MenuGestionPublicacionNuevaUsuario {
         System.out.println("4. Obtener directores de videograbaciones");
         System.out.println("5. Obtener cancion");
         System.out.println("6. Obtener artistas de canciones");
-        System.out.println("7. Salir");
+        System.out.println("0. Salir");
 
 
         System.out.print(ELIGE_OPCION);
@@ -68,7 +68,7 @@ public class MenuGestionPublicacionNuevaUsuario {
             case 6:
                 gestionObtenerArtistaCancion();
                 break;
-            case 7:
+            case 0:
                 continuarMenu = false;
                 break;
             default:

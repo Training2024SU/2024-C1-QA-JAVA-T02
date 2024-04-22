@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static co.com.ejercicio.menu.dialogos.MenuGestionPrestamo.menuPrestamos;
@@ -82,6 +83,41 @@ public class GestionPrestamoSuperUsuario {
     }
 
     public static void actualizarPrestamoSuperUsuario() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Actualizando préstamo...");
+        System.out.println("Ingrese id de prestamo ha actualizar");
+
+        int idPrestamo = scanner.nextInt();
+        scanner.nextLine();
+
+        try {
+            Prestamo prestamoAEditar = prestamos.stream()
+                    .filter(prestamo -> prestamo.getIdPrestamo() == idPrestamo).findFirst().orElseThrow();
+
+            System.out.println("Editando prestamo: " + prestamoAEditar);
+
+            System.out.println("Editando fecha prestamo");
+            Date fechaPrestamo = Date.valueOf(scanner.nextLine());
+            System.out.println("Editando fecha devolucion");
+            Date fechaDevolucion = Date.valueOf(scanner.nextLine());
+            System.out.println("Editando estado");
+            String estado = scanner.nextLine();
+            System.out.println("Editando correo usuario");
+            String correoUsuario = scanner.nextLine();
+            System.out.println("Editando titulo publicacion");
+            String tituloPublicacion = scanner.nextLine();
+
+            prestamoAEditar.setFechaPrestamo(fechaPrestamo);
+            prestamoAEditar.setFechaDevolucion(fechaDevolucion);
+            prestamoAEditar.setEstado(estado);
+            prestamoAEditar.setUsuarioCorreo(correoUsuario);
+            prestamoAEditar.setPublicacionTitulo(tituloPublicacion);
+
+            System.out.println("Prestamo editado exitosamente");
+        } catch (NoSuchElementException e){
+            System.out.println("Pestamo con id " + idPrestamo + " no existe");
+        }
+
+
     }
 }

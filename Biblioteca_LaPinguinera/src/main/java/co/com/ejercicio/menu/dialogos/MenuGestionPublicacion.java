@@ -13,7 +13,9 @@ public class MenuGestionPublicacion {
     public static void menuPublicacion() {
         Scanner scanner = new Scanner(System.in);
 
+        boolean continuarMenu = true;
 
+        while(continuarMenu){
         System.out.println("MENÚ DE GESTIÓN DE PUBLICACIONES");
         System.out.println("¿Qué desea hacer?");
         System.out.println(INSERTAR);
@@ -25,6 +27,7 @@ public class MenuGestionPublicacion {
         System.out.println("7. Exportar publicaciones a XML");
         System.out.println("8. Imprimir publicaciones de archivo json");
         System.out.println("9. Imprimir publicaciones de archivo xml");
+            System.out.println("0. Salir");
 
         System.out.print(ELIGE_OPCION);
         int opcion = scanner.nextInt();
@@ -94,9 +97,12 @@ public class MenuGestionPublicacion {
             case 9:
                 gestionarImportarXml();
                 break;
+            case 0:
+                continuarMenu = false;
+                break;
             default:
                 System.out.println("Opción no válida. Por favor ingrese un número entre 1 y 5.");
+            }
         }
-        scanner.close();
     }
 }
