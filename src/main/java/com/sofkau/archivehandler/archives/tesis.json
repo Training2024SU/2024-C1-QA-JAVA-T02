@@ -1,0 +1,92 @@
+[
+  {
+    "titulo": "Título 1",
+    "fecha": "2023-01-15",
+    "autor": "Autor 1",
+    "campoEstudio": "Campo 1",
+    "pais": "País 1",
+    "cantidadCopia": 10,
+    "cantidadPrestado": 3
+  },
+  {
+    "titulo": "Título 2",
+    "fecha": "2023-02-20",
+    "autor": "Autor 2",
+    "campoEstudio": "Campo 2",
+    "pais": "País 2",
+    "cantidadCopia": 15,
+    "cantidadPrestado": 5
+  },
+  {
+    "titulo": "Título 3",
+    "fecha": "2023-03-10",
+    "autor": "Autor 3",
+    "campoEstudio": "Campo 3",
+    "pais": "País 3",
+    "cantidadCopia": 20,
+    "cantidadPrestado": 8
+  },
+  {
+    "titulo": "Título 4",
+    "fecha": "2023-04-05",
+    "autor": "Autor 4",
+    "campoEstudio": "Campo 4",
+    "pais": "País 4",
+    "cantidadCopia": 12,
+    "cantidadPrestado": 4
+  },
+  {
+    "titulo": "Título 5",
+    "fecha": "2023-05-18",
+    "autor": "Autor 5",
+    "campoEstudio": "Campo 5",
+    "pais": "País 5",
+    "cantidadCopia": 18,
+    "cantidadPrestado": 6
+  },
+  {
+    "titulo": "Título 6",
+    "fecha": "2023-06-22",
+    "autor": "Autor 6",
+    "campoEstudio": "Campo 6",
+    "pais": "País 6",
+    "cantidadCopia": 25,
+    "cantidadPrestado": 9
+  },
+  {
+    "titulo": "Título 7",
+    "fecha": "2023-07-14",
+    "autor": "Autor 7",
+    "campoEstudio": "Campo 7",
+    "pais": "País 7",
+    "cantidadCopia": 30,
+    "cantidadPrestado": 12
+  },
+  {
+    "titulo": "Título 8",
+    "fecha": "2023-08-30",
+    "autor": "Autor 8",
+    "campoEstudio": "Campo 8",
+    "pais": "País 8",
+    "cantidadCopia": 22,
+    "cantidadPrestado": 7
+  },
+  {
+    "titulo": "Título 9",
+    "fecha": "2023-09-05",
+    "autor": "Autor 9",
+    "campoEstudio": "Campo 9",
+    "pais": "País 9",
+    "cantidadCopia": 28,
+    "cantidadPrestado": 10
+  },
+  {
+    "titulo": "Título 10",
+    "fecha": "2023-10-12",
+    "autor": "Autor 10",
+    "campoEstudio": "Campo 10",
+    "pais": "País 10",
+    "cantidadCopia": 35,
+    "cantidadPrestado": 14
+  }
+]

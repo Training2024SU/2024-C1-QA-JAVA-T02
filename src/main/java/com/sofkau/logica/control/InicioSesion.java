@@ -64,6 +64,8 @@ public class InicioSesion {
                 usuarioOp.registrarUsuario(new Usuario(nombre, correoU, contrasenaU));
                 option = 0;
 
+            }case 4 ->{
+                bandera = false;
             }case 0 -> {
                 option = 0;
 

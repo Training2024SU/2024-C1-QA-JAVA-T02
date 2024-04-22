@@ -75,4 +75,10 @@ public class EmpleadoRepositorio {
         IngresoQuery.ejecutarIngresoQuery(query);
     }
 
+    public static void actualizarEmpleado(Empleado empleado) {
+        String query = String.format("UPDATE Empleado SET nombre = '%s', correo = '%s', contrasena = '%s', rol = '%s' WHERE idEmpleado = '%s'",
+                empleado.getNombre(), empleado.getCorreo(), empleado.getContrasena(), empleado.getRol(), empleado.getId());
+        IngresoQuery.ejecutarIngresoQuery(query);
+    }
+
 }

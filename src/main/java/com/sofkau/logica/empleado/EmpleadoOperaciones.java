@@ -80,4 +80,20 @@ public class EmpleadoOperaciones {
         return empleadoActual;
     }
 
+    public void actualizarEmpleado(Empleado empleado) {
+        // Verificamos si el empleado a actualizar existe en la base de datos
+        Empleado empleadoExistente = buscarEmpleadoPorCorreo(empleado.getCorreo());
+        if (empleadoExistente != null) {
+            // Actualizamos el empleado en la base de datos
+            EmpleadoRepositorio.actualizarEmpleado(empleado);
+            // Actualizamos el empleado en la lista de empleados
+            empleados.put(empleadoExistente.getId(), empleado);
+            // Asignamos el empleado actualizado como el empleado perfil
+            empleadoPerfil = empleado;
+            System.out.println("Empleado actualizado correctamente: " + empleado);
+        } else {
+            System.out.println("El empleado con correo " + empleado.getCorreo() + " no existe en la base de datos.");
+        }
+    }
+
 }

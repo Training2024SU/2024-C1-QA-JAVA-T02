@@ -44,4 +44,10 @@ public class UsuarioRepositorio {
         }
     }
 
+    public static void actualizarUsuario(Usuario usuario) {
+        String query = String.format("UPDATE Usuario SET nombre = '%s', contrasena = '%s' WHERE correo = '%s'",
+                usuario.getNombre(), usuario.getContrasena(), usuario.getCorreo());
+        IngresoQuery.ejecutarIngresoQuery(query);
+    }
+
     }

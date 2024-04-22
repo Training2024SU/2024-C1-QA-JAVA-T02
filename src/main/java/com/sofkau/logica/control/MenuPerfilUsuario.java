@@ -2,6 +2,7 @@ package com.sofkau.logica.control;
 
 import com.sofkau.dialogo.Menu;
 import com.sofkau.model.PerfilModificable;
+import com.sofkau.model.Usuario;
 import com.sofkau.util.enums.TipoPublicacion;
 
 import static com.sofkau.logica.control.ControlIngreso.*;
@@ -42,6 +43,13 @@ public class MenuPerfilUsuario {
                 ));
             }
             case 4-> {
+                Menu.contrasena();
+                String contrasena = scannerGlobal.nextLine();
+                usuarioOp.actualizarUsuario(new Usuario(
+                        usuarioOp.getUsuarioActual().getNombre(),
+                        usuarioOp.getUsuarioActual().getCorreo(),
+                        contrasena
+                ));
 
             }
             default -> {

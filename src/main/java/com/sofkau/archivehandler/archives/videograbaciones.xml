@@ -1,0 +1,52 @@
+<listadoVideoGrabaciones>
+    <videograbacion>
+        <titulo>Video A</titulo>
+        <sinopsis>Sinopsis del video A</sinopsis>
+        <genero>Género A</genero>
+        <autor>Autor A</autor>
+        <calificacion>4</calificacion>
+        <tipo>Tipo A</tipo>
+        <cantidadCopia>10</cantidadCopia>
+        <cantidadPrestado>3</cantidadPrestado>
+    </videograbacion>
+    <videograbacion>
+        <titulo>Video B</titulo>
+        <sinopsis>Sinopsis del video B</sinopsis>
+        <genero>Género B</genero>
+        <autor>Autor B</autor>
+        <calificacion>3</calificacion>
+        <tipo>Tipo B</tipo>
+        <cantidadCopia>15</cantidadCopia>
+        <cantidadPrestado>5</cantidadPrestado>
+    </videograbacion>
+    <videograbacion>
+        <titulo>Video C</titulo>
+        <sinopsis>Sinopsis del video C</sinopsis>
+        <genero>Género C</genero>
+        <autor>Autor C</autor>
+        <calificacion>5</calificacion>
+        <tipo>Tipo C</tipo>
+        <cantidadCopia>20</cantidadCopia>
+        <cantidadPrestado>8</cantidadPrestado>
+    </videograbacion>
+    <videograbacion>
+        <titulo>Video D</titulo>
+        <sinopsis>Sinopsis del video D</sinopsis>
+        <genero>Género D</genero>
+        <autor>Autor D</autor>
+        <calificacion>4</calificacion>
+        <tipo>Tipo D</tipo>
+        <cantidadCopia>12</cantidadCopia>
+        <cantidadPrestado>4</cantidadPrestado>
+    </videograbacion>
+    <videograbacion>
+        <titulo>Video E</titulo>
+        <sinopsis>Sinopsis del video E</sinopsis>
+        <genero>Género E</genero>
+        <autor>Autor E</autor>
+        <calificacion>3</calificacion>
+        <tipo>Tipo E</tipo>
+        <cantidadCopia>18</cantidadCopia>
+        <cantidadPrestado>6</cantidadPrestado>
+    </videograbacion>
+</listadoVideoGrabaciones>

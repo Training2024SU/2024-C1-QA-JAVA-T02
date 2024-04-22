@@ -48,7 +48,10 @@ public class MenuPerfilEmpleado {
                 ));
             }
             case 4-> {
-
+                Menu.contrasena();
+                String contrasena = scannerGlobal.nextLine();
+                empleadoPerfil.setContrasena(contrasena);
+                empleadoOp.actualizarEmpleado(empleadoPerfil);
             }
             default -> {
                 System.out.println("Ha ocurrido un error por favor verifique sus credenciales");

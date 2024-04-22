@@ -43,4 +43,19 @@ public class UsuarioOperaciones {
     public Usuario getUsuarioActual() {
         return usuarioActual;
     }
+
+    public void actualizarUsuario(Usuario usuario) {
+        // Verificamos si el usuario a actualizar existe en la base de datos
+        if (usuarios.containsKey(usuario.getCorreo())) {
+            // Actualizamos el usuario en la base de datos
+            UsuarioRepositorio.actualizarUsuario(usuario);
+            // Actualizamos el usuario en la lista de usuarios en memoria
+            usuarios.put(usuario.getCorreo(), usuario);
+            // Asignamos el usuario actualizado como el usuario actual
+            usuarioActual = usuario;
+            System.out.println("Usuario actualizado correctamente: " + usuario);
+        } else {
+            System.out.println("El usuario con correo " + usuario.getCorreo() + " no existe en la base de datos.");
+        }
+    }
 }
