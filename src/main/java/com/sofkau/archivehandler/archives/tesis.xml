@@ -1,0 +1,47 @@
+<listadoTesis>
+    <tesis>
+        <titulo>Nombre de la Tesis 1</titulo>
+        <fecha>2023-01-15</fecha>
+        <autor>Autor de la Tesis 1</autor>
+        <campoEstudio>Campo de Estudio 1</campoEstudio>
+        <pais>País de la Tesis 1</pais>
+        <cantidadCopia>10</cantidadCopia>
+        <cantidadPrestado>3</cantidadPrestado>
+    </tesis>
+    <tesis>
+        <titulo>Nombre de la Tesis 2</titulo>
+        <fecha>2023-02-20</fecha>
+        <autor>Autor de la Tesis 2</autor>
+        <campoEstudio>Campo de Estudio 2</campoEstudio>
+        <pais>País de la Tesis 2</pais>
+        <cantidadCopia>15</cantidadCopia>
+        <cantidadPrestado>5</cantidadPrestado>
+    </tesis>
+    <tesis>
+        <titulo>Nombre de la Tesis 3</titulo>
+        <fecha>2023-03-10</fecha>
+        <autor>Autor de la Tesis 3</autor>
+        <campoEstudio>Campo de Estudio 3</campoEstudio>
+        <pais>País de la Tesis 3</pais>
+        <cantidadCopia>20</cantidadCopia>
+        <cantidadPrestado>8</cantidadPrestado>
+    </tesis>
+    <tesis>
+        <titulo>Nombre de la Tesis 4</titulo>
+        <fecha>2023-04-05</fecha>
+        <autor>Autor de la Tesis 4</autor>
+        <campoEstudio>Campo de Estudio 4</campoEstudio>
+        <pais>País de la Tesis 4</pais>
+        <cantidadCopia>12</cantidadCopia>
+        <cantidadPrestado>4</cantidadPrestado>
+    </tesis>
+    <tesis>
+        <titulo>Nombre de la Tesis 5</titulo>
+        <fecha>2023-05-18</fecha>
+        <autor>Autor de la Tesis 5</autor>
+        <campoEstudio>Campo de Estudio 5</campoEstudio>
+        <pais>País de la Tesis 5</pais>
+        <cantidadCopia>18</cantidadCopia>
+        <cantidadPrestado>6</cantidadPrestado>
+    </tesis>
+</listadoTesis>
