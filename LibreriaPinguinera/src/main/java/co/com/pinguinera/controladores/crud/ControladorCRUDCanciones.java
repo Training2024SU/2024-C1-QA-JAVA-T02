@@ -92,7 +92,7 @@ public class ControladorCRUDCanciones {
         try {
             sincronizadorCanciones.sincronizarCanciones();
         } catch (SQLException e) {
-            VistaUtil.mostrarMensajeError();
+
         }
     }
 }

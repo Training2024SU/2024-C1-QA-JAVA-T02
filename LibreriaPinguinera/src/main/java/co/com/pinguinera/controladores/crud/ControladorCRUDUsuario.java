@@ -53,11 +53,11 @@ public class ControladorCRUDUsuario {
         VistaUtil.mostrarMensajeExito();
     }
 
-    public void actualizarUsuario() {
+    public void actualizarUsuario(String correo,String contrasena) {
         Usuario usuarioActualizado = new Usuario();
         Scanner scanner =new Scanner(System.in);
-        System.out.println("Ingrese el Id del usuario que desea actualizar");
-        usuarioActualizado.setIdUsuario(Integer.parseInt(scanner.nextLine()));
+        int id = obtenerUsuario(correo,contrasena);
+        usuarioActualizado.setIdUsuario(id);
         usuarioActualizado.setNombre(vista.pedirNombreUsuario());
         usuarioActualizado.setCorreo(vista.pedirCorreoUsuario());
         usuarioActualizado.setContrasena(vista.pedirContrasenaUsuario());
@@ -106,11 +106,29 @@ public class ControladorCRUDUsuario {
         }
     }
 
+    public int obtenerUsuario(String correoABuscar,String contrasena) {
+        try {
+            List<Usuario> usuarios = usuarioDAO.obtenerTodos();
+            for (Usuario usuario : usuarios) {
+                if (usuario.getCorreo().equals(correoABuscar) && usuario.getContrasena().equals(contrasena)) {
+                    int id = usuario.getIdUsuario();
+                    return id;
+                }
+            }
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeSolicitudFallida();
+            return 0;
+        }
+        return 0;
+    }
+
+
+
     private void sincronizarDatos() {
         try {
             sincronizadorUsuario.sincronizarUsuarios();
         } catch (SQLException e) {
-            VistaUtil.mostrarMensajeError();
+
         }
     }
 }

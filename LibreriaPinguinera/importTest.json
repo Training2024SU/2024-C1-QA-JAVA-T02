@@ -1,0 +1,33 @@
+[
+  {
+    
+    "titulo": "El ensayo sobre la ceguera",
+    "tipoPublicacion": "ENSAYO",
+    "autor": "José Saramago",
+    "formato": "pdf",
+    "cantEjemplares": 100,
+    "cantPrestados": 10
+    
+  },
+  {
+    
+    "titulo": "El arte de la guerra",
+    "tipoPublicacion": "LIBRO",
+    "autor": "Sun Tzu",
+    
+    "formato": "pdf",
+    "cantEjemplares": 50,
+    "cantPrestados": 5
+    
+  },
+  {
+    
+    "titulo": "Ensayos",
+    "tipoPublicacion": "ENSAYO",    
+    "autor": "Michel de Montaigne",    
+    "formato": "pdf",
+    "cantEjemplares": 80,
+    "cantPrestados": 15
+    
+  }
+]

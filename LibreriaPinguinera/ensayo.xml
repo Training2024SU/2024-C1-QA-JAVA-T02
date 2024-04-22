@@ -1,0 +1,19 @@
+<ensayos>
+    <id>1</id>
+    <titulo>Ensayo sobre la naturaleza</titulo>
+    <autor>John Smith</autor>
+    <formato>PDF</formato>
+    <ejemplares>20</ejemplares>
+    <prestados>5</prestados>
+    <disponible>15</disponible>
+</ensayos>
+
+<ensayos>
+    <id>2</id>
+    <titulo>Ensayo sobre la historia del arte</titulo>
+    <autor>María Rodríguez</autor>
+    <formato>Impreso</formato>
+    <ejemplares>15</ejemplares>
+    <prestados>3</prestados>
+    <disponible>12</disponible>
+</ensayos>

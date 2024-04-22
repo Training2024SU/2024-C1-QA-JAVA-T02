@@ -12,6 +12,7 @@ import java.util.List;
 public abstract class AbstractDAO<T> implements DAO<T> {
 
     protected GestorBD gestorBD;
+    private static final String OBTENER_TODAS = "SELECT * FROM Publicacion";
 
     public AbstractDAO(GestorBD gestorBD) {
         this.gestorBD = gestorBD;
@@ -33,6 +34,23 @@ public abstract class AbstractDAO<T> implements DAO<T> {
             return resultados;
         }
     }
+
+    public List<T> obtenerTodosExport() throws SQLException {
+        String consulta = OBTENER_TODAS;
+        try (PreparedStatement statement = prepararConsulta(consulta)) {
+            ResultSet resultSet = statement.executeQuery();
+            List<T> resultados = new ArrayList<>();
+
+            // Llamada a un método abstracto para convertir cada fila a un objeto T
+            while (resultSet.next()) {
+                T objeto = convertirFilaAObjeto(resultSet);
+                resultados.add(objeto);
+            }
+
+            return resultados;
+        }
+    }
+
 
     // Método abstracto para obtener la consulta específica de la tabla
     protected abstract String obtenerConsultaTodos();

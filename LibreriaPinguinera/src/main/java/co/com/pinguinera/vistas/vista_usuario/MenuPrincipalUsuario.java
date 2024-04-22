@@ -2,8 +2,11 @@ package co.com.pinguinera.vistas.vista_usuario;
 
 import co.com.pinguinera.LoggerUtil;
 import co.com.pinguinera.controladores.crud.*;
+import co.com.pinguinera.datos.model.Usuario;
 import co.com.pinguinera.vistas.VistaUtil;
 
+
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -38,7 +41,7 @@ public class MenuPrincipalUsuario {
         this.scanner = new Scanner(System.in);
     }
 
-    public void mostrarMenu() {
+    public void mostrarMenu(String correo,String contrasena) {
         boolean continuar = true;
 
         while (continuar) {
@@ -56,7 +59,7 @@ public class MenuPrincipalUsuario {
 
             switch (opcion) {
                 case 1:
-                    controladorCRUDUsuario.actualizarUsuario();
+                    controladorCRUDUsuario.actualizarUsuario(correo,contrasena);
                     break;
                 case 2:
                     controladorPrestamo.registrarPrestamo();

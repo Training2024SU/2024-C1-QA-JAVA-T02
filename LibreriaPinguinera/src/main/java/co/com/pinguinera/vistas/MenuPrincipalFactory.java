@@ -163,6 +163,9 @@ public class MenuPrincipalFactory {
                 controladorCRUDLibro,
                 controladorCRUDNovela, //Falta agregar las otras 3 categorias
                 controladorCRUDPrestamo,
+                controladorCRUDVideograbaciones,
+                controladorCRUDEnsayos,
+                controladorCRUDCanciones,
                 menuAdministrarPrestamos // Pasa la instancia de MenuAdministrarPrestamos como argumento
         );
 
@@ -173,7 +176,10 @@ public class MenuPrincipalFactory {
                 controladorCRUDPrestamo,
                 controladorCRUDEmpleado,
                 controladorCRUDNovela,
-                controladorCRUDLibro
+                controladorCRUDLibro,
+                controladorCRUDVideograbaciones,
+                controladorCRUDEnsayos,
+                controladorCRUDCanciones
         );
 
         MenuPrincipalSuperadmin menuPrincipalSuperadmin = new MenuPrincipalSuperadmin(

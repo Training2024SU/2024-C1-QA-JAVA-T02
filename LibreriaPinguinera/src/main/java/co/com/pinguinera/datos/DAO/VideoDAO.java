@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class VideoDAO extends AbstractDAO<Videograbaciones>{
 
     private static final String CONSULTA_VIDEOS = "SELECT * FROM Publicacion WHERE tipo_publicacion = 'VIDEO'";
-    private static final String INSERTAR_VIDEO = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Num_paginas, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'VIDEO', ?, ?, ?, ?)";
+    private static final String INSERTAR_VIDEO = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Formato, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'VIDEO', ?, ?, ?, ?)";
     private static final String ACTUALIZAR_VIDEO = "UPDATE Publicacion SET Titulo = ?, Autor = ?, Formato = ?, Cant_ejemplares = ?, Cant_prestados = ? WHERE idPublicacion = ?";
     private static final String ELIMINAR_VIDEO = "DELETE FROM Publicacion WHERE idPublicacion = ?";
 

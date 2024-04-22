@@ -9,6 +9,7 @@ import co.com.pinguinera.vistas.vistas_prestamo.InformacionPrestamoVista;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 public class ControladorCRUDPrestamo {
 
@@ -26,13 +27,21 @@ public class ControladorCRUDPrestamo {
     }
 
     public void registrarPrestamo() {
+        Scanner scanner = new Scanner(System.in);
         Prestamo nuevoPrestamo = new Prestamo();
         nuevoPrestamo.setFechaPrestamo(vista.pedirFechaPrestamo());
         nuevoPrestamo.setFechaDevolucion(vista.pedirFechaDevolucion());
-        nuevoPrestamo.setEstado(vista.pedirEstadoPrestamo());
+        nuevoPrestamo.setEstado(vista.crearEstadoPrestamo());
         nuevoPrestamo.setIdUsuario(vista.pedirIdUsuario());
         nuevoPrestamo.setIdPublicacion(vista.pedirIdPublicacion());
-        crudPrestamosLocales.agregar(nuevoPrestamo);
+        System.out.println("Desea confirmar el prestamo (1 para si, 0 para no)");
+        int option = Integer.parseInt(scanner.nextLine());
+        if (option==1){
+            crudPrestamosLocales.agregar(nuevoPrestamo);
+        } else {
+            System.out.println("Solicitud cancelada");
+            return;
+        }
         try {
             prestamoDAO.insertar(nuevoPrestamo);
         } catch (SQLException e) {
@@ -64,6 +73,34 @@ public class ControladorCRUDPrestamo {
     public void eliminarPrestamo() {
         Prestamo prestamoAEliminar = new Prestamo();
         prestamoAEliminar.setIdPrestamo(vista.pedirIdPrestamo());
+        crudPrestamosLocales.eliminar(prestamoAEliminar);
+        try {
+            prestamoDAO.eliminar(prestamoAEliminar);
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeError();
+            return;
+        }
+        sincronizarDatos();
+        VistaUtil.mostrarMensajeExito();
+    }
+
+    public void eliminarPrestamoSA() {
+        Prestamo prestamoAEliminar = new Prestamo();
+        //prestamoAEliminar.setIdPrestamo(vista.pedirIdPrestamo());
+        //crudPrestamosLocales.eliminar(prestamoAEliminar);
+        try {
+            prestamoDAO.eliminarSA(prestamoAEliminar);
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeError();
+            return;
+        }
+        sincronizarDatos();
+        VistaUtil.mostrarMensajeExito();
+    }
+
+    public void eliminarPrestamosSuperad() {
+        Prestamo prestamoAEliminar = new Prestamo();
+        prestamoAEliminar.setIdPrestamo(1);
         crudPrestamosLocales.eliminar(prestamoAEliminar);
         try {
             prestamoDAO.eliminar(prestamoAEliminar);

@@ -10,9 +10,10 @@ import java.sql.SQLException;
 public class EnsayoDAO extends AbstractDAO<Ensayos>{
 
     private static final String CONSULTA_ENSAYOS = "SELECT * FROM Publicacion WHERE tipo_publicacion = 'ENSAYO  '";
-    private static final String INSERTAR_ENSAYO = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Num_paginas, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'ENSAYO', ?, ?, ?, ?)";
+    private static final String INSERTAR_ENSAYO = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Formato, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'ENSAYO', ?, ?, ?, ?)";
     private static final String ACTUALIZAR_ENSAYO = "UPDATE Publicacion SET Titulo = ?, Autor = ?, Formato = ?, Cant_ejemplares = ?, Cant_prestados = ? WHERE idPublicacion = ?";
     private static final String ELIMINAR_ENSAYO = "DELETE FROM Publicacion WHERE idPublicacion = ?";
+    private static final String OBTENER_TODAS = "SELECT * FROM Publicacion";
 
     public EnsayoDAO(GestorBD gestorBD) {
         super(gestorBD);
@@ -70,4 +71,6 @@ public class EnsayoDAO extends AbstractDAO<Ensayos>{
             statement.executeUpdate();
         }
     }
+
+
 }

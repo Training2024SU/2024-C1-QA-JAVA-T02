@@ -13,8 +13,12 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
     private static final String CONSULTA_USUARIOS = "SELECT * FROM Usuario";
     private static final String INSERTAR_USUARIO = "INSERT INTO usuario (Correo, Nombre, Contrasena) VALUES (?, ?, ?);";
     private static final String INSERTAR_INFO_ADICIONAL = "INSERT INTO `pinguinera`.`infoadicionalusuario` (`idUsuario`, `Edad`, `Telefono`) VALUES (LAST_INSERT_ID(), ?, ?)";
-    private static final String ACTUALIZAR_USUARIO = "UPDATE Usuario SET Nombre = ?, Contrasena = ? WHERE idUsuario = ?";
-    private static final String ACTUALIZAR_INFO_ADICIONAL = "UPDATE `pinguinera`.`infoadicionalusuario` SET `Edad` = ?, `Telefono` = ? WHERE (`idUsuario` = ?)";
+    private static final String ACTUALIZAR_USUARIO = "UPDATE Usuario SET Nombre = ?, Contrasena = ?,Correo=? WHERE idUsuario = ?";
+    private static final String ACTUALIZAR_INFO_ADICIONAL = "INSERT INTO `pinguinera`.`infoadicionalusuario` (`idUsuario`, `Edad`, `Telefono`)\n" +
+            "VALUES (?, ?, ?)\n" +
+            "ON DUPLICATE KEY UPDATE\n" +
+            "`Edad` = VALUES(`Edad`),\n" +
+            "`Telefono` = VALUES(`Telefono`);";
     private static final String ELIMINAR_USUARIO = "DELETE FROM Usuario WHERE idUsuario = ?";
 
     // Constructor que recibe un objeto GestorBD para establecer la conexión
@@ -54,7 +58,8 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
         try (PreparedStatement statement = prepararConsulta(ACTUALIZAR_USUARIO)) {
             statement.setString(1, usuario.getNombre());
             statement.setString(2, usuario.getContrasena());
-            statement.setInt(3, usuario.getIdUsuario());
+            statement.setString(3, usuario.getCorreo());
+            statement.setInt(4, usuario.getIdUsuario());
             statement.executeUpdate();
         }
     }
@@ -78,9 +83,10 @@ public class UsuarioDAO extends AbstractDAO<Usuario> {
 
     public void actualizarInfoAdicional(Usuario usuario) throws SQLException {
         try (PreparedStatement statement = prepararConsulta(ACTUALIZAR_INFO_ADICIONAL)) {
-            statement.setString(1, usuario.getEdad());
-            statement.setString(2, usuario.getTelefono());
-            statement.setString(3, String.valueOf(usuario.getIdUsuario()));
+            statement.setString(1, String.valueOf(usuario.getIdUsuario()));
+            statement.setString(2, usuario.getEdad());
+            statement.setString(3, usuario.getTelefono());
+
             statement.executeUpdate();
         }
     }

@@ -9,6 +9,9 @@ public class MenuConstantes {
     public static final String VER_TODOS_PRESTAMOS = "Ver todos los préstamos";
     public static final String AGREGAR_LIBRO = "Agregar libro";
     public static final String AGREGAR_NOVELA = "Agregar novela";
+    public static final String AGREGAR_VIDEO = "Agregar video";
+    public static final String AGREGAR_CANCION = "Agregar cancion";
+    public static final String AGREGAR_ENSAYO = "Agregar ensayo";
     public static final String ELIMINAR_LIBRO = "Eliminar libro";
     public static final String ELIMINAR_NOVELA = "Eliminar novela";
     public static final String ACTUALIZAR_LIBRO = "Actualizar libro";

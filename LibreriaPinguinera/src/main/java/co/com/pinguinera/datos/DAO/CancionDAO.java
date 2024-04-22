@@ -2,7 +2,6 @@ package co.com.pinguinera.datos.DAO;
 
 import co.com.pinguinera.datos.interfaces.GestorBD;
 import co.com.pinguinera.datos.model.publicaciones.Cancion;
-import co.com.pinguinera.datos.model.publicaciones.Videograbaciones;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 
 public class CancionDAO extends AbstractDAO<Cancion>{
     private static final String CONSULTA_CANCIONES = "SELECT * FROM Publicacion WHERE tipo_publicacion = 'CANCION'";
-    private static final String INSERTAR_VIDEO = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Num_paginas, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'VIDEO', ?, ?, ?, ?)";
+    private static final String INSERTAR_CANCION = "INSERT INTO Publicacion (idPublicacion, Titulo, tipo_publicacion, Autor, Formato, Cant_ejemplares, Cant_prestados) VALUES (?, ?, 'CANCION', ?, ?, ?, ?)";
     private static final String ACTUALIZAR_CANCION = "UPDATE Publicacion SET Titulo = ?, Autor = ?, Formato = ?, Cant_ejemplares = ?, Cant_prestados = ? WHERE idPublicacion = ?";
     private static final String ELIMINAR_CANCION = "DELETE FROM Publicacion WHERE idPublicacion = ?";
 
@@ -38,7 +37,7 @@ public class CancionDAO extends AbstractDAO<Cancion>{
 
     @Override
     public void insertar(Cancion cancion) throws SQLException {
-        try (PreparedStatement statement = prepararConsulta(INSERTAR_VIDEO)) {
+        try (PreparedStatement statement = prepararConsulta(INSERTAR_CANCION)) {
             statement.setInt(1, cancion.getIdPublicacion());
             statement.setString(2, cancion.getTitulo());
             statement.setString(3, cancion.getAutor());

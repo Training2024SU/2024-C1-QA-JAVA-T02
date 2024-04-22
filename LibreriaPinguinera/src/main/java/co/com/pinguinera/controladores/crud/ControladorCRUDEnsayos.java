@@ -3,7 +3,6 @@ package co.com.pinguinera.controladores.crud;
 import co.com.pinguinera.datos.DAO.EnsayoDAO;
 import co.com.pinguinera.datos.crud_local.CRUDEnsayosLocales;
 import co.com.pinguinera.datos.model.publicaciones.Ensayos;
-import co.com.pinguinera.datos.model.publicaciones.Videograbaciones;
 import co.com.pinguinera.servicios.integracion.SincronizadorEnsayos;
 import co.com.pinguinera.vistas.VistaUtil;
 import co.com.pinguinera.vistas.vista_ensayos.InformacionEnsayosVista;
@@ -42,6 +41,17 @@ public class ControladorCRUDEnsayos {
         }
         sincronizarDatos();
         VistaUtil.mostrarMensajeExito();
+    }
+
+    public void registrarJSON(Ensayos ensayo){
+        
+        crudEnsayosLocales.agregar(ensayo);
+        try {
+            ensayoDAO.insertar(ensayo);
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeError();
+
+        }
     }
 
     public void actualizarEnsayo() {
@@ -89,11 +99,23 @@ public class ControladorCRUDEnsayos {
         }
     }
 
+    public List<Ensayos> obtenerTodosGson() {
+        try {
+            List<Ensayos> ensayosBD = ensayoDAO.obtenerTodosExport();
+            return ensayosBD;
+
+        } catch (SQLException e) {
+            VistaUtil.mostrarMensajeSolicitudFallida();
+            return null;
+        }
+
+    }
+
     private void sincronizarDatos() {
         try {
             sincronizadorEnsayos.sincronizarEnsayos();
         } catch (SQLException e) {
-            VistaUtil.mostrarMensajeError();
+
         }
     }
 

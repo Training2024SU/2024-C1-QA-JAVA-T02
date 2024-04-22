@@ -30,12 +30,31 @@ CREATE TABLE IF NOT EXISTS `pinguinera`.`Usuario` (
     UNIQUE (`Correo`) 
 ) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS `pinguinera`.`registros_creados` (
+    `id` INT AUTO_INCREMENT NOT NULL,
+    `fecha` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `registro_id` INT NOT NULL,
+    `idUsuario` INT NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE (`registro_id`),
+    FOREIGN KEY (`idUsuario`) REFERENCES `Usuario`(`idUsuario`)
+) ENGINE=InnoDB;
+
+
 CREATE TABLE IF NOT EXISTS `pinguinera`.`InfoAdicionalUsuario` (
     `idUsuario` INT NOT NULL,
     `Edad` INT NULL,
     `Telefono` VARCHAR(20) NULL,
     PRIMARY KEY (`idUsuario`),
     FOREIGN KEY (`idUsuario`) REFERENCES `Usuario`(`idUsuario`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `pinguinera`.`InfoAdicionalEmpleado` (
+    `idEmpleado` INT NOT NULL,
+    `Edad` INT NULL,
+    `Telefono` VARCHAR(20) NULL,
+    PRIMARY KEY (`idEmpleado`),
+    FOREIGN KEY (`idEmpleado`) REFERENCES `Empleado`(`idEmpleado`)
 ) ENGINE=InnoDB;
 
 -- Tabla `Publicacion`

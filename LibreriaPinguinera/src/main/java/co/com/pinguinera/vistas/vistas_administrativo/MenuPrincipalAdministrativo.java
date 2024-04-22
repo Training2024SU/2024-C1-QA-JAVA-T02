@@ -14,17 +14,27 @@ public class MenuPrincipalAdministrativo {
     private final MenuGestionEmpleados menuGestionEmpleados;
     private final MenuGestionNovelas menuGestionNovelas;
     private final MenuGestionLibros menuGestionLibros;
+    private final MenuGestionCanciones menuGestionCanciones;
+    private final MenuGestionEnsayos menuGestionEnsayos;
+    private final MenuGestionVideos menuGestionVideos;
 
     public MenuPrincipalAdministrativo(ControladorCRUDUsuario controladorCRUDUsuario,
                                        ControladorCRUDPrestamo controladorCRUDPrestamo,
                                        ControladorCRUDEmpleado controladorCRUDEmpleado,
                                        ControladorCRUDNovela controladorCRUDNovela,
-                                       ControladorCRUDLibro controladorCRUDLibro) {
+                                       ControladorCRUDLibro controladorCRUDLibro,
+                                       ControladorCRUDVideograbaciones controladorCRUDVideograbaciones,
+                                       ControladorCRUDEnsayos controladorCRUDEnsayos,
+                                       ControladorCRUDCanciones controladorCRUDCanciones
+                                       ) {
         this.menuGestionUsuarios = new MenuGestionUsuarios(controladorCRUDUsuario);
         this.menuGestionPrestamos = new MenuGestionPrestamos(controladorCRUDPrestamo);
         this.menuGestionEmpleados = new MenuGestionEmpleados(controladorCRUDEmpleado);
         this.menuGestionNovelas = new MenuGestionNovelas(controladorCRUDNovela);
         this.menuGestionLibros = new MenuGestionLibros(controladorCRUDLibro);
+        this.menuGestionEnsayos = new MenuGestionEnsayos(controladorCRUDEnsayos);
+        this.menuGestionVideos = new MenuGestionVideos(controladorCRUDVideograbaciones);
+        this.menuGestionCanciones = new MenuGestionCanciones(controladorCRUDCanciones);
     }
 
     public void mostrarMenu() {
@@ -37,7 +47,10 @@ public class MenuPrincipalAdministrativo {
             LOGGER.info("3. Gestión de empleados");
             LOGGER.info("4. Gestión de novelas");
             LOGGER.info("5. Gestión de libros");
-            LOGGER.info("6. " + MenuConstantes.SALIR);
+            LOGGER.info("6. Gestión de videograbaciones");
+            LOGGER.info("7. Gestión de canciones");
+            LOGGER.info("8. Gestión de ensayos");
+            LOGGER.info("9. " + MenuConstantes.SALIR);
 
             int opcion = VistaUtil.obtenerOpcion();
 
@@ -58,6 +71,15 @@ public class MenuPrincipalAdministrativo {
                     menuGestionLibros.mostrarMenu();
                     break;
                 case 6:
+                    menuGestionVideos.mostrarMenu();
+                    break;
+                case 7:
+                    menuGestionCanciones.mostrarMenu();
+                    break;
+                case 8:
+                    menuGestionEnsayos.mostrarMenu();
+                    break;
+                case 9:
                     LOGGER.info(MenuConstantes.OPCION_VOLVER);
                     continuar = false;
                     break;

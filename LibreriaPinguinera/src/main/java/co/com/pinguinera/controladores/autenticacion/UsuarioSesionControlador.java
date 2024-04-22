@@ -1,8 +1,11 @@
 package co.com.pinguinera.controladores.autenticacion;
 
+import co.com.pinguinera.datos.model.Usuario;
 import co.com.pinguinera.servicios.GestorAccesoUsuarios;
 import co.com.pinguinera.vistas.VistaUtil;
 import co.com.pinguinera.vistas.vista_usuario.MenuPrincipalUsuario;
+
+import java.util.List;
 
 public class UsuarioSesionControlador {
     private GestorAccesoUsuarios gestorAccesoUsuarios;
@@ -19,11 +22,13 @@ public class UsuarioSesionControlador {
         String correo = VistaUtil.pedirCorreoElectronico();
         String contrasena = VistaUtil.pedirContrasena();
 
+
         boolean esUsuarioValido = gestorAccesoUsuarios.verificarUsuario(correo, contrasena);
         if (esUsuarioValido) {
             VistaUtil.mostrarMensajeExito();
             if (menuPrincipalUsuario != null) {
-                menuPrincipalUsuario.mostrarMenu();
+
+                menuPrincipalUsuario.mostrarMenu(correo,contrasena);
             }
         } else {
             VistaUtil.mostrarMensajeError();

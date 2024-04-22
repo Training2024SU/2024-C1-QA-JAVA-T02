@@ -28,7 +28,7 @@ public class MenuGestionUsuarios {
                 controladorCRUDUsuario.registrarUsuario();
                 break;
             case 2:
-                controladorCRUDUsuario.actualizarUsuario();
+                controladorCRUDUsuario.actualizarUsuario(" ","");
                 break;
             case 3:
                 controladorCRUDUsuario.eliminarUsuario();

@@ -46,6 +46,13 @@ public class InformacionPrestamoVista {
                 throw new IllegalArgumentException("Opción inválida.");
         }
     }
+
+    public EstadoPrestamo crearEstadoPrestamo() {
+        logger.info("SOLICITADO");
+        return EstadoPrestamo.SOLICITADO;
+
+    }
+
     public int pedirIdUsuario() {
         logger.info("Ingrese el ID del usuario: ");
         return Integer.parseInt(scanner.nextLine());

@@ -91,7 +91,7 @@ public class ControladorCRUDVideograbaciones {
         try {
             sincronizadorVideos.sincronizarVideos();
         } catch (SQLException e) {
-            VistaUtil.mostrarMensajeError();
+
         }
     }
 

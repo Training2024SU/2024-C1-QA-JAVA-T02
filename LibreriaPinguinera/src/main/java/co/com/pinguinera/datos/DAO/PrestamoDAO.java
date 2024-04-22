@@ -18,6 +18,7 @@ public class PrestamoDAO extends AbstractDAO<Prestamo> {
     private static final String ACTUALIZAR_CANTIDAD_LIBROS_DISPONIBLES_REALIZADO = "UPDATE Publicacion SET cant_prestados = cant_prestados + 1 WHERE idPublicacion = ?";
     private static final String ACTUALIZAR_CANTIDAD_LIBROS_DISPONIBLES_FINALIZADO = "UPDATE Publicacion SET cant_prestados = cant_prestados - 1 WHERE idPublicacion = ?";
     private static final String CONSULTA_PRESTAMO_POR_ID = "SELECT * FROM Prestamo WHERE idPrestamo = ?";
+    private static final String ELIMINAR_PRESTAMOS_SA = "DELETE FROM Prestamo WHERE idUsuario = ?";
 
     public PrestamoDAO(GestorBD gestorBD) {
         super(gestorBD);
@@ -82,6 +83,13 @@ public class PrestamoDAO extends AbstractDAO<Prestamo> {
     public void eliminar(Prestamo prestamo) throws SQLException {
         try (PreparedStatement statement = prepararConsulta(ELIMINAR_PRESTAMO)) {
             statement.setInt(1, prestamo.getIdPrestamo());
+            statement.executeUpdate();
+        }
+    }
+
+    public void eliminarSA(Prestamo prestamo) throws SQLException {
+        try (PreparedStatement statement = prepararConsulta(ELIMINAR_PRESTAMOS_SA)) {
+            statement.setInt(1, 1);
             statement.executeUpdate();
         }
     }

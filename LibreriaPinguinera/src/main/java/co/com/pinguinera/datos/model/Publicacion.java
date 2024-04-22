@@ -1,7 +1,9 @@
 package co.com.pinguinera.datos.model;
 import co.com.pinguinera.datos.model.enums.TipoPublicacion;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-
+@XmlRootElement(name = "publicacion")
 public class Publicacion {
     private int idPublicacion;
     private String titulo;
@@ -30,14 +32,16 @@ public class Publicacion {
     }
 
     // Getters y Setters
+    @XmlElement(name = "id")
     public int getIdPublicacion() {
         return idPublicacion;
     }
 
-    public void setIdPublicacion(int idPublicacion) {
+    public void setIdPublicacion(Integer idPublicacion) {
         this.idPublicacion = idPublicacion;
     }
 
+    @XmlElement(name = "titulo")
     public String getTitulo() {
         return titulo;
     }
@@ -46,6 +50,7 @@ public class Publicacion {
         this.titulo = titulo;
     }
 
+    @XmlElement(name = "tipo")
     public TipoPublicacion getTipoPublicacion() {
         return tipoPublicacion;
     }
@@ -54,6 +59,7 @@ public class Publicacion {
         this.tipoPublicacion = tipoPublicacion;
     }
 
+    @XmlElement(name = "autor")
     public String getAutor() {
         return autor;
     }
@@ -62,12 +68,13 @@ public class Publicacion {
         this.autor = autor;
     }
 
+    @XmlElement(name = "formato")
     public String getFormato() {        return formato;    }
 
     public void setFormato(String formato) {
         this.formato = formato;
     }
-
+    @XmlElement(name = "ejemplares")
     public int getCantEjemplares() {
         return cantEjemplares;
     }
@@ -75,7 +82,7 @@ public class Publicacion {
     public void setCantEjemplares(int cantEjemplares) {
         this.cantEjemplares = cantEjemplares;
     }
-
+    @XmlElement(name = "prestados")
     public int getCantPrestados() {
         return cantPrestados;
     }
@@ -83,7 +90,7 @@ public class Publicacion {
     public void setCantPrestados(int cantPrestados) {
         this.cantPrestados = cantPrestados;
     }
-
+    @XmlElement(name = "disponible")
     public int getCantDisponible() {
         return cantDisponible;
     }

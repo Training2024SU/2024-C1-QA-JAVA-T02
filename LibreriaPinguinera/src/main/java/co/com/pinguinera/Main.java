@@ -1,17 +1,24 @@
 package co.com.pinguinera;
 
 import co.com.pinguinera.datos.conexionBD.ConexionBD;
+import co.com.pinguinera.exporting.Xml.*;
+import co.com.pinguinera.exporting.Xml;
 import co.com.pinguinera.vistas.MenuPrincipal;
 import co.com.pinguinera.vistas.MenuPrincipalFactory;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
+
+
 
 public class Main {
 
     private static final Logger LOGGER = LoggerUtil.getLogger(); // Usar el logger global
 
     public static void main(String[] args) {
+
         try (Connection conexion = ConexionBD.conectar()) {
             LOGGER.info("Conexión a la base de datos abierta con éxito.");
 
