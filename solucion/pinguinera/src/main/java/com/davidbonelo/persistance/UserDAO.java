@@ -1,13 +1,14 @@
 package com.davidbonelo.persistance;
 
 import com.davidbonelo.models.User;
-import com.davidbonelo.models.UserExtraInfo;
-import com.davidbonelo.models.UserRole;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.davidbonelo.models.UserRole;
+import com.davidbonelo.mongodb.MongoDBConnector;
+import com.mongodb.client.MongoCollection;
+import org.bson.Document;
+
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +49,8 @@ public class UserDAO {
             return users;
         }
     }
+
+
 
     public List<User> getAllUsersExtraInfo() throws SQLException {
         String sql = "SELECT u.id, u.name, u.email, u.role, ui.biography, ui.birthday FROM Users u " +

@@ -2,10 +2,17 @@ package com.davidbonelo.ui;
 
 import com.davidbonelo.models.User;
 import com.davidbonelo.models.UserRole;
+import com.davidbonelo.mongodb.MongoDBConnector;
+import com.davidbonelo.persistance.UserDAOMongo;
 import com.davidbonelo.services.DataService;
 import com.davidbonelo.services.UserService;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import org.bson.Document;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
@@ -46,12 +53,43 @@ public class AdminMenu {
                 case 8 -> importInventoryJson();
                 case 9 -> exportInventoryXml();
                 case 10 -> importInventoryXml();
+                case 11 -> selectUserFromMongo();
+
                 case 0 -> {
                     return;
                 }
                 default -> System.out.println(messages.getString("unknownOption"));
             }
         }
+    }
+
+    private void selectUserFromMongo() {
+        MongoDBConnector mongoDBConnector = new MongoDBConnector();
+        UserDAOMongo userDAOMongo = new UserDAOMongo(mongoDBConnector.getMongoDatabase());
+        MongoCollection<Document> usersCollection = userDAOMongo.getAllUsersFromMongoDB();
+
+        // Obtenemos un cursor para recorrer los documentos
+        MongoCursor<Document> cursor = usersCollection.find().iterator();
+
+        // Iteramos sobre los documentos
+        while (cursor.hasNext()) {
+            Document document = cursor.next();
+            System.out.println(document.toJson());
+        }
+
+        // Cerramos el cursor
+        cursor.close();
+    }
+
+    private User buildUserFromDocument(Document document) {
+        int id = document.getInteger("id");
+        String name = document.getString("name");
+        String email = document.getString("email");
+        String roleString = document.getString("role");
+        UserRole role = UserRole.valueOf(roleString);
+        String biography = document.getString("biography");
+        Date birthday = Date.valueOf(String.valueOf(document.getDate("birthday")));
+        return new User(id, name, email, role, biography, birthday);
     }
 
     private void exportInventoryXml() {
