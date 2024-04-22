@@ -1,2 +1,52 @@
-package com.sofkau.logica.prestamo;public class CrudPrestamoGraba {
+package com.sofkau.logica.prestamo;
+
+import com.sofkau.model.Prestamo;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import static com.sofkau.Main.mySqlOperation;
+
+public class CrudPrestamoGraba {
+
+    private static final String SELECT_PRESTAMO_BY_ID = "select * from mydb.prestamo_g where idPrestamo = '%s';";
+    private static final String UPTADATE_PRESTAMO_ESTADO = "update mydb.prestamo_g SET Estado = '%s' where idPrestamo = '%s';";
+
+    private static final String INSERT_PRESTAMO = "insert into mydb.prestamo_g (idPrestamo, Fecha_prestamo, Fecha_devolucion, Estado, correo_usuario, titulo) values('%s', '%s', '%s', '%s', '%s', '%s');";
+
+    public static Prestamo findPrestamoByIdGraba(String idPrestamo) throws SQLException {
+        Prestamo prestamo = new Prestamo();
+        try {
+            mySqlOperation.setSqlStatement(String.format(SELECT_PRESTAMO_BY_ID, idPrestamo));
+            mySqlOperation.executeSqlStatement();
+            ResultSet resultSet = mySqlOperation.getResulset();
+            while (resultSet.next()) {
+                prestamo.setIdPrestamo(resultSet.getString(1));
+                prestamo.setFechaPrestamo(resultSet.getString(2));
+                prestamo.setFechaDevolucion(resultSet.getString(3));
+                prestamo.setEstadoPrestamo(resultSet.getString(4));
+                prestamo.setCorreoUsuario(resultSet.getString(5));
+                prestamo.setTituloPublicacion(resultSet.getString(6));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al obtener prestamo: " + e.getMessage());
+        }
+        return prestamo;
+    }
+
+    public static void changeStatusPrestamoGraba(String newState, String idPrestamo) {
+        mySqlOperation.setSqlStatement(String.format(UPTADATE_PRESTAMO_ESTADO, newState, idPrestamo));
+        mySqlOperation.executeSqlStatementVoid();
+    }
+
+    public static void createPrestamoGraba(Prestamo prestamo) {
+        try {
+            mySqlOperation.setSqlStatement(String.format(INSERT_PRESTAMO, prestamo.getIdPrestamo(), prestamo.getFechaPrestamo(), prestamo.getFechaDevolucion(), prestamo.getEstadoPrestamo(), prestamo.getCorreoUsuario(), prestamo.getTituloPublicacion()));
+            mySqlOperation.executeSqlStatementVoid();
+            System.out.println("Se creo el prestamo con id: " + prestamo.getIdPrestamo());
+            System.out.println("La fecha de devolucion es: " + prestamo.getFechaDevolucion());
+            System.out.println("Pase por el asistente para que le entrege la grabacion");
+        } catch (Exception e) {
+            System.out.println("No se creo el prestamo");
+        }
+    }
 }

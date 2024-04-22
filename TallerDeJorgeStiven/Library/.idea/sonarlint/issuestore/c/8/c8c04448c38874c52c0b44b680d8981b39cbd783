@@ -1,0 +1,19 @@
+
+}
+java:S1118":Add a private constructor to hide the implicit public one.(Ò£Ø‡8­Êœğ1J$7fdda5fe-b38a-4973-b6de-2cd29f84ef82
+m	java:S106"+Replace this use of System.out by a logger.(¤¤ Ê8¼Êœğ1J$e6e0d595-26bc-42b8-bb76-8bf26a9210c6
+m	java:S106"+Replace this use of System.out by a logger.(ñôí¡8¼Êœğ1J$77025ddf-7542-4239-ac8d-aaaa6665f244
+m	java:S106"+Replace this use of System.out by a logger.(¿úÔŒ8½Êœğ1J$b696d149-083d-4268-b959-dc9b14eb4703
+m	java:S106"+Replace this use of System.out by a logger.(ïßûŸ8½Êœğ1J$cdca0191-7b20-4916-8949-cf9baae5a47c
+r	java:S106"+Replace this use of System.out by a logger.(€¡İùÿÿÿÿ8½Êœğ1J$d4369075-1329-49b5-a4b7-17c956a0d001
+r	java:S106+"+Replace this use of System.out by a logger.(ú»Á†şÿÿÿÿ8½Êœğ1J$ac2f6b6a-469a-4da7-bfdd-ed83f01be733
+m	java:S1060"+Replace this use of System.out by a logger.(É—¦¸8½Êœğ1J$9deea719-e7d6-4aa3-b287-73160d104924
+l	java:S1061"+Replace this use of System.out by a logger.(±ÎäG8½Êœğ1J$4c204e05-9958-49e9-b2dc-80cea18319b8
+m	java:S1063"+Replace this use of System.out by a logger.(î¯ú¡8½Êœğ1J$1eec1c30-2aa8-48d5-b5ec-6f8cda83ed3c
+r	java:S106G"+Replace this use of System.out by a logger.(—ŒëÁúÿÿÿÿ8…’ôœğ1J$9fe53e63-daff-4ae9-b9f0-75fb16607720
+‹
+java:S1128"IRemove this unused import 'com.sofkau.logica.prestamo.CrudPrestamoPubli'.(ı—›A8Éôœğ1J$5ac87a2c-f73f-432a-91ad-407a1a80df13
+ 
+java:S1128"XRemove this unused import 'com.sofkau.logica.prestamo.CrudPrestamoPubli.createPrestamo'.(ı™±öûÿÿÿÿ8Éôœğ1J$15af5ca4-29a2-4bd0-8f6c-dd93995db1e3
+
+java:S1128"ZRemove this unused import 'com.sofkau.logica.prestamo.CrudPrestamoPubli.findPrestamoById'.(ƒ–Î8Éôœğ1J$fb87cf27-bb78-4173-a84e-5bbcb7aba90a
