@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.21" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>75</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>80</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>5</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>328</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>1984</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>99</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>120</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>21</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>78</int>
+    </void>
+    <void property="tipo">
+     <string>libro</string>
+    </void>
+    <void property="titulo">
+     <string>Azul</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>150</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>200</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>50</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>368</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>Cien años de soledad</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>110</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>120</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>10</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>128</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>Crónica de una muerte anunciada</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>90</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>100</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>10</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>928</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>Don Quijote de la Mancha</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>125</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>150</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>25</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>208</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>El alquimista</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>185</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>220</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>35</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>689</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>El código Da Vinci</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>24</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>50</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>26</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>87</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>El coronel no tiene quien le escriba</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>105</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>120</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>15</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>304</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>El Hobbit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>160</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>180</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>20</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>662</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>El nombre del viento</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>200</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>300</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>100</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>96</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>El Principito</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>72</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>80</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>8</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>254</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>El retrato de Dorian Gray</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>115</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>130</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>15</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>512</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>El señor de los anillos: La comunidad del anillo</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>130</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>150</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>20</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>352</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>Harry Potter y la piedra filosofal</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>120</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>150</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>30</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>456</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>La ciudad y los perros</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>160</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>200</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>40</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>560</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>La sombra del viento</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>155</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>180</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>25</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>374</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>Los juegos del hambre</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>220</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>250</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>30</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>1104</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>Los pilares de la Tierra</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>70</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>80</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>10</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>624</int>
+    </void>
+    <void property="tipo">
+     <string>Novela</string>
+    </void>
+    <void property="titulo">
+     <string>Moby Dick</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="co.com.ejercicio.modelo.Publicacion">
+    <void property="cantidadDisponible">
+     <int>15</int>
+    </void>
+    <void property="cantidadEjemplares">
+     <int>20</int>
+    </void>
+    <void property="cantidadPrestado">
+     <int>5</int>
+    </void>
+    <void property="numeroPaginas">
+     <int>300</int>
+    </void>
+    <void property="tipo">
+     <string>Libro</string>
+    </void>
+    <void property="titulo">
+     <string>Orgullo y prejuicio</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
