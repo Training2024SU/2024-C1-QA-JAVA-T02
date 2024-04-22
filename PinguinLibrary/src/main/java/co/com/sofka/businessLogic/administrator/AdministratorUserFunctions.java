@@ -61,7 +61,7 @@ public class AdministratorUserFunctions {
         String email = askString("Enter email: ");
         String password = askString("Enter password: ");
         String roleS = askString("Enter user role: (ADMINISTRATOR/ASSISTANT/READER)");
-        UserType role = UserType.valueOf(askString(roleS));
+        UserType role = UserType.valueOf(roleS);
         LocalDate birthDate = askDate("Enter Birth Date: ");
         String phone = askString("Enter phone number: ");
         return new User(UUID.randomUUID().toString(), name, email, password, role, birthDate,
