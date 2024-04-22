@@ -115,7 +115,7 @@ public class ReaderManagement implements GetAllAvailableBooks, GetAvailableBookB
     }
 
     public List<Resource> getAvailableResources(ResourceType type) {
-        return resourceDAO.getAllResources().stream().filter(r -> r.getType() == type).toList();
+        return resourceDAO.getAllResources().stream().filter(r -> r.getType() == type && r.getAlailableQuantity() >= 1).toList();
     }
 
     public void selectResourceToLoan(int resourceId) {

@@ -32,7 +32,7 @@ public abstract class Resource {
         this.author = author;
     }
 
-    protected int getAlailableQuantity() {
+    public int getAlailableQuantity() {
         return quantity - quantityLoaned;
     }
 
