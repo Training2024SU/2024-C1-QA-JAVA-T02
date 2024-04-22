@@ -1,0 +1,129 @@
+[ {
+  "titulo" : "Nombre de la Tesis 1",
+  "fecha" : 1673672400000,
+  "autor" : "Autor de la Tesis 1",
+  "campoEstudio" : "Campo de Estudio 1",
+  "pais" : "País de la Tesis 1",
+  "cantidadCopia" : 10,
+  "cantidadPrestado" : 3
+}, {
+  "titulo" : "Nombre de la Tesis 2",
+  "fecha" : 1676782800000,
+  "autor" : "Autor de la Tesis 2",
+  "campoEstudio" : "Campo de Estudio 2",
+  "pais" : "País de la Tesis 2",
+  "cantidadCopia" : 15,
+  "cantidadPrestado" : 5
+}, {
+  "titulo" : "Nombre de la Tesis 3",
+  "fecha" : 1678338000000,
+  "autor" : "Autor de la Tesis 3",
+  "campoEstudio" : "Campo de Estudio 3",
+  "pais" : "País de la Tesis 3",
+  "cantidadCopia" : 20,
+  "cantidadPrestado" : 8
+}, {
+  "titulo" : "Nombre de la Tesis 4",
+  "fecha" : 1680584400000,
+  "autor" : "Autor de la Tesis 4",
+  "campoEstudio" : "Campo de Estudio 4",
+  "pais" : "País de la Tesis 4",
+  "cantidadCopia" : 12,
+  "cantidadPrestado" : 4
+}, {
+  "titulo" : "Nombre de la Tesis 5",
+  "fecha" : 1684299600000,
+  "autor" : "Autor de la Tesis 5",
+  "campoEstudio" : "Campo de Estudio 5",
+  "pais" : "País de la Tesis 5",
+  "cantidadCopia" : 18,
+  "cantidadPrestado" : 6
+}, {
+  "titulo" : "Título 1",
+  "fecha" : 1673672400000,
+  "autor" : "Autor 1",
+  "campoEstudio" : "Campo 1",
+  "pais" : "País 1",
+  "cantidadCopia" : 10,
+  "cantidadPrestado" : 3
+}, {
+  "titulo" : "Título 10",
+  "fecha" : 1697000400000,
+  "autor" : "Autor 10",
+  "campoEstudio" : "Campo 10",
+  "pais" : "País 10",
+  "cantidadCopia" : 35,
+  "cantidadPrestado" : 14
+}, {
+  "titulo" : "Título 2",
+  "fecha" : 1676782800000,
+  "autor" : "Autor 2",
+  "campoEstudio" : "Campo 2",
+  "pais" : "País 2",
+  "cantidadCopia" : 15,
+  "cantidadPrestado" : 5
+}, {
+  "titulo" : "Título 3",
+  "fecha" : 1678338000000,
+  "autor" : "Autor 3",
+  "campoEstudio" : "Campo 3",
+  "pais" : "País 3",
+  "cantidadCopia" : 20,
+  "cantidadPrestado" : 8
+}, {
+  "titulo" : "Título 4",
+  "fecha" : 1680584400000,
+  "autor" : "Autor 4",
+  "campoEstudio" : "Campo 4",
+  "pais" : "País 4",
+  "cantidadCopia" : 12,
+  "cantidadPrestado" : 4
+}, {
+  "titulo" : "Título 5",
+  "fecha" : 1684299600000,
+  "autor" : "Autor 5",
+  "campoEstudio" : "Campo 5",
+  "pais" : "País 5",
+  "cantidadCopia" : 18,
+  "cantidadPrestado" : 6
+}, {
+  "titulo" : "Título 6",
+  "fecha" : 1687323600000,
+  "autor" : "Autor 6",
+  "campoEstudio" : "Campo 6",
+  "pais" : "País 6",
+  "cantidadCopia" : 25,
+  "cantidadPrestado" : 9
+}, {
+  "titulo" : "Título 7",
+  "fecha" : 1689224400000,
+  "autor" : "Autor 7",
+  "campoEstudio" : "Campo 7",
+  "pais" : "País 7",
+  "cantidadCopia" : 30,
+  "cantidadPrestado" : 12
+}, {
+  "titulo" : "Título 8",
+  "fecha" : 1693285200000,
+  "autor" : "Autor 8",
+  "campoEstudio" : "Campo 8",
+  "pais" : "País 8",
+  "cantidadCopia" : 22,
+  "cantidadPrestado" : 7
+}, {
+  "titulo" : "Título 9",
+  "fecha" : 1693803600000,
+  "autor" : "Autor 9",
+  "campoEstudio" : "Campo 9",
+  "pais" : "País 9",
+  "cantidadCopia" : 28,
+  "cantidadPrestado" : 10
+}, {
+  "titulo" : "titulotesis",
+  "fecha" : 1711947600000,
+  "autor" : "nombreautor",
+  "campoEstudio" : "campoestudiotesis",
+  "pais" : "colombia",
+  "cantidadCopia" : 20,
+  "cantidadPrestado" : 1
+} ]

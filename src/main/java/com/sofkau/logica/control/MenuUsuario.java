@@ -49,6 +49,7 @@ public class MenuUsuario {
             case 5-> {
                 Menu.nombre();
                 String nombre = scannerGlobal.nextLine();
+                publicacionOp.listarPublicacionesPorAutor(nombre);
             }
             case 6-> {
                     MenuPerfilUsuario.menuPerfilUsuario();

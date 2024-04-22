@@ -219,6 +219,12 @@ public class Menu {
             System.out.println("5. " + MSN_TESIS);
     }
 
+    public static void ingresoPrestamoOtroTipo() {
+        System.out.println("1. " + MSN_CANCION);
+        System.out.println("2. " + MSN_VIDEOGRABACION);
+        System.out.println("3. " + MSN_TESIS);
+    }
+
 
 
 }

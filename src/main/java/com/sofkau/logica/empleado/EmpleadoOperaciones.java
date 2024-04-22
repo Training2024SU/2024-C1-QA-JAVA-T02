@@ -28,6 +28,7 @@ public class EmpleadoOperaciones {
         EmpleadoRepositorio.registroCreacion(empleadoActual.getId(),empleado.getId());
             MensajeOperacionBd.crearEmpleado();
             System.out.println(empleado);
+        empleados.put(empleado.getId(),empleado);
     }
 
     public EmpleadoOperaciones() {
@@ -49,7 +50,6 @@ public class EmpleadoOperaciones {
     }
 
     public boolean inicioSesion(String correo, String contrasena) {
-        getEmpleados();
         Optional<Empleado> empleadoVal;
         empleadoVal = empleados.values().stream()
                     .filter(empleado -> empleado.getCorreo().equals(correo) && empleado.getContrasena().equals(contrasena))

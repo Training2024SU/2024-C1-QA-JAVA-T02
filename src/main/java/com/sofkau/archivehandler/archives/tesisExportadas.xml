@@ -1,0 +1,146 @@
+<ArrayList>
+  <item>
+    <titulo>Nombre de la Tesis 1</titulo>
+    <fecha>1673672400000</fecha>
+    <autor>Autor de la Tesis 1</autor>
+    <campoEstudio>Campo de Estudio 1</campoEstudio>
+    <pais>País de la Tesis 1</pais>
+    <cantidadCopia>10</cantidadCopia>
+    <cantidadPrestado>3</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Nombre de la Tesis 2</titulo>
+    <fecha>1676782800000</fecha>
+    <autor>Autor de la Tesis 2</autor>
+    <campoEstudio>Campo de Estudio 2</campoEstudio>
+    <pais>País de la Tesis 2</pais>
+    <cantidadCopia>15</cantidadCopia>
+    <cantidadPrestado>5</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Nombre de la Tesis 3</titulo>
+    <fecha>1678338000000</fecha>
+    <autor>Autor de la Tesis 3</autor>
+    <campoEstudio>Campo de Estudio 3</campoEstudio>
+    <pais>País de la Tesis 3</pais>
+    <cantidadCopia>20</cantidadCopia>
+    <cantidadPrestado>8</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Nombre de la Tesis 4</titulo>
+    <fecha>1680584400000</fecha>
+    <autor>Autor de la Tesis 4</autor>
+    <campoEstudio>Campo de Estudio 4</campoEstudio>
+    <pais>País de la Tesis 4</pais>
+    <cantidadCopia>12</cantidadCopia>
+    <cantidadPrestado>4</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Nombre de la Tesis 5</titulo>
+    <fecha>1684299600000</fecha>
+    <autor>Autor de la Tesis 5</autor>
+    <campoEstudio>Campo de Estudio 5</campoEstudio>
+    <pais>País de la Tesis 5</pais>
+    <cantidadCopia>18</cantidadCopia>
+    <cantidadPrestado>6</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 1</titulo>
+    <fecha>1673672400000</fecha>
+    <autor>Autor 1</autor>
+    <campoEstudio>Campo 1</campoEstudio>
+    <pais>País 1</pais>
+    <cantidadCopia>10</cantidadCopia>
+    <cantidadPrestado>3</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 10</titulo>
+    <fecha>1697000400000</fecha>
+    <autor>Autor 10</autor>
+    <campoEstudio>Campo 10</campoEstudio>
+    <pais>País 10</pais>
+    <cantidadCopia>35</cantidadCopia>
+    <cantidadPrestado>14</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 2</titulo>
+    <fecha>1676782800000</fecha>
+    <autor>Autor 2</autor>
+    <campoEstudio>Campo 2</campoEstudio>
+    <pais>País 2</pais>
+    <cantidadCopia>15</cantidadCopia>
+    <cantidadPrestado>5</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 3</titulo>
+    <fecha>1678338000000</fecha>
+    <autor>Autor 3</autor>
+    <campoEstudio>Campo 3</campoEstudio>
+    <pais>País 3</pais>
+    <cantidadCopia>20</cantidadCopia>
+    <cantidadPrestado>8</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 4</titulo>
+    <fecha>1680584400000</fecha>
+    <autor>Autor 4</autor>
+    <campoEstudio>Campo 4</campoEstudio>
+    <pais>País 4</pais>
+    <cantidadCopia>12</cantidadCopia>
+    <cantidadPrestado>4</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 5</titulo>
+    <fecha>1684299600000</fecha>
+    <autor>Autor 5</autor>
+    <campoEstudio>Campo 5</campoEstudio>
+    <pais>País 5</pais>
+    <cantidadCopia>18</cantidadCopia>
+    <cantidadPrestado>6</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 6</titulo>
+    <fecha>1687323600000</fecha>
+    <autor>Autor 6</autor>
+    <campoEstudio>Campo 6</campoEstudio>
+    <pais>País 6</pais>
+    <cantidadCopia>25</cantidadCopia>
+    <cantidadPrestado>9</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 7</titulo>
+    <fecha>1689224400000</fecha>
+    <autor>Autor 7</autor>
+    <campoEstudio>Campo 7</campoEstudio>
+    <pais>País 7</pais>
+    <cantidadCopia>30</cantidadCopia>
+    <cantidadPrestado>12</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 8</titulo>
+    <fecha>1693285200000</fecha>
+    <autor>Autor 8</autor>
+    <campoEstudio>Campo 8</campoEstudio>
+    <pais>País 8</pais>
+    <cantidadCopia>22</cantidadCopia>
+    <cantidadPrestado>7</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>Título 9</titulo>
+    <fecha>1693803600000</fecha>
+    <autor>Autor 9</autor>
+    <campoEstudio>Campo 9</campoEstudio>
+    <pais>País 9</pais>
+    <cantidadCopia>28</cantidadCopia>
+    <cantidadPrestado>10</cantidadPrestado>
+  </item>
+  <item>
+    <titulo>titulotesis</titulo>
+    <fecha>1711947600000</fecha>
+    <autor>nombreautor</autor>
+    <campoEstudio>campoestudiotesis</campoEstudio>
+    <pais>colombia</pais>
+    <cantidadCopia>20</cantidadCopia>
+    <cantidadPrestado>1</cantidadPrestado>
+  </item>
+</ArrayList>

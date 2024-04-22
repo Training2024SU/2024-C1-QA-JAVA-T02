@@ -11,7 +11,7 @@ import static com.sofkau.logica.control.ControlIngreso.*;
 public class MenuPrestamoUsuario {
 
     public static void mostrarMenuPrestamo() {
-        Menu.ingresoTipoMaterial();
+        Menu.ingresoPrestamoOtroTipo();
         int op = scannerGlobal.nextInt();
         scannerGlobal.nextLine();
 

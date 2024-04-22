@@ -4,9 +4,16 @@ import com.sofkau.dialogo.Menu;
 import com.sofkau.logica.Autor.AutorOperaciones;
 import com.sofkau.logica.cancion.CancionOperaciones;
 import com.sofkau.logica.empleado.EmpleadoOperaciones;
+import com.sofkau.logica.empleado.PerfilEmpleadoOperaciones;
+import com.sofkau.logica.prestamo.PrestamoCancionOperaciones;
 import com.sofkau.logica.prestamo.PrestamoOperaciones;
+import com.sofkau.logica.prestamo.PrestamoTesisOperaciones;
+import com.sofkau.logica.prestamo.PrestamoVideoGrabacionOperaciones;
 import com.sofkau.logica.publicacion.PublicacionOperaciones;
+import com.sofkau.logica.tesis.TesisOperaciones;
+import com.sofkau.logica.usuario.PerfilModificableOperaciones;
 import com.sofkau.logica.usuario.UsuarioOperaciones;
+import com.sofkau.logica.videograbacion.VideoGrabacionOperaciones;
 import com.sofkau.model.Empleado;
 import com.sofkau.util.enums.Roles;
 
@@ -78,17 +85,20 @@ public class MenuSuperAdmin {
     }
 
     private static void restaurarValores() {
+
         usuarioOp = new UsuarioOperaciones();
-
         empleadoOp.getEmpleados();
-
         autorOp = new AutorOperaciones();
-
         publicacionOp = new PublicacionOperaciones();
-
         prestamoOp = new PrestamoOperaciones();
-
         cancionOperaciones = new CancionOperaciones();
+        videoGrabacionOperaciones = new VideoGrabacionOperaciones();
+        tesisOperaciones = new TesisOperaciones();
+        perfilOp = new PerfilModificableOperaciones();
+        prestCancionOp = new PrestamoCancionOperaciones();
+        prestVideoGrabacionOp = new PrestamoVideoGrabacionOperaciones();
+        prestamoTesisOp = new PrestamoTesisOperaciones();
+        perfilEmpleadoOp = new PerfilEmpleadoOperaciones();
 
     }
 

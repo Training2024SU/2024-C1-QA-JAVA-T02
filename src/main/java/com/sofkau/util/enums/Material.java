@@ -9,9 +9,6 @@ public enum Material {
 
     VIDEOGRABACION;
 
-    public static String parseString(Material mat){
-        return mat.toString();
-    }
 }
 
 

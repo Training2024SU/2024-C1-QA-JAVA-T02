@@ -133,8 +133,6 @@ public class MenuAsistente {
                 scannerGlobal.nextLine();
                 MenuPrestamoEmpleado.menuDevolucionMaterial(opcionPrest);
             }case 7 ->{
-                Menu.ingresoTipoMaterial();
-                Menu.listarPrestamos();
                 Menu.correo();
                 String correo = scannerGlobal.nextLine();
                 prestamoOp.listarPrestamosPorCorreo(correo);
